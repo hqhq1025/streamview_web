@@ -1,0 +1,342 @@
+{
+  "root_url": "https://studio.youtube.com",
+  "max_depth": 2,
+  "items": [
+    {
+      "id": 1,
+      "url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/content",
+      "page": "content",
+      "depth": 0,
+      "status": "done",
+      "discovered_from": "user_request",
+      "artifacts": [
+        "screenshots/content-videos-tab.png",
+        "screenshots/content-shorts-tab.png",
+        "screenshots/content-live-tab.png",
+        "screenshots/content-posts-tab.png",
+        "screenshots/content-playlists-tab.png",
+        "screenshots/content-podcasts-tab.png",
+        "screenshots/content-promotions-tab.png",
+        "screenshots/content-collaborations-tab.png",
+        "snapshots/content-videos-tab.md"
+      ]
+    },
+    {
+      "id": 2,
+      "url": "https://studio.youtube.com/video/kziDjgXLyN0/edit",
+      "page": "video-edit-details",
+      "depth": 1,
+      "status": "done",
+      "discovered_from": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/content",
+      "artifacts": [
+        "screenshots/video-edit-details-tab.png",
+        "snapshots/video-edit-details-tab.md"
+      ]
+    },
+    {
+      "id": 3,
+      "url": "https://studio.youtube.com/video/kziDjgXLyN0/analytics/tab-overview/period-default",
+      "page": "video-edit-analytics",
+      "depth": 1,
+      "status": "done",
+      "discovered_from": "https://studio.youtube.com/video/kziDjgXLyN0/edit",
+      "artifacts": [
+        "screenshots/video-edit-analytics-tab.png"
+      ]
+    },
+    {
+      "id": 4,
+      "url": "https://studio.youtube.com/video/kziDjgXLyN0/comments/inbox",
+      "page": "video-edit-comments",
+      "depth": 1,
+      "status": "done",
+      "discovered_from": "https://studio.youtube.com/video/kziDjgXLyN0/edit",
+      "artifacts": [
+        "screenshots/video-edit-comments-tab.png"
+      ]
+    },
+    {
+      "id": 5,
+      "url": "https://studio.youtube.com/video/kziDjgXLyN0/editor",
+      "page": "video-edit-editor",
+      "depth": 1,
+      "status": "done",
+      "discovered_from": "https://studio.youtube.com/video/kziDjgXLyN0/edit",
+      "artifacts": [
+        "screenshots/video-edit-editor-tab.png"
+      ]
+    },
+    {
+      "id": 6,
+      "url": "https://studio.youtube.com/video/kziDjgXLyN0/copyright",
+      "page": "video-edit-copyright",
+      "depth": 1,
+      "status": "done",
+      "discovered_from": "https://studio.youtube.com/video/kziDjgXLyN0/edit",
+      "artifacts": [
+        "screenshots/video-edit-copyright-tab.png"
+      ]
+    },
+    {
+      "id": 7,
+      "url": "https://studio.youtube.com/video/kziDjgXLyN0/clips",
+      "page": "video-edit-clips",
+      "depth": 1,
+      "status": "done",
+      "discovered_from": "https://studio.youtube.com/video/kziDjgXLyN0/edit",
+      "artifacts": [
+        "screenshots/video-edit-clips-tab.png"
+      ]
+    },
+    {
+      "id": 8,
+      "url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/videos/short",
+      "page": "content-shorts",
+      "depth": 1,
+      "status": "done",
+      "discovered_from": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/content",
+      "artifacts": []
+    },
+    {
+      "id": 9,
+      "url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/videos/live",
+      "page": "content-live",
+      "depth": 1,
+      "status": "done",
+      "discovered_from": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/content",
+      "artifacts": []
+    },
+    {
+      "id": 10,
+      "url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/content/posts",
+      "page": "content-posts",
+      "depth": 1,
+      "status": "done",
+      "discovered_from": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/content",
+      "artifacts": []
+    },
+    {
+      "id": 11,
+      "url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/content/playlists",
+      "page": "content-playlists",
+      "depth": 1,
+      "status": "done",
+      "discovered_from": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/content",
+      "artifacts": []
+    },
+    {
+      "id": 12,
+      "url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/content/podcasts",
+      "page": "content-podcasts",
+      "depth": 1,
+      "status": "done",
+      "discovered_from": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/content",
+      "artifacts": []
+    },
+    {
+      "id": 13,
+      "url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/content/promotions",
+      "page": "content-promotions",
+      "depth": 1,
+      "status": "done",
+      "discovered_from": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/content",
+      "artifacts": []
+    },
+    {
+      "id": 14,
+      "url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/videos/collaboration",
+      "page": "content-collaborations",
+      "depth": 1,
+      "status": "done",
+      "discovered_from": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/content",
+      "artifacts": []
+    },
+    {
+      "id": 15,
+      "url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/livestreaming",
+      "page": "livestreaming",
+      "depth": 2,
+      "status": "done",
+      "discovered_from": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/videos/live",
+      "artifacts": [
+        "screenshots/livestreaming-page.png",
+        "screenshots/livestreaming-settings-dialog.png",
+        "screenshots/livestreaming-request-access.png",
+        "screenshots/livestreaming-feedback-dialog.png",
+        "snapshots/livestreaming-page.md",
+        "summaries/livestreaming-summary.md"
+      ]
+    },
+    {
+      "id": 16,
+      "url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA",
+      "page": "dashboard",
+      "depth": 0,
+      "status": "done",
+      "discovered_from": "sidebar",
+      "artifacts": [
+        "screenshots/dashboard-full.png",
+        "screenshots/dashboard-views-metric-selected.png",
+        "screenshots/dashboard-create-menu.png",
+        "snapshots/dashboard-snapshot.md",
+        "summaries/dashboard-summary.md"
+      ]
+    },
+    {
+      "id": 17,
+      "url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/analytics/tab-overview/period-default",
+      "page": "analytics",
+      "depth": 1,
+      "status": "done",
+      "discovered_from": "sidebar",
+      "artifacts": [
+        "screenshots/analytics-overview-tab-full.png",
+        "screenshots/analytics-content-tab-full.png",
+        "screenshots/analytics-audience-tab-full.png",
+        "screenshots/analytics-trends-tab-full.png",
+        "screenshots/analytics-time-period-dropdown.png",
+        "screenshots/analytics-watch-time-metric.png",
+        "snapshots/analytics-overview-tab-snapshot.md",
+        "summaries/analytics-summary.md"
+      ]
+    },
+    {
+      "id": 18,
+      "url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/comments/inbox",
+      "page": "community",
+      "depth": 1,
+      "status": "done",
+      "discovered_from": "sidebar",
+      "artifacts": [
+        "screenshots/community/community-published-tab-full.png",
+        "screenshots/community/community-moderation-dropdown.png",
+        "screenshots/community/community-held-tab-empty.png",
+        "screenshots/community/community-sort-by-dropdown.png",
+        "screenshots/community/community-filter-test.png",
+        "screenshots/community/community-action-menu.png",
+        "screenshots/community/community-response-status-dropdown.png",
+        "screenshots/community/community-viewer-posts-tab-full.png",
+        "screenshots/community/community-mentions-tab-empty.png",
+        "screenshots/community/community-reply-interface.png",
+        "screenshots/community/community-replies-expanded.png",
+        "snapshots/community/community-published-tab-snapshot.md",
+        "summaries/community-summary.md"
+      ]
+    },
+    {
+      "id": 19,
+      "url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/subtitles",
+      "page": "subtitles",
+      "depth": 1,
+      "status": "done",
+      "discovered_from": "sidebar",
+      "artifacts": [
+        "screenshots/subtitles/subtitles-full.png",
+        "screenshots/subtitles/subtitles-video-detail-full.png",
+        "screenshots/subtitles/subtitles-language-dropdown.png",
+        "screenshots/subtitles/subtitles-language-selected.png",
+        "screenshots/subtitles/subtitles-add-language-view.png",
+        "screenshots/subtitles/subtitles-add-language-dropdown.png",
+        "snapshots/subtitles/subtitles-snapshot.md",
+        "summaries/subtitles-summary.md"
+      ]
+    },
+    {
+      "id": 20,
+      "url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/content-detection",
+      "page": "content-detection",
+      "depth": 1,
+      "status": "done",
+      "discovered_from": "sidebar",
+      "artifacts": [
+        "screenshots/content-detection/content-detection-final-full.png",
+        "screenshots/content-detection/content-detection-loaded-full.png",
+        "screenshots/content-detection/content-detection-viewport.png",
+        "screenshots/content-detection/content-detection-error.png",
+        "snapshots/content-detection/content-detection-snapshot.md",
+        "summaries/content-detection-summary.md"
+      ]
+    },
+    {
+      "id": 21,
+      "url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/monetization",
+      "page": "earn",
+      "depth": 1,
+      "status": "done",
+      "discovered_from": "sidebar",
+      "artifacts": [
+        "screenshots/earn/earn-overview-full.png",
+        "screenshots/earn/earn-supers-expanded-full.png",
+        "screenshots/earn/earn-shopping-expanded-full.png",
+        "screenshots/earn/earn-shorts-feed-ads-expanded-full.png",
+        "screenshots/earn/earn-get-notified-clicked-full.png",
+        "snapshots/earn/earn-overview-snapshot.md",
+        "summaries/earn-summary.md"
+      ]
+    },
+    {
+      "id": 22,
+      "url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/customization",
+      "page": "customization",
+      "depth": 1,
+      "status": "done",
+      "discovered_from": "sidebar",
+      "artifacts": [
+        "screenshots/customization/customization-profile-tab-full.png",
+        "screenshots/customization/customization-home-tab-full.png",
+        "screenshots/customization/customization-home-tab-enabled-full.png",
+        "screenshots/customization/customization-for-you-options-menu.png",
+        "screenshots/customization/customization-add-section-menu.png",
+        "screenshots/customization/customization-pronoun-selection.png",
+        "screenshots/customization/customization-add-link-form.png",
+        "snapshots/customization/customization-profile-tab-snapshot.md",
+        "snapshots/customization/customization-profile-tab-final-snapshot.md",
+        "summaries/customization-summary.md"
+      ]
+    },
+    {
+      "id": 23,
+      "url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/audiolibrary",
+      "page": "audio-library",
+      "depth": 1,
+      "status": "done",
+      "discovered_from": "sidebar",
+      "artifacts": [
+        "screenshots/audio-library/audio-library-music-tab-full.png",
+        "screenshots/audio-library/audio-library-sound-effects-tab-full.png",
+        "screenshots/audio-library/audio-library-starred-tab-full.png",
+        "screenshots/audio-library/audio-library-starred-tab-with-track-full.png",
+        "screenshots/audio-library/audio-library-filtered-by-genre-full.png",
+        "screenshots/audio-library/audio-library-filtered-by-mood-full.png",
+        "screenshots/audio-library/audio-library-track-starred-full.png",
+        "screenshots/audio-library/audio-library-error.png",
+        "snapshots/audio-library/audio-library-music-tab-snapshot.md",
+        "summaries/audio-library-summary.md"
+      ]
+    },
+    {
+      "id": 24,
+      "url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/settings",
+      "page": "settings",
+      "depth": 1,
+      "status": "done",
+      "discovered_from": "sidebar",
+      "artifacts": [
+        "screenshots/settings/settings-general-tab.png",
+        "screenshots/settings/settings-channel-basic-info.png",
+        "screenshots/settings/settings-channel-advanced.png",
+        "screenshots/settings/settings-channel-feature-eligibility.png",
+        "screenshots/settings/settings-upload-defaults-basic.png",
+        "screenshots/settings/settings-upload-defaults-advanced.png",
+        "screenshots/settings/settings-permissions.png",
+        "screenshots/settings/settings-community-moderation-content-controls.png",
+        "screenshots/settings/settings-community-moderation-user-management.png",
+        "screenshots/settings/settings-community-moderation-channel-guidelines.png",
+        "screenshots/settings/settings-agreements.png",
+        "screenshots/settings/settings-country-dropdown.png",
+        "snapshots/settings/settings-general-tab.md",
+        "summaries/settings-summary.md"
+      ]
+    }
+  ]
+}

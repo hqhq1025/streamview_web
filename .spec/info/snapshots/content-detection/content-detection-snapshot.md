@@ -1,0 +1,103 @@
+### Page state
+- Page URL: https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/copyright
+- Page Title: Content detection - YouTube Studio
+- Page Snapshot:
+```yaml
+- generic [ref=e1]:
+  - generic:
+    - generic [ref=e2]: Channel content
+    - generic [ref=e4]:
+      - banner [ref=e6]:
+        - button "Collapse menu" [ref=e7] [cursor=pointer]:
+          - generic [ref=e10]:
+            - img
+        - link "YouTube Studio dashboard" [ref=e12] [cursor=pointer]:
+          - /url: /channel/UCtxQrYzeMBCKMAofCgcY5dA
+        - button "Skip navigation" [ref=e15] [cursor=pointer]:
+          - generic [ref=e16]: Skip navigation
+        - generic [ref=e21]:
+          - generic [ref=e24]:
+            - img
+          - textbox "Search across your channel" [ref=e26]
+        - generic [ref=e28]:
+          - generic [ref=e29]:
+            - button "Help" [ref=e31] [cursor=pointer]:
+              - generic [ref=e34]:
+                - img
+            - button "Notifications" [ref=e36] [cursor=pointer]:
+              - generic [ref=e39]:
+                - img
+          - button "Create" [ref=e42] [cursor=pointer]:
+            - generic [ref=e46]:
+              - img
+            - generic [ref=e47]: Create
+          - generic "Account" [ref=e51]:
+            - button "Account" [ref=e52]
+      - generic [ref=e54]:
+        - navigation [ref=e56]:
+          - generic [ref=e57]:
+            - generic:
+              - img "Tony zhou" [ref=e67]
+              - generic [ref=e68]:
+                - generic [ref=e69]: Your channel
+                - generic [ref=e70]: Tony zhou
+          - menu [ref=e72]:
+            - menuitem "Dashboard" [ref=e73] [cursor=pointer]:
+              - button "Dashboard" [ref=e74]:
+                - generic [ref=e78]:
+                  - img
+                - generic [ref=e79]: Dashboard
+            - menuitem "Content" [ref=e80] [cursor=pointer]:
+              - button "Content" [ref=e81]:
+                - generic [ref=e85]:
+                  - img
+                - generic [ref=e86]: Content
+            - menuitem "Analytics" [ref=e87] [cursor=pointer]:
+              - button "Analytics" [ref=e88]:
+                - generic [ref=e92]:
+                  - img
+                - generic [ref=e93]: Analytics
+            - menuitem "Community" [ref=e94] [cursor=pointer]:
+              - button "Community" [ref=e95]:
+                - generic [ref=e99]:
+                  - img
+                - generic [ref=e100]: Community
+            - menuitem "Subtitles" [ref=e101] [cursor=pointer]:
+              - button "Subtitles" [ref=e102]:
+                - generic [ref=e106]:
+                  - img
+                - generic [ref=e107]: Subtitles
+            - menuitem "Content detection" [ref=e108] [cursor=pointer]:
+              - button "Content detection" [active] [ref=e109]:
+                - generic [ref=e158]:
+                  - img
+                - generic [ref=e114]: Content detection
+            - menuitem "Earn" [ref=e115] [cursor=pointer]:
+              - button "Earn" [ref=e116]:
+                - generic [ref=e120]:
+                  - img
+                - generic [ref=e121]: Earn
+            - menuitem "Customization" [ref=e122] [cursor=pointer]:
+              - button "Customization" [ref=e123]:
+                - generic [ref=e127]:
+                  - img
+                - generic [ref=e128]: Customization
+            - menuitem "Audio library" [ref=e129] [cursor=pointer]:
+              - button "Audio library" [ref=e130]:
+                - generic [ref=e134]:
+                  - img
+                - generic [ref=e135]: Audio library
+          - list [ref=e137]:
+            - listitem [ref=e138]:
+              - button "Settings" [ref=e139] [cursor=pointer]:
+                - generic [ref=e143]:
+                  - img
+                - generic [ref=e144]: Settings
+            - listitem [ref=e145]:
+              - button "Send feedback" [ref=e147] [cursor=pointer]:
+                - generic [ref=e151]:
+                  - img
+                - generic [ref=e152]: Send feedback
+        - main [ref=e153]:
+          - heading "Channel content" [level=1] [ref=e157]
+```

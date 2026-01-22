@@ -1,0 +1,67 @@
+
+> frontend@0.0.0 dev
+> vite --host --port 5173
+
+
+  VITE v7.3.0  ready in 121 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: http://192.168.5.25:5173/
+  ➜  Network: http://100.66.66.45:5173/
+  ➜  Network: http://172.18.0.1:5173/
+  ➜  Network: http://172.19.0.1:5173/
+19:58:00 [vite] (client) hmr update /src/studio/components/Analytics.jsx, /src/index.css
+19:58:39 [vite] (client) hmr update /src/components/Sidebar.jsx, /src/index.css
+19:58:49 [vite] (client) hmr update /src/components/Sidebar.jsx, /src/index.css
+20:00:03 [vite] (client) hmr update /src/studio/StudioApp.jsx, /src/index.css
+20:04:12 [vite] (client) hmr update /src/components/Sidebar.jsx, /src/index.css
+20:04:18 [vite] (client) hmr update /src/components/Sidebar.jsx, /src/index.css
+20:08:52 [vite] (client) hmr update /src/studio/components/TopBar.jsx, /src/index.css
+20:08:58 [vite] (client) hmr update /src/studio/components/TopBar.jsx, /src/index.css
+20:09:22 [vite] (client) hmr update /src/studio/components/TopBar.jsx, /src/index.css
+20:09:43 [vite] (client) hmr update /src/studio/components/TopBar.jsx, /src/index.css
+20:25:41 [vite] (client) hmr update /src/App.jsx, /src/index.css
+20:25:49 [vite] (client) hmr update /src/App.jsx, /src/index.css
+20:25:58 [vite] (client) hmr update /src/pages/LibraryPage.jsx, /src/index.css
+20:30:53 [vite] (client) hmr update /src/components/Header.jsx, /src/index.css
+20:31:03 [vite] (client) hmr update /src/components/Header.jsx, /src/index.css
+20:31:08 [vite] (client) hmr update /src/components/Header.jsx, /src/index.css
+20:31:14 [vite] (client) hmr update /src/components/Header.jsx, /src/index.css
+20:31:27 [vite] (client) hmr update /src/components/Header.css
+20:32:47 [vite] (client) hmr update /src/components/Header.jsx, /src/index.css
+20:32:54 [vite] (client) hmr update /src/components/Header.jsx, /src/index.css
+20:36:33 [vite] (client) hmr update /src/studio/StudioApp.jsx, /src/index.css
+20:36:42 [vite] (client) hmr update /src/studio/StudioApp.jsx, /src/index.css
+20:36:53 [vite] (client) hmr update /src/studio/StudioApp.jsx, /src/index.css
+20:37:08 [vite] (client) hmr update /src/studio/StudioApp.jsx, /src/index.css
+20:39:07 [vite] (client) hmr update /src/studio/components/Dashboard.jsx, /src/index.css
+20:43:36 [vite] (client) hmr update /src/studio/StudioApp.jsx, /src/index.css
+20:43:43 [vite] (client) hmr update /src/studio/StudioApp.jsx, /src/index.css
+20:43:51 [vite] (client) hmr update /src/studio/StudioApp.jsx, /src/index.css
+20:43:59 [vite] (client) hmr update /src/studio/StudioApp.jsx, /src/index.css
+20:44:19 [vite] (client) hmr update /src/studio/StudioApp.jsx, /src/index.css
+20:44:33 [vite] (client) hmr update /src/studio/components/Dashboard.jsx, /src/index.css
+20:44:40 [vite] (client) hmr update /src/studio/components/Dashboard.jsx, /src/index.css
+20:44:44 [vite] (client) hmr update /src/studio/components/Dashboard.jsx, /src/index.css
+20:44:52 [vite] (client) hmr update /src/studio/StudioApp.jsx, /src/index.css
+20:51:24 [vite] (client) hmr update /src/studio/StudioApp.jsx, /src/index.css
+20:51:29 [vite] (client) hmr update /src/studio/StudioApp.jsx, /src/index.css
+20:51:38 [vite] (client) hmr update /src/studio/StudioApp.jsx, /src/index.css
+20:51:56 [vite] (client) hmr update /src/studio/StudioApp.jsx, /src/index.css
+20:57:59 [vite] (client) hmr update /src/studio/components/Content.jsx, /src/index.css
+20:58:12 [vite] (client) hmr update /src/studio/components/Content.jsx, /src/index.css
+20:58:23 [vite] (client) hmr update /src/studio/components/Content.jsx, /src/index.css
+20:58:37 [vite] (client) hmr update /src/studio/components/Content.jsx, /src/index.css
+20:58:43 [vite] (client) hmr update /src/studio/components/Content.jsx, /src/index.css
+20:58:50 [vite] (client) hmr update /src/studio/components/Content.jsx, /src/index.css
+20:59:21 [vite] (client) hmr update /src/studio/components/Content.jsx, /src/index.css
+20:59:32 [vite] (client) hmr update /src/studio/components/Content.jsx, /src/index.css
+20:59:52 [vite] (client) hmr update /src/index.css, /src/studio/components/LiveStreaming.jsx
+21:00:06 [vite] (client) hmr update /src/index.css, /src/studio/components/LiveStreaming.jsx
+21:00:47 [vite] (client) hmr update /src/studio/components/VideoEdit.jsx, /src/index.css
+21:00:53 [vite] (client) hmr update /src/studio/components/VideoEdit.jsx, /src/index.css
+21:01:19 [vite] (client) hmr update /src/studio/components/VideoEdit.jsx, /src/index.css
+21:01:56 [vite] (client) hmr update /src/studio/components/VideoEdit.jsx, /src/index.css
+21:02:02 [vite] (client) hmr update /src/studio/components/VideoEdit.jsx, /src/index.css
+21:02:13 [vite] (client) hmr update /src/studio/components/VideoEdit.jsx, /src/index.css
+Killed

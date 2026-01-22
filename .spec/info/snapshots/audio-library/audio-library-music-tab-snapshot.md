@@ -1,0 +1,1257 @@
+### Page state
+- Page URL: https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/music
+- Page Title: Audio library - YouTube Studio
+- Page Snapshot:
+```yaml
+- generic [active] [ref=e1]:
+  - generic:
+    - generic [ref=e2]: All changes saved.
+    - generic [ref=e4]:
+      - banner [ref=e6]:
+        - button "Collapse menu" [ref=e7] [cursor=pointer]:
+          - generic [ref=e10]:
+            - img
+        - link "YouTube Studio dashboard" [ref=e12] [cursor=pointer]:
+          - /url: /channel/UCtxQrYzeMBCKMAofCgcY5dA
+        - button "Skip navigation" [ref=e15] [cursor=pointer]:
+          - generic [ref=e16]: Skip navigation
+        - generic [ref=e21]:
+          - generic [ref=e24]:
+            - img
+          - textbox "Search across your channel" [ref=e26]
+        - generic [ref=e28]:
+          - generic [ref=e29]:
+            - button "Help" [ref=e31] [cursor=pointer]:
+              - generic [ref=e34]:
+                - img
+            - button "Notifications" [ref=e36] [cursor=pointer]:
+              - generic [ref=e39]:
+                - img
+          - button "Create" [ref=e42] [cursor=pointer]:
+            - generic [ref=e46]:
+              - img
+            - generic [ref=e47]: Create
+          - generic "Account" [ref=e51]:
+            - button "Account" [ref=e52]
+      - generic [ref=e54]:
+        - navigation [ref=e56]:
+          - generic [ref=e57]:
+            - generic:
+              - img "Tony zhou" [ref=e60]
+              - generic [ref=e61]:
+                - generic [ref=e62]: Your channel
+                - generic [ref=e63]: Tony zhou
+          - menu [ref=e65]:
+            - menuitem "Dashboard" [ref=e66] [cursor=pointer]:
+              - button "Dashboard" [ref=e67]:
+                - generic [ref=e406]:
+                  - img
+                - generic [ref=e72]: Dashboard
+            - menuitem "Content" [ref=e73] [cursor=pointer]:
+              - button "Content" [ref=e74]:
+                - generic [ref=e78]:
+                  - img
+                - generic [ref=e79]: Content
+            - menuitem "Analytics" [ref=e80] [cursor=pointer]:
+              - button "Analytics" [ref=e81]:
+                - generic [ref=e85]:
+                  - img
+                - generic [ref=e86]: Analytics
+            - menuitem "Community" [ref=e87] [cursor=pointer]:
+              - button "Community" [ref=e88]:
+                - generic [ref=e92]:
+                  - img
+                - generic [ref=e93]: Community
+            - menuitem "Subtitles" [ref=e94] [cursor=pointer]:
+              - button "Subtitles" [ref=e95]:
+                - generic [ref=e99]:
+                  - img
+                - generic [ref=e100]: Subtitles
+            - menuitem "Content detection" [ref=e101] [cursor=pointer]:
+              - button "Content detection" [ref=e102]:
+                - generic [ref=e106]:
+                  - img
+                - generic [ref=e107]: Content detection
+            - menuitem "Earn" [ref=e108] [cursor=pointer]:
+              - button "Earn" [ref=e109]:
+                - generic [ref=e113]:
+                  - img
+                - generic [ref=e114]: Earn
+            - menuitem "Customization" [ref=e115] [cursor=pointer]:
+              - button "Customization" [ref=e116]:
+                - generic [ref=e120]:
+                  - img
+                - generic [ref=e121]: Customization
+            - menuitem "Audio library" [ref=e122] [cursor=pointer]:
+              - button "Audio library" [ref=e123]:
+                - generic [ref=e407]:
+                  - img
+                - generic [ref=e128]: Audio library
+          - list [ref=e130]:
+            - listitem [ref=e131]:
+              - button "Settings" [ref=e132] [cursor=pointer]:
+                - generic [ref=e136]:
+                  - img
+                - generic [ref=e137]: Settings
+            - listitem [ref=e138]:
+              - button "Send feedback" [ref=e140] [cursor=pointer]:
+                - generic [ref=e144]:
+                  - img
+                - generic [ref=e145]: Send feedback
+        - main [ref=e146]:
+          - generic [ref=e147]:
+            - heading "Audio library" [level=1] [ref=e408]
+            - generic [ref=e410]:
+              - tablist [ref=e437]:
+                - generic [ref=e439]:
+                  - tab "Music" [selected] [ref=e441] [cursor=pointer]:
+                    - generic [ref=e443]: Music
+                  - tab "Sound effects" [ref=e444] [cursor=pointer]:
+                    - generic [ref=e446]: Sound effects
+                  - tab "Starred" [ref=e447] [cursor=pointer]:
+                    - generic [ref=e449]: Starred
+              - generic [ref=e450]:
+                - generic [ref=e451]:
+                  - generic [ref=e456]:
+                    - generic [ref=e459] [cursor=pointer]:
+                      - img
+                    - textbox "Search or filter library" [ref=e462]
+                  - row "Track title Genre Mood Artist Duration License type Added" [ref=e463]:
+                    - columnheader [ref=e464]:
+                      - heading [level=3]
+                    - columnheader "Track title" [ref=e465]:
+                      - heading "Track title" [level=3] [ref=e466]:
+                        - button "Track title" [ref=e467] [cursor=pointer]:
+                          - generic [ref=e468]: Track title
+                    - columnheader "Genre" [ref=e469]:
+                      - heading "Genre" [level=3] [ref=e470]:
+                        - generic [ref=e471]: Genre
+                    - columnheader "Mood" [ref=e472]:
+                      - heading "Mood" [level=3] [ref=e473]:
+                        - generic [ref=e474]: Mood
+                    - columnheader "Artist" [ref=e475]:
+                      - heading "Artist" [level=3] [ref=e476]:
+                        - button "Artist" [ref=e477] [cursor=pointer]:
+                          - generic [ref=e478]: Artist
+                    - columnheader "Duration" [ref=e479]:
+                      - heading "Duration" [level=3] [ref=e480]:
+                        - button "Duration" [ref=e481] [cursor=pointer]:
+                          - generic [ref=e482]: Duration
+                    - columnheader "License type" [ref=e483]:
+                      - heading "License type" [level=3] [ref=e484]:
+                        - generic [ref=e485]: License type
+                    - columnheader "Added" [ref=e486]:
+                      - heading "Added" [level=3] [ref=e487]:
+                        - button "Added" [ref=e488] [cursor=pointer]:
+                          - generic [ref=e489]: Added
+                          - generic [ref=e492]:
+                            - img
+                - generic [ref=e493]:
+                  - generic [ref=e495]:
+                    - generic [ref=e496]:
+                      - button "Play audio track On The Flip" [ref=e497] [cursor=pointer]:
+                        - generic [ref=e500]:
+                          - img
+                      - button "Add star On The Flip" [ref=e501] [cursor=pointer]:
+                        - generic [ref=e504]:
+                          - img
+                    - generic [ref=e506]: On The Flip
+                    - generic [ref=e507]:
+                      - generic [ref=e508]: Hip-Hop & Rap
+                      - button "Filter by this genre" [ref=e509] [cursor=pointer]:
+                        - generic [ref=e512]:
+                          - img
+                    - generic [ref=e513]:
+                      - generic [ref=e514]: Calm
+                      - button "Filter by this mood" [ref=e515] [cursor=pointer]:
+                        - generic [ref=e518]:
+                          - img
+                    - generic [ref=e519]:
+                      - link "The Grey Room / Density & Time" [ref=e522] [cursor=pointer]:
+                        - /url: https://www.youtube.com/channel/UCoOTOoAbEhY-WD_XhkvJBJg/
+                        - generic [ref=e523]: The Grey Room / Density & Time
+                        - generic [ref=e526]:
+                          - img
+                      - button "Filter by this artist" [ref=e527] [cursor=pointer]:
+                        - generic [ref=e530]:
+                          - img
+                    - generic [ref=e532]: 3:02
+                    - button "YouTube Audio Library License" [ref=e535] [cursor=pointer]:
+                      - generic [ref=e538]:
+                        - img
+                    - generic [ref=e539]:
+                      - generic [ref=e540]: Aug 2025
+                      - button "Download" [ref=e544] [cursor=pointer]:
+                        - generic [ref=e545]: Download
+                  - generic [ref=e550]:
+                    - generic [ref=e551]:
+                      - button "Play audio track By Myself" [ref=e552] [cursor=pointer]:
+                        - generic [ref=e555]:
+                          - img
+                      - button "Add star By Myself" [ref=e556] [cursor=pointer]:
+                        - generic [ref=e559]:
+                          - img
+                    - generic [ref=e561]: By Myself
+                    - generic [ref=e562]:
+                      - generic [ref=e563]: R&B & Soul
+                      - button "Filter by this genre" [ref=e564] [cursor=pointer]:
+                        - generic [ref=e567]:
+                          - img
+                    - generic [ref=e568]:
+                      - generic [ref=e569]: Sad
+                      - button "Filter by this mood" [ref=e570] [cursor=pointer]:
+                        - generic [ref=e573]:
+                          - img
+                    - generic [ref=e574]:
+                      - link "The Grey Room / Clark Sims" [ref=e577] [cursor=pointer]:
+                        - /url: https://www.youtube.com/channel/UCGm39mho4T9_A8X3EshV7fg/
+                        - generic [ref=e578]: The Grey Room / Clark Sims
+                        - generic [ref=e581]:
+                          - img
+                      - button "Filter by this artist" [ref=e582] [cursor=pointer]:
+                        - generic [ref=e585]:
+                          - img
+                    - generic [ref=e587]: 2:54
+                    - button "YouTube Audio Library License" [ref=e590] [cursor=pointer]:
+                      - generic [ref=e593]:
+                        - img
+                    - generic [ref=e594]:
+                      - generic [ref=e595]: Aug 2025
+                      - button "Download" [ref=e599] [cursor=pointer]:
+                        - generic [ref=e600]: Download
+                  - generic [ref=e605]:
+                    - generic [ref=e606]:
+                      - button "Play audio track Resolution Or Reflection" [ref=e607] [cursor=pointer]:
+                        - generic [ref=e610]:
+                          - img
+                      - button "Add star Resolution Or Reflection" [ref=e611] [cursor=pointer]:
+                        - generic [ref=e614]:
+                          - img
+                    - generic [ref=e616]: Resolution Or Reflection
+                    - generic [ref=e617]:
+                      - generic [ref=e618]: R&B & Soul
+                      - button "Filter by this genre" [ref=e619] [cursor=pointer]:
+                        - generic [ref=e622]:
+                          - img
+                    - generic [ref=e623]:
+                      - generic [ref=e624]: Calm
+                      - button "Filter by this mood" [ref=e625] [cursor=pointer]:
+                        - generic [ref=e628]:
+                          - img
+                    - generic [ref=e629]:
+                      - link "The Grey Room / Clark Sims" [ref=e632] [cursor=pointer]:
+                        - /url: https://www.youtube.com/channel/UCGm39mho4T9_A8X3EshV7fg/
+                        - generic [ref=e633]: The Grey Room / Clark Sims
+                        - generic [ref=e636]:
+                          - img
+                      - button "Filter by this artist" [ref=e637] [cursor=pointer]:
+                        - generic [ref=e640]:
+                          - img
+                    - generic [ref=e642]: 2:58
+                    - button "YouTube Audio Library License" [ref=e645] [cursor=pointer]:
+                      - generic [ref=e648]:
+                        - img
+                    - generic [ref=e649]:
+                      - generic [ref=e650]: Aug 2025
+                      - button "Download" [ref=e654] [cursor=pointer]:
+                        - generic [ref=e655]: Download
+                  - generic [ref=e660]:
+                    - generic [ref=e661]:
+                      - button "Play audio track Down The Rabbit Hole" [ref=e662] [cursor=pointer]:
+                        - generic [ref=e665]:
+                          - img
+                      - button "Add star Down The Rabbit Hole" [ref=e666] [cursor=pointer]:
+                        - generic [ref=e669]:
+                          - img
+                    - generic [ref=e671]: Down The Rabbit Hole
+                    - generic [ref=e672]:
+                      - generic [ref=e673]: Hip-Hop & Rap
+                      - button "Filter by this genre" [ref=e674] [cursor=pointer]:
+                        - generic [ref=e677]:
+                          - img
+                    - generic [ref=e678]:
+                      - generic [ref=e679]: Sad
+                      - button "Filter by this mood" [ref=e680] [cursor=pointer]:
+                        - generic [ref=e683]:
+                          - img
+                    - generic [ref=e684]:
+                      - link "The Grey Room / Density & Time" [ref=e687] [cursor=pointer]:
+                        - /url: https://www.youtube.com/channel/UCoOTOoAbEhY-WD_XhkvJBJg/
+                        - generic [ref=e688]: The Grey Room / Density & Time
+                        - generic [ref=e691]:
+                          - img
+                      - button "Filter by this artist" [ref=e692] [cursor=pointer]:
+                        - generic [ref=e695]:
+                          - img
+                    - generic [ref=e697]: 3:04
+                    - button "YouTube Audio Library License" [ref=e700] [cursor=pointer]:
+                      - generic [ref=e703]:
+                        - img
+                    - generic [ref=e704]:
+                      - generic [ref=e705]: Aug 2025
+                      - button "Download" [ref=e709] [cursor=pointer]:
+                        - generic [ref=e710]: Download
+                  - generic [ref=e715]:
+                    - generic [ref=e716]:
+                      - button "Play audio track Claim To Fame" [ref=e717] [cursor=pointer]:
+                        - generic [ref=e720]:
+                          - img
+                      - button "Add star Claim To Fame" [ref=e721] [cursor=pointer]:
+                        - generic [ref=e724]:
+                          - img
+                    - generic [ref=e726]: Claim To Fame
+                    - generic [ref=e727]:
+                      - generic [ref=e728]: R&B & Soul
+                      - button "Filter by this genre" [ref=e729] [cursor=pointer]:
+                        - generic [ref=e732]:
+                          - img
+                    - generic [ref=e733]:
+                      - generic [ref=e734]: Funky
+                      - button "Filter by this mood" [ref=e735] [cursor=pointer]:
+                        - generic [ref=e738]:
+                          - img
+                    - generic [ref=e739]:
+                      - link "The Grey Room / Clark Sims" [ref=e742] [cursor=pointer]:
+                        - /url: https://www.youtube.com/channel/UCGm39mho4T9_A8X3EshV7fg/
+                        - generic [ref=e743]: The Grey Room / Clark Sims
+                        - generic [ref=e746]:
+                          - img
+                      - button "Filter by this artist" [ref=e747] [cursor=pointer]:
+                        - generic [ref=e750]:
+                          - img
+                    - generic [ref=e752]: 3:23
+                    - button "YouTube Audio Library License" [ref=e755] [cursor=pointer]:
+                      - generic [ref=e758]:
+                        - img
+                    - generic [ref=e759]:
+                      - generic [ref=e760]: Aug 2025
+                      - button "Download" [ref=e764] [cursor=pointer]:
+                        - generic [ref=e765]: Download
+                  - generic [ref=e770]:
+                    - generic [ref=e771]:
+                      - button "Play audio track In The Morning" [ref=e772] [cursor=pointer]:
+                        - generic [ref=e775]:
+                          - img
+                      - button "Add star In The Morning" [ref=e776] [cursor=pointer]:
+                        - generic [ref=e779]:
+                          - img
+                    - generic [ref=e781]: In The Morning
+                    - generic [ref=e782]:
+                      - generic [ref=e783]: R&B & Soul
+                      - button "Filter by this genre" [ref=e784] [cursor=pointer]:
+                        - generic [ref=e787]:
+                          - img
+                    - generic [ref=e788]:
+                      - generic [ref=e789]: Funky
+                      - button "Filter by this mood" [ref=e790] [cursor=pointer]:
+                        - generic [ref=e793]:
+                          - img
+                    - generic [ref=e794]:
+                      - link "The Grey Room / Clark Sims" [ref=e797] [cursor=pointer]:
+                        - /url: https://www.youtube.com/channel/UCGm39mho4T9_A8X3EshV7fg/
+                        - generic [ref=e798]: The Grey Room / Clark Sims
+                        - generic [ref=e801]:
+                          - img
+                      - button "Filter by this artist" [ref=e802] [cursor=pointer]:
+                        - generic [ref=e805]:
+                          - img
+                    - generic [ref=e807]: 2:58
+                    - button "YouTube Audio Library License" [ref=e810] [cursor=pointer]:
+                      - generic [ref=e813]:
+                        - img
+                    - generic [ref=e814]:
+                      - generic [ref=e815]: Aug 2025
+                      - button "Download" [ref=e819] [cursor=pointer]:
+                        - generic [ref=e820]: Download
+                  - generic [ref=e825]:
+                    - generic [ref=e826]:
+                      - button "Play audio track Purple Desire" [ref=e827] [cursor=pointer]:
+                        - generic [ref=e830]:
+                          - img
+                      - button "Add star Purple Desire" [ref=e831] [cursor=pointer]:
+                        - generic [ref=e834]:
+                          - img
+                    - generic [ref=e836]: Purple Desire
+                    - generic [ref=e837]:
+                      - generic [ref=e838]: Pop
+                      - button "Filter by this genre" [ref=e839] [cursor=pointer]:
+                        - generic [ref=e842]:
+                          - img
+                    - generic [ref=e843]:
+                      - generic [ref=e844]: Bright
+                      - button "Filter by this mood" [ref=e845] [cursor=pointer]:
+                        - generic [ref=e848]:
+                          - img
+                    - generic [ref=e849]:
+                      - link "The Grey Room / Clark Sims" [ref=e852] [cursor=pointer]:
+                        - /url: https://www.youtube.com/channel/UCGm39mho4T9_A8X3EshV7fg/
+                        - generic [ref=e853]: The Grey Room / Clark Sims
+                        - generic [ref=e856]:
+                          - img
+                      - button "Filter by this artist" [ref=e857] [cursor=pointer]:
+                        - generic [ref=e860]:
+                          - img
+                    - generic [ref=e862]: 3:09
+                    - button "YouTube Audio Library License" [ref=e865] [cursor=pointer]:
+                      - generic [ref=e868]:
+                        - img
+                    - generic [ref=e869]:
+                      - generic [ref=e870]: Aug 2025
+                      - button "Download" [ref=e874] [cursor=pointer]:
+                        - generic [ref=e875]: Download
+                  - generic [ref=e880]:
+                    - generic [ref=e881]:
+                      - button "Play audio track Boogie Down" [ref=e882] [cursor=pointer]:
+                        - generic [ref=e885]:
+                          - img
+                      - button "Add star Boogie Down" [ref=e886] [cursor=pointer]:
+                        - generic [ref=e889]:
+                          - img
+                    - generic [ref=e891]: Boogie Down
+                    - generic [ref=e892]:
+                      - generic [ref=e893]: Pop
+                      - button "Filter by this genre" [ref=e894] [cursor=pointer]:
+                        - generic [ref=e897]:
+                          - img
+                    - generic [ref=e898]:
+                      - generic [ref=e899]: Funky
+                      - button "Filter by this mood" [ref=e900] [cursor=pointer]:
+                        - generic [ref=e903]:
+                          - img
+                    - generic [ref=e904]:
+                      - link "The Grey Room / Golden Palms" [ref=e907] [cursor=pointer]:
+                        - /url: https://www.youtube.com/channel/UCoOTOoAbEhY-WD_XhkvJBJg/
+                        - generic [ref=e908]: The Grey Room / Golden Palms
+                        - generic [ref=e911]:
+                          - img
+                      - button "Filter by this artist" [ref=e912] [cursor=pointer]:
+                        - generic [ref=e915]:
+                          - img
+                    - generic [ref=e917]: 3:21
+                    - button "YouTube Audio Library License" [ref=e920] [cursor=pointer]:
+                      - generic [ref=e923]:
+                        - img
+                    - generic [ref=e924]:
+                      - generic [ref=e925]: Aug 2025
+                      - button "Download" [ref=e929] [cursor=pointer]:
+                        - generic [ref=e930]: Download
+                  - generic [ref=e935]:
+                    - generic [ref=e936]:
+                      - button "Play audio track Pawn" [ref=e937] [cursor=pointer]:
+                        - generic [ref=e940]:
+                          - img
+                      - button "Add star Pawn" [ref=e941] [cursor=pointer]:
+                        - generic [ref=e944]:
+                          - img
+                    - generic [ref=e946]: Pawn
+                    - generic [ref=e947]:
+                      - generic [ref=e948]: Pop
+                      - button "Filter by this genre" [ref=e949] [cursor=pointer]:
+                        - generic [ref=e952]:
+                          - img
+                    - generic [ref=e953]:
+                      - generic [ref=e954]: Happy
+                      - button "Filter by this mood" [ref=e955] [cursor=pointer]:
+                        - generic [ref=e958]:
+                          - img
+                    - generic [ref=e959]:
+                      - link "The Grey Room / Golden Palms" [ref=e962] [cursor=pointer]:
+                        - /url: https://www.youtube.com/channel/UCoOTOoAbEhY-WD_XhkvJBJg/
+                        - generic [ref=e963]: The Grey Room / Golden Palms
+                        - generic [ref=e966]:
+                          - img
+                      - button "Filter by this artist" [ref=e967] [cursor=pointer]:
+                        - generic [ref=e970]:
+                          - img
+                    - generic [ref=e972]: 3:05
+                    - button "YouTube Audio Library License" [ref=e975] [cursor=pointer]:
+                      - generic [ref=e978]:
+                        - img
+                    - generic [ref=e979]:
+                      - generic [ref=e980]: Aug 2025
+                      - button "Download" [ref=e984] [cursor=pointer]:
+                        - generic [ref=e985]: Download
+                  - generic [ref=e990]:
+                    - generic [ref=e991]:
+                      - button "Play audio track At All Costs" [ref=e992] [cursor=pointer]:
+                        - generic [ref=e995]:
+                          - img
+                      - button "Add star At All Costs" [ref=e996] [cursor=pointer]:
+                        - generic [ref=e999]:
+                          - img
+                    - generic [ref=e1001]: At All Costs
+                    - generic [ref=e1002]:
+                      - generic [ref=e1003]: Pop
+                      - button "Filter by this genre" [ref=e1004] [cursor=pointer]:
+                        - generic [ref=e1007]:
+                          - img
+                    - generic [ref=e1008]:
+                      - generic [ref=e1009]: Dramatic
+                      - button "Filter by this mood" [ref=e1010] [cursor=pointer]:
+                        - generic [ref=e1013]:
+                          - img
+                    - generic [ref=e1014]:
+                      - link "The Grey Room / Golden Palms" [ref=e1017] [cursor=pointer]:
+                        - /url: https://www.youtube.com/channel/UCoOTOoAbEhY-WD_XhkvJBJg/
+                        - generic [ref=e1018]: The Grey Room / Golden Palms
+                        - generic [ref=e1021]:
+                          - img
+                      - button "Filter by this artist" [ref=e1022] [cursor=pointer]:
+                        - generic [ref=e1025]:
+                          - img
+                    - generic [ref=e1027]: 3:23
+                    - button "YouTube Audio Library License" [ref=e1030] [cursor=pointer]:
+                      - generic [ref=e1033]:
+                        - img
+                    - generic [ref=e1034]:
+                      - generic [ref=e1035]: Aug 2025
+                      - button "Download" [ref=e1039] [cursor=pointer]:
+                        - generic [ref=e1040]: Download
+                  - generic [ref=e1045]:
+                    - generic [ref=e1046]:
+                      - button "Play audio track A Stroll" [ref=e1047] [cursor=pointer]:
+                        - generic [ref=e1050]:
+                          - img
+                      - button "Add star A Stroll" [ref=e1051] [cursor=pointer]:
+                        - generic [ref=e1054]:
+                          - img
+                    - generic [ref=e1056]: A Stroll
+                    - generic [ref=e1057]:
+                      - generic [ref=e1058]: Hip-Hop & Rap
+                      - button "Filter by this genre" [ref=e1059] [cursor=pointer]:
+                        - generic [ref=e1062]:
+                          - img
+                    - generic [ref=e1063]:
+                      - generic [ref=e1064]: Happy
+                      - button "Filter by this mood" [ref=e1065] [cursor=pointer]:
+                        - generic [ref=e1068]:
+                          - img
+                    - generic [ref=e1069]:
+                      - link "The Grey Room / Density & Time" [ref=e1072] [cursor=pointer]:
+                        - /url: https://www.youtube.com/channel/UCoOTOoAbEhY-WD_XhkvJBJg/
+                        - generic [ref=e1073]: The Grey Room / Density & Time
+                        - generic [ref=e1076]:
+                          - img
+                      - button "Filter by this artist" [ref=e1077] [cursor=pointer]:
+                        - generic [ref=e1080]:
+                          - img
+                    - generic [ref=e1082]: 3:03
+                    - button "YouTube Audio Library License" [ref=e1085] [cursor=pointer]:
+                      - generic [ref=e1088]:
+                        - img
+                    - generic [ref=e1089]:
+                      - generic [ref=e1090]: Aug 2025
+                      - button "Download" [ref=e1094] [cursor=pointer]:
+                        - generic [ref=e1095]: Download
+                  - generic [ref=e1100]:
+                    - generic [ref=e1101]:
+                      - button "Play audio track Ruff Money" [ref=e1102] [cursor=pointer]:
+                        - generic [ref=e1105]:
+                          - img
+                      - button "Add star Ruff Money" [ref=e1106] [cursor=pointer]:
+                        - generic [ref=e1109]:
+                          - img
+                    - generic [ref=e1111]: Ruff Money
+                    - generic [ref=e1112]:
+                      - generic [ref=e1113]: R&B & Soul
+                      - button "Filter by this genre" [ref=e1114] [cursor=pointer]:
+                        - generic [ref=e1117]:
+                          - img
+                    - generic [ref=e1118]:
+                      - generic [ref=e1119]: Funky
+                      - button "Filter by this mood" [ref=e1120] [cursor=pointer]:
+                        - generic [ref=e1123]:
+                          - img
+                    - generic [ref=e1124]:
+                      - link "The Grey Room / Clark Sims" [ref=e1127] [cursor=pointer]:
+                        - /url: https://www.youtube.com/channel/UCGm39mho4T9_A8X3EshV7fg/
+                        - generic [ref=e1128]: The Grey Room / Clark Sims
+                        - generic [ref=e1131]:
+                          - img
+                      - button "Filter by this artist" [ref=e1132] [cursor=pointer]:
+                        - generic [ref=e1135]:
+                          - img
+                    - generic [ref=e1137]: 3:06
+                    - button "YouTube Audio Library License" [ref=e1140] [cursor=pointer]:
+                      - generic [ref=e1143]:
+                        - img
+                    - generic [ref=e1144]:
+                      - generic [ref=e1145]: Aug 2025
+                      - button "Download" [ref=e1149] [cursor=pointer]:
+                        - generic [ref=e1150]: Download
+                  - generic [ref=e1155]:
+                    - generic [ref=e1156]:
+                      - button "Play audio track Flutter" [ref=e1157] [cursor=pointer]:
+                        - generic [ref=e1160]:
+                          - img
+                      - button "Add star Flutter" [ref=e1161] [cursor=pointer]:
+                        - generic [ref=e1164]:
+                          - img
+                    - generic [ref=e1166]: Flutter
+                    - generic [ref=e1167]:
+                      - generic [ref=e1168]: R&B & Soul
+                      - button "Filter by this genre" [ref=e1169] [cursor=pointer]:
+                        - generic [ref=e1172]:
+                          - img
+                    - generic [ref=e1173]:
+                      - generic [ref=e1174]: Happy
+                      - button "Filter by this mood" [ref=e1175] [cursor=pointer]:
+                        - generic [ref=e1178]:
+                          - img
+                    - generic [ref=e1179]:
+                      - link "The Grey Room / Clark Sims" [ref=e1182] [cursor=pointer]:
+                        - /url: https://www.youtube.com/channel/UCGm39mho4T9_A8X3EshV7fg/
+                        - generic [ref=e1183]: The Grey Room / Clark Sims
+                        - generic [ref=e1186]:
+                          - img
+                      - button "Filter by this artist" [ref=e1187] [cursor=pointer]:
+                        - generic [ref=e1190]:
+                          - img
+                    - generic [ref=e1192]: 3:08
+                    - button "YouTube Audio Library License" [ref=e1195] [cursor=pointer]:
+                      - generic [ref=e1198]:
+                        - img
+                    - generic [ref=e1199]:
+                      - generic [ref=e1200]: Aug 2025
+                      - button "Download" [ref=e1204] [cursor=pointer]:
+                        - generic [ref=e1205]: Download
+                  - generic [ref=e1210]:
+                    - generic [ref=e1211]:
+                      - button "Play audio track Futile" [ref=e1212] [cursor=pointer]:
+                        - generic [ref=e1215]:
+                          - img
+                      - button "Add star Futile" [ref=e1216] [cursor=pointer]:
+                        - generic [ref=e1219]:
+                          - img
+                    - generic [ref=e1221]: Futile
+                    - generic [ref=e1222]:
+                      - generic [ref=e1223]: Pop
+                      - button "Filter by this genre" [ref=e1224] [cursor=pointer]:
+                        - generic [ref=e1227]:
+                          - img
+                    - generic [ref=e1228]:
+                      - generic [ref=e1229]: Romantic
+                      - button "Filter by this mood" [ref=e1230] [cursor=pointer]:
+                        - generic [ref=e1233]:
+                          - img
+                    - generic [ref=e1234]:
+                      - link "The Grey Room / Golden Palms" [ref=e1237] [cursor=pointer]:
+                        - /url: https://www.youtube.com/channel/UCoOTOoAbEhY-WD_XhkvJBJg/
+                        - generic [ref=e1238]: The Grey Room / Golden Palms
+                        - generic [ref=e1241]:
+                          - img
+                      - button "Filter by this artist" [ref=e1242] [cursor=pointer]:
+                        - generic [ref=e1245]:
+                          - img
+                    - generic [ref=e1247]: 3:12
+                    - button "YouTube Audio Library License" [ref=e1250] [cursor=pointer]:
+                      - generic [ref=e1253]:
+                        - img
+                    - generic [ref=e1254]:
+                      - generic [ref=e1255]: Aug 2025
+                      - button "Download" [ref=e1259] [cursor=pointer]:
+                        - generic [ref=e1260]: Download
+                  - generic [ref=e1265]:
+                    - generic [ref=e1266]:
+                      - button "Play audio track Special" [ref=e1267] [cursor=pointer]:
+                        - generic [ref=e1270]:
+                          - img
+                      - button "Add star Special" [ref=e1271] [cursor=pointer]:
+                        - generic [ref=e1274]:
+                          - img
+                    - generic [ref=e1276]: Special
+                    - generic [ref=e1277]:
+                      - generic [ref=e1278]: R&B & Soul
+                      - button "Filter by this genre" [ref=e1279] [cursor=pointer]:
+                        - generic [ref=e1282]:
+                          - img
+                    - generic [ref=e1283]:
+                      - generic [ref=e1284]: Happy
+                      - button "Filter by this mood" [ref=e1285] [cursor=pointer]:
+                        - generic [ref=e1288]:
+                          - img
+                    - generic [ref=e1289]:
+                      - link "The Grey Room / Clark Sims" [ref=e1292] [cursor=pointer]:
+                        - /url: https://www.youtube.com/channel/UCGm39mho4T9_A8X3EshV7fg/
+                        - generic [ref=e1293]: The Grey Room / Clark Sims
+                        - generic [ref=e1296]:
+                          - img
+                      - button "Filter by this artist" [ref=e1297] [cursor=pointer]:
+                        - generic [ref=e1300]:
+                          - img
+                    - generic [ref=e1302]: 2:47
+                    - button "YouTube Audio Library License" [ref=e1305] [cursor=pointer]:
+                      - generic [ref=e1308]:
+                        - img
+                    - generic [ref=e1309]:
+                      - generic [ref=e1310]: Aug 2025
+                      - button "Download" [ref=e1314] [cursor=pointer]:
+                        - generic [ref=e1315]: Download
+                  - generic [ref=e1320]:
+                    - generic [ref=e1321]:
+                      - button "Play audio track Cooked" [ref=e1322] [cursor=pointer]:
+                        - generic [ref=e1325]:
+                          - img
+                      - button "Add star Cooked" [ref=e1326] [cursor=pointer]:
+                        - generic [ref=e1329]:
+                          - img
+                    - generic [ref=e1331]: Cooked
+                    - generic [ref=e1332]:
+                      - generic [ref=e1333]: Pop
+                      - button "Filter by this genre" [ref=e1334] [cursor=pointer]:
+                        - generic [ref=e1337]:
+                          - img
+                    - generic [ref=e1338]:
+                      - generic [ref=e1339]: Funky
+                      - button "Filter by this mood" [ref=e1340] [cursor=pointer]:
+                        - generic [ref=e1343]:
+                          - img
+                    - generic [ref=e1344]:
+                      - link "The Grey Room / Golden Palms" [ref=e1347] [cursor=pointer]:
+                        - /url: https://www.youtube.com/channel/UCoOTOoAbEhY-WD_XhkvJBJg/
+                        - generic [ref=e1348]: The Grey Room / Golden Palms
+                        - generic [ref=e1351]:
+                          - img
+                      - button "Filter by this artist" [ref=e1352] [cursor=pointer]:
+                        - generic [ref=e1355]:
+                          - img
+                    - generic [ref=e1357]: 3:03
+                    - button "YouTube Audio Library License" [ref=e1360] [cursor=pointer]:
+                      - generic [ref=e1363]:
+                        - img
+                    - generic [ref=e1364]:
+                      - generic [ref=e1365]: Aug 2025
+                      - button "Download" [ref=e1369] [cursor=pointer]:
+                        - generic [ref=e1370]: Download
+                  - generic [ref=e1375]:
+                    - generic [ref=e1376]:
+                      - button "Play audio track Windy Road Back To You" [ref=e1377] [cursor=pointer]:
+                        - generic [ref=e1380]:
+                          - img
+                      - button "Add star Windy Road Back To You" [ref=e1381] [cursor=pointer]:
+                        - generic [ref=e1384]:
+                          - img
+                    - generic [ref=e1386]: Windy Road Back To You
+                    - generic [ref=e1387]:
+                      - generic [ref=e1388]: Rock
+                      - button "Filter by this genre" [ref=e1389] [cursor=pointer]:
+                        - generic [ref=e1392]:
+                          - img
+                    - generic [ref=e1393]:
+                      - generic [ref=e1394]: Romantic
+                      - button "Filter by this mood" [ref=e1395] [cursor=pointer]:
+                        - generic [ref=e1398]:
+                          - img
+                    - generic [ref=e1399]:
+                      - link "The Grey Room / Golden Palms" [ref=e1402] [cursor=pointer]:
+                        - /url: https://www.youtube.com/channel/UCoOTOoAbEhY-WD_XhkvJBJg/
+                        - generic [ref=e1403]: The Grey Room / Golden Palms
+                        - generic [ref=e1406]:
+                          - img
+                      - button "Filter by this artist" [ref=e1407] [cursor=pointer]:
+                        - generic [ref=e1410]:
+                          - img
+                    - generic [ref=e1412]: 3:05
+                    - button "YouTube Audio Library License" [ref=e1415] [cursor=pointer]:
+                      - generic [ref=e1418]:
+                        - img
+                    - generic [ref=e1419]:
+                      - generic [ref=e1420]: Aug 2025
+                      - button "Download" [ref=e1424] [cursor=pointer]:
+                        - generic [ref=e1425]: Download
+                  - generic [ref=e1430]:
+                    - generic [ref=e1431]:
+                      - button "Play audio track Time" [ref=e1432] [cursor=pointer]:
+                        - generic [ref=e1435]:
+                          - img
+                      - button "Add star Time" [ref=e1436] [cursor=pointer]:
+                        - generic [ref=e1439]:
+                          - img
+                    - generic [ref=e1441]: Time
+                    - generic [ref=e1442]:
+                      - generic [ref=e1443]: R&B & Soul
+                      - button "Filter by this genre" [ref=e1444] [cursor=pointer]:
+                        - generic [ref=e1447]:
+                          - img
+                    - generic [ref=e1448]:
+                      - generic [ref=e1449]: Inspirational
+                      - button "Filter by this mood" [ref=e1450] [cursor=pointer]:
+                        - generic [ref=e1453]:
+                          - img
+                    - generic [ref=e1454]:
+                      - link "The Grey Room / Clark Sims" [ref=e1457] [cursor=pointer]:
+                        - /url: https://www.youtube.com/channel/UCGm39mho4T9_A8X3EshV7fg/
+                        - generic [ref=e1458]: The Grey Room / Clark Sims
+                        - generic [ref=e1461]:
+                          - img
+                      - button "Filter by this artist" [ref=e1462] [cursor=pointer]:
+                        - generic [ref=e1465]:
+                          - img
+                    - generic [ref=e1467]: 3:35
+                    - button "YouTube Audio Library License" [ref=e1470] [cursor=pointer]:
+                      - generic [ref=e1473]:
+                        - img
+                    - generic [ref=e1474]:
+                      - generic [ref=e1475]: Aug 2025
+                      - button "Download" [ref=e1479] [cursor=pointer]:
+                        - generic [ref=e1480]: Download
+                  - generic [ref=e1485]:
+                    - generic [ref=e1486]:
+                      - button "Play audio track Push Thru" [ref=e1487] [cursor=pointer]:
+                        - generic [ref=e1490]:
+                          - img
+                      - button "Add star Push Thru" [ref=e1491] [cursor=pointer]:
+                        - generic [ref=e1494]:
+                          - img
+                    - generic [ref=e1496]: Push Thru
+                    - generic [ref=e1497]:
+                      - generic [ref=e1498]: Dance & Electronic
+                      - button "Filter by this genre" [ref=e1499] [cursor=pointer]:
+                        - generic [ref=e1502]:
+                          - img
+                    - generic [ref=e1503]:
+                      - generic [ref=e1504]: Sad
+                      - button "Filter by this mood" [ref=e1505] [cursor=pointer]:
+                        - generic [ref=e1508]:
+                          - img
+                    - generic [ref=e1509]:
+                      - link "The Grey Room / Golden Palms" [ref=e1512] [cursor=pointer]:
+                        - /url: https://www.youtube.com/channel/UCoOTOoAbEhY-WD_XhkvJBJg/
+                        - generic [ref=e1513]: The Grey Room / Golden Palms
+                        - generic [ref=e1516]:
+                          - img
+                      - button "Filter by this artist" [ref=e1517] [cursor=pointer]:
+                        - generic [ref=e1520]:
+                          - img
+                    - generic [ref=e1522]: 3:05
+                    - button "YouTube Audio Library License" [ref=e1525] [cursor=pointer]:
+                      - generic [ref=e1528]:
+                        - img
+                    - generic [ref=e1529]:
+                      - generic [ref=e1530]: Aug 2025
+                      - button "Download" [ref=e1534] [cursor=pointer]:
+                        - generic [ref=e1535]: Download
+                  - generic [ref=e1540]:
+                    - generic [ref=e1541]:
+                      - button "Play audio track Soaring" [ref=e1542] [cursor=pointer]:
+                        - generic [ref=e1545]:
+                          - img
+                      - button "Add star Soaring" [ref=e1546] [cursor=pointer]:
+                        - generic [ref=e1549]:
+                          - img
+                    - generic [ref=e1551]: Soaring
+                    - generic [ref=e1552]:
+                      - generic [ref=e1553]: Rock
+                      - button "Filter by this genre" [ref=e1554] [cursor=pointer]:
+                        - generic [ref=e1557]:
+                          - img
+                    - generic [ref=e1558]:
+                      - generic [ref=e1559]: Bright
+                      - button "Filter by this mood" [ref=e1560] [cursor=pointer]:
+                        - generic [ref=e1563]:
+                          - img
+                    - generic [ref=e1564]:
+                      - link "The Grey Room / Golden Palms" [ref=e1567] [cursor=pointer]:
+                        - /url: https://www.youtube.com/channel/UCoOTOoAbEhY-WD_XhkvJBJg/
+                        - generic [ref=e1568]: The Grey Room / Golden Palms
+                        - generic [ref=e1571]:
+                          - img
+                      - button "Filter by this artist" [ref=e1572] [cursor=pointer]:
+                        - generic [ref=e1575]:
+                          - img
+                    - generic [ref=e1577]: 3:01
+                    - button "YouTube Audio Library License" [ref=e1580] [cursor=pointer]:
+                      - generic [ref=e1583]:
+                        - img
+                    - generic [ref=e1584]:
+                      - generic [ref=e1585]: Aug 2025
+                      - button "Download" [ref=e1589] [cursor=pointer]:
+                        - generic [ref=e1590]: Download
+                  - generic [ref=e1595]:
+                    - generic [ref=e1596]:
+                      - button "Play audio track F16" [ref=e1597] [cursor=pointer]:
+                        - generic [ref=e1600]:
+                          - img
+                      - button "Add star F16" [ref=e1601] [cursor=pointer]:
+                        - generic [ref=e1604]:
+                          - img
+                    - generic [ref=e1606]: F16
+                    - generic [ref=e1607]:
+                      - generic [ref=e1608]: Pop
+                      - button "Filter by this genre" [ref=e1609] [cursor=pointer]:
+                        - generic [ref=e1612]:
+                          - img
+                    - generic [ref=e1613]:
+                      - generic [ref=e1614]: Funky
+                      - button "Filter by this mood" [ref=e1615] [cursor=pointer]:
+                        - generic [ref=e1618]:
+                          - img
+                    - generic [ref=e1619]:
+                      - link "The Grey Room / Golden Palms" [ref=e1622] [cursor=pointer]:
+                        - /url: https://www.youtube.com/channel/UCoOTOoAbEhY-WD_XhkvJBJg/
+                        - generic [ref=e1623]: The Grey Room / Golden Palms
+                        - generic [ref=e1626]:
+                          - img
+                      - button "Filter by this artist" [ref=e1627] [cursor=pointer]:
+                        - generic [ref=e1630]:
+                          - img
+                    - generic [ref=e1632]: 3:16
+                    - button "YouTube Audio Library License" [ref=e1635] [cursor=pointer]:
+                      - generic [ref=e1638]:
+                        - img
+                    - generic [ref=e1639]:
+                      - generic [ref=e1640]: Aug 2025
+                      - button "Download" [ref=e1644] [cursor=pointer]:
+                        - generic [ref=e1645]: Download
+                  - generic [ref=e1650]:
+                    - generic [ref=e1651]:
+                      - button "Play audio track Overboard" [ref=e1652] [cursor=pointer]:
+                        - generic [ref=e1655]:
+                          - img
+                      - button "Add star Overboard" [ref=e1656] [cursor=pointer]:
+                        - generic [ref=e1659]:
+                          - img
+                    - generic [ref=e1661]: Overboard
+                    - generic [ref=e1662]:
+                      - generic [ref=e1663]: Alternative & Punk
+                      - button "Filter by this genre" [ref=e1664] [cursor=pointer]:
+                        - generic [ref=e1667]:
+                          - img
+                    - generic [ref=e1668]:
+                      - generic [ref=e1669]: Dramatic
+                      - button "Filter by this mood" [ref=e1670] [cursor=pointer]:
+                        - generic [ref=e1673]:
+                          - img
+                    - generic [ref=e1674]:
+                      - link "The Grey Room / Golden Palms" [ref=e1677] [cursor=pointer]:
+                        - /url: https://www.youtube.com/channel/UCoOTOoAbEhY-WD_XhkvJBJg/
+                        - generic [ref=e1678]: The Grey Room / Golden Palms
+                        - generic [ref=e1681]:
+                          - img
+                      - button "Filter by this artist" [ref=e1682] [cursor=pointer]:
+                        - generic [ref=e1685]:
+                          - img
+                    - generic [ref=e1687]: 3:04
+                    - button "YouTube Audio Library License" [ref=e1690] [cursor=pointer]:
+                      - generic [ref=e1693]:
+                        - img
+                    - generic [ref=e1694]:
+                      - generic [ref=e1695]: Aug 2025
+                      - button "Download" [ref=e1699] [cursor=pointer]:
+                        - generic [ref=e1700]: Download
+                  - generic [ref=e1705]:
+                    - generic [ref=e1706]:
+                      - button "Play audio track Missed My Chance" [ref=e1707] [cursor=pointer]:
+                        - generic [ref=e1710]:
+                          - img
+                      - button "Add star Missed My Chance" [ref=e1711] [cursor=pointer]:
+                        - generic [ref=e1714]:
+                          - img
+                    - generic [ref=e1716]: Missed My Chance
+                    - generic [ref=e1717]:
+                      - generic [ref=e1718]: R&B & Soul
+                      - button "Filter by this genre" [ref=e1719] [cursor=pointer]:
+                        - generic [ref=e1722]:
+                          - img
+                    - generic [ref=e1723]:
+                      - generic [ref=e1724]: Dramatic
+                      - button "Filter by this mood" [ref=e1725] [cursor=pointer]:
+                        - generic [ref=e1728]:
+                          - img
+                    - generic [ref=e1729]:
+                      - link "The Grey Room / Clark Sims" [ref=e1732] [cursor=pointer]:
+                        - /url: https://www.youtube.com/channel/UCGm39mho4T9_A8X3EshV7fg/
+                        - generic [ref=e1733]: The Grey Room / Clark Sims
+                        - generic [ref=e1736]:
+                          - img
+                      - button "Filter by this artist" [ref=e1737] [cursor=pointer]:
+                        - generic [ref=e1740]:
+                          - img
+                    - generic [ref=e1742]: 3:12
+                    - button "YouTube Audio Library License" [ref=e1745] [cursor=pointer]:
+                      - generic [ref=e1748]:
+                        - img
+                    - generic [ref=e1749]:
+                      - generic [ref=e1750]: Aug 2025
+                      - button "Download" [ref=e1754] [cursor=pointer]:
+                        - generic [ref=e1755]: Download
+                  - generic [ref=e1760]:
+                    - generic [ref=e1761]:
+                      - button "Play audio track High Noon" [ref=e1762] [cursor=pointer]:
+                        - generic [ref=e1765]:
+                          - img
+                      - button "Add star High Noon" [ref=e1766] [cursor=pointer]:
+                        - generic [ref=e1769]:
+                          - img
+                    - generic [ref=e1771]: High Noon
+                    - generic [ref=e1772]:
+                      - generic [ref=e1773]: Hip-Hop & Rap
+                      - button "Filter by this genre" [ref=e1774] [cursor=pointer]:
+                        - generic [ref=e1777]:
+                          - img
+                    - generic [ref=e1778]:
+                      - generic [ref=e1779]: Romantic
+                      - button "Filter by this mood" [ref=e1780] [cursor=pointer]:
+                        - generic [ref=e1783]:
+                          - img
+                    - generic [ref=e1784]:
+                      - link "The Grey Room / Density & Time" [ref=e1787] [cursor=pointer]:
+                        - /url: https://www.youtube.com/channel/UCoOTOoAbEhY-WD_XhkvJBJg/
+                        - generic [ref=e1788]: The Grey Room / Density & Time
+                        - generic [ref=e1791]:
+                          - img
+                      - button "Filter by this artist" [ref=e1792] [cursor=pointer]:
+                        - generic [ref=e1795]:
+                          - img
+                    - generic [ref=e1797]: 3:15
+                    - button "YouTube Audio Library License" [ref=e1800] [cursor=pointer]:
+                      - generic [ref=e1803]:
+                        - img
+                    - generic [ref=e1804]:
+                      - generic [ref=e1805]: Aug 2025
+                      - button "Download" [ref=e1809] [cursor=pointer]:
+                        - generic [ref=e1810]: Download
+                  - generic [ref=e1815]:
+                    - generic [ref=e1816]:
+                      - button "Play audio track Twinkle" [ref=e1817] [cursor=pointer]:
+                        - generic [ref=e1820]:
+                          - img
+                      - button "Add star Twinkle" [ref=e1821] [cursor=pointer]:
+                        - generic [ref=e1824]:
+                          - img
+                    - generic [ref=e1826]: Twinkle
+                    - generic [ref=e1827]:
+                      - generic [ref=e1828]: Hip-Hop & Rap
+                      - button "Filter by this genre" [ref=e1829] [cursor=pointer]:
+                        - generic [ref=e1832]:
+                          - img
+                    - generic [ref=e1833]:
+                      - generic [ref=e1834]: Calm
+                      - button "Filter by this mood" [ref=e1835] [cursor=pointer]:
+                        - generic [ref=e1838]:
+                          - img
+                    - generic [ref=e1839]:
+                      - link "The Grey Room / Density & Time" [ref=e1842] [cursor=pointer]:
+                        - /url: https://www.youtube.com/channel/UCoOTOoAbEhY-WD_XhkvJBJg/
+                        - generic [ref=e1843]: The Grey Room / Density & Time
+                        - generic [ref=e1846]:
+                          - img
+                      - button "Filter by this artist" [ref=e1847] [cursor=pointer]:
+                        - generic [ref=e1850]:
+                          - img
+                    - generic [ref=e1852]: 3:14
+                    - button "YouTube Audio Library License" [ref=e1855] [cursor=pointer]:
+                      - generic [ref=e1858]:
+                        - img
+                    - generic [ref=e1859]:
+                      - generic [ref=e1860]: Aug 2025
+                      - button "Download" [ref=e1864] [cursor=pointer]:
+                        - generic [ref=e1865]: Download
+                  - generic [ref=e1870]:
+                    - generic [ref=e1871]:
+                      - button "Play audio track Nebula" [ref=e1872] [cursor=pointer]:
+                        - generic [ref=e1875]:
+                          - img
+                      - button "Add star Nebula" [ref=e1876] [cursor=pointer]:
+                        - generic [ref=e1879]:
+                          - img
+                    - generic [ref=e1881]: Nebula
+                    - generic [ref=e1882]:
+                      - generic [ref=e1883]: Ambient
+                      - button "Filter by this genre" [ref=e1884] [cursor=pointer]:
+                        - generic [ref=e1887]:
+                          - img
+                    - generic [ref=e1888]:
+                      - generic [ref=e1889]: Happy
+                      - button "Filter by this mood" [ref=e1890] [cursor=pointer]:
+                        - generic [ref=e1893]:
+                          - img
+                    - generic [ref=e1894]:
+                      - link "The Grey Room / Density & Time" [ref=e1897] [cursor=pointer]:
+                        - /url: https://www.youtube.com/channel/UCoOTOoAbEhY-WD_XhkvJBJg/
+                        - generic [ref=e1898]: The Grey Room / Density & Time
+                        - generic [ref=e1901]:
+                          - img
+                      - button "Filter by this artist" [ref=e1902] [cursor=pointer]:
+                        - generic [ref=e1905]:
+                          - img
+                    - generic [ref=e1907]: 3:09
+                    - button "YouTube Audio Library License" [ref=e1910] [cursor=pointer]:
+                      - generic [ref=e1913]:
+                        - img
+                    - generic [ref=e1914]:
+                      - generic [ref=e1915]: Aug 2025
+                      - button "Download" [ref=e1919] [cursor=pointer]:
+                        - generic [ref=e1920]: Download
+                  - generic [ref=e1925]:
+                    - generic [ref=e1926]:
+                      - button "Play audio track Rapid Unscheduled Disassembly" [ref=e1927] [cursor=pointer]:
+                        - generic [ref=e1930]:
+                          - img
+                      - button "Add star Rapid Unscheduled Disassembly" [ref=e1931] [cursor=pointer]:
+                        - generic [ref=e1934]:
+                          - img
+                    - generic [ref=e1936]: Rapid Unscheduled Disassembly
+                    - generic [ref=e1937]:
+                      - generic [ref=e1938]: Ambient
+                      - button "Filter by this genre" [ref=e1939] [cursor=pointer]:
+                        - generic [ref=e1942]:
+                          - img
+                    - generic [ref=e1943]:
+                      - generic [ref=e1944]: Dramatic
+                      - button "Filter by this mood" [ref=e1945] [cursor=pointer]:
+                        - generic [ref=e1948]:
+                          - img
+                    - generic [ref=e1949]:
+                      - link "The Grey Room / Density & Time" [ref=e1952] [cursor=pointer]:
+                        - /url: https://www.youtube.com/channel/UCoOTOoAbEhY-WD_XhkvJBJg/
+                        - generic [ref=e1953]: The Grey Room / Density & Time
+                        - generic [ref=e1956]:
+                          - img
+                      - button "Filter by this artist" [ref=e1957] [cursor=pointer]:
+                        - generic [ref=e1960]:
+                          - img
+                    - generic [ref=e1962]: 5:37
+                    - button "YouTube Audio Library License" [ref=e1965] [cursor=pointer]:
+                      - generic [ref=e1968]:
+                        - img
+                    - generic [ref=e1969]:
+                      - generic [ref=e1970]: Aug 2025
+                      - button "Download" [ref=e1974] [cursor=pointer]:
+                        - generic [ref=e1975]: Download
+                  - generic [ref=e1980]:
+                    - generic [ref=e1981]:
+                      - button "Play audio track Pulsar" [ref=e1982] [cursor=pointer]:
+                        - generic [ref=e1985]:
+                          - img
+                      - button "Add star Pulsar" [ref=e1986] [cursor=pointer]:
+                        - generic [ref=e1989]:
+                          - img
+                    - generic [ref=e1991]: Pulsar
+                    - generic [ref=e1992]:
+                      - generic [ref=e1993]: Ambient
+                      - button "Filter by this genre" [ref=e1994] [cursor=pointer]:
+                        - generic [ref=e1997]:
+                          - img
+                    - generic [ref=e1998]:
+                      - generic [ref=e1999]: Calm
+                      - button "Filter by this mood" [ref=e2000] [cursor=pointer]:
+                        - generic [ref=e2003]:
+                          - img
+                    - generic [ref=e2004]:
+                      - link "The Grey Room / Density & Time" [ref=e2007] [cursor=pointer]:
+                        - /url: https://www.youtube.com/channel/UCoOTOoAbEhY-WD_XhkvJBJg/
+                        - generic [ref=e2008]: The Grey Room / Density & Time
+                        - generic [ref=e2011]:
+                          - img
+                      - button "Filter by this artist" [ref=e2012] [cursor=pointer]:
+                        - generic [ref=e2015]:
+                          - img
+                    - generic [ref=e2017]: 4:08
+                    - button "YouTube Audio Library License" [ref=e2020] [cursor=pointer]:
+                      - generic [ref=e2023]:
+                        - img
+                    - generic [ref=e2024]:
+                      - generic [ref=e2025]: Aug 2025
+                      - button "Download" [ref=e2029] [cursor=pointer]:
+                        - generic [ref=e2030]: Download
+                  - generic [ref=e2035]:
+                    - generic [ref=e2036]:
+                      - button "Play audio track Frame-Dragging" [ref=e2037] [cursor=pointer]:
+                        - generic [ref=e2040]:
+                          - img
+                      - button "Add star Frame-Dragging" [ref=e2041] [cursor=pointer]:
+                        - generic [ref=e2044]:
+                          - img
+                    - generic [ref=e2046]: Frame-Dragging
+                    - generic [ref=e2047]:
+                      - generic [ref=e2048]: Ambient
+                      - button "Filter by this genre" [ref=e2049] [cursor=pointer]:
+                        - generic [ref=e2052]:
+                          - img
+                    - generic [ref=e2053]:
+                      - generic [ref=e2054]: Bright
+                      - button "Filter by this mood" [ref=e2055] [cursor=pointer]:
+                        - generic [ref=e2058]:
+                          - img
+                    - generic [ref=e2059]:
+                      - link "The Grey Room / Density & Time" [ref=e2062] [cursor=pointer]:
+                        - /url: https://www.youtube.com/channel/UCoOTOoAbEhY-WD_XhkvJBJg/
+                        - generic [ref=e2063]: The Grey Room / Density & Time
+                        - generic [ref=e2066]:
+                          - img
+                      - button "Filter by this artist" [ref=e2067] [cursor=pointer]:
+                        - generic [ref=e2070]:
+                          - img
+                    - generic [ref=e2072]: 3:22
+                    - button "YouTube Audio Library License" [ref=e2075] [cursor=pointer]:
+                      - generic [ref=e2078]:
+                        - img
+                    - generic [ref=e2079]:
+                      - generic [ref=e2080]: Aug 2025
+                      - button "Download" [ref=e2084] [cursor=pointer]:
+                        - generic [ref=e2085]: Download
+                  - generic [ref=e2090]:
+                    - generic [ref=e2091]:
+                      - button "Play audio track Red Shift" [ref=e2092] [cursor=pointer]:
+                        - generic [ref=e2095]:
+                          - img
+                      - button "Add star Red Shift" [ref=e2096] [cursor=pointer]:
+                        - generic [ref=e2099]:
+                          - img
+                    - generic [ref=e2101]: Red Shift
+                    - generic [ref=e2102]:
+                      - generic [ref=e2103]: Ambient
+                      - button "Filter by this genre" [ref=e2104] [cursor=pointer]:
+                        - generic [ref=e2107]:
+                          - img
+                    - generic [ref=e2108]:
+                      - generic [ref=e2109]: Sad
+                      - button "Filter by this mood" [ref=e2110] [cursor=pointer]:
+                        - generic [ref=e2113]:
+                          - img
+                    - generic [ref=e2114]:
+                      - link "The Grey Room / Density & Time" [ref=e2117] [cursor=pointer]:
+                        - /url: https://www.youtube.com/channel/UCoOTOoAbEhY-WD_XhkvJBJg/
+                        - generic [ref=e2118]: The Grey Room / Density & Time
+                        - generic [ref=e2121]:
+                          - img
+                      - button "Filter by this artist" [ref=e2122] [cursor=pointer]:
+                        - generic [ref=e2125]:
+                          - img
+                    - generic [ref=e2127]: 4:12
+                    - button "YouTube Audio Library License" [ref=e2130] [cursor=pointer]:
+                      - generic [ref=e2133]:
+                        - img
+                    - generic [ref=e2134]:
+                      - generic [ref=e2135]: Aug 2025
+                      - button "Download" [ref=e2139] [cursor=pointer]:
+                        - generic [ref=e2140]: Download
+                - generic [ref=e2144]:
+                  - generic [ref=e2145]:
+                    - button "Terms and conditions" [ref=e2146] [cursor=pointer]:
+                      - generic [ref=e2147]: Terms and conditions
+                    - link "About these results" [ref=e2149] [cursor=pointer]:
+                      - /url: https://www.youtube.com/howyoutubeworks/product-features/search/
+                      - generic [ref=e2150]: About these results
+                      - generic [ref=e2153]:
+                        - img
+                  - generic [ref=e2155]:
+                    - generic [ref=e2156]: "Rows per page:"
+                    - generic "Menu for selecting the number of rows per page." [ref=e2157]:
+                      - button "30" [ref=e2159]:
+                        - button "30" [ref=e2160] [cursor=pointer]:
+                          - generic [ref=e2164]: "30"
+                          - generic [ref=e2168]:
+                            - img
+                    - generic [ref=e2169]: 1–30 of about 1,584
+                    - button "Navigate to the first page" [disabled] [ref=e2170]:
+                      - generic [ref=e2173]:
+                        - img
+                    - button "Navigate to the previous page" [disabled] [ref=e2174]:
+                      - generic [ref=e2177]:
+                        - img
+                    - button "Navigate to the next page" [ref=e2178] [cursor=pointer]:
+                      - generic [ref=e2181]:
+                        - img
+```

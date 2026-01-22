@@ -1,0 +1,233 @@
+### Page state
+- Page URL: https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/analytics/tab-overview/period-default
+- Page Title: Channel analytics - YouTube Studio
+- Page Snapshot:
+```yaml
+- generic [active] [ref=e1]:
+  - generic:
+    - generic [ref=e2]: Channel analytics
+    - generic [ref=e4]:
+      - banner [ref=e6]:
+        - button "Collapse menu" [ref=e7] [cursor=pointer]:
+          - generic [ref=e10]:
+            - img
+        - link "YouTube Studio dashboard" [ref=e12] [cursor=pointer]:
+          - /url: /channel/UCtxQrYzeMBCKMAofCgcY5dA
+        - button "Skip navigation" [ref=e15] [cursor=pointer]:
+          - generic [ref=e16]: Skip navigation
+        - generic [ref=e21]:
+          - generic [ref=e24]:
+            - img
+          - textbox "Search across your channel" [ref=e26]
+        - generic [ref=e28]:
+          - generic [ref=e29]:
+            - button "Help" [ref=e31] [cursor=pointer]:
+              - generic [ref=e34]:
+                - img
+            - button "Notifications" [ref=e36] [cursor=pointer]:
+              - generic [ref=e39]:
+                - img
+          - button "Create" [ref=e42] [cursor=pointer]:
+            - generic [ref=e46]:
+              - img
+            - generic [ref=e47]: Create
+          - generic "Account" [ref=e51]:
+            - button "Account" [ref=e52]
+      - generic [ref=e57]:
+        - navigation [ref=e59]:
+          - generic [ref=e60]:
+            - generic:
+              - img "Tony zhou" [ref=e63]
+              - generic [ref=e64]:
+                - generic [ref=e65]: Your channel
+                - generic [ref=e66]: Tony zhou
+          - menu [ref=e68]:
+            - menuitem "Dashboard" [ref=e69] [cursor=pointer]:
+              - button "Dashboard" [ref=e70]:
+                - generic [ref=e74]:
+                  - img
+                - generic [ref=e75]: Dashboard
+            - menuitem "Content" [ref=e76] [cursor=pointer]:
+              - button "Content" [ref=e77]:
+                - generic [ref=e81]:
+                  - img
+                - generic [ref=e82]: Content
+            - menuitem "Analytics" [ref=e83] [cursor=pointer]:
+              - button "Analytics" [ref=e84]:
+                - generic [ref=e88]:
+                  - img
+                - generic [ref=e89]: Analytics
+            - menuitem "Community" [ref=e90] [cursor=pointer]:
+              - button "Community" [ref=e91]:
+                - generic [ref=e95]:
+                  - img
+                - generic [ref=e96]: Community
+            - menuitem "Subtitles" [ref=e97] [cursor=pointer]:
+              - button "Subtitles" [ref=e98]:
+                - generic [ref=e102]:
+                  - img
+                - generic [ref=e103]: Subtitles
+            - menuitem "Content detection" [ref=e104] [cursor=pointer]:
+              - button "Content detection" [ref=e105]:
+                - generic [ref=e109]:
+                  - img
+                - generic [ref=e110]: Content detection
+            - menuitem "Earn" [ref=e111] [cursor=pointer]:
+              - button "Earn" [ref=e112]:
+                - generic [ref=e116]:
+                  - img
+                - generic [ref=e117]: Earn
+            - menuitem "Customization" [ref=e118] [cursor=pointer]:
+              - button "Customization" [ref=e119]:
+                - generic [ref=e123]:
+                  - img
+                - generic [ref=e124]: Customization
+            - menuitem "Audio library" [ref=e125] [cursor=pointer]:
+              - button "Audio library" [ref=e126]:
+                - generic [ref=e130]:
+                  - img
+                - generic [ref=e131]: Audio library
+          - list [ref=e133]:
+            - listitem [ref=e134]:
+              - button "Settings" [ref=e135] [cursor=pointer]:
+                - generic [ref=e139]:
+                  - img
+                - generic [ref=e140]: Settings
+            - listitem [ref=e141]:
+              - button "Send feedback" [ref=e143] [cursor=pointer]:
+                - generic [ref=e147]:
+                  - img
+                - generic [ref=e148]: Send feedback
+        - main [ref=e149]:
+          - generic [ref=e150]:
+            - generic [ref=e152]:
+              - heading "Channel analytics" [level=1] [ref=e153]
+              - link "Advanced mode" [ref=e155] [cursor=pointer]:
+                - /url: /channel/UCtxQrYzeMBCKMAofCgcY5dA/analytics/tab-overview/period-default/explore?entity_type=CHANNEL&entity_id=UCtxQrYzeMBCKMAofCgcY5dA&time_period=4_weeks&explore_type=TABLE_AND_CHART&metric=EXTERNAL_VIEWS&granularity=DAY&t_metrics=EXTERNAL_VIEWS&t_metrics=EXTERNAL_WATCH_TIME&t_metrics=SUBSCRIBERS_NET_CHANGE&t_metrics=TOTAL_ESTIMATED_EARNINGS&t_metrics=VIDEO_THUMBNAIL_IMPRESSIONS&t_metrics=VIDEO_THUMBNAIL_IMPRESSIONS_VTR&dimension=VIDEO&o_column=EXTERNAL_VIEWS&o_direction=ANALYTICS_ORDER_DIRECTION_DESC
+                - button "Advanced mode" [ref=e158]:
+                  - generic [ref=e159]: Advanced mode
+            - generic [ref=e167]:
+              - generic [ref=e170]:
+                - tablist [ref=e172]:
+                  - generic [ref=e174]:
+                    - tab "Overview" [selected] [ref=e176] [cursor=pointer]:
+                      - generic [ref=e177]: Overview
+                    - tab "Content" [ref=e178] [cursor=pointer]:
+                      - generic [ref=e179]: Content
+                    - tab "Audience" [ref=e180] [cursor=pointer]:
+                      - generic [ref=e181]: Audience
+                    - tab "Trends" [ref=e182] [cursor=pointer]:
+                      - generic [ref=e183]: Trends
+                - button "Dec 2 – 29, 2025 Last 28 days" [ref=e190]:
+                  - button "Dec 2 – 29, 2025 Last 28 days" [ref=e191] [cursor=pointer]:
+                    - generic [ref=e194]:
+                      - generic [ref=e196]: Dec 2 – 29, 2025
+                      - generic [ref=e197]: Last 28 days
+                    - generic [ref=e201]:
+                      - img
+              - generic [ref=e185]:
+                - generic [ref=e202]:
+                  - heading "Your channel didn’t get any views in the last 28 days" [level=2] [ref=e205]
+                  - generic [ref=e208]:
+                    - generic [ref=e209]: Views
+                    - listbox [ref=e211]:
+                      - option "Views — Total views for the selected date range, region and other filters." [selected] [ref=e212] [cursor=pointer]:
+                        - generic [ref=e214]:
+                          - generic [ref=e215]:
+                            - generic [ref=e218]: Views
+                            - generic [ref=e221]: —
+                          - generic [ref=e222]: Total views for the selected date range, region and other filters.
+                      - option "Watch time (hours) — Estimated total hours of viewing time of your content from your audience." [ref=e223] [cursor=pointer]:
+                        - generic [ref=e225]:
+                          - generic [ref=e226]:
+                            - generic [ref=e229]: Watch time (hours)
+                            - generic [ref=e232]: —
+                          - generic [ref=e233]: Estimated total hours of viewing time of your content from your audience.
+                      - option "Subscribers — The change in total subscribers found by subtracting subscribers lost from subscribers gained for the selected date range and region." [ref=e234] [cursor=pointer]:
+                        - generic [ref=e236]:
+                          - generic [ref=e237]:
+                            - generic [ref=e240]: Subscribers
+                            - generic [ref=e243]: —
+                          - generic [ref=e244]: The change in total subscribers found by subtracting subscribers lost from subscribers gained for the selected date range and region.
+                    - generic [ref=e250]:
+                      - img [ref=e251]:
+                        - generic [ref=e252]:
+                          - generic [ref=e253]:
+                            - generic [ref=e255]: Dec 2, 2025
+                            - generic [ref=e257]: Dec 7, 2025
+                            - generic [ref=e259]: Dec 11, 2025
+                            - generic [ref=e261]: Dec 16, 2025
+                            - generic [ref=e263]: Dec 20, 2025
+                            - generic [ref=e265]: Dec 25, 2025
+                            - generic [ref=e267]: Dec 29, ...
+                          - generic [ref=e268]:
+                            - generic [ref=e270]: "3"
+                            - generic [ref=e272]: "2"
+                            - generic [ref=e274]: "1"
+                            - generic [ref=e276]: "0"
+                      - generic [ref=e282]: Views
+                    - link "See more" [ref=e285] [cursor=pointer]:
+                      - /url: /channel/UCtxQrYzeMBCKMAofCgcY5dA/analytics/tab-overview/period-default/explore?entity_type=CHANNEL&entity_id=UCtxQrYzeMBCKMAofCgcY5dA&time_period=4_weeks&explore_type=TABLE_AND_CHART&metrics_computation_type=DELTA&metric=EXTERNAL_VIEWS&granularity=DAY&t_metrics=EXTERNAL_VIEWS&t_metrics=EXTERNAL_WATCH_TIME&t_metrics=SUBSCRIBERS_NET_CHANGE&t_metrics=VIDEO_THUMBNAIL_IMPRESSIONS&t_metrics=VIDEO_THUMBNAIL_IMPRESSIONS_VTR&v_metrics=EXTERNAL_VIEWS&v_metrics=EXTERNAL_WATCH_TIME&v_metrics=SUBSCRIBERS_NET_CHANGE&v_metrics=VIDEO_THUMBNAIL_IMPRESSIONS&v_metrics=VIDEO_THUMBNAIL_IMPRESSIONS_VTR&dimension=VIDEO&o_column=EXTERNAL_VIEWS&o_direction=ANALYTICS_ORDER_DIRECTION_DESC
+                      - generic "See more" [ref=e286]:
+                        - button "See more" [ref=e288]:
+                          - generic [ref=e289]: See more
+                - generic [ref=e293]:
+                  - generic [ref=e296]:
+                    - generic [ref=e297]:
+                      - generic [ref=e298]:
+                        - heading "Realtime" [level=2] [ref=e305]
+                        - generic [ref=e309]: Updating live
+                        - separator [ref=e310]
+                        - generic [ref=e311]:
+                          - generic [ref=e312]: —
+                          - generic [ref=e313]: Subscribers
+                        - link "See live count" [ref=e315] [cursor=pointer]:
+                          - /url: /channel/UCtxQrYzeMBCKMAofCgcY5dA/analytics/tab-overview/period-default/explore?entity_type=CHANNEL&entity_id=UCtxQrYzeMBCKMAofCgcY5dA&time_period=4_weeks&explore_type=SUBSCRIBERS
+                          - button "See live count" [ref=e318]:
+                            - generic [ref=e319]: See live count
+                        - separator [ref=e323]
+                        - generic [ref=e324]:
+                          - generic [ref=e325]: "41"
+                          - generic [ref=e327]: Views · Last 48 hours
+                      - generic [ref=e331]:
+                        - img [ref=e332]:
+                          - generic [ref=e336]: Now
+                        - generic [ref=e389]: "Latest activity, Views: Last 48 hours, 41."
+                      - generic [ref=e390]:
+                        - generic [ref=e391]:
+                          - generic [ref=e392]: Top content
+                          - generic [ref=e394]: Views
+                        - generic [ref=e396]:
+                          - link "STUDY SCENE4 tilt the black book against the shelf——使用Clipchamp制作 STUDY SCENE4 tilt the black book against the shelf——使用Clipchamp制作" [ref=e398] [cursor=pointer]:
+                            - /url: /video/kziDjgXLyN0/analytics/tab-overview/period-default
+                            - img "STUDY SCENE4 tilt the black book against the shelf——使用Clipchamp制作" [ref=e403]
+                            - generic [ref=e405]: STUDY SCENE4 tilt the black book against the shelf——使用Clipchamp制作
+                          - generic [ref=e407]: "41"
+                    - link "See more" [ref=e410] [cursor=pointer]:
+                      - /url: /channel/UCtxQrYzeMBCKMAofCgcY5dA/analytics/tab-overview/period-default/explore?entity_type=CHANNEL&entity_id=UCtxQrYzeMBCKMAofCgcY5dA&time_period=4_weeks&explore_type=LATEST_ACTIVITY
+                      - generic "See more" [ref=e411]:
+                        - button "See more" [ref=e413]:
+                          - generic [ref=e414]: See more
+                  - generic [ref=e420]:
+                    - generic [ref=e421]: Latest content
+                    - generic [ref=e423]:
+                      - 'img "Video thumbnail: STUDY SCENE4 tilt the black book against the shelf——使用Clipchamp制作" [ref=e424]'
+                      - heading [level=2] [ref=e427]: STUDY SCENE4 tilt the black book against the shelf——使用Clipchamp制作
+                    - generic [ref=e430]:
+                      - generic [ref=e432]: First 2 hours 47 minutes
+                      - generic [ref=e433]:
+                        - button "Views 41" [ref=e434]:
+                          - generic [ref=e435]: Views
+                          - generic [ref=e439]: "41"
+                        - button "Impressions click-through rate —" [ref=e440]:
+                          - generic [ref=e441]: Impressions click-through rate
+                          - generic [ref=e445]: —
+                        - button "Average view duration —" [ref=e446]:
+                          - generic [ref=e447]: Average view duration
+                          - generic [ref=e451]: —
+                      - generic [ref=e452]: Additional metrics become available 3 hours after publish.
+                    - link "See video analytics" [ref=e454] [cursor=pointer]:
+                      - /url: /video/kziDjgXLyN0/analytics/tab-overview/period-default
+                      - button "See video analytics" [ref=e457]:
+                        - generic [ref=e458]: See video analytics
+```

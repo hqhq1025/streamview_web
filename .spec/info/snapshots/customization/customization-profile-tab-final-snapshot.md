@@ -1,0 +1,238 @@
+### Page state
+- Page URL: https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/editing/profile
+- Page Title: Channel customization - YouTube Studio
+- Page Snapshot:
+```yaml
+- generic [active] [ref=e1]:
+  - generic:
+    - generic [ref=e2]: Channel customization
+    - generic [ref=e4]:
+      - banner [ref=e6]:
+        - button "Collapse menu" [ref=e7] [cursor=pointer]:
+          - generic [ref=e10]:
+            - img
+        - link "YouTube Studio dashboard" [ref=e12] [cursor=pointer]:
+          - /url: /channel/UCtxQrYzeMBCKMAofCgcY5dA
+        - button "Skip navigation" [ref=e15] [cursor=pointer]:
+          - generic [ref=e16]: Skip navigation
+        - generic [ref=e21]:
+          - generic [ref=e24]:
+            - img
+          - textbox "Search across your channel" [ref=e26]
+        - generic [ref=e28]:
+          - generic [ref=e29]:
+            - button "Help" [ref=e31] [cursor=pointer]:
+              - generic [ref=e34]:
+                - img
+            - button "Notifications" [ref=e36] [cursor=pointer]:
+              - generic [ref=e39]:
+                - img
+          - button "Create" [ref=e42] [cursor=pointer]:
+            - generic [ref=e46]:
+              - img
+            - generic [ref=e47]: Create
+          - generic "Account" [ref=e51]:
+            - button "Account" [ref=e52]
+      - generic [ref=e54]:
+        - navigation [ref=e56]:
+          - generic [ref=e57]:
+            - generic:
+              - img "Tony zhou" [ref=e60]
+              - generic [ref=e61]:
+                - generic [ref=e62]: Your channel
+                - generic [ref=e63]: Tony zhou
+          - menu [ref=e65]:
+            - menuitem "Dashboard" [ref=e66] [cursor=pointer]:
+              - button "Dashboard" [ref=e67]:
+                - generic [ref=e406]:
+                  - img
+                - generic [ref=e72]: Dashboard
+            - menuitem "Content" [ref=e73] [cursor=pointer]:
+              - button "Content" [ref=e74]:
+                - generic [ref=e78]:
+                  - img
+                - generic [ref=e79]: Content
+            - menuitem "Analytics" [ref=e80] [cursor=pointer]:
+              - button "Analytics" [ref=e81]:
+                - generic [ref=e85]:
+                  - img
+                - generic [ref=e86]: Analytics
+            - menuitem "Community" [ref=e87] [cursor=pointer]:
+              - button "Community" [ref=e88]:
+                - generic [ref=e92]:
+                  - img
+                - generic [ref=e93]: Community
+            - menuitem "Subtitles" [ref=e94] [cursor=pointer]:
+              - button "Subtitles" [ref=e95]:
+                - generic [ref=e99]:
+                  - img
+                - generic [ref=e100]: Subtitles
+            - menuitem "Content detection" [ref=e101] [cursor=pointer]:
+              - button "Content detection" [ref=e102]:
+                - generic [ref=e106]:
+                  - img
+                - generic [ref=e107]: Content detection
+            - menuitem "Earn" [ref=e108] [cursor=pointer]:
+              - button "Earn" [ref=e109]:
+                - generic [ref=e113]:
+                  - img
+                - generic [ref=e114]: Earn
+            - menuitem "Customization" [ref=e115] [cursor=pointer]:
+              - button "Customization" [ref=e116]:
+                - generic [ref=e407]:
+                  - img
+                - generic [ref=e121]: Customization
+            - menuitem "Audio library" [ref=e122] [cursor=pointer]:
+              - button "Audio library" [ref=e123]:
+                - generic [ref=e127]:
+                  - img
+                - generic [ref=e128]: Audio library
+          - list [ref=e130]:
+            - listitem [ref=e131]:
+              - button "Settings" [ref=e132] [cursor=pointer]:
+                - generic [ref=e136]:
+                  - img
+                - generic [ref=e137]: Settings
+            - listitem [ref=e138]:
+              - button "Send feedback" [ref=e140] [cursor=pointer]:
+                - generic [ref=e144]:
+                  - img
+                - generic [ref=e145]: Send feedback
+        - main [ref=e146]:
+          - generic [ref=e147]:
+            - heading "Channel customization" [level=1] [ref=e408]
+            - generic [ref=e410]:
+              - generic [ref=e413]:
+                - tablist [ref=e415]:
+                  - generic [ref=e417]:
+                    - tab "Profile" [selected] [ref=e419] [cursor=pointer]:
+                      - generic [ref=e421]: Profile
+                    - tab "Home tab" [ref=e422] [cursor=pointer]:
+                      - generic [ref=e424]: Home tab
+                - generic [ref=e425]:
+                  - button "View channel" [ref=e428] [cursor=pointer]:
+                    - generic [ref=e429]: View channel
+                  - button "Cancel" [ref=e435] [cursor=pointer]:
+                    - generic [ref=e436]: Cancel
+                  - button "Publish" [disabled] [ref=e439]:
+                    - generic [ref=e440]: Publish
+              - generic [ref=e444]:
+                - generic [ref=e447]:
+                  - generic [ref=e448]: Banner image
+                  - generic [ref=e449]: This image will appear across the top of your channel
+                  - generic [ref=e450]:
+                    - img [ref=e452]
+                    - generic [ref=e462]:
+                      - generic [ref=e463]:
+                        - text: For the best results on all devices, use an image that’s at least 2048 x 1152 pixels and 6MB or less.
+                        - generic "You can manage basic info about your YouTube channel such as channel name and description, translations, and links." [ref=e465]:
+                          - generic [ref=e467]:
+                            - img
+                      - button "Upload" [ref=e471] [cursor=pointer]:
+                        - generic [ref=e472]: Upload
+                - generic [ref=e478]:
+                  - generic [ref=e479]: Picture
+                  - generic [ref=e480]: Your profile picture will appear where your channel is presented on YouTube, like next to your videos and comments
+                  - generic [ref=e481]:
+                    - img "Profile picture" [ref=e483]
+                    - generic [ref=e484]:
+                      - generic [ref=e485]:
+                        - text: It’s recommended to use a picture that’s at least 98 x 98 pixels and 4MB or less. Use a PNG or GIF (no animations) file. Make sure your picture follows the YouTube Community Guidelines.
+                        - generic "You can manage basic info about your YouTube channel such as channel name and description, translations, and links." [ref=e487]:
+                          - generic [ref=e489]:
+                            - img
+                      - button "Upload" [ref=e493] [cursor=pointer]:
+                        - generic [ref=e494]: Upload
+                - generic [ref=e498]:
+                  - heading "Name" [level=2] [ref=e499]
+                  - generic [ref=e500]:
+                    - generic [ref=e501]:
+                      - text: Choose a channel name that represents you and your content. Changes made to your name and picture are visible only on YouTube and not other Google services. You can change your name twice in 14 days.
+                      - generic "You can manage basic info about your YouTube channel such as channel name and description, translations, and links." [ref=e503]:
+                        - generic [ref=e505]:
+                          - img
+                    - textbox "Enter channel name" [ref=e510]: Tony zhou
+                  - generic [ref=e512]:
+                    - heading "Handle" [level=2] [ref=e513]
+                    - generic [ref=e514]:
+                      - text: Choose your unique handle by adding letters and numbers. You can change your handle back within 14 days. Handles can be changed twice every 14 days.
+                      - generic "Handles are a way for you to find and connect with creators on YouTube. Handles are unique and short channel identifiers distinct from channel names, and they start with the “@” symbol. For example, @youtubecreators." [ref=e516]:
+                        - generic [ref=e518]:
+                          - img
+                    - generic [ref=e522]:
+                      - text: "@"
+                      - textbox "Set your handle" [ref=e523]: tonyzhou3956
+                    - generic [ref=e525]: https://www.youtube.com/@tonyzhou3956
+                  - generic [ref=e528]:
+                    - heading "Pronouns" [level=2] [ref=e529]
+                    - generic [ref=e530]:
+                      - text: Optionally add your pronouns. Let others know how to refer to you. You can edit or remove them anytime. You can choose who can view your pronouns. Your pronouns will appear on your channel page.
+                      - generic [ref=e534]:
+                        - img
+                    - generic [ref=e916]:
+                      - button "Filter by language" [ref=e918]:
+                        - button "Filter by language" [ref=e919] [cursor=pointer]:
+                          - generic [ref=e923]: Filter by language
+                          - generic [ref=e927]:
+                            - img
+                      - textbox "Type to find your pronouns" [ref=e935]
+                      - button "Visible to only my subscribers" [ref=e939]:
+                        - button "Visible to only my subscribers" [ref=e940] [cursor=pointer]:
+                          - generic [ref=e944]: Visible to only my subscribers
+                          - generic [ref=e948]:
+                            - img
+                  - heading "Description" [level=2] [ref=e547]
+                  - textbox "Tell viewers about your channel. Your description will appear in the About section of your channel and search results, among other places." [ref=e554]
+                  - button "Add language" [ref=e558] [cursor=pointer]:
+                    - generic [ref=e562]:
+                      - img
+                    - generic [ref=e563]: Add language
+                - generic [ref=e568]:
+                  - heading "Channel URL" [level=2] [ref=e569]
+                  - generic [ref=e570]:
+                    - text: This is the standard web address for your channel. It includes your unique channel ID, which is the numbers and letters at the end of the URL.
+                    - generic "Your channel can have more than one URL that directs your audience to your channel homepage. These URLs can look different from one another, but each URL can point your audience to the same place - your channel. Handle URLs, custom URLs, and legacy username URLs are all forms of personalized URLs. You can view all URLs associated with your channel at youtube.com/handle." [ref=e572]:
+                      - generic [ref=e574]:
+                        - img
+                  - generic [ref=e575]:
+                    - textbox [ref=e576]: https://www.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA
+                    - button "Copy" [ref=e577] [cursor=pointer]:
+                      - generic [ref=e580]:
+                        - img
+                - generic [ref=e582]:
+                  - heading "Links" [level=2] [ref=e583]
+                  - generic [ref=e584]: Share external links with your viewers. They'll be visible on your channel profile and about page.
+                  - generic [ref=e951]:
+                    - generic [ref=e955]:
+                      - img
+                    - generic [ref=e957]:
+                      - generic [ref=e958]: Link title (required)
+                      - textbox "Enter a title" [ref=e960]
+                    - generic [ref=e962]:
+                      - generic [ref=e963]: URL (required)
+                      - textbox "Enter a URL" [ref=e965]
+                    - button "Remove" [ref=e966] [cursor=pointer]:
+                      - generic [ref=e969]:
+                        - img
+                  - button "Add link" [disabled] [ref=e587]:
+                    - generic [ref=e970]:
+                      - img
+                    - generic [ref=e592]: Add link
+                - generic [ref=e596]:
+                  - generic [ref=e597]:
+                    - heading "Contact info" [level=2] [ref=e598]
+                    - generic [ref=e599]: Let people know how to contact you with business inquiries. The email address you enter may appear in the About section of your channel and be visible to viewers.
+                  - generic [ref=e601]:
+                    - generic [ref=e602]: Email
+                    - textbox "Email address" [ref=e604]
+                - generic [ref=e607]:
+                  - generic [ref=e608]: Video watermark
+                  - generic [ref=e609]: The watermark will appear on your videos in the right-hand corner of the video player
+                  - generic [ref=e610]:
+                    - generic [ref=e616]:
+                      - img
+                    - generic [ref=e617]:
+                      - generic [ref=e618]: An image that’s 150 x 150 pixels is recommended. Use a PNG, GIF (no animations), BMP, or JPEG file that’s 1MB or less.
+                      - button "Upload" [ref=e623] [cursor=pointer]:
+                        - generic [ref=e624]: Upload
+```

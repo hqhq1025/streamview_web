@@ -1,0 +1,214 @@
+### Page state
+- Page URL: https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/comments/inbox?filter=%5B%7B%22isDisabled%22%3Afalse%2C%22isPinned%22%3Atrue%2C%22name%22%3A%22SORT_BY%22%2C%22value%22%3A%22SORT_BY_MOST_RELEVANT%22%7D%2C%7B%22name%22%3A%22ENGAGED_STATUS%22%2C%22value%22%3A%5B%22COMMENT_CATEGORY_NOT_ENGAGED%22%5D%7D%5D
+- Page Title: Community - YouTube Studio
+- Page Snapshot:
+```yaml
+- generic [active] [ref=e1]:
+  - generic:
+    - generic [ref=e2]: Community
+    - generic [ref=e4]:
+      - banner [ref=e6]:
+        - button "Collapse menu" [ref=e7] [cursor=pointer]:
+          - generic [ref=e10]:
+            - img
+        - link "YouTube Studio dashboard" [ref=e12] [cursor=pointer]:
+          - /url: /channel/UCtxQrYzeMBCKMAofCgcY5dA
+        - button "Skip navigation" [ref=e15] [cursor=pointer]:
+          - generic [ref=e16]: Skip navigation
+        - generic [ref=e21]:
+          - generic [ref=e24]:
+            - img
+          - textbox "Search across your channel" [ref=e26]
+        - generic [ref=e28]:
+          - generic [ref=e29]:
+            - button "Help" [ref=e31] [cursor=pointer]:
+              - generic [ref=e34]:
+                - img
+            - button "Notifications" [ref=e36] [cursor=pointer]:
+              - generic [ref=e39]:
+                - img
+          - button "Create" [ref=e42] [cursor=pointer]:
+            - generic [ref=e46]:
+              - img
+            - generic [ref=e47]: Create
+          - generic "Account" [ref=e51]:
+            - button "Account" [ref=e52]
+      - generic [ref=e54]:
+        - navigation [ref=e56]:
+          - generic [ref=e57]:
+            - generic:
+              - img "Tony zhou" [ref=e60]
+              - generic [ref=e61]:
+                - generic [ref=e62]: Your channel
+                - generic [ref=e63]: Tony zhou
+          - menu [ref=e65]:
+            - menuitem "Dashboard" [ref=e66] [cursor=pointer]:
+              - button "Dashboard" [ref=e67]:
+                - generic [ref=e71]:
+                  - img
+                - generic [ref=e72]: Dashboard
+            - menuitem "Content" [ref=e73] [cursor=pointer]:
+              - button "Content" [ref=e74]:
+                - generic [ref=e78]:
+                  - img
+                - generic [ref=e79]: Content
+            - menuitem "Analytics" [ref=e80] [cursor=pointer]:
+              - button "Analytics" [ref=e81]:
+                - generic [ref=e85]:
+                  - img
+                - generic [ref=e86]: Analytics
+            - menuitem "Community" [ref=e87] [cursor=pointer]:
+              - button "Community" [ref=e88]:
+                - generic [ref=e92]:
+                  - img
+                - generic [ref=e93]: Community
+            - menuitem "Subtitles" [ref=e94] [cursor=pointer]:
+              - button "Subtitles" [ref=e95]:
+                - generic [ref=e99]:
+                  - img
+                - generic [ref=e100]: Subtitles
+            - menuitem "Content detection" [ref=e101] [cursor=pointer]:
+              - button "Content detection" [ref=e102]:
+                - generic [ref=e106]:
+                  - img
+                - generic [ref=e107]: Content detection
+            - menuitem "Earn" [ref=e108] [cursor=pointer]:
+              - button "Earn" [ref=e109]:
+                - generic [ref=e113]:
+                  - img
+                - generic [ref=e114]: Earn
+            - menuitem "Customization" [ref=e115] [cursor=pointer]:
+              - button "Customization" [ref=e116]:
+                - generic [ref=e120]:
+                  - img
+                - generic [ref=e121]: Customization
+            - menuitem "Audio library" [ref=e122] [cursor=pointer]:
+              - button "Audio library" [ref=e123]:
+                - generic [ref=e127]:
+                  - img
+                - generic [ref=e128]: Audio library
+          - list [ref=e130]:
+            - listitem [ref=e131]:
+              - button "Settings" [ref=e132] [cursor=pointer]:
+                - generic [ref=e136]:
+                  - img
+                - generic [ref=e137]: Settings
+            - listitem [ref=e138]:
+              - button "Send feedback" [ref=e140] [cursor=pointer]:
+                - generic [ref=e144]:
+                  - img
+                - generic [ref=e145]: Send feedback
+        - main [ref=e146]:
+          - generic [ref=e149]:
+            - heading "Community" [level=1] [ref=e153]
+            - tablist [ref=e158]:
+              - generic [ref=e160]:
+                - tab "Comments" [selected] [ref=e162] [cursor=pointer]:
+                  - generic [ref=e163]: Comments
+                - tab "Viewer posts" [ref=e164] [cursor=pointer]:
+                  - generic [ref=e165]: Viewer posts
+                - tab "Mentions" [ref=e166] [cursor=pointer]:
+                  - generic [ref=e167]: Mentions
+            - generic [ref=e169]:
+              - generic [ref=e170]:
+                - generic [ref=e172]:
+                  - generic [ref=e175] [cursor=pointer]:
+                    - img
+                  - generic [ref=e177]:
+                    - button "Published. Press enter to edit" [ref=e178] [cursor=pointer]:
+                      - generic [ref=e179]: Published
+                      - generic [ref=e182]:
+                        - img
+                    - button "Sort by. Press enter to edit" [ref=e183] [cursor=pointer]:
+                      - generic [ref=e184]: Sort by
+                      - generic [ref=e187]:
+                        - img
+                    - 'button "Response status: Unresponded. Press enter to edit" [ref=e188] [cursor=pointer]':
+                      - generic [ref=e189]: "Response status: Unresponded"
+                      - button "Remove" [ref=e190]:
+                        - generic [ref=e193]:
+                          - img
+                    - textbox [ref=e194]
+                - generic "Select all comments for batch" [ref=e195] [cursor=pointer]:
+                  - generic [ref=e199]:
+                    - checkbox
+                - separator [ref=e200]
+              - list [ref=e203]:
+                - generic [ref=e205]:
+                  - generic [ref=e208]:
+                    - generic [ref=e209]:
+                      - generic "Select comment for batch" [ref=e210] [cursor=pointer]:
+                        - generic [ref=e214]:
+                          - checkbox
+                      - link "@XinyuanWang-f6m" [ref=e216] [cursor=pointer]:
+                        - /url: http://www.youtube.com/@XinyuanWang-f6m
+                        - img "@XinyuanWang-f6m" [ref=e218]
+                      - generic [ref=e219]:
+                        - generic [ref=e220]:
+                          - link "@XinyuanWang-f6m" [ref=e221] [cursor=pointer]:
+                            - /url: http://www.youtube.com/@XinyuanWang-f6m
+                          - text: • 2 hours ago
+                        - generic [ref=e223]: tony zhou无敌
+                        - generic [ref=e224]:
+                          - generic [ref=e226]:
+                            - button "Reply" [ref=e231] [cursor=pointer]:
+                              - generic [ref=e232]: Reply
+                            - button "1 reply" [ref=e238] [cursor=pointer]:
+                              - generic [ref=e239]: 1 reply
+                              - generic [ref=e243]:
+                                - img
+                            - button "Like" [ref=e248] [cursor=pointer]:
+                              - generic [ref=e251]:
+                                - img
+                            - button "Dislike" [ref=e253] [cursor=pointer]:
+                              - generic [ref=e256]:
+                                - img
+                            - button "Heart" [ref=e259] [cursor=pointer]:
+                              - generic [ref=e262]:
+                                - img
+                          - button "Action menu" [ref=e263] [cursor=pointer]:
+                            - generic [ref=e266]:
+                              - img
+                    - generic [ref=e267]:
+                      - generic [ref=e268] [cursor=pointer]:
+                        - img [ref=e271]
+                        - generic [ref=e272]: STUDY SCENE4 tilt the black book against the shelf——使用Clipchamp制作
+                      - button "View comment on YouTube" [ref=e273]:
+                        - button "View comment on YouTube" [ref=e275] [cursor=pointer]:
+                          - generic [ref=e278]:
+                            - img
+                  - generic [ref=e282]:
+                    - generic [ref=e283]:
+                      - generic "Select comment for batch" [ref=e284] [cursor=pointer]:
+                        - generic [ref=e288]:
+                          - checkbox
+                      - link "@XXZSaikou" [ref=e290] [cursor=pointer]:
+                        - /url: http://www.youtube.com/@XXZSaikou
+                        - img "@XXZSaikou" [ref=e292]
+                      - generic [ref=e293]:
+                        - generic [ref=e294]:
+                          - link "@XXZSaikou" [ref=e295] [cursor=pointer]:
+                            - /url: http://www.youtube.com/@XXZSaikou
+                          - text: • 2 hours ago
+                        - generic [ref=e297]: 没错，神中神
+                        - generic [ref=e298]:
+                          - generic [ref=e300]:
+                            - button "Reply" [ref=e305] [cursor=pointer]:
+                              - generic [ref=e306]: Reply
+                            - button "Like" [ref=e311] [cursor=pointer]:
+                              - generic [ref=e314]:
+                                - img
+                            - button "Dislike" [ref=e316] [cursor=pointer]:
+                              - generic [ref=e319]:
+                                - img
+                            - button "Heart" [ref=e322] [cursor=pointer]:
+                              - generic [ref=e325]:
+                                - img
+                          - button "Action menu" [ref=e326] [cursor=pointer]:
+                            - generic [ref=e329]:
+                              - img
+                    - button "View comment on YouTube" [ref=e333]:
+                      - button "View comment on YouTube" [ref=e335] [cursor=pointer]:
+                        - generic [ref=e338]:
+                          - img
+```

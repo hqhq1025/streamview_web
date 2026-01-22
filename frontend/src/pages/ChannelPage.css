@@ -1,0 +1,132 @@
+
+.channel-page {
+  padding: 0;
+}
+
+.channel-banner {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background-color: var(--hover-bg);
+}
+
+.channel-header {
+  padding: 24px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.channel-header-content {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+.channel-avatar-xl {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.channel-info {
+  flex: 1;
+}
+
+.channel-name-large {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.channel-handle {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.channel-stats {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.channel-tabs {
+  display: flex;
+  gap: 32px;
+  padding: 0 24px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.channel-tab {
+  padding: 12px 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.channel-tab:hover {
+  color: var(--text-primary);
+}
+
+.channel-tab.active {
+  color: var(--text-primary);
+  border-bottom-color: var(--text-primary);
+}
+
+.channel-content {
+  padding: 24px;
+}
+
+.channel-videos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+@media (min-width: 1024px) {
+  .channel-videos-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.channel-about {
+  max-width: 800px;
+}
+
+.about-section {
+  margin-bottom: 32px;
+}
+
+.about-section h3 {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.about-section p {
+  font-size: 14px;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.about-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.about-link {
+  color: var(--primary-red);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.about-link:hover {
+  text-decoration: underline;
+}
+  

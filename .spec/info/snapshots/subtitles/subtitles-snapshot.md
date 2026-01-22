@@ -1,0 +1,177 @@
+### Page state
+- Page URL: https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/translations
+- Page Title: Channel subtitles - YouTube Studio
+- Page Snapshot:
+```yaml
+- generic [ref=e1]:
+  - generic:
+    - generic [ref=e2]: Channel subtitles
+    - generic [ref=e4]:
+      - banner [ref=e6]:
+        - button "Collapse menu" [ref=e7] [cursor=pointer]:
+          - generic [ref=e10]:
+            - img
+        - link "YouTube Studio dashboard" [ref=e12] [cursor=pointer]:
+          - /url: /channel/UCtxQrYzeMBCKMAofCgcY5dA
+        - button "Skip navigation" [ref=e15] [cursor=pointer]:
+          - generic [ref=e16]: Skip navigation
+        - generic [ref=e21]:
+          - generic [ref=e24]:
+            - img
+          - textbox "Search across your channel" [ref=e26]
+        - generic [ref=e28]:
+          - generic [ref=e29]:
+            - button "Help" [ref=e31] [cursor=pointer]:
+              - generic [ref=e34]:
+                - img
+            - button "Notifications" [ref=e36] [cursor=pointer]:
+              - generic [ref=e39]:
+                - img
+          - button "Create" [ref=e42] [cursor=pointer]:
+            - generic [ref=e46]:
+              - img
+            - generic [ref=e47]: Create
+          - generic "Account" [ref=e51]:
+            - button "Account" [ref=e52]
+      - generic [ref=e54]:
+        - navigation [ref=e56]:
+          - generic [ref=e57]:
+            - generic:
+              - img "Tony zhou" [ref=e60]
+              - generic [ref=e61]:
+                - generic [ref=e62]: Your channel
+                - generic [ref=e63]: Tony zhou
+          - menu [ref=e65]:
+            - menuitem "Dashboard" [ref=e66] [cursor=pointer]:
+              - button "Dashboard" [ref=e67]:
+                - generic [ref=e407]:
+                  - img
+                - generic [ref=e72]: Dashboard
+            - menuitem "Content" [ref=e73] [cursor=pointer]:
+              - button "Content" [ref=e74]:
+                - generic [ref=e78]:
+                  - img
+                - generic [ref=e79]: Content
+            - menuitem "Analytics" [ref=e80] [cursor=pointer]:
+              - button "Analytics" [ref=e81]:
+                - generic [ref=e85]:
+                  - img
+                - generic [ref=e86]: Analytics
+            - menuitem "Community" [ref=e87] [cursor=pointer]:
+              - button "Community" [ref=e88]:
+                - generic [ref=e92]:
+                  - img
+                - generic [ref=e93]: Community
+            - menuitem "Subtitles" [ref=e94] [cursor=pointer]:
+              - button "Subtitles" [active] [ref=e95]:
+                - generic [ref=e408]:
+                  - img
+                - generic [ref=e100]: Subtitles
+            - menuitem "Content detection" [ref=e101] [cursor=pointer]:
+              - button "Content detection" [ref=e102]:
+                - generic [ref=e106]:
+                  - img
+                - generic [ref=e107]: Content detection
+            - menuitem "Earn" [ref=e108] [cursor=pointer]:
+              - button "Earn" [ref=e109]:
+                - generic [ref=e113]:
+                  - img
+                - generic [ref=e114]: Earn
+            - menuitem "Customization" [ref=e115] [cursor=pointer]:
+              - button "Customization" [ref=e116]:
+                - generic [ref=e120]:
+                  - img
+                - generic [ref=e121]: Customization
+            - menuitem "Audio library" [ref=e122] [cursor=pointer]:
+              - button "Audio library" [ref=e123]:
+                - generic [ref=e127]:
+                  - img
+                - generic [ref=e128]: Audio library
+          - list [ref=e130]:
+            - listitem [ref=e131]:
+              - button "Settings" [ref=e132] [cursor=pointer]:
+                - generic [ref=e136]:
+                  - img
+                - generic [ref=e137]: Settings
+            - listitem [ref=e138]:
+              - button "Send feedback" [ref=e140] [cursor=pointer]:
+                - generic [ref=e144]:
+                  - img
+                - generic [ref=e145]: Send feedback
+        - main [ref=e146]:
+          - generic [ref=e147]:
+            - heading "Channel subtitles" [level=1] [ref=e409]
+            - generic [ref=e412]:
+              - heading "Videos tab selection" [level=2] [ref=e413]
+              - region "Videos tab selection" [ref=e414]:
+                - tablist "Video languages" [ref=e418]:
+                  - generic [ref=e420]:
+                    - tab "All" [selected] [ref=e422] [cursor=pointer]:
+                      - generic [ref=e424]: All
+                    - tab "Drafts" [ref=e425] [cursor=pointer]:
+                      - generic [ref=e427]: Drafts
+                    - tab "Published" [ref=e428] [cursor=pointer]:
+                      - generic [ref=e430]: Published
+              - region "Videos table" [ref=e431]:
+                - generic [ref=e435]:
+                  - table "All channel videos" [ref=e436]:
+                    - rowgroup [ref=e437]:
+                      - row "Video Languages Modified on" [ref=e438]:
+                        - columnheader "Video" [ref=e439]:
+                          - heading "Video" [level=3] [ref=e440]:
+                            - generic [ref=e441]: Video
+                        - columnheader "Languages" [ref=e442]:
+                          - heading "Languages" [level=3] [ref=e443]:
+                            - generic [ref=e444]: Languages
+                        - columnheader "Modified on" [ref=e445]:
+                          - heading "Modified on" [level=3] [ref=e446]:
+                            - generic [ref=e447]: Modified on
+                    - rowgroup [ref=e448]:
+                      - row "STUDY SCENE4 tilt the black book against the shelf——使用Clipchamp制作 0 Dec 22, 2025" [ref=e450]:
+                        - cell "STUDY SCENE4 tilt the black book against the shelf——使用Clipchamp制作" [ref=e451]:
+                          - generic "STUDY SCENE4 tilt the black book against the shelf——使用Clipchamp制作" [ref=e452]:
+                            - 'link "Video thumbnail: STUDY SCENE4 tilt the black book against the shelf——使用Clipchamp制作 0:53" [ref=e454] [cursor=pointer]':
+                              - /url: /video/kziDjgXLyN0/translations
+                              - generic [ref=e457]:
+                                - 'img "Video thumbnail: STUDY SCENE4 tilt the black book against the shelf——使用Clipchamp制作" [ref=e460]'
+                                - generic [ref=e462]: 0:53
+                            - generic [ref=e463]:
+                              - link "STUDY SCENE4 tilt the black book against the shelf——使用Clipchamp制作" [ref=e465] [cursor=pointer]:
+                                - /url: /video/kziDjgXLyN0/translations
+                                - generic [ref=e466]: STUDY SCENE4 tilt the black book against the shelf——使用Clipchamp制作
+                              - generic [ref=e468]: "123"
+                        - cell "0" [ref=e469]:
+                          - generic [ref=e470]: "0"
+                        - cell "Dec 22, 2025" [ref=e471]:
+                          - generic [ref=e472]: Dec 22, 2025
+                      - row "STUDY SCENE4 tilt the black book against the shelf——使用Clipchamp制作 0 Dec 21, 2025" [ref=e474]:
+                        - cell "STUDY SCENE4 tilt the black book against the shelf——使用Clipchamp制作" [ref=e475]:
+                          - generic "STUDY SCENE4 tilt the black book against the shelf——使用Clipchamp制作" [ref=e476]:
+                            - 'link "Video thumbnail: STUDY SCENE4 tilt the black book against the shelf——使用Clipchamp制作 0:53" [ref=e478] [cursor=pointer]':
+                              - /url: /video/f5MXgjX31IU/translations
+                              - generic [ref=e481]:
+                                - 'img "Video thumbnail: STUDY SCENE4 tilt the black book against the shelf——使用Clipchamp制作" [ref=e484]'
+                                - generic [ref=e486]: 0:53
+                            - link "STUDY SCENE4 tilt the black book against the shelf——使用Clipchamp制作" [ref=e489] [cursor=pointer]:
+                              - /url: /video/f5MXgjX31IU/translations
+                              - generic [ref=e490]: STUDY SCENE4 tilt the black book against the shelf——使用Clipchamp制作
+                        - cell "0" [ref=e491]:
+                          - generic [ref=e492]: "0"
+                        - cell "Dec 21, 2025" [ref=e493]:
+                          - generic [ref=e494]: Dec 21, 2025
+                  - region "Table navigation" [ref=e495]:
+                    - generic [ref=e497]:
+                      - generic [ref=e498]: 1–2 of 2
+                      - button "Navigate to the first page" [disabled] [ref=e499]:
+                        - generic [ref=e502]:
+                          - img
+                      - button "Navigate to the previous page" [disabled] [ref=e503]:
+                        - generic [ref=e506]:
+                          - img
+                      - button "Navigate to the next page" [disabled] [ref=e507]:
+                        - generic [ref=e510]:
+                          - img
+                      - button "Navigate to the last page" [disabled] [ref=e511]:
+                        - generic [ref=e514]:
+                          - img
+```

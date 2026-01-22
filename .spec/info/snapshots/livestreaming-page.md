@@ -1,0 +1,74 @@
+### Page state
+- Page URL: https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/livestreaming
+- Page Title: Live streaming - YouTube Studio
+- Page Snapshot:
+```yaml
+- generic [ref=e1]:
+  - dialog "Set up an overlay for your breaks" [ref=e40]:
+    - generic [ref=e41]:
+      - heading "Set up an overlay for your breaks" [level=4] [ref=e43]
+      - generic [ref=e44]: Keep viewers engaged by reverting to one of your videos or a default overlay
+      - button "Close" [ref=e48] [cursor=pointer]:
+        - generic [ref=e49]: Close
+  - generic:
+    - generic [ref=e2]: Live streaming
+    - generic [ref=e4]:
+      - banner [ref=e7]:
+        - generic [ref=e8]:
+          - button "Collapse menu" [ref=e9] [cursor=pointer]:
+            - generic [ref=e55]:
+              - img
+          - link "YouTube Studio dashboard" [ref=e12] [cursor=pointer]:
+            - /url: /channel/UCtxQrYzeMBCKMAofCgcY5dA
+        - button "Account profile photo that opens list of alternate accounts" [ref=e15]
+      - generic [ref=e17]:
+        - navigation [ref=e19]:
+          - list [ref=e21]:
+            - listitem [ref=e22]:
+              - generic [ref=e23]:
+                - button "Stream" [disabled]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img
+                  - generic: Stream
+            - listitem [ref=e24]:
+              - generic [ref=e25]:
+                - button "Webcam" [disabled]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img
+                  - generic: Webcam
+            - listitem [ref=e26]:
+              - button "Manage" [disabled]:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - img
+                - generic: Manage
+          - list [ref=e27]:
+            - listitem [ref=e28]:
+              - button "Channel Level Settings" [ref=e29] [cursor=pointer]:
+                - generic [ref=e57]:
+                  - img
+                - generic [ref=e32]: Channel Level Settings
+            - listitem [ref=e33]:
+              - button "Send feedback" [ref=e35] [cursor=pointer]:
+                - generic [ref=e59]:
+                  - img
+                - generic [ref=e38]: Send feedback
+        - generic [ref=e63]:
+          - generic "Once requested, it may take up to 24 hours to get access to live streaming":
+            - dialog "Once requested, it may take up to 24 hours to get access to live streaming" [active] [ref=e64]:
+              - generic [ref=e67]:
+                - generic [ref=e70]:
+                  - img
+                - generic [ref=e71]: Request access to streaming
+              - paragraph [ref=e74]: Once requested, it may take up to 24 hours to get access to live streaming
+              - button "Request" [ref=e79] [cursor=pointer]:
+                - generic [ref=e80]: Request
+```

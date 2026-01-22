@@ -1,0 +1,300 @@
+### Page state
+- Page URL: https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA
+- Page Title: Channel dashboard - YouTube Studio
+- Page Snapshot:
+```yaml
+- generic [ref=e1]:
+  - generic:
+    - generic [ref=e2]: Channel dashboard
+    - generic [ref=e4]:
+      - banner [ref=e6]:
+        - button "Collapse menu" [ref=e7] [cursor=pointer]:
+          - generic [ref=e10]:
+            - img
+        - link "YouTube Studio dashboard" [ref=e12] [cursor=pointer]:
+          - /url: /channel/UCtxQrYzeMBCKMAofCgcY5dA
+        - button "Skip navigation" [ref=e15] [cursor=pointer]:
+          - generic [ref=e16]: Skip navigation
+        - generic [ref=e21]:
+          - generic [ref=e24]:
+            - img
+          - textbox "Search across your channel" [ref=e26]
+        - generic [ref=e28]:
+          - generic [ref=e29]:
+            - button "Help" [ref=e31] [cursor=pointer]:
+              - generic [ref=e34]:
+                - img
+            - button "Notifications" [ref=e36] [cursor=pointer]:
+              - generic [ref=e39]:
+                - img
+          - button "Create" [ref=e42] [cursor=pointer]:
+            - generic [ref=e46]:
+              - img
+            - generic [ref=e47]: Create
+          - generic "Account" [ref=e51]:
+            - button "Account" [ref=e52]
+      - generic [ref=e54]:
+        - navigation [ref=e56]:
+          - generic [ref=e57]:
+            - generic:
+              - img "Tony zhou" [ref=e60]
+              - generic [ref=e61]:
+                - generic [ref=e62]: Your channel
+                - generic [ref=e63]: Tony zhou
+          - menu [ref=e65]:
+            - menuitem "Dashboard" [ref=e66] [cursor=pointer]:
+              - button "Dashboard" [ref=e67]:
+                - generic [ref=e71]:
+                  - img
+                - generic [ref=e72]: Dashboard
+            - menuitem "Content" [ref=e73] [cursor=pointer]:
+              - button "Content" [ref=e74]:
+                - generic [ref=e78]:
+                  - img
+                - generic [ref=e79]: Content
+            - menuitem "Analytics" [ref=e80] [cursor=pointer]:
+              - button "Analytics" [ref=e81]:
+                - generic [ref=e85]:
+                  - img
+                - generic [ref=e86]: Analytics
+            - menuitem "Community" [ref=e87] [cursor=pointer]:
+              - button "Community" [ref=e88]:
+                - generic [ref=e92]:
+                  - img
+                - generic [ref=e93]: Community
+            - menuitem "Subtitles" [ref=e94] [cursor=pointer]:
+              - button "Subtitles" [ref=e95]:
+                - generic [ref=e99]:
+                  - img
+                - generic [ref=e100]: Subtitles
+            - menuitem "Content detection" [ref=e101] [cursor=pointer]:
+              - button "Content detection" [ref=e102]:
+                - generic [ref=e106]:
+                  - img
+                - generic [ref=e107]: Content detection
+            - menuitem "Earn" [ref=e108] [cursor=pointer]:
+              - button "Earn" [ref=e109]:
+                - generic [ref=e113]:
+                  - img
+                - generic [ref=e114]: Earn
+            - menuitem "Customization" [ref=e115] [cursor=pointer]:
+              - button "Customization" [ref=e116]:
+                - generic [ref=e120]:
+                  - img
+                - generic [ref=e121]: Customization
+            - menuitem "Audio library" [ref=e122] [cursor=pointer]:
+              - button "Audio library" [ref=e123]:
+                - generic [ref=e127]:
+                  - img
+                - generic [ref=e128]: Audio library
+          - list [ref=e130]:
+            - listitem [ref=e131]:
+              - button "Settings" [ref=e132] [cursor=pointer]:
+                - generic [ref=e136]:
+                  - img
+                - generic [ref=e137]: Settings
+            - listitem [ref=e138]:
+              - button "Send feedback" [ref=e140] [cursor=pointer]:
+                - generic [ref=e144]:
+                  - img
+                - generic [ref=e145]: Send feedback
+        - main [ref=e146]:
+          - generic [ref=e147]:
+            - generic [ref=e149]:
+              - heading "Channel dashboard" [level=1] [ref=e150]
+              - generic [ref=e151]:
+                - button "Upload videos" [ref=e153] [cursor=pointer]:
+                  - generic [ref=e156]:
+                    - img
+                - link "Go live" [ref=e157] [cursor=pointer]:
+                  - /url: /channel/UCtxQrYzeMBCKMAofCgcY5dA/livestreaming
+                  - button "Go live" [ref=e158]:
+                    - generic [ref=e161]:
+                      - img
+                - link "Create post" [ref=e162] [cursor=pointer]:
+                  - /url: https://www.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/posts?show_create_dialog=1
+                  - button "Create post" [ref=e163]:
+                    - generic [ref=e166]:
+                      - img
+            - generic [ref=e168]:
+              - generic [ref=e170]:
+                - generic [ref=e171]:
+                  - generic [ref=e177]:
+                    - heading "Latest video performance" [level=2] [ref=e178]
+                    - generic [ref=e180]:
+                      - 'img "Video thumbnail: STUDY SCENE4 tilt the black book against the shelf——使用Clipchamp制作" [ref=e181]'
+                      - heading [level=2] [ref=e184]: STUDY SCENE4 tilt the black book against the shelf——使用Clipchamp制作
+                    - generic [ref=e185]:
+                      - generic [ref=e186]:
+                        - generic [ref=e187]:
+                          - generic [ref=e190]:
+                            - img
+                          - text: "41"
+                        - generic [ref=e191]:
+                          - generic [ref=e194]:
+                            - img
+                          - text: "4"
+                        - generic [ref=e195]:
+                          - generic [ref=e198]:
+                            - img
+                          - text: "2"
+                      - button "Collapse" [ref=e199] [cursor=pointer]:
+                        - generic [ref=e202]:
+                          - img
+                    - separator [ref=e203]
+                    - group [ref=e204]:
+                      - generic [ref=e207]:
+                        - generic [ref=e209]: First 3 hours 16 minutes
+                        - generic [ref=e210]:
+                          - button "Views 41" [ref=e211]:
+                            - generic [ref=e212]: Views
+                            - generic [ref=e216]: "41"
+                          - button "Impressions click-through rate 0%" [ref=e217]:
+                            - generic [ref=e218]: Impressions click-through rate
+                            - generic [ref=e222]: 0%
+                          - button "Average view duration 0:22" [ref=e223]:
+                            - generic [ref=e224]: Average view duration
+                            - generic [ref=e228]: 0:22
+                    - generic [ref=e229]:
+                      - link "Go to video analytics" [ref=e230] [cursor=pointer]:
+                        - /url: /video/kziDjgXLyN0/analytics/tab-overview/period-default
+                        - button "Go to video analytics" [ref=e233]:
+                          - generic [ref=e234]: Go to video analytics
+                      - link "See comments (4)" [ref=e238] [cursor=pointer]:
+                        - /url: /video/kziDjgXLyN0/comments/inbox
+                        - button "See comments (4)" [ref=e241]:
+                          - generic [ref=e242]: See comments (4)
+                  - list [ref=e249]:
+                    - listitem [ref=e250]:
+                      - generic [ref=e253]:
+                        - paragraph [ref=e256]: Create your first post to start a conversation and get feedback from your community.
+                        - link "Create post" [ref=e258] [cursor=pointer]:
+                          - /url: https://www.youtube.com/my_community?pdc=OAk%253D
+                          - button "Create post" [ref=e261]:
+                            - generic [ref=e262]: Create post
+                - generic [ref=e266]:
+                  - generic [ref=e272]:
+                    - heading "Channel analytics" [level=2] [ref=e273]
+                    - generic [ref=e274]:
+                      - generic [ref=e275]: Current subscribers
+                      - generic [ref=e276]: "0"
+                    - separator [ref=e278]
+                    - generic [ref=e279]:
+                      - generic [ref=e280]: Summary
+                      - generic [ref=e281]: Last 28 days
+                    - generic [ref=e283]:
+                      - generic [ref=e284]:
+                        - generic [ref=e285]: Views
+                        - generic [ref=e286]: "41"
+                        - generic [ref=e288]: —
+                      - generic [ref=e289]:
+                        - generic [ref=e290]: Watch time (hours)
+                        - generic [ref=e291]: "0.3"
+                        - generic [ref=e293]: —
+                    - separator [ref=e295]
+                    - generic [ref=e296]:
+                      - text: Top videos
+                      - generic [ref=e297]: Last 48 hours · Views
+                    - table [ref=e299]:
+                      - rowgroup [ref=e300]:
+                        - row "STUDY SCENE4 tilt the black book against the shelf——使用Clipchamp制作 41" [ref=e301]:
+                          - cell "STUDY SCENE4 tilt the black book against the shelf——使用Clipchamp制作" [ref=e302]:
+                            - link "STUDY SCENE4 tilt the black book against the shelf——使用Clipchamp制作" [ref=e303] [cursor=pointer]:
+                              - /url: /video/kziDjgXLyN0/analytics/tab-overview/period-default
+                          - cell "41" [ref=e304]:
+                            - link "41" [ref=e305] [cursor=pointer]:
+                              - /url: /video/kziDjgXLyN0/analytics/tab-overview/period-default
+                    - link "Go to channel analytics" [ref=e307] [cursor=pointer]:
+                      - /url: /channel/UCtxQrYzeMBCKMAofCgcY5dA/analytics/tab-overview/period-default
+                      - button "Go to channel analytics" [ref=e310]:
+                        - generic [ref=e311]: Go to channel analytics
+                  - list [ref=e318]:
+                    - listitem [ref=e319]:
+                      - heading "Comments" [level=2] [ref=e322]
+                    - listitem [ref=e325]:
+                      - generic [ref=e328]:
+                        - generic [ref=e332]:
+                          - generic [ref=e333]:
+                            - generic [ref=e335]: "@XinyuanWang-f6m"
+                            - generic [ref=e336]: •
+                            - generic [ref=e337]: 3 hours ago
+                          - generic [ref=e338]: tony zhou无敌
+                        - img [ref=e343]
+                    - listitem [ref=e344]:
+                      - link "View more" [ref=e347] [cursor=pointer]:
+                        - /url: /channel/UCtxQrYzeMBCKMAofCgcY5dA/comments/inbox?filter=%5B%7B%22name%22%3A%22ENGAGED_STATUS%22%2C%22value%22%3A%5B%22COMMENT_CATEGORY_NOT_ENGAGED%22%5D%7D%2C%7B%22isPinned%22%3Atrue%2C%22name%22%3A%22SORT_BY%22%2C%22value%22%3A%22SORT_BY_MOST_RELEVANT%22%7D%5D
+                        - button "View more" [ref=e350]:
+                          - generic [ref=e351]: View more
+                - generic [ref=e355]:
+                  - generic [ref=e358]:
+                    - heading "Creator Insider" [level=2] [ref=e360]
+                    - generic [ref=e363]:
+                      - link [ref=e365] [cursor=pointer]:
+                        - /url: https://www.youtube.com/watch?v=362YARqMk84
+                      - heading "This Week at YouTube" [level=2] [ref=e367]
+                      - generic [ref=e368]:
+                        - generic [ref=e369]: Hey Insiders! Our final 2025 Newsflash is here. Thanks for an amazing year of support and feedback. See you in January for more!
+                        - button "Watch on YouTube" [ref=e373] [cursor=pointer]:
+                          - generic [ref=e374]: Watch on YouTube
+                  - generic [ref=e380]:
+                    - heading "What's new in Studio" [level=2] [ref=e382]
+                    - list [ref=e386]:
+                      - listitem [ref=e387]:
+                        - link "Increasing Shorts length" [ref=e388] [cursor=pointer]:
+                          - /url: https://support.google.com/youtube/answer/11286863?hl=en
+                          - heading "Increasing Shorts length" [level=3] [ref=e389]
+                        - separator [ref=e390]
+                      - listitem [ref=e391]:
+                        - link "Expansion of channel permissions" [ref=e392] [cursor=pointer]:
+                          - /url: https://support.google.com/youtube/answer/11286864?hl=en
+                          - heading "Expansion of channel permissions" [level=3] [ref=e393]
+                        - separator [ref=e394]
+                      - listitem [ref=e395]:
+                        - link "Upcoming changes to Community Guidelines warnings" [ref=e396] [cursor=pointer]:
+                          - /url: https://support.google.com/youtube/answer/11287076?hl=en
+                          - heading "Upcoming changes to Community Guidelines warnings" [level=3] [ref=e397]
+              - generic [ref=e399]:
+                - link "Terms of use" [ref=e401] [cursor=pointer]:
+                  - /url: https://www.youtube.com/t/terms
+                - link "Privacy policy" [ref=e403] [cursor=pointer]:
+                  - /url: https://policies.google.com/privacy?hl=en
+                - link "Policies & Safety" [ref=e405] [cursor=pointer]:
+                  - /url: https://www.youtube.com/yt/policyandsafety/
+  - generic:
+    - generic:
+      - generic "Settings":
+        - dialog "Settings" [active] [ref=e406]:
+          - heading "Settings" [level=1] [ref=e409]
+          - generic [ref=e411]:
+            - menu [ref=e413]:
+              - menuitem "General" [ref=e414] [cursor=pointer]:
+                - generic [ref=e415]: General
+              - menuitem "Channel" [ref=e416] [cursor=pointer]:
+                - generic [ref=e417]: Channel
+              - menuitem "Upload defaults" [ref=e418] [cursor=pointer]:
+                - generic [ref=e419]: Upload defaults
+              - menuitem "Permissions" [ref=e420] [cursor=pointer]:
+                - generic [ref=e421]: Permissions
+              - menuitem "Community moderation" [ref=e422] [cursor=pointer]:
+                - generic [ref=e423]: Community moderation
+              - menuitem "Agreements" [ref=e424] [cursor=pointer]:
+                - generic [ref=e425]: Agreements
+            - generic [ref=e429]:
+              - generic [ref=e430]:
+                - text: Default units
+                - generic "Choose the currency unit you would want to see in YouTube Studio. This does not change the payout currency which is set in your Google AdSense Account – If you're paid in the same currency, the amount displayed here may still differ from the final payment due to different exchange rates applied." [ref=e431]:
+                  - generic [ref=e433]:
+                    - img
+              - button "Currency USD — US Dollar" [ref=e438]:
+                - button "Currency USD — US Dollar" [ref=e439] [cursor=pointer]:
+                  - generic [ref=e442]:
+                    - generic [ref=e444]: Currency
+                    - generic [ref=e445]: USD — US Dollar
+                  - generic [ref=e449]:
+                    - img
+          - generic [ref=e451]:
+            - button "Close" [ref=e454] [cursor=pointer]:
+              - generic [ref=e455]: Close
+            - button "Save" [disabled] [ref=e461]:
+              - generic [ref=e462]: Save
+```

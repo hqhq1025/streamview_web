@@ -1,0 +1,1907 @@
+{
+  "root_url": "http://localhost:5173",
+  "max_depth": 3,
+  "audit_started": "2026-01-07T13:42:00Z",
+  "items": [
+    {
+      "id": 1,
+      "url": "http://localhost:5173/",
+      "page": "home",
+      "depth": 0,
+      "status": "done",
+      "elements_tested": 25,
+      "issues_found": 6,
+      "console_errors": 0,
+      "issues": [
+        {
+          "element_type": "button",
+          "selector": "button[name='Voice search']",
+          "text": "Voice search",
+          "expected": "Open voice search interface",
+          "actual": "Shows placeholder message: 'Voice search is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "home-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Shorts'",
+          "text": "Shorts",
+          "expected": "Navigate to Shorts page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "home-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Music'",
+          "text": "Music",
+          "expected": "Navigate to Music page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "home-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Gaming'",
+          "text": "Gaming",
+          "expected": "Navigate to Gaming page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "home-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'News'",
+          "text": "News",
+          "expected": "Navigate to News page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "home-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Sports'",
+          "text": "Sports",
+          "expected": "Navigate to Sports page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "home-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Learning'",
+          "text": "Learning",
+          "expected": "Navigate to Learning page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "home-initial.png",
+          "console_errors": []
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "url": "http://localhost:5173/subscriptions",
+      "page": "subscriptions",
+      "depth": 1,
+      "status": "done",
+      "elements_tested": 18,
+      "issues_found": 8,
+      "console_errors": 0,
+      "issues": [
+        {
+          "element_type": "button",
+          "selector": "button[name='Voice search']",
+          "text": "Voice search",
+          "expected": "Open voice search interface",
+          "actual": "Shows placeholder message: 'Voice search is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "subscriptions-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Shorts'",
+          "text": "Shorts",
+          "expected": "Navigate to Shorts page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "subscriptions-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Music'",
+          "text": "Music",
+          "expected": "Navigate to Music page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "subscriptions-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Gaming'",
+          "text": "Gaming",
+          "expected": "Navigate to Gaming page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "subscriptions-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'News'",
+          "text": "News",
+          "expected": "Navigate to News page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "subscriptions-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Sports'",
+          "text": "Sports",
+          "expected": "Navigate to Sports page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "subscriptions-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Learning'",
+          "text": "Learning",
+          "expected": "Navigate to Learning page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "subscriptions-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button.show-more-button",
+          "text": "Show 5 more",
+          "expected": "Expand subscription list to show 5 more channels",
+          "actual": "Shows placeholder message: 'Expanded subscription list is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "subscriptions-initial.png",
+          "console_errors": []
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "url": "http://localhost:5173/channel/user-1",
+      "page": "user_channel",
+      "depth": 1,
+      "status": "done",
+      "elements_tested": 23,
+      "issues_found": 8,
+      "console_errors": 0,
+      "issues": [
+        {
+          "element_type": "button",
+          "selector": "button[name='Voice search']",
+          "text": "Voice search",
+          "expected": "Open voice search interface",
+          "actual": "Shows placeholder message: 'Voice search is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "user-channel-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button[name='Sign out']",
+          "text": "Sign out",
+          "expected": "Sign out user and redirect to login",
+          "actual": "Shows placeholder message: 'Sign out is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "user-channel-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button.show-more-button",
+          "text": "Show 5 more",
+          "expected": "Expand subscription list to show 5 more channels",
+          "actual": "Shows placeholder message: 'Expanded subscription list is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "user-channel-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Shorts'",
+          "text": "Shorts",
+          "expected": "Navigate to Shorts page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "user-channel-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Music'",
+          "text": "Music",
+          "expected": "Navigate to Music page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "user-channel-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Gaming'",
+          "text": "Gaming",
+          "expected": "Navigate to Gaming page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "user-channel-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'News'",
+          "text": "News",
+          "expected": "Navigate to News page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "user-channel-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Sports'",
+          "text": "Sports",
+          "expected": "Navigate to Sports page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "user-channel-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Learning'",
+          "text": "Learning",
+          "expected": "Navigate to Learning page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "user-channel-initial.png",
+          "console_errors": []
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "url": "http://localhost:5173/history",
+      "page": "history",
+      "depth": 1,
+      "status": "done",
+      "elements_tested": 20,
+      "issues_found": 9,
+      "console_errors": 0,
+      "issues": [
+        {
+          "element_type": "button",
+          "selector": "button[name='Voice search']",
+          "text": "Voice search",
+          "expected": "Open voice search interface",
+          "actual": "Shows placeholder message: 'Voice search is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "history-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button[name='Sign out']",
+          "text": "Sign out",
+          "expected": "Sign out user and redirect to login",
+          "actual": "Shows placeholder message: 'Sign out is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "history-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button.show-more-button",
+          "text": "Show 5 more",
+          "expected": "Expand subscription list to show 5 more channels",
+          "actual": "Button is outside of viewport and cannot be clicked",
+          "issue_type": "visual_bug",
+          "screenshot": "history-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Shorts'",
+          "text": "Shorts",
+          "expected": "Navigate to Shorts page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "history-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Music'",
+          "text": "Music",
+          "expected": "Navigate to Music page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "history-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Gaming'",
+          "text": "Gaming",
+          "expected": "Navigate to Gaming page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "history-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'News'",
+          "text": "News",
+          "expected": "Navigate to News page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "history-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Sports'",
+          "text": "Sports",
+          "expected": "Navigate to Sports page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "history-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Learning'",
+          "text": "Learning",
+          "expected": "Navigate to Learning page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "history-initial.png",
+          "console_errors": []
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "url": "http://localhost:5173/watch-later",
+      "page": "watch_later",
+      "depth": 1,
+      "status": "done",
+      "elements_tested": 20,
+      "issues_found": 9,
+      "console_errors": 0,
+      "issues": [
+        {
+          "element_type": "button",
+          "selector": "button[name='Voice search']",
+          "text": "Voice search",
+          "expected": "Open voice search interface",
+          "actual": "Shows placeholder message: 'Voice search is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "watch-later-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button[name='Sign out']",
+          "text": "Sign out",
+          "expected": "Sign out user and redirect to login",
+          "actual": "Shows placeholder message: 'Sign out is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "watch-later-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button.show-more-button",
+          "text": "Show 5 more",
+          "expected": "Expand subscription list to show 5 more channels",
+          "actual": "Button is outside of viewport and cannot be clicked",
+          "issue_type": "visual_bug",
+          "screenshot": "watch-later-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Shorts'",
+          "text": "Shorts",
+          "expected": "Navigate to Shorts page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "watch-later-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Music'",
+          "text": "Music",
+          "expected": "Navigate to Music page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "watch-later-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Gaming'",
+          "text": "Gaming",
+          "expected": "Navigate to Gaming page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "watch-later-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'News'",
+          "text": "News",
+          "expected": "Navigate to News page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "watch-later-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Sports'",
+          "text": "Sports",
+          "expected": "Navigate to Sports page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "watch-later-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Learning'",
+          "text": "Learning",
+          "expected": "Navigate to Learning page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "watch-later-initial.png",
+          "console_errors": []
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "url": "http://localhost:5173/liked",
+      "page": "liked_videos",
+      "depth": 1,
+      "status": "done",
+      "elements_tested": 20,
+      "issues_found": 9,
+      "console_errors": 0,
+      "issues": [
+        {
+          "element_type": "button",
+          "selector": "button[name='Voice search']",
+          "text": "Voice search",
+          "expected": "Open voice search interface",
+          "actual": "Shows placeholder message: 'Voice search is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "liked-videos-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button[name='Sign out']",
+          "text": "Sign out",
+          "expected": "Sign out user and redirect to login",
+          "actual": "Shows placeholder message: 'Sign out is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "liked-videos-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button.show-more-button",
+          "text": "Show 5 more",
+          "expected": "Expand subscription list to show 5 more channels",
+          "actual": "Button is outside of viewport and cannot be clicked",
+          "issue_type": "visual_bug",
+          "screenshot": "liked-videos-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Shorts'",
+          "text": "Shorts",
+          "expected": "Navigate to Shorts page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "liked-videos-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Music'",
+          "text": "Music",
+          "expected": "Navigate to Music page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "liked-videos-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Gaming'",
+          "text": "Gaming",
+          "expected": "Navigate to Gaming page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "liked-videos-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'News'",
+          "text": "News",
+          "expected": "Navigate to News page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "liked-videos-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Sports'",
+          "text": "Sports",
+          "expected": "Navigate to Sports page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "liked-videos-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Learning'",
+          "text": "Learning",
+          "expected": "Navigate to Learning page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "liked-videos-initial.png",
+          "console_errors": []
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "url": "http://localhost:5173/library",
+      "page": "library",
+      "depth": 1,
+      "status": "done",
+      "elements_tested": 22,
+      "issues_found": 10,
+      "console_errors": 0,
+      "issues": [
+        {
+          "element_type": "button",
+          "selector": "button[name='Voice search']",
+          "text": "Voice search",
+          "expected": "Open voice search interface",
+          "actual": "Shows placeholder message: 'Voice search is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "library-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button[name='Sign out']",
+          "text": "Sign out",
+          "expected": "Sign out user and redirect to login",
+          "actual": "Shows placeholder message: 'Sign out is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "library-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button.show-more-button",
+          "text": "Show 5 more",
+          "expected": "Expand subscription list to show 5 more channels",
+          "actual": "Button is outside of viewport and cannot be clicked",
+          "issue_type": "visual_bug",
+          "screenshot": "library-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Shorts'",
+          "text": "Shorts",
+          "expected": "Navigate to Shorts page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "library-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Music'",
+          "text": "Music",
+          "expected": "Navigate to Music page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "library-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Gaming'",
+          "text": "Gaming",
+          "expected": "Navigate to Gaming page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "library-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'News'",
+          "text": "News",
+          "expected": "Navigate to News page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "library-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Sports'",
+          "text": "Sports",
+          "expected": "Navigate to Sports page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "library-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Learning'",
+          "text": "Learning",
+          "expected": "Navigate to Learning page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "library-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "playlist_item",
+          "selector": "div with playlist items",
+          "text": "Favorite Tech Videos",
+          "expected": "Navigate to playlist page",
+          "actual": "Click on playlist does nothing - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "library-initial.png",
+          "console_errors": []
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "url": "http://localhost:5173/channel/channel-1",
+      "page": "channel_techmaster",
+      "depth": 1,
+      "status": "done",
+      "elements_tested": 23,
+      "issues_found": 9,
+      "console_errors": 0,
+      "issues": [
+        {
+          "element_type": "button",
+          "selector": "button[name='Voice search']",
+          "text": "Voice search",
+          "expected": "Open voice search interface",
+          "actual": "Shows placeholder message: 'Voice search is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button[name='Sign out']",
+          "text": "Sign out",
+          "expected": "Sign out user and redirect to login",
+          "actual": "Shows placeholder message: 'Sign out is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button.show-more-button",
+          "text": "Show 4 more",
+          "expected": "Expand subscription list to show 4 more channels",
+          "actual": "Button is outside of viewport and cannot be clicked",
+          "issue_type": "visual_bug",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Shorts'",
+          "text": "Shorts",
+          "expected": "Navigate to Shorts page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Music'",
+          "text": "Music",
+          "expected": "Navigate to Music page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Gaming'",
+          "text": "Gaming",
+          "expected": "Navigate to Gaming page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'News'",
+          "text": "News",
+          "expected": "Navigate to News page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Sports'",
+          "text": "Sports",
+          "expected": "Navigate to Sports page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Learning'",
+          "text": "Learning",
+          "expected": "Navigate to Learning page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "url": "http://localhost:5173/channel/channel-2",
+      "page": "channel_gamezone",
+      "depth": 1,
+      "status": "done",
+      "elements_tested": 23,
+      "issues_found": 9,
+      "console_errors": 0,
+      "issues": [
+        {
+          "element_type": "button",
+          "selector": "button[name='Voice search']",
+          "text": "Voice search",
+          "expected": "Open voice search interface",
+          "actual": "Shows placeholder message: 'Voice search is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button[name='Sign out']",
+          "text": "Sign out",
+          "expected": "Sign out user and redirect to login",
+          "actual": "Shows placeholder message: 'Sign out is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button.show-more-button",
+          "text": "Show 4 more",
+          "expected": "Expand subscription list to show 4 more channels",
+          "actual": "Button is outside of viewport and cannot be clicked",
+          "issue_type": "visual_bug",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Shorts'",
+          "text": "Shorts",
+          "expected": "Navigate to Shorts page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Music'",
+          "text": "Music",
+          "expected": "Navigate to Music page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Gaming'",
+          "text": "Gaming",
+          "expected": "Navigate to Gaming page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'News'",
+          "text": "News",
+          "expected": "Navigate to News page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Sports'",
+          "text": "Sports",
+          "expected": "Navigate to Sports page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Learning'",
+          "text": "Learning",
+          "expected": "Navigate to Learning page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "url": "http://localhost:5173/channel/channel-3",
+      "page": "channel_tastykitchen",
+      "depth": 1,
+      "status": "done",
+      "elements_tested": 23,
+      "issues_found": 9,
+      "console_errors": 0,
+      "issues": [
+        {
+          "element_type": "button",
+          "selector": "button[name='Voice search']",
+          "text": "Voice search",
+          "expected": "Open voice search interface",
+          "actual": "Shows placeholder message: 'Voice search is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button[name='Sign out']",
+          "text": "Sign out",
+          "expected": "Sign out user and redirect to login",
+          "actual": "Shows placeholder message: 'Sign out is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button.show-more-button",
+          "text": "Show 4 more",
+          "expected": "Expand subscription list to show 4 more channels",
+          "actual": "Button is outside of viewport and cannot be clicked",
+          "issue_type": "visual_bug",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Shorts'",
+          "text": "Shorts",
+          "expected": "Navigate to Shorts page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Music'",
+          "text": "Music",
+          "expected": "Navigate to Music page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Gaming'",
+          "text": "Gaming",
+          "expected": "Navigate to Gaming page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'News'",
+          "text": "News",
+          "expected": "Navigate to News page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Sports'",
+          "text": "Sports",
+          "expected": "Navigate to Sports page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Learning'",
+          "text": "Learning",
+          "expected": "Navigate to Learning page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "url": "http://localhost:5173/channel/channel-4",
+      "page": "channel_fitlife",
+      "depth": 1,
+      "status": "done",
+      "elements_tested": 23,
+      "issues_found": 9,
+      "console_errors": 0,
+      "issues": [
+        {
+          "element_type": "button",
+          "selector": "button[name='Voice search']",
+          "text": "Voice search",
+          "expected": "Open voice search interface",
+          "actual": "Shows placeholder message: 'Voice search is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button[name='Sign out']",
+          "text": "Sign out",
+          "expected": "Sign out user and redirect to login",
+          "actual": "Shows placeholder message: 'Sign out is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button.show-more-button",
+          "text": "Show 4 more",
+          "expected": "Expand subscription list to show 4 more channels",
+          "actual": "Button is outside of viewport and cannot be clicked",
+          "issue_type": "visual_bug",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Shorts'",
+          "text": "Shorts",
+          "expected": "Navigate to Shorts page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Music'",
+          "text": "Music",
+          "expected": "Navigate to Music page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Gaming'",
+          "text": "Gaming",
+          "expected": "Navigate to Gaming page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'News'",
+          "text": "News",
+          "expected": "Navigate to News page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Sports'",
+          "text": "Sports",
+          "expected": "Navigate to Sports page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Learning'",
+          "text": "Learning",
+          "expected": "Navigate to Learning page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "url": "http://localhost:5173/channel/channel-5",
+      "page": "channel_melody",
+      "depth": 1,
+      "status": "done",
+      "elements_tested": 23,
+      "issues_found": 9,
+      "console_errors": 0,
+      "issues": [
+        {
+          "element_type": "button",
+          "selector": "button[name='Voice search']",
+          "text": "Voice search",
+          "expected": "Open voice search interface",
+          "actual": "Shows placeholder message: 'Voice search is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button[name='Sign out']",
+          "text": "Sign out",
+          "expected": "Sign out user and redirect to login",
+          "actual": "Shows placeholder message: 'Sign out is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button.show-more-button",
+          "text": "Show 4 more",
+          "expected": "Expand subscription list to show 4 more channels",
+          "actual": "Button is outside of viewport and cannot be clicked",
+          "issue_type": "visual_bug",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Shorts'",
+          "text": "Shorts",
+          "expected": "Navigate to Shorts page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Music'",
+          "text": "Music",
+          "expected": "Navigate to Music page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Gaming'",
+          "text": "Gaming",
+          "expected": "Navigate to Gaming page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'News'",
+          "text": "News",
+          "expected": "Navigate to News page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Sports'",
+          "text": "Sports",
+          "expected": "Navigate to Sports page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Learning'",
+          "text": "Learning",
+          "expected": "Navigate to Learning page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "url": "http://localhost:5173/channel/channel-6",
+      "page": "channel_learn",
+      "depth": 1,
+      "status": "done",
+      "elements_tested": 23,
+      "issues_found": 9,
+      "console_errors": 0,
+      "issues": [
+        {
+          "element_type": "button",
+          "selector": "button[name='Voice search']",
+          "text": "Voice search",
+          "expected": "Open voice search interface",
+          "actual": "Shows placeholder message: 'Voice search is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button[name='Sign out']",
+          "text": "Sign out",
+          "expected": "Sign out user and redirect to login",
+          "actual": "Shows placeholder message: 'Sign out is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button.show-more-button",
+          "text": "Show 4 more",
+          "expected": "Expand subscription list to show 4 more channels",
+          "actual": "Button is outside of viewport and cannot be clicked",
+          "issue_type": "visual_bug",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Shorts'",
+          "text": "Shorts",
+          "expected": "Navigate to Shorts page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Music'",
+          "text": "Music",
+          "expected": "Navigate to Music page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Gaming'",
+          "text": "Gaming",
+          "expected": "Navigate to Gaming page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'News'",
+          "text": "News",
+          "expected": "Navigate to News page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Sports'",
+          "text": "Sports",
+          "expected": "Navigate to Sports page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Learning'",
+          "text": "Learning",
+          "expected": "Navigate to Learning page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "url": "http://localhost:5173/channel/channel-7",
+      "page": "channel_wanderlust",
+      "depth": 1,
+      "status": "done",
+      "elements_tested": 23,
+      "issues_found": 9,
+      "console_errors": 0,
+      "issues": [
+        {
+          "element_type": "button",
+          "selector": "button[name='Voice search']",
+          "text": "Voice search",
+          "expected": "Open voice search interface",
+          "actual": "Shows placeholder message: 'Voice search is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button[name='Sign out']",
+          "text": "Sign out",
+          "expected": "Sign out user and redirect to login",
+          "actual": "Shows placeholder message: 'Sign out is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button.show-more-button",
+          "text": "Show 4 more",
+          "expected": "Expand subscription list to show 4 more channels",
+          "actual": "Button is outside of viewport and cannot be clicked",
+          "issue_type": "visual_bug",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Shorts'",
+          "text": "Shorts",
+          "expected": "Navigate to Shorts page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Music'",
+          "text": "Music",
+          "expected": "Navigate to Music page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Gaming'",
+          "text": "Gaming",
+          "expected": "Navigate to Gaming page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'News'",
+          "text": "News",
+          "expected": "Navigate to News page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Sports'",
+          "text": "Sports",
+          "expected": "Navigate to Sports page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Learning'",
+          "text": "Learning",
+          "expected": "Navigate to Learning page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "channel-1-initial.png",
+          "console_errors": []
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "url": "http://localhost:5173/trending",
+      "page": "trending",
+      "depth": 1,
+      "status": "done",
+      "elements_tested": 20,
+      "issues_found": 8,
+      "console_errors": 0,
+      "issues": [
+        {
+          "element_type": "button",
+          "selector": "button[name='Voice search']",
+          "text": "Voice search",
+          "expected": "Open voice search interface",
+          "actual": "Shows placeholder message: 'Voice search is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "trending-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button[name='Sign out']",
+          "text": "Sign out",
+          "expected": "Sign out user and redirect to login",
+          "actual": "Shows placeholder message: 'Sign out is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "trending-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button.show-more-button",
+          "text": "Show 5 more",
+          "expected": "Expand subscription list to show 5 more channels",
+          "actual": "Button is outside of viewport and cannot be clicked",
+          "issue_type": "visual_bug",
+          "screenshot": "trending-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Shorts'",
+          "text": "Shorts",
+          "expected": "Navigate to Shorts page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "trending-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Music'",
+          "text": "Music",
+          "expected": "Navigate to Music page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "trending-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Gaming'",
+          "text": "Gaming",
+          "expected": "Navigate to Gaming page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "trending-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'News'",
+          "text": "News",
+          "expected": "Navigate to News page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "trending-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Sports'",
+          "text": "Sports",
+          "expected": "Navigate to Sports page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "trending-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Learning'",
+          "text": "Learning",
+          "expected": "Navigate to Learning page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "trending-initial.png",
+          "console_errors": []
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "url": "http://localhost:5173/studio",
+      "page": "studio_dashboard",
+      "depth": 1,
+      "status": "done",
+      "elements_tested": 30,
+      "issues_found": 4,
+      "console_errors": 0,
+      "issues": [
+        {
+          "element_type": "button",
+          "selector": "button[name='Help']",
+          "text": "Help",
+          "expected": "Open help menu or documentation",
+          "actual": "Shows placeholder message: 'Help is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "studio-dashboard-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button[name='Notifications']",
+          "text": "Notifications",
+          "expected": "Open notifications panel",
+          "actual": "Shows placeholder message: 'Notifications is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "studio-dashboard-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button with text 'Go live'",
+          "text": "Go live",
+          "expected": "Open live streaming setup",
+          "actual": "Shows placeholder message: 'Go live is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "studio-dashboard-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button with text 'Create post'",
+          "text": "Create post",
+          "expected": "Open community post creation interface",
+          "actual": "Shows placeholder message: 'Create post is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "studio-dashboard-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button with text 'Watch on YouTube'",
+          "text": "Watch on YouTube",
+          "expected": "Navigate to Creator Insider video",
+          "actual": "Shows placeholder message: 'Creator Insider is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "studio-dashboard-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button with avatar 'A'",
+          "text": "A (Profile button)",
+          "expected": "Open account/profile menu",
+          "actual": "Shows placeholder message: 'Account menu is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "studio-dashboard-initial.png",
+          "console_errors": []
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "url": "http://localhost:5173/studio/content",
+      "page": "studio_content",
+      "depth": 1,
+      "status": "done",
+      "elements_tested": 42,
+      "issues_found": 17,
+      "console_errors": 1,
+      "issues": [
+        {
+          "element_type": "button",
+          "selector": "button[name='Help']",
+          "text": "Help",
+          "expected": "Open help menu or documentation",
+          "actual": "Shows placeholder message: 'Help is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "studio-content-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button[name='Notifications']",
+          "text": "Notifications",
+          "expected": "Open notifications panel",
+          "actual": "Shows placeholder message: 'Notifications is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "studio-content-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button in CREATE menu",
+          "text": "Go live",
+          "expected": "Open live streaming setup",
+          "actual": "Shows placeholder message: 'Go live is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "studio-content-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button in CREATE menu",
+          "text": "Create post",
+          "expected": "Open community post creation interface",
+          "actual": "Shows placeholder message: 'Create post is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "studio-content-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button in CREATE menu",
+          "text": "New playlist",
+          "expected": "Open playlist creation dialog",
+          "actual": "Shows placeholder message: 'New playlist is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "studio-content-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button in CREATE menu",
+          "text": "New podcast",
+          "expected": "Open podcast creation dialog",
+          "actual": "Shows placeholder message: 'New podcast is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "studio-content-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button[name='A']",
+          "text": "Profile button",
+          "expected": "Open account/profile menu",
+          "actual": "Shows placeholder message: 'Account menu is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "studio-content-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button in Live tab",
+          "text": "Request (access to streaming)",
+          "expected": "Submit request for live streaming access",
+          "actual": "Shows placeholder message: 'Request access to streaming is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "studio-content-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button in Posts tab",
+          "text": "Create a post",
+          "expected": "Open community post creation dialog",
+          "actual": "Shows placeholder message: 'Community posts is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "studio-content-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button in Playlists tab",
+          "text": "New playlist",
+          "expected": "Open playlist creation dialog",
+          "actual": "Shows placeholder message: 'Playlists is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "studio-content-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button in Podcasts tab",
+          "text": "New podcast",
+          "expected": "Open podcast creation dialog",
+          "actual": "Shows placeholder message: 'Podcasts is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "studio-content-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button in Promotions tab",
+          "text": "Get started",
+          "expected": "Open promotions setup",
+          "actual": "Shows placeholder message: 'Promotions is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "studio-content-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button in video Details page",
+          "text": "Upload file (thumbnail)",
+          "expected": "Open file picker for thumbnail upload",
+          "actual": "Shows placeholder message: 'Thumbnail upload is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "studio-content-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button in video Details page",
+          "text": "Subtitles",
+          "expected": "Open subtitles editor",
+          "actual": "Shows placeholder message: 'Subtitles is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "studio-content-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button in video Editor page",
+          "text": "Trim & cut",
+          "expected": "Open video trimming tool",
+          "actual": "Shows placeholder message: 'Trim & cut is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "studio-content-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button in video list",
+          "text": "Options",
+          "expected": "Open video options menu",
+          "actual": "Shows placeholder message: 'Video options is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "studio-content-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button[name='Send feedback']",
+          "text": "Send feedback",
+          "expected": "Open feedback form or modal",
+          "actual": "Navigates to dashboard page instead of opening feedback form",
+          "issue_type": "incomplete",
+          "screenshot": "studio-content-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "console_error",
+          "selector": "N/A",
+          "text": "SVG polyline attribute error",
+          "expected": "No console errors",
+          "actual": "Error: <polyline> attribute points: Expected number",
+          "issue_type": "console_error",
+          "screenshot": "studio-content-initial.png",
+          "console_errors": [
+            "Error: <polyline> attribute points: Expected number, \"0%,94.28571007518…\"."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "url": "http://localhost:5173/watch/video-1",
+      "page": "watch_video",
+      "depth": 1,
+      "status": "done",
+      "elements_tested": 38,
+      "issues_found": 8,
+      "console_errors": 0,
+      "issues": [
+        {
+          "element_type": "button",
+          "selector": "button[name='Voice search']",
+          "text": "Voice search",
+          "expected": "Open voice search interface",
+          "actual": "Shows placeholder message: 'Voice search is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "watch-video-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button with three dots (more options)",
+          "text": "More options",
+          "expected": "Open video options menu",
+          "actual": "Shows placeholder message: 'More actions are not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "watch-video-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Shorts'",
+          "text": "Shorts",
+          "expected": "Navigate to Shorts page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "watch-video-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Music'",
+          "text": "Music",
+          "expected": "Navigate to Music page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "watch-video-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Gaming'",
+          "text": "Gaming",
+          "expected": "Navigate to Gaming page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "watch-video-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'News'",
+          "text": "News",
+          "expected": "Navigate to News page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "watch-video-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Sports'",
+          "text": "Sports",
+          "expected": "Navigate to Sports page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "watch-video-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "sidebar_link",
+          "selector": "div with text 'Learning'",
+          "text": "Learning",
+          "expected": "Navigate to Learning page",
+          "actual": "Element has no href or click handler - no navigation occurs",
+          "issue_type": "no_response",
+          "screenshot": "watch-video-initial.png",
+          "console_errors": []
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "url": "http://localhost:5173/search?q=test%20search",
+      "page": "search_results",
+      "depth": 1,
+      "status": "done",
+      "elements_tested": 15,
+      "issues_found": 2,
+      "console_errors": 0,
+      "issues": [
+        {
+          "element_type": "button",
+          "selector": "button[name='Voice search']",
+          "text": "Voice search",
+          "expected": "Open voice search interface",
+          "actual": "Shows placeholder message: 'Voice search is not implemented yet.'",
+          "issue_type": "placeholder",
+          "screenshot": "search-results-initial.png",
+          "console_errors": []
+        },
+        {
+          "element_type": "button",
+          "selector": "button.show-more-button",
+          "text": "Show 6 more",
+          "expected": "Expand subscription list to show 6 more channels",
+          "actual": "Button is outside of viewport and cannot be clicked",
+          "issue_type": "visual_bug",
+          "screenshot": "search-results-initial.png",
+          "console_errors": []
+        }
+      ]
+    }
+  ]
+}

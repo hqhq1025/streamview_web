@@ -1,0 +1,301 @@
+### Page state
+- Page URL: https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/monetization
+- Page Title: Earn on YouTube - YouTube Studio
+- Page Snapshot:
+```yaml
+- generic [active] [ref=e1]:
+  - generic:
+    - generic [ref=e2]: Earn on YouTube
+    - generic [ref=e4]:
+      - banner [ref=e6]:
+        - button "Collapse menu" [ref=e7] [cursor=pointer]:
+          - generic [ref=e10]:
+            - img
+        - link "YouTube Studio dashboard" [ref=e12] [cursor=pointer]:
+          - /url: /channel/UCtxQrYzeMBCKMAofCgcY5dA
+        - button "Skip navigation" [ref=e15] [cursor=pointer]:
+          - generic [ref=e16]: Skip navigation
+        - generic [ref=e21]:
+          - generic [ref=e24]:
+            - img
+          - textbox "Search across your channel" [ref=e26]
+        - generic [ref=e28]:
+          - generic [ref=e29]:
+            - button "Help" [ref=e31] [cursor=pointer]:
+              - generic [ref=e34]:
+                - img
+            - button "Notifications" [ref=e36] [cursor=pointer]:
+              - generic [ref=e39]:
+                - img
+          - button "Create" [ref=e42] [cursor=pointer]:
+            - generic [ref=e46]:
+              - img
+            - generic [ref=e47]: Create
+          - generic "Account" [ref=e51]:
+            - button "Account" [ref=e52]
+      - generic [ref=e54]:
+        - navigation [ref=e56]:
+          - generic [ref=e57]:
+            - generic:
+              - img "Tony zhou" [ref=e60]
+              - generic [ref=e61]:
+                - generic [ref=e62]: Your channel
+                - generic [ref=e63]: Tony zhou
+          - menu [ref=e65]:
+            - menuitem "Dashboard" [ref=e66] [cursor=pointer]:
+              - button "Dashboard" [ref=e67]:
+                - generic [ref=e71]:
+                  - img
+                - generic [ref=e72]: Dashboard
+            - menuitem "Content" [ref=e73] [cursor=pointer]:
+              - button "Content" [ref=e74]:
+                - generic [ref=e78]:
+                  - img
+                - generic [ref=e79]: Content
+            - menuitem "Analytics" [ref=e80] [cursor=pointer]:
+              - button "Analytics" [ref=e81]:
+                - generic [ref=e85]:
+                  - img
+                - generic [ref=e86]: Analytics
+            - menuitem "Community" [ref=e87] [cursor=pointer]:
+              - button "Community" [ref=e88]:
+                - generic [ref=e92]:
+                  - img
+                - generic [ref=e93]: Community
+            - menuitem "Subtitles" [ref=e94] [cursor=pointer]:
+              - button "Subtitles" [ref=e95]:
+                - generic [ref=e99]:
+                  - img
+                - generic [ref=e100]: Subtitles
+            - menuitem "Content detection" [ref=e101] [cursor=pointer]:
+              - button "Content detection" [ref=e102]:
+                - generic [ref=e106]:
+                  - img
+                - generic [ref=e107]: Content detection
+            - menuitem "Earn" [ref=e108] [cursor=pointer]:
+              - button "Earn" [ref=e109]:
+                - generic [ref=e113]:
+                  - img
+                - generic [ref=e114]: Earn
+            - menuitem "Customization" [ref=e115] [cursor=pointer]:
+              - button "Customization" [ref=e116]:
+                - generic [ref=e120]:
+                  - img
+                - generic [ref=e121]: Customization
+            - menuitem "Audio library" [ref=e122] [cursor=pointer]:
+              - button "Audio library" [ref=e123]:
+                - generic [ref=e127]:
+                  - img
+                - generic [ref=e128]: Audio library
+          - list [ref=e130]:
+            - listitem [ref=e131]:
+              - button "Settings" [ref=e132] [cursor=pointer]:
+                - generic [ref=e136]:
+                  - img
+                - generic [ref=e137]: Settings
+            - listitem [ref=e138]:
+              - button "Send feedback" [ref=e140] [cursor=pointer]:
+                - generic [ref=e144]:
+                  - img
+                - generic [ref=e145]: Send feedback
+        - main [ref=e146]:
+          - generic [ref=e147]:
+            - heading "Earn on YouTube" [level=1] [ref=e150]
+            - generic [ref=e157]:
+              - generic [ref=e158]:
+                - generic [ref=e159]:
+                  - generic [ref=e160]:
+                    - generic [ref=e161]: Next milestone
+                    - generic [ref=e164]:
+                      - img
+                  - generic [ref=e165]: Start your earning journey
+                  - generic [ref=e166]: Earn income by connecting with your fans and gain access to support forums and creator tools
+                - generic [ref=e171]:
+                  - generic [ref=e173]:
+                    - generic [ref=e174]:
+                      - button "Memberships" [expanded] [ref=e175] [cursor=pointer]:
+                        - generic [ref=e178]: Memberships
+                      - button "Collapse" [ref=e181] [cursor=pointer]:
+                        - generic "Collapse" [ref=e182]:
+                          - generic [ref=e184]:
+                            - img
+                    - generic "Memberships" [ref=e185]:
+                      - generic [ref=e187]:
+                        - generic [ref=e188]: Grow your community and earn monthly
+                        - paragraph [ref=e190]: Excite your audience with access to exclusive perks as a monthly paying member. Viewers will be able to join from your channel and video pages. You’ll receive 70% of net revenue.
+                  - separator [ref=e193]
+                  - generic [ref=e196]:
+                    - button "Supers" [ref=e197] [cursor=pointer]:
+                      - generic [ref=e200]: Supers
+                    - button "Expand" [ref=e203] [cursor=pointer]:
+                      - generic "Expand" [ref=e204]:
+                        - generic [ref=e206]:
+                          - img
+                  - separator [ref=e207]
+                  - generic [ref=e210]:
+                    - button "Shopping" [ref=e211] [cursor=pointer]:
+                      - generic [ref=e214]: Shopping
+                    - button "Expand" [ref=e217] [cursor=pointer]:
+                      - generic "Expand" [ref=e218]:
+                        - generic [ref=e220]:
+                          - img
+                - generic [ref=e221]: Some benefits may have additional eligibility criteria.
+                - generic [ref=e223]:
+                  - generic [ref=e224]: Eligibility
+                  - generic [ref=e226]:
+                    - text: "Showing data as of: Dec 26, 2025"
+                    - generic "Why could this take a week to update? We carefully validate each channel's engagement metrics before they are displayed here. This process may take several days to complete, and may vary from what you see elsewhere, such as YouTube Analytics." [ref=e227]:
+                      - generic [ref=e229]:
+                        - img
+                  - generic [ref=e230]:
+                    - progressbar [ref=e231]
+                    - generic [ref=e233]:
+                      - generic [ref=e234]: 0 subscribers
+                      - generic [ref=e235]: "500"
+                  - generic [ref=e236]:
+                    - progressbar [ref=e237]
+                    - generic [ref=e240]:
+                      - generic [ref=e241]:
+                        - generic [ref=e242]: 1 video upload
+                        - generic [ref=e243]: last 90 days
+                      - generic [ref=e244]: "3"
+                  - generic [ref=e245]: and one of the following
+                  - generic [ref=e246]:
+                    - generic [ref=e247]:
+                      - progressbar [ref=e248]
+                      - generic:
+                        - generic [ref=e250]:
+                          - generic [ref=e251]: 0 valid public watch hours
+                          - generic [ref=e252]: last 365 days
+                        - generic [ref=e253]: 3,000
+                    - generic [ref=e254]:
+                      - progressbar [ref=e255]
+                      - generic:
+                        - generic [ref=e257]:
+                          - generic [ref=e258]: 0 valid public Shorts views
+                          - generic [ref=e259]: last 90 days
+                        - generic [ref=e260]: 3M
+                - generic [ref=e261]:
+                  - generic [ref=e262]: Want to know when you're eligible?
+                  - button "Get notified" [ref=e266] [cursor=pointer]:
+                    - generic [ref=e267]: Get notified
+                - generic [ref=e271]:
+                  - generic [ref=e272]:
+                    - generic [ref=e273]: Future milestone
+                    - generic [ref=e276]:
+                      - img
+                  - generic [ref=e277]: Continue to grow
+                  - generic [ref=e278]: Unlock even more ways to earn—including the option to show ads on videos.
+                - generic [ref=e283]:
+                  - generic [ref=e285]:
+                    - generic [ref=e286]:
+                      - button "Watch Page Ads" [expanded] [ref=e287] [cursor=pointer]:
+                        - generic [ref=e290]: Watch Page Ads
+                      - button "Collapse" [ref=e293] [cursor=pointer]:
+                        - generic "Collapse" [ref=e294]:
+                          - generic [ref=e296]:
+                            - img
+                    - generic "Memberships" [ref=e297]:
+                      - generic [ref=e299]:
+                        - generic [ref=e300]: Earn from ads & YouTube Premium on the Watch Page
+                        - generic [ref=e301]:
+                          - paragraph [ref=e302]: You can earn from ads on or around your videos and from YouTube Premium subscribers watching your videos on the Watch Page
+                          - paragraph
+                  - separator [ref=e305]
+                  - generic [ref=e308]:
+                    - button "Shorts Feed Ads" [ref=e309] [cursor=pointer]:
+                      - generic [ref=e312]: Shorts Feed Ads
+                    - button "Expand" [ref=e315] [cursor=pointer]:
+                      - generic "Expand" [ref=e316]:
+                        - generic [ref=e318]:
+                          - img
+                - generic [ref=e320]:
+                  - generic [ref=e321]: Eligibility
+                  - generic [ref=e323]:
+                    - text: "Showing data as of: Dec 26, 2025"
+                    - generic "Why could this take a week to update? We carefully validate each channel's engagement metrics before they are displayed here. This process may take several days to complete, and may vary from what you see elsewhere, such as YouTube Analytics." [ref=e324]:
+                      - generic [ref=e326]:
+                        - img
+                  - generic [ref=e327]:
+                    - progressbar [ref=e328]
+                    - generic [ref=e330]:
+                      - generic [ref=e331]: 0 subscribers
+                      - generic [ref=e332]: 1,000
+                  - generic [ref=e333]: and one of the following
+                  - generic [ref=e334]:
+                    - generic [ref=e335]:
+                      - progressbar [ref=e336]
+                      - generic:
+                        - generic [ref=e338]:
+                          - generic [ref=e339]: 0 valid public watch hours
+                          - generic [ref=e340]: last 365 days
+                        - generic [ref=e341]: 4,000
+                    - generic [ref=e342]:
+                      - progressbar [ref=e343]
+                      - generic:
+                        - generic [ref=e345]:
+                          - generic [ref=e346]: 0 valid public Shorts views
+                          - generic [ref=e347]: last 90 days
+                        - generic [ref=e348]: 10M
+                - generic [ref=e350]:
+                  - generic [ref=e351]: Creator resources & tools
+                  - generic [ref=e356]:
+                    - generic [ref=e361]:
+                      - generic [ref=e364]:
+                        - img
+                      - link "YouTube Creator Support" [ref=e366] [cursor=pointer]:
+                        - /url: https://support.google.com/youtube/answer/3545535?hl=en
+                        - generic [ref=e367]: YouTube Creator Support
+                    - generic [ref=e372]:
+                      - generic [ref=e375]:
+                        - img
+                      - link "Copyright Match Tool" [ref=e377] [cursor=pointer]:
+                        - /url: https://support.google.com/youtube/answer/7648743?hl=en
+                        - generic [ref=e378]: Copyright Match Tool
+                    - generic [ref=e383]:
+                      - generic [ref=e386]:
+                        - img
+                      - link "Video end screens" [ref=e388] [cursor=pointer]:
+                        - /url: https://support.google.com/youtube/answer/6388789?hl=en&ref_topic=9257785
+                        - generic [ref=e389]: Video end screens
+                  - heading "Resources" [level=3] [ref=e390]
+                  - generic [ref=e395]:
+                    - generic [ref=e399]:
+                      - generic [ref=e401]: Support
+                      - generic [ref=e402]:
+                        - link "Help Center" [ref=e404] [cursor=pointer]:
+                          - /url: https://support.google.com/youtube?hl=en
+                          - generic [ref=e405]: Help Center
+                        - link "Community forums" [ref=e407] [cursor=pointer]:
+                          - /url: https://support.google.com/youtube/community?hl=en
+                          - generic [ref=e408]: Community forums
+                    - generic [ref=e412]:
+                      - generic [ref=e414]: Learn
+                      - link "YouTube Creators Channel" [ref=e417] [cursor=pointer]:
+                        - /url: https://www.youtube.com/channel/UCkRfArvrzheW2E7b6SVT7vQ
+                        - generic [ref=e418]: YouTube Creators Channel
+                    - generic [ref=e422]:
+                      - generic [ref=e424]: Things to know
+                      - generic [ref=e425]:
+                        - link "Channel monetization policies" [ref=e427] [cursor=pointer]:
+                          - /url: https://support.google.com/youtube/answer/1311392?hl=en
+                          - generic [ref=e428]: Channel monetization policies
+                        - link "Advertiser-friendly guidelines" [ref=e430] [cursor=pointer]:
+                          - /url: https://support.google.com/youtube/answer/6162278?hl=en
+                          - generic [ref=e431]: Advertiser-friendly guidelines
+                        - link "Other ways to earn" [ref=e433] [cursor=pointer]:
+                          - /url: https://support.google.com/youtube/answer/94522?hl=en&ref_topic=9257989
+                          - generic [ref=e434]: Other ways to earn
+              - generic [ref=e439]:
+                - generic [ref=e440]: After you apply
+                - generic [ref=e441]:
+                  - text: We'll check if your channel follows YouTube's
+                  - link "monetization policies" [ref=e443] [cursor=pointer]:
+                    - /url: https://support.google.com/youtube/answer/1311392?hl=en
+                    - generic [ref=e444]: monetization policies
+                  - text: . If everything looks good, you're in!
+                - link "Learn more" [ref=e445] [cursor=pointer]:
+                  - /url: https://support.google.com/youtube/answer/72851?hl=en
+                  - button "Learn more" [ref=e448]:
+                    - generic [ref=e449]: Learn more
+```

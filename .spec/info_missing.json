@@ -1,0 +1,107 @@
+{
+  "note": "Features blocked by missing data, backend capabilities, or external integrations. These should show a 'Not implemented yet' popup until info is available.",
+  "items": [
+    {
+      "area": "Studio/Content",
+      "feature": "Shorts, Live, Posts, Podcasts, Promotions, Collaborations data sets",
+      "missing_info": "No data models or seed data for non-video content types in current state.",
+      "spec_refs": [".spec/info/summaries/content-summary.md"]
+    },
+    {
+      "area": "Studio/Livestreaming",
+      "feature": "Go live flow, stream settings, access request",
+      "missing_info": "Stream ingest configuration, scheduling model, access/eligibility state, and realtime health metrics are missing.",
+      "spec_refs": [".spec/info/summaries/livestreaming-summary.md"]
+    },
+    {
+      "area": "Studio/Community",
+      "feature": "Community posts creation and viewer posts/mentions tabs",
+      "missing_info": "Post/mention data model and moderation workflows are not defined in state or API.",
+      "spec_refs": [".spec/info/summaries/community-summary.md", ".spec/info/summaries/content-summary.md"]
+    },
+    {
+      "area": "Studio/Community",
+      "feature": "Moderation actions (report spam, hide user, always approve, add moderators)",
+      "missing_info": "No moderation queue, user role model, or spam/reporting endpoints exist.",
+      "spec_refs": [".spec/info/summaries/community-summary.md"]
+    },
+    {
+      "area": "Studio/Video Edit",
+      "feature": "Editor timeline tools (trim/cut, blur, audio replace, end screen, cards)",
+      "missing_info": "Video processing pipeline, asset editing state, and render/export flow are not defined.",
+      "spec_refs": [".spec/info/summaries/video-edit-summary.md"]
+    },
+    {
+      "area": "Studio/Video Edit",
+      "feature": "Thumbnail upload and A/B testing",
+      "missing_info": "Thumbnail storage, validation rules, and test result data are missing.",
+      "spec_refs": [".spec/info/summaries/video-edit-summary.md"]
+    },
+    {
+      "area": "Studio/Video Edit",
+      "feature": "Clips creation and management",
+      "missing_info": "Clip metadata, trimming boundaries, and share/embed data are missing.",
+      "spec_refs": [".spec/info/summaries/video-edit-summary.md"]
+    },
+    {
+      "area": "Studio/Analytics",
+      "feature": "Time-series charts, traffic sources, audience demographics, trends/saved ideas",
+      "missing_info": "Analytics time-series, retention, demographic, and traffic source datasets are not available.",
+      "spec_refs": [".spec/info/summaries/analytics-summary.md"]
+    },
+    {
+      "area": "Studio/Analytics",
+      "feature": "Realtime analytics and live subscriber count",
+      "missing_info": "Realtime telemetry stream and live subscriber data are missing.",
+      "spec_refs": [".spec/info/summaries/analytics-summary.md"]
+    },
+    {
+      "area": "Studio/Subtitles",
+      "feature": "Subtitle tracks, translations, and publish states",
+      "missing_info": "Subtitle file storage, translation data, and publish/draft states are not modeled.",
+      "spec_refs": [".spec/info/summaries/subtitles-summary.md"]
+    },
+    {
+      "area": "Studio/Content Detection",
+      "feature": "Copyright claims, takedown requests, and likeness detection results",
+      "missing_info": "Content ID claim data, removal workflows, and detection results are missing.",
+      "spec_refs": [".spec/info/summaries/content-detection-summary.md"]
+    },
+    {
+      "area": "Studio/Earn",
+      "feature": "Monetization eligibility and revenue reporting",
+      "missing_info": "Earnings metrics, eligibility thresholds, and payout data are not available.",
+      "spec_refs": [".spec/info/summaries/earn-summary.md"]
+    },
+    {
+      "area": "Studio/Audio Library",
+      "feature": "Audio catalog integration and downloads",
+      "missing_info": "Real track catalog, preview URLs, and licensing metadata are missing.",
+      "spec_refs": [".spec/info/summaries/audio-library-summary.md"]
+    },
+    {
+      "area": "Studio/Customization",
+      "feature": "Banner/profile uploads, watermark, and persisted channel profile changes",
+      "missing_info": "Image storage pipeline and channel profile persistence are missing.",
+      "spec_refs": [".spec/info/summaries/customization-summary.md"]
+    },
+    {
+      "area": "Studio/Settings",
+      "feature": "Google Ads linking and automatic dubbing",
+      "missing_info": "External account linking and dubbing pipeline details are missing.",
+      "spec_refs": [".spec/info/summaries/settings-summary.md"]
+    },
+    {
+      "area": "Viewer/Playback",
+      "feature": "Notification settings, voice search, and extended action menus",
+      "missing_info": "Notification preference model, speech recognition integration, and action definitions are not specified.",
+      "spec_refs": []
+    },
+    {
+      "area": "Viewer/Comments",
+      "feature": "Replying to replies (threaded comments beyond one level)",
+      "missing_info": "Nested comment threading rules and backend support are not defined.",
+      "spec_refs": []
+    }
+  ]
+}

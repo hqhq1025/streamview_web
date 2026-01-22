@@ -1,0 +1,1080 @@
+<project_specification>
+  <project_name>YouTube Studio Clone</project_name>
+
+  <overview>
+    YouTube Studio is a comprehensive creator dashboard for managing YouTube channels, content, analytics, and community engagement. This clone will replicate the core functionality including content management (videos, shorts, live streams, posts), video editing, analytics dashboards, community moderation, subtitle management, monetization tracking, channel customization, audio library access, and comprehensive settings. The application features a responsive design with persistent sidebar navigation, tab-based content organization, modal dialogs for settings, and real-time data updates.
+  </overview>
+
+  <technology_stack>
+    <frontend>
+      <framework>React 18+ with TypeScript</framework>
+      <styling>Tailwind CSS 3.4+ with custom component library</styling>
+      <state_management>React Context API + React Query for server state</state_management>
+      <routing>React Router 6+ with nested routes</routing>
+      <charts>Recharts or Chart.js for analytics visualization</charts>
+      <rich_text_editors>TipTap or similar for description editing</rich_text_editors>
+      <video_handling>HTML5 Video API with custom controls</video_handling>
+      <build_tool>Vite 5+ for fast development and optimized builds</build_tool>
+      <component_library>Custom Headless UI components following YouTube patterns</component_library>
+    </frontend>
+    <backend>
+      <runtime>Node.js 20+ with Express.js</runtime>
+      <database>PostgreSQL for structured data + MongoDB for analytics timeseries</database>
+      <authentication>OAuth 2.0 with JWT tokens</authentication>
+      <file_storage>AWS S3 or similar for video/thumbnail storage</file_storage>
+      <video_processing>FFmpeg for video transcoding and thumbnail generation</video_processing>
+      <api_style>RESTful API with OpenAPI 3.0 specification</api_style>
+      <realtime_features>WebSocket integration for live chat and realtime analytics</realtime_features>
+      <background_jobs>Bull/BullMQ with Redis for job queues</background_jobs>
+    </backend>
+    <communication>
+      <api>REST API with JSON responses</api>
+      <websocket>Socket.io for real-time features (comments, analytics, live streaming)</websocket>
+      <cdn>CloudFront or Cloudflare for static asset delivery</cdn>
+    </communication>
+  </technology_stack>
+
+  <prerequisites>
+    <environment_setup>
+      Node.js 20+ and npm/yarn/pnpm installed
+      PostgreSQL 14+ with configured database
+      MongoDB 6+ for analytics data
+      Redis 7+ for caching and job queues
+      FFmpeg installed system-wide for video processing
+      AWS S3 bucket or equivalent storage configured
+      OAuth 2.0 credentials for YouTube API integration (if importing data)
+      Git for version control
+      Modern web browser (Chrome, Firefox, Edge, Safari)
+      IDE with TypeScript support (VS Code recommended)
+    </environment_setup>
+  </prerequisites>
+
+  <feature_count>248</feature_count>
+
+  <core_features>
+    <navigation_and_layout>
+      - Persistent sidebar navigation with collapsible menu (cite: .spec/info/summaries/dashboard-summary.md)
+      - Top navigation bar with search, help, notifications, create button, and account profile (cite: .spec/info/summaries/dashboard-summary.md)
+      - Channel branding display in sidebar with profile picture and channel name (cite: .spec/info/summaries/dashboard-summary.md)
+      - Main menu items: Dashboard, Content, Analytics, Community, Subtitles, Content Detection, Earn, Customization, Audio Library (cite: .spec/info/summaries/dashboard-summary.md)
+      - Secondary menu items: Settings, Send feedback (cite: .spec/info/summaries/dashboard-summary.md)
+      - Breadcrumb navigation for nested pages (cite: .spec/info/summaries/video-edit-summary.md)
+      - Responsive design that adapts to different screen sizes (cite: .spec/info/summaries/content-summary.md)
+      - Skip navigation accessibility feature for keyboard users (cite: .spec/info/summaries/dashboard-summary.md)
+    </navigation_and_layout>
+
+    <dashboard>
+      - Latest video performance card with real-time metrics (cite: .spec/info/summaries/dashboard-summary.md)
+      - Key metrics: Views, Comments, Likes with expandable options (cite: .spec/info/summaries/dashboard-summary.md)
+      - Time-based metric updates (e.g., "First 2 hours 31 minutes") (cite: .spec/info/summaries/dashboard-summary.md)
+      - Channel analytics card with subscribers, views, watch time (cite: .spec/info/summaries/dashboard-summary.md)
+      - Time period selector (Last 28 days, etc.) (cite: .spec/info/summaries/dashboard-summary.md)
+      - Top videos section with links to analytics (cite: .spec/info/summaries/dashboard-summary.md)
+      - Recent comments section with user info and timestamps (cite: .spec/info/summaries/dashboard-summary.md)
+      - Quick actions bar: Upload videos, Go live, Create post (cite: .spec/info/summaries/dashboard-summary.md)
+      - Community posts section with create CTA (cite: .spec/info/summaries/dashboard-summary.md)
+      - Creator Insider news section with video links (cite: .spec/info/summaries/dashboard-summary.md)
+      - What's New in Studio feature announcements (cite: .spec/info/summaries/dashboard-summary.md)
+      - Real-time data updates without page refresh (cite: .spec/info/summaries/dashboard-summary.md)
+    </dashboard>
+
+    <content_management>
+      - Tab-based content organization with 8 tabs (cite: .spec/info/summaries/content-summary.md)
+      - Videos tab: Table with thumbnail, title, visibility, date, views, comments, likes columns (cite: .spec/info/summaries/content-summary.md)
+      - Shorts tab: Short-form video content management (cite: .spec/info/summaries/content-summary.md)
+      - Live tab: Live stream content management with "Get started" link (cite: .spec/info/summaries/content-summary.md)
+      - Posts tab: Community post creation and management (cite: .spec/info/summaries/content-summary.md)
+      - Playlists tab: Playlist organization and management (cite: .spec/info/summaries/content-summary.md)
+      - Podcasts tab: Podcast content and RSS feed management (cite: .spec/info/summaries/content-summary.md)
+      - Promotions tab: Promotional campaign management (cite: .spec/info/summaries/content-summary.md)
+      - Collaborations tab: Collaborative video project management (cite: .spec/info/summaries/content-summary.md)
+      - Sortable columns (Date, Views, Comments, Likes) (cite: .spec/info/summaries/content-summary.md)
+      - Filter textbox for searching content (cite: .spec/info/summaries/content-summary.md)
+      - Pagination controls with customizable rows per page (cite: .spec/info/summaries/content-summary.md)
+      - Bulk selection checkboxes for batch operations (cite: .spec/info/summaries/content-summary.md)
+      - Visibility indicators (Public, Private, Unlisted, Scheduled) (cite: .spec/info/summaries/content-summary.md)
+      - Empty states with helpful call-to-action buttons (cite: .spec/info/summaries/content-summary.md)
+    </content_management>
+
+    <video_editing_and_management>
+      - Details tab: Title editing with @ mention support for channels (cite: .spec/info/summaries/video-edit-summary.md)
+      - Description editing with multi-line textarea (cite: .spec/info/summaries/video-edit-summary.md)
+      - Thumbnail management: Upload, auto-generated, A/B testing (cite: .spec/info/summaries/video-edit-summary.md)
+      - Thumbnail recommendations: 1280x720, <2MB, JPG/PNG/GIF (cite: .spec/info/summaries/video-edit-summary.md)
+      - Playlist assignment with multi-select (cite: .spec/info/summaries/video-edit-summary.md)
+      - Audience targeting (Made for kids) with COPPA compliance info (cite: .spec/info/summaries/video-edit-summary.md)
+      - Age restriction settings (cite: .spec/info/summaries/video-edit-summary.md)
+      - Video preview panel with embedded player and controls (cite: .spec/info/summaries/video-edit-summary.md)
+      - Visibility status and restrictions display (cite: .spec/info/summaries/video-edit-summary.md)
+      - Subtitles, End screen, and Cards management buttons (cite: .spec/info/summaries/video-edit-summary.md)
+      - Video link with copy functionality (cite: .spec/info/summaries/video-edit-summary.md)
+      - Undo changes and Save buttons with enable/disable states (cite: .spec/info/summaries/video-edit-summary.md)
+      - Analytics tab with Overview, Reach, Engagement, Audience sub-tabs (cite: .spec/info/summaries/video-edit-summary.md)
+      - Realtime views tracking (cite: .spec/info/summaries/video-edit-summary.md)
+      - Comments tab with moderation tools (cite: .spec/info/summaries/video-edit-summary.md)
+      - Editor tab with timeline-based editing (cite: .spec/info/summaries/video-edit-summary.md)
+      - Trim & cut functionality for removing video sections (cite: .spec/info/summaries/video-edit-summary.md)
+      - Blur effects for faces and objects (cite: .spec/info/summaries/video-edit-summary.md)
+      - Audio track replacement (cite: .spec/info/summaries/video-edit-summary.md)
+      - End screen creation (cite: .spec/info/summaries/video-edit-summary.md)
+      - Info cards management (cite: .spec/info/summaries/video-edit-summary.md)
+      - Copyright tab with Content ID status (cite: .spec/info/summaries/video-edit-summary.md)
+      - Clips tab for creating short clips from existing videos (cite: .spec/info/summaries/video-edit-summary.md)
+    </video_editing_and_management>
+
+    <analytics>
+      - Advanced mode link for comprehensive analytics exploration (cite: .spec/info/summaries/analytics-summary.md)
+      - Tab navigation: Overview, Content, Audience, Trends (cite: .spec/info/summaries/analytics-summary.md)
+      - Time period selector: 7, 28, 90, 365 days, Lifetime, Custom ranges (cite: .spec/info/summaries/analytics-summary.md)
+      - Yearly and monthly breakdown options (cite: .spec/info/summaries/analytics-summary.md)
+      - Key metric card with Views, Watch time, Subscribers (cite: .spec/info/summaries/analytics-summary.md)
+      - Interactive charts with hover tooltips and clickable data points (cite: .spec/info/summaries/analytics-summary.md)
+      - Realtime section with live subscriber count and last 48 hours views (cite: .spec/info/summaries/analytics-summary.md)
+      - Top content and latest content sections (cite: .spec/info/summaries/analytics-summary.md)
+      - Content tab with Traffic Sources analysis (cite: .spec/info/summaries/analytics-summary.md)
+      - Impressions report showing how impressions led to watch time (cite: .spec/info/summaries/analytics-summary.md)
+      - Audience tab with monthly unique viewers (cite: .spec/info/summaries/analytics-summary.md)
+      - Audience segments: New, Casual, Regular viewers (cite: .spec/info/summaries/analytics-summary.md)
+      - Viewers schedule heatmap showing when viewers are on YouTube (cite: .spec/info/summaries/analytics-summary.md)
+      - Subscriber vs non-subscriber watch time (cite: .spec/info/summaries/analytics-summary.md)
+      - Demographics: Age and gender breakdown (cite: .spec/info/summaries/analytics-summary.md)
+      - Device types breakdown: Desktop, Mobile, Tablet, TV, Other (cite: .spec/info/summaries/analytics-summary.md)
+      - Geographies: Top countries and regions (cite: .spec/info/summaries/analytics-summary.md)
+      - Subtitle/Closed Caption language usage (cite: .spec/info/summaries/analytics-summary.md)
+      - External insights: Channels audience watches, What audience watches (cite: .spec/info/summaries/analytics-summary.md)
+      - Trends tab with research tool and saved ideas (cite: .spec/info/summaries/analytics-summary.md)
+      - Topic suggestions with thumbnails and exploration links (cite: .spec/info/summaries/analytics-summary.md)
+      - "Not enough data" handling for low-traffic channels (cite: .spec/info/summaries/analytics-summary.md)
+    </analytics>
+
+    <community_management>
+      - Comments tab with moderation and filtering tools (cite: .spec/info/summaries/community-summary.md)
+      - Published and Held comment queues (cite: .spec/info/summaries/community-summary.md)
+      - Sort options: Most relevant, Newest (cite: .spec/info/summaries/community-summary.md)
+      - Response status filter: Unresponded, Responded, New replies (cite: .spec/info/summaries/community-summary.md)
+      - Search and filter textbox for text-based filtering (cite: .spec/info/summaries/community-summary.md)
+      - Batch selection for bulk moderation actions (cite: .spec/info/summaries/community-summary.md)
+      - Comment elements: User avatar, name, timestamp, content, video reference (cite: .spec/info/summaries/community-summary.md)
+      - Engagement buttons: Reply, View replies, Like, Dislike, Heart (cite: .spec/info/summaries/community-summary.md)
+      - Action menu with moderation options (cite: .spec/info/summaries/community-summary.md)
+      - Inline reply editor with Cancel/Reply buttons (cite: .spec/info/summaries/community-summary.md)
+      - Reply thread expansion and collapse (cite: .spec/info/summaries/community-summary.md)
+      - Moderation actions: Remove, Report, Hide user, Auto-approve (cite: .spec/info/summaries/community-summary.md)
+      - Moderator assignment: Managing and Standard moderator roles (cite: .spec/info/summaries/community-summary.md)
+      - Viewer posts tab for community post management (cite: .spec/info/summaries/community-summary.md)
+      - Published status filter for viewer posts (cite: .spec/info/summaries/community-summary.md)
+      - Mentions tab for tracking channel mentions (cite: .spec/info/summaries/community-summary.md)
+      - "View comment on YouTube" links (cite: .spec/info/summaries/community-summary.md)
+    </community_management>
+
+    <subtitle_management>
+      - Channel-level view of all videos and subtitle status (cite: .spec/info/summaries/subtitles-summary.md)
+      - Tab selection: All, Drafts, Published (cite: .spec/info/summaries/subtitles-summary.md)
+      - Videos table with thumbnail, title, language count, modified date (cite: .spec/info/summaries/subtitles-summary.md)
+      - Video subtitle detail view with breadcrumb navigation (cite: .spec/info/summaries/subtitles-summary.md)
+      - Language settings dropdown with 150+ languages (cite: .spec/info/summaries/subtitles-summary.md)
+      - Regional language variants (e.g., English US vs English UK) (cite: .spec/info/summaries/subtitles-summary.md)
+      - "Make this the default for my channel" checkbox (cite: .spec/info/summaries/subtitles-summary.md)
+      - Translations table with Language, Subtitles, Title & description columns (cite: .spec/info/summaries/subtitles-summary.md)
+      - Add language button with disabled already-selected languages (cite: .spec/info/summaries/subtitles-summary.md)
+      - Draft and published states for subtitle tracks (cite: .spec/info/summaries/subtitles-summary.md)
+      - "All changes saved" toast notifications (cite: .spec/info/summaries/subtitles-summary.md)
+    </subtitle_management>
+
+    <content_detection_and_copyright>
+      - Copyright tab for takedown request management (cite: .spec/info/summaries/content-detection-summary.md)
+      - New removal request button (cite: .spec/info/summaries/content-detection-summary.md)
+      - Empty state with helpful messaging (cite: .spec/info/summaries/content-detection-summary.md)
+      - Links to copyright takedown requests and video list (cite: .spec/info/summaries/content-detection-summary.md)
+      - Likeness detection section for AI-generated/altered content (cite: .spec/info/summaries/content-detection-summary.md)
+      - "Review content where your likeness may be altered" description (cite: .spec/info/summaries/content-detection-summary.md)
+      - Retry mechanisms for failed content sections (cite: .spec/info/summaries/content-detection-summary.md)
+      - URL redirection from /content-detection to /copyright (cite: .spec/info/summaries/content-detection-summary.md)
+    </content_detection_and_copyright>
+
+    <monetization>
+      - Next Milestone section with progress tracking (cite: .spec/info/summaries/earn-summary.md)
+      - Earning methods: Memberships, Supers, Shopping (cite: .spec/info/summaries/earn-summary.md)
+      - Expandable/collapsible cards with smooth animations (cite: .spec/info/summaries/earn-summary.md)
+      - Membership details: 70% revenue share, monthly payments (cite: .spec/info/summaries/earn-summary.md)
+      - Supers: Super Chat, Super Stickers, Super Thanks (cite: .spec/info/summaries/earn-summary.md)
+      - Shopping: Online store connection and product promotion (cite: .spec/info/summaries/earn-summary.md)
+      - Eligibility progress section with real-time metrics (cite: .spec/info/summaries/earn-summary.md)
+      - Visual progress bars for each threshold (cite: .spec/info/summaries/earn-summary.md)
+      - Requirements: 500 subscribers, 3 uploads, 3000 watch hours OR 3M Shorts views (cite: .spec/info/summaries/earn-summary.md)
+      - Data freshness note with validation delay explanation (cite: .spec/info/summaries/earn-summary.md)
+      - "Get notified" button for eligibility alerts (cite: .spec/info/summaries/earn-summary.md)
+      - Future milestone section: 1000 subscribers, 4000 watch hours OR 10M Shorts views (cite: .spec/info/summaries/earn-summary.md)
+      - Watch Page Ads and Shorts Feed Ads earning methods (cite: .spec/info/summaries/earn-summary.md)
+      - Creator resources and tools links (cite: .spec/info/summaries/earn-summary.md)
+      - Support, Learn, and Things to know resource sections (cite: .spec/info/summaries/earn-summary.md)
+      - After You Apply explanation of review process (cite: .spec/info/summaries/earn-summary.md)
+    </monetization>
+
+    <channel_customization>
+      - Profile tab with channel identity elements (cite: .spec/info/summaries/customization-summary.md)
+      - Banner image upload: 2048x1152 recommended, 6MB max (cite: .spec/info/summaries/customization-summary.md)
+      - Profile picture upload: 98x98 minimum, 4MB max, PNG/GIF (cite: .spec/info/summaries/customization-summary.md)
+      - Channel name editing with change frequency limits (cite: .spec/info/summaries/customization-summary.md)
+      - Handle editing with @username preview and revert option (cite: .spec/info/summaries/customization-summary.md)
+      - Pronouns with language filter, visibility settings, and text search (cite: .spec/info/summaries/customization-summary.md)
+      - Channel description textarea with translation support (cite: .spec/info/summaries/customization-summary.md)
+      - Channel URL display with copy button (cite: .spec/info/summaries/customization-summary.md)
+      - External links section with title and URL fields (cite: .spec/info/summaries/customization-summary.md)
+      - Contact info email field (cite: .spec/info/summaries/customization-summary.md)
+      - Video watermark upload: 150x150 recommended, 1MB max (cite: .spec/info/summaries/customization-summary.md)
+      - Home tab for homepage layout customization (cite: .spec/info/summaries/customization-summary.md)
+      - Home tab enable/disable toggle (cite: .spec/info/summaries/customization-summary.md)
+      - Layout section with up to 12 customizable sections (cite: .spec/info/summaries/customization-summary.md)
+      - Add section menu with 16 section types (cite: .spec/info/summaries/customization-summary.md)
+      - Section options menu with remove functionality (cite: .spec/info/summaries/customization-summary.md)
+      - View channel, Cancel, and Publish buttons (cite: .spec/info/summaries/customization-summary.md)
+      - URL redirection from /customization to /editing/profile (cite: .spec/info/summaries/customization-summary.md)
+    </channel_customization>
+
+    <audio_library>
+      - Tab navigation: Music, Sound Effects, Starred (cite: .spec/info/summaries/audio-library-summary.md)
+      - Search box for track title, mood, artist, duration, license type (cite: .spec/info/summaries/audio-library-summary.md)
+      - Genre filter buttons (Hip-Hop, R&B, Pop, Rock, Ambient, etc.) (cite: .spec/info/summaries/audio-library-summary.md)
+      - Mood filter buttons (Calm, Sad, Funky, Bright, Happy, etc.) (cite: .spec/info/summaries/audio-library-summary.md)
+      - Artist filter for specific artist selection (cite: .spec/info/summaries/audio-library-summary.md)
+      - Active filters display with remove buttons (cite: .spec/info/summaries/audio-library-summary.md)
+      - Filter dialog with checkbox-based multi-select (cite: .spec/info/summaries/audio-library-summary.md)
+      - Audio track listing with play/pause preview (cite: .spec/info/summaries/audio-library-summary.md)
+      - Star/unstar functionality for favorites (cite: .spec/info/summaries/audio-library-summary.md)
+      - Track metadata: title, genre, mood, artist, duration, license, added date (cite: .spec/info/summaries/audio-library-summary.md)
+      - Download button for each track (cite: .spec/info/summaries/audio-library-summary.md)
+      - Pagination controls with customizable rows per page (cite: .spec/info/summaries/audio-library-summary.md)
+      - Result counter showing current range and total (cite: .spec/info/summaries/audio-library-summary.md)
+      - Sort by column functionality (cite: .spec/info/summaries/audio-library-summary.md)
+      - "All changes saved" confirmation for star/unstar actions (cite: .spec/info/summaries/audio-library-summary.md)
+      - Empty state message in Starred tab (cite: .spec/info/summaries/audio-library-summary.md)
+      - YouTube Audio Library License information (cite: .spec/info/summaries/audio-library-summary.md)
+    </audio_library>
+
+    <settings>
+      - Settings dialog modal implementation (cite: .spec/info/summaries/settings-summary.md)
+      - Six main tabs: General, Channel, Upload Defaults, Permissions, Community Moderation, Agreements (cite: .spec/info/summaries/settings-summary.md)
+      - General tab: Currency selection for display (cite: .spec/info/summaries/settings-summary.md)
+      - Channel tab - Basic info: Country of residence, keywords (cite: .spec/info/summaries/settings-summary.md)
+      - Channel tab - Advanced settings: Made for kids (COPPA) with 3 radio options (cite: .spec/info/summaries/settings-summary.md)
+      - Google Ads account linking (cite: .spec/info/summaries/settings-summary.md)
+      - Automatic captions: Inappropriate words filter (cite: .spec/info/summaries/settings-summary.md)
+      - Automatic dubbing early access feature (cite: .spec/info/summaries/settings-summary.md)
+      - Advertisements: Interest-based ads toggle (cite: .spec/info/summaries/settings-summary.md)
+      - Clips: Allow viewers to clip content toggle (cite: .spec/info/summaries/settings-summary.md)
+      - Video quality enhancements: Visual and audio (cite: .spec/info/summaries/settings-summary.md)
+      - Third-party AI training permission toggle (cite: .spec/info/summaries/settings-summary.md)
+      - Channel tab - Feature eligibility with 3 tiers (cite: .spec/info/summaries/settings-summary.md)
+      - Upload defaults: Title, description, visibility, tags (cite: .spec/info/summaries/settings-summary.md)
+      - Upload defaults advanced: Chapters, license, category, language, captions (cite: .spec/info/summaries/settings-summary.md)
+      - Permissions tab: Invite users, manage roles (cite: .spec/info/summaries/settings-summary.md)
+      - Community moderation - Content controls: Comments, live chat, posts settings (cite: .spec/info/summaries/settings-summary.md)
+      - Blocked words and link text moderation (cite: .spec/info/summaries/settings-summary.md)
+      - User management: Moderators, approved users, hidden users (cite: .spec/info/summaries/settings-summary.md)
+      - Live redirect settings (cite: .spec/info/summaries/settings-summary.md)
+      - Channel guidelines setup with verification requirement (cite: .spec/info/summaries/settings-summary.md)
+      - Agreements tab with Terms of Service links (cite: .spec/info/summaries/settings-summary.md)
+      - Save button with enable/disable state tracking (cite: .spec/info/summaries/settings-summary.md)
+      - Cancel button with "Discard changes?" confirmation (cite: .spec/info/summaries/settings-summary.md)
+    </settings>
+
+    <live_streaming>
+      - Navigation tabs: Stream, Webcam, Manage (cite: .spec/info/summaries/livestreaming-summary.md)
+      - Request access dialog for channels without streaming enabled (cite: .spec/info/summaries/livestreaming-summary.md)
+      - 24-hour waiting period information (cite: .spec/info/summaries/livestreaming-summary.md)
+      - Channel level settings button (cite: .spec/info/summaries/livestreaming-summary.md)
+      - Overlay for breaks configuration (cite: .spec/info/summaries/livestreaming-summary.md)
+      - Default overlay vs. custom video overlay options (cite: .spec/info/summaries/livestreaming-summary.md)
+      - Send feedback button opening UserVoice iframe (cite: .spec/info/summaries/livestreaming-summary.md)
+      - Tooltip on disabled tabs: "You don't have access to this feature" (cite: .spec/info/summaries/livestreaming-summary.md)
+      - Settings dialog with Save and Cancel buttons (cite: .spec/info/summaries/livestreaming-summary.md)
+    </live_streaming>
+
+    <create_menu_and_actions>
+      - Create button dropdown in top navigation (cite: .spec/info/screenshots/dashboard-create-menu.png)
+      - Upload videos option (cite: .spec/info/summaries/dashboard-summary.md)
+      - Go live option (cite: .spec/info/summaries/dashboard-summary.md)
+      - Create post option (cite: .spec/info/summaries/dashboard-summary.md)
+      - New playlist option (cite: .spec/info/summaries/dashboard-summary.md)
+      - New podcast option (cite: .spec/info/summaries/dashboard-summary.md)
+    </create_menu_and_actions>
+
+    <search_functionality>
+      - "Search across your channel" textbox in top navigation (cite: .spec/info/summaries/dashboard-summary.md)
+      - Filter textboxes in content tables (cite: .spec/info/summaries/content-summary.md)
+      - Search in audio library with multi-field filtering (cite: .spec/info/summaries/audio-library-summary.md)
+      - Search in comments for text-based filtering (cite: .spec/info/summaries/community-summary.md)
+    </search_functionality>
+
+    <notifications_and_help>
+      - Help button in top navigation (cite: .spec/info/summaries/dashboard-summary.md)
+      - Notifications button showing channel notifications (cite: .spec/info/summaries/dashboard-summary.md)
+      - Send feedback option in sidebar (cite: .spec/info/summaries/dashboard-summary.md)
+      - Creator Insider news section (cite: .spec/info/summaries/dashboard-summary.md)
+      - What's New in Studio announcements (cite: .spec/info/summaries/dashboard-summary.md)
+      - "Learn more" links throughout the interface (cite: .spec/info/summaries/dashboard-summary.md)
+    </notifications_and_help>
+
+    <data_export_and_sharing>
+      - Copy video link functionality (cite: .spec/info/summaries/video-edit-summary.md)
+      - Copy channel URL functionality (cite: .spec/info/summaries/customization-summary.md)
+      - Share buttons and links to public YouTube pages (cite: .spec/info/summaries/video-edit-summary.md)
+    </data_export_and_sharing>
+
+    <accessibility_features>
+      - Skip navigation link (cite: .spec/info/summaries/dashboard-summary.md)
+      - Proper heading hierarchy (h1, h2, h3) (cite: .spec/info/summaries/dashboard-summary.md)
+      - ARIA roles and accessible names (cite: .spec/info/summaries/dashboard-summary.md)
+      - Focus management on interactive elements (cite: .spec/info/summaries/dashboard-summary.md)
+      - Semantic HTML elements (cite: .spec/info/summaries/dashboard-summary.md)
+      - Keyboard navigation support (cite: .spec/info/summaries/audio-library-summary.md)
+    </accessibility_features>
+
+    <responsive_and_adaptive_design>
+      - Collapsible sidebar menu (cite: .spec/info/summaries/dashboard-summary.md)
+      - Responsive table layouts (cite: .spec/info/summaries/content-summary.md)
+      - Mobile-friendly controls and touch targets (cite: .spec/info/summaries/content-summary.md)
+      - Adaptive layouts for different screen sizes (cite: .spec/info/summaries/dashboard-summary.md)
+    </responsive_and_adaptive_design>
+  </core_features>
+
+  <database_schema>
+    <tables>
+      <users>
+        - id, email, password_hash, display_name, profile_picture_url, created_at, updated_at
+        - OAuth tokens for YouTube API integration
+        (evidence: .spec/info/summaries/dashboard-summary.md)
+      </users>
+      <channels>
+        - id, user_id, channel_name, handle (@username), description, country, keywords
+        - profile_picture_url, banner_url, watermark_url
+        - created_at, updated_at
+        - settings_json (contains all channel-level settings)
+        (evidence: .spec/info/summaries/customization-summary.md)
+      </channels>
+      <videos>
+        - id, channel_id, title, description, thumbnail_url, filename, duration
+        - visibility (public/private/unlisted/scheduled), scheduled_date
+        - made_for_kids (boolean), age_restricted (boolean)
+        - views, comments_count, likes_count, dislikes_count
+        - upload_date, published_date, updated_at
+        - video_url, storage_path
+        - license_type, category_id, language_id
+        (evidence: .spec/info/summaries/video-edit-summary.md)
+      </videos>
+      <video_thumbnails>
+        - id, video_id, thumbnail_url, is_custom, thumbnail_index, created_at
+        (evidence: .spec/info/summaries/video-edit-summary.md)
+      </video_thumbnails>
+      <video_analytics>
+        - id, video_id, date, views, watch_time_minutes, average_view_duration
+        - impressions, impressions_click_through_rate
+        - subscribers_gained, subscribers_lost
+        - likes, dislikes, comments
+        (evidence: .spec/info/summaries/analytics-summary.md)
+      </video_analytics>
+      <channel_analytics>
+        - id, channel_id, date, views, watch_time_hours, subscribers
+        - unique_viewers, videos_added, videos_deleted
+        (evidence: .spec/info/summaries/analytics-summary.md)
+      </channel_analytics>
+      <comments>
+        - id, video_id, parent_comment_id, user_id, user_display_name, user_avatar_url
+        - comment_text, created_at, updated_at, is_reply
+        - like_count, dislike_count, is_creator_hearted
+        - status (published/held/removed)
+        - moderation_status (approved/rejected/pending)
+        (evidence: .spec/info/summaries/community-summary.md)
+      </comments>
+      <comment_replies>
+        - id, comment_id, user_id, reply_text, created_at, updated_at
+        - like_count, is_creator_response
+        (evidence: .spec/info/summaries/community-summary.md)
+      </comment_replies>
+      <subtitles>
+        - id, video_id, language_code, is_draft, is_auto_generated
+        - subtitle_file_url, created_at, updated_at
+        (evidence: .spec/info/summaries/subtitles-summary.md)
+      </subtitles>
+      <subtitle_translations>
+        - id, video_id, language_code, title_translated, description_translated
+        - created_at, updated_at
+        (evidence: .spec/info/summaries/subtitles-summary.md)
+      </subtitle_translations>
+      <playlists>
+        - id, channel_id, title, description, visibility, created_at, updated_at
+        - position, thumbnail_url
+        (evidence: .spec/info/summaries/content-summary.md)
+      </playlists>
+      <playlist_videos>
+        - id, playlist_id, video_id, position, added_at
+        (evidence: .spec/info/summaries/content-summary.md)
+      </playlist_videos>
+      <community_posts>
+        - id, channel_id, post_type (text/image/video/poll), content
+        - media_urls_json, created_at, updated_at, published_status
+        - likes_count, comments_count
+        (evidence: .spec/info/summaries/community-summary.md)
+      </community_posts>
+      <shorts>
+        - Inherits from videos table with additional short-specific fields
+        - is_short (boolean), music_track_id
+        (evidence: .spec/info/summaries/content-summary.md)
+      </shorts>
+      <live_streams>
+        - id, channel_id, title, description, thumbnail_url, scheduled_date
+        - stream_status (upcoming/live/ended), viewer_count
+        - stream_url, chat_enabled, overlay_settings_json
+        (evidence: .spec/info/summaries/livestreaming-summary.md)
+      </live_streams>
+      <copyright_claims>
+        - id, video_id, claim_type, claimant_name, policy_action
+        - created_at, updated_at, status
+        (evidence: .spec/info/summaries/content-detection-summary.md)
+      </copyright_claims>
+      <monetization_progress>
+        - id, channel_id, subscribers_count, video_count_last_90days
+        - watch_hours_last_365days, shorts_views_last_90days
+        - milestone_tier, eligibility_status, last_updated
+        (evidence: .spec/info/summaries/earn-summary.md)
+      </monetization_progress>
+      <audio_library_tracks>
+        - id, title, artist, genre, mood, duration_seconds
+        - file_url, license_type, added_date, is_starred
+        - track_type (music/sound_effect)
+        (evidence: .spec/info/summaries/audio-library-summary.md)
+      </audio_library_tracks>
+      <channel_settings>
+        - id, channel_id, settings_json (comprehensive settings object)
+        - default_currency, made_for_kids_setting
+        - upload_defaults_json, moderation_settings_json
+        - updated_at
+        (evidence: .spec/info/summaries/settings-summary.md)
+      </channel_settings>
+      <permissions>
+        - id, channel_id, user_id, role (owner/manager/moderator/editor)
+        - granted_by, granted_at, permissions_json
+        (evidence: .spec/info/summaries/settings-summary.md)
+      </permissions>
+      <moderation_actions>
+        - id, channel_id, moderator_id, target_user_id, action_type
+        - reason, created_at
+        - action_type: hide_user, approve_user, add_moderator, remove_moderator
+        (evidence: .spec/info/summaries/community-summary.md)
+      </moderation_actions>
+      <blocked_words>
+        - id, channel_id, word_or_phrase, created_at
+        (evidence: .spec/info/summaries/settings-summary.md)
+      </blocked_words>
+      <channel_guidelines>
+        - id, channel_id, guidelines_text, is_published, created_at, updated_at
+        (evidence: .spec/info/summaries/settings-summary.md)
+      </channel_guidelines>
+      <pronouns>
+        - id, user_id, pronoun_text, language_code, visibility
+        - created_at, updated_at
+        (evidence: .spec/info/summaries/customization-summary.md)
+      </pronouns>
+      <external_links>
+        - id, channel_id, link_title, url, position, created_at
+        (evidence: .spec/info/summaries/customization-summary.md)
+      </external_links>
+      <home_tab_sections>
+        - id, channel_id, section_type, position, settings_json
+        - is_visible, created_at, updated_at
+        - section_type: trailer/spotlight/for_you/videos/shorts/playlists/etc
+        (evidence: .spec/info/summaries/customization-summary.md)
+      </home_tab_sections>
+    </tables>
+  </database_schema>
+
+  <api_endpoints_summary>
+    <authentication>
+      - POST /api/auth/register (cite: inferred from user management needs)
+      - POST /api/auth/login (cite: inferred from user management needs)
+      - POST /api/auth/logout (cite: inferred from user management needs)
+      - POST /api/auth/oauth/callback (cite: OAuth integration requirement)
+      - GET /api/auth/me (cite: user profile display)
+    </authentication>
+    <channels>
+      - GET /api/channels (cite: channel listing)
+      - GET /api/channels/:id (cite: channel details)
+      - PUT /api/channels/:id (cite: channel customization)
+      - GET /api/channels/:id/settings (cite: .spec/info/summaries/settings-summary.md)
+      - PUT /api/channels/:id/settings (cite: .spec/info/summaries/settings-summary.md)
+    </channels>
+    <videos>
+      - GET /api/videos (cite: content page video list)
+      - GET /api/videos/:id (cite: video edit page)
+      - PUT /api/videos/:id (cite: .spec/info/summaries/video-edit-summary.md)
+      - DELETE /api/videos/:id (cite: content management)
+      - POST /api/videos/upload (cite: upload functionality)
+      - POST /api/videos/:id/thumbnail (cite: .spec/info/summaries/video-edit-summary.md)
+      - GET /api/videos/:id/analytics (cite: .spec/info/summaries/video-edit-summary.md)
+      - POST /api/videos/:id/publish (cite: visibility management)
+      - POST /api/videos/:id/schedule (cite: scheduled publishing)
+    </videos>
+    <comments>
+      - GET /api/comments (cite: community page)
+      - GET /api/videos/:id/comments (cite: .spec/info/summaries/video-edit-summary.md)
+      - POST /api/comments/:id/reply (cite: .spec/info/summaries/community-summary.md)
+      - PUT /api/comments/:id/moderate (cite: .spec/info/summaries/community-summary.md)
+      - POST /api/comments/:id/like (cite: .spec/info/summaries/community-summary.md)
+      - POST /api/comments/:id/heart (cite: .spec/info/summaries/community-summary.md)
+      - GET /api/comments/queued/published (cite: .spec/info/summaries/community-summary.md)
+      - GET /api/comments/queued/held (cite: .spec/info/summaries/community-summary.md)
+    </comments>
+    <analytics>
+      - GET /api/analytics/overview (cite: .spec/info/summaries/analytics-summary.md)
+      - GET /api/analytics/content (cite: .spec/info/summaries/analytics-summary.md)
+      - GET /api/analytics/audience (cite: .spec/info/summaries/analytics-summary.md)
+      - GET /api/analytics/realtime (cite: .spec/info/summaries/analytics-summary.md)
+      - GET /api/videos/:id/analytics (cite: .spec/info/summaries/video-edit-summary.md)
+      - GET /api/analytics/trends (cite: .spec/info/summaries/analytics-summary.md)
+    </analytics>
+    <subtitles>
+      - GET /api/subtitles (cite: .spec/info/summaries/subtitles-summary.md)
+      - GET /api/videos/:id/subtitles (cite: .spec/info/summaries/subtitles-summary.md)
+      - POST /api/videos/:id/subtitles (cite: subtitle management)
+      - PUT /api/videos/:id/subtitles/:language (cite: .spec/info/summaries/subtitles-summary.md)
+      - DELETE /api/videos/:id/subtitles/:language (cite: subtitle management)
+    </subtitles>
+    <playlists>
+      - GET /api/playlists (cite: content page playlists tab)
+      - POST /api/playlists (cite: create playlist)
+      - PUT /api/playlists/:id (cite: playlist management)
+      - DELETE /api/playlists/:id (cite: playlist management)
+      - POST /api/playlists/:id/videos (cite: add to playlist)
+      - DELETE /api/playlists/:id/videos/:videoId (cite: remove from playlist)
+    </playlists>
+    <live_streaming>
+      - GET /api/livestreaming (cite: .spec/info/summaries/livestreaming-summary.md)
+      - POST /api/livestreaming/request-access (cite: .spec/info/summaries/livestreaming-summary.md)
+      - POST /api/livestreaming/stream (cite: create stream)
+      - POST /api/livestreaming/webcam (cite: webcam streaming)
+      - PUT /api/livestreaming/settings (cite: .spec/info/summaries/livestreaming-summary.md)
+    </live_streaming>
+    <monetization>
+      - GET /api/monetization/status (cite: .spec/info/summaries/earn-summary.md)
+      - GET /api/monetization/eligibility (cite: .spec/info/summaries/earn-summary.md)
+      - POST /api/monetization/apply (cite: .spec/info/summaries/earn-summary.md)
+      - POST /api/monetization/notify (cite: .spec/info/summaries/earn-summary.md)
+    </monetization>
+    <audio_library>
+      - GET /api/audio-library (cite: .spec/info/summaries/audio-library-summary.md)
+      - GET /api/audio-library/tracks (cite: .spec/info/summaries/audio-library-summary.md)
+      - POST /api/audio-library/tracks/:id/star (cite: .spec/info/summaries/audio-library-summary.md)
+      - DELETE /api/audio-library/tracks/:id/star (cite: .spec/info/summaries/audio-library-summary.md)
+      - GET /api/audio-library/tracks/:id/download (cite: .spec/info/summaries/audio-library-summary.md)
+    </audio_library>
+    <content_detection>
+      - GET /api/copyright/claims (cite: .spec/info/summaries/content-detection-summary.md)
+      - POST /api/copyright/takedown (cite: .spec/info/summaries/content-detection-summary.md)
+      - GET /api/likeness-detection (cite: .spec/info/summaries/content-detection-summary.md)
+    </content_detection>
+    <community>
+      - GET /api/community/posts (cite: .spec/info/summaries/community-summary.md)
+      - POST /api/community/posts (cite: create post)
+      - GET /api/community/mentions (cite: .spec/info/summaries/community-summary.md)
+    </community>
+    <moderation>
+      - POST /api/moderation/users/hide (cite: .spec/info/summaries/community-summary.md)
+      - POST /api/moderation/users/approve (cite: .spec/info/summaries/community-summary.md)
+      - POST /api/moderation/moderators (cite: .spec/info/summaries/community-summary.md)
+      - POST /api/moderation/blocked-words (cite: .spec/info/summaries/settings-summary.md)
+    </moderation>
+    <settings>
+      - GET /api/settings (cite: .spec/info/summaries/settings-summary.md)
+      - PUT /api/settings (cite: .spec/info/summaries/settings-summary.md)
+      - POST /api/settings/permissions (cite: .spec/info/summaries/settings-summary.md)
+      - DELETE /api/settings/permissions/:id (cite: .spec/info/summaries/settings-summary.md)
+      - POST /api/settings/guidelines (cite: .spec/info/summaries/settings-summary.md)
+    </settings>
+  </api_endpoints_summary>
+
+  <ui_layout>
+    <main_structure>
+      Three-column layout with persistent navigation: (evidence: .spec/info/screenshots/dashboard-full.png)
+      1. Left sidebar (240px collapsed, 280px expanded): Channel branding, main navigation menu, secondary menu items
+      2. Top bar (56px height): Logo, search, help, notifications, create button, account profile
+      3. Main content area (flexible width): Page content with cards, tables, and forms
+      Sidebar can be collapsed to 72px for more content space (evidence: .spec/info/summaries/dashboard-summary.md)
+    </main_structure>
+    <sidebar_navigation>
+      Channel info section at top with profile picture and channel name (evidence: .spec/info/summaries/dashboard-summary.md)
+      Main menu with 9 items using icon + label format (evidence: .spec/info/summaries/dashboard-summary.md)
+      Secondary menu with 2 items (Settings, Send feedback) separated by divider (evidence: .spec/info/summaries/dashboard-summary.md)
+      Active state highlighting for current page (evidence: .spec/info/snapshots/snapshots/content-videos-tab.md)
+      Hover states with subtle background color changes
+      Collapse/expand functionality with animated transitions
+    </sidebar_navigation>
+    <top_navigation_bar>
+      Fixed position bar with: (evidence: .spec/info/summaries/dashboard-summary.md)
+      Collapse menu button (left)
+      YouTube Studio logo link
+      Skip navigation accessibility link
+      Search textbox with placeholder text
+      Help and Notifications buttons with icon indicators
+      Create button with dropdown menu
+      Account profile section with avatar
+    </top_navigation_bar>
+    <content_pages>
+      Dashboard: Card-based grid layout with 2-3 columns (evidence: .spec/info/screenshots/dashboard-full.png)
+      Content: Table layout with horizontal tabs (evidence: .spec/info/screenshots/content-videos-tab.png)
+      Video Edit: Split layout with left sidebar nav + right content area (evidence: .spec/info/screenshots/video-edit-details-tab.png)
+      Analytics: Chart-focused layout with metric cards (evidence: .spec/info/screenshots/analytics-overview-tab-full.png)
+      Community: Threaded comment layout with moderation tools (evidence: .spec/info/screenshots/community/community-published-tab-full.png)
+      Settings: Modal dialog with left tab navigation (evidence: .spec/info/screenshots/settings/settings-general-tab.png)
+    </content_pages>
+    <card_components>
+      Rounded corners (8px border-radius)
+      Subtle box-shadow (0 1px 2px rgba(0,0,0,0.1))
+      White background on light gray page background (#f9f9f9)
+      Padding: 16px-24px
+      Collapsible functionality with expand/collapse icons (evidence: .spec/info/summaries/dashboard-summary.md)
+    </card_components>
+    <table_components>
+      Column headers with sort indicators (evidence: .spec/info/screenshots/content-videos-tab.png)
+      Row hover states with background color changes
+      Checkbox selection in first column
+      Pagination controls at bottom right
+      Sticky header on scroll
+      Alternating row colors for readability
+    </table_components>
+    <forms_and_inputs>
+      Text inputs with 32px height, 4px border radius
+      Textarea with resize handle
+      Select dropdowns with custom chevron icons
+      Radio buttons for mutually exclusive options
+      Checkboxes for independent selections
+      Toggle switches for binary settings (evidence: .spec/info/screenshots/customization/customization-home-tab-enabled-full.png)
+      Primary buttons with solid background color
+      Secondary buttons with outlined style
+      Disabled states with reduced opacity
+    </forms_and_inputs>
+    <modals_and_dialogs>
+      Centered overlay with backdrop blur (evidence: .spec/info/screenshots/settings/settings-general-tab.png)
+      Fixed width (600px for most dialogs)
+      Close button in top-right corner
+      Action buttons at bottom right (Cancel, Save)
+      Escape key to close
+      Click outside to close with confirmation if unsaved changes
+    </modals_and_dialogs>
+  </ui_layout>
+
+  <design_system>
+    <color_palette>
+      Primary brand: #FF0000 (YouTube Red)
+      Background:
+        - Page background: #f9f9f9 (light gray)
+        - Card background: #ffffff (white)
+        - Sidebar background: #ffffff
+      Text:
+        - Primary text: #0f0f0f (near black)
+        - Secondary text: #606060 (dark gray)
+        - Disabled text: #aaaaaa
+      Borders:
+        - Border color: #e5e5e5 (light gray)
+        - Divider color: #d3d3d3
+      Interactive elements:
+        - Link color: #065fd4 (blue)
+        - Link hover: #0049b6
+        - Button primary: #065fd4
+        - Button primary hover: #0049b6
+      Status colors:
+        - Success: #2ba640 (green)
+        - Warning: #f1c40f (yellow)
+        - Error: #cc0000 (red)
+      Evidence from: .spec/info/screenshots/dashboard-full.png, content-videos-tab.png
+    </color_palette>
+    <typography>
+      Font family: Roboto, Arial, sans-serif (Google's standard font)
+      Font sizes:
+        - H1 page titles: 24px, weight 500
+        - H2 section titles: 18px, weight 500
+        - H3 component titles: 14px, weight 500
+        - Body text: 14px, weight 400
+        - Small text: 12px, weight 400
+      Line heights:
+        - Headings: 1.2
+        - Body: 1.5
+      Letter spacing: Normal (0)
+    </typography>
+    <spacing>
+      Base unit: 4px
+      Scale: 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96
+      Component padding: 16px (4 units)
+      Card padding: 24px (6 units)
+      Section margins: 32px (8 units)
+    </spacing>
+    <component_patterns>
+      Sidebar navigation: (cite: .spec/info/snapshots/snapshots/content-videos-tab.md)
+        - Menu item with icon + text label
+        - Active state with left border accent
+        - Hover state with background change
+      Tab navigation: (cite: .spec/info/snapshots/snapshots/content-videos-tab.md)
+        - Horizontal tab list with underline indicator
+        - Selected tab with bold text
+        - Smooth transition on tab change
+      Button components:
+        - Primary: Solid background, rounded corners
+        - Secondary: Outlined style
+        - Icon-only buttons for toolbars
+        - Dropdown buttons with chevron indicator
+      Form controls: (cite: .spec/info/snapshots/snapshots/video-edit-details-tab.md)
+        - Labeled inputs with help text below
+        - Validation error messages in red
+        - Required field indicators
+      Table components: (cite: .spec/info/snapshots/snapshots/content-videos-tab.md)
+        - Sortable columns with arrow indicators
+        - Checkbox for bulk selection
+        - Row actions on hover
+      Cards: (cite: .spec/info/summaries/dashboard-summary.md)
+        - Header with title + action buttons
+        - Collapsible body section
+        - Expand/collapse icon indicator
+      Modals: (cite: .spec/info/screenshots/livestreaming/livestreaming-settings-dialog.png)
+        - Backdrop overlay
+        - Centered content with fixed max-width
+        - Action bar at bottom
+      Dropdown menus: (cite: .spec/info/screenshots/dashboard-create-menu.png)
+        - Positioned below trigger button
+        - Menu items with icon + text
+        - Hover highlight on items
+      Loading states:
+        - Skeleton screens for content loading
+        - Spinner indicators for async operations
+        - Progress bars for uploads/processing
+      Empty states: (cite: .spec/info/screenshots/content/content-shorts-tab.png)
+        - Illustration or icon
+        - Helpful message text
+        - Call-to-action button
+    </component_patterns>
+    <icon_system>
+      Material Design Icons (Google's icon library)
+      Icon size: 24px for navigation, 20px for buttons, 16px for inline
+      Icon-only buttons with 40px x 40px touch target
+      Color: #606060 (secondary text color)
+      Evidence from: All screenshots showing Material Design icon style
+    </icon_system>
+    <shadows_and_elevation>
+      Level 1: 0 1px 2px rgba(0,0,0,0.1) (cards)
+      Level 2: 0 2px 8px rgba(0,0,0,0.15) (dropdowns, tooltips)
+      Level 3: 0 4px 16px rgba(0,0,0,0.2) (modals)
+    </shadows_and_elevation>
+    <border_radius>
+      Small: 4px (buttons, inputs)
+      Medium: 8px (cards, tables)
+      Large: 16px (modals, images)
+      Full: 50% (circular elements like avatars)
+    </border_radius>
+  </design_system>
+
+  <implementation_steps>
+    <step number="1">
+      <title>Project Setup and Foundation</title>
+      <tasks>
+        - Initialize React + TypeScript + Vite project structure
+        - Configure Tailwind CSS with custom design system (colors, spacing, typography)
+        - Set up routing with React Router (nested routes for all pages)
+        - Create base layout components: Layout, Sidebar, TopBar
+        - Implement authentication context and protected routes
+        - Set up API client with interceptors for tokens and error handling
+        - Configure ESLint, Prettier, and TypeScript strict mode
+        - Create component library structure (Button, Input, Table, Card, Modal)
+      </tasks>
+    </step>
+    <step number="2">
+      <title>Core Navigation and Layout</title>
+      <tasks>
+        - Build collapsible sidebar with navigation items
+        - Implement top navigation bar with search, notifications, create button
+        - Create responsive layout that adapts to screen size
+        - Add breadcrumb navigation component
+        - Implement channel branding display in sidebar
+        - Add skip navigation accessibility feature
+        - Test keyboard navigation through all interactive elements
+      </tasks>
+    </step>
+    <step number="3">
+      <title>Content Management System</title>
+      <tasks>
+        - Build Content page with tab navigation (8 tabs)
+        - Implement Videos table with sortable columns
+        - Add filter and search functionality
+        - Create pagination controls
+        - Build video detail/edit page with left sidebar nav
+        - Implement Details tab with title, description, thumbnail, playlist
+        - Add audience targeting (COPPA compliance)
+        - Create video preview panel with embedded player
+        - Implement visibility and restriction controls
+        - Add undo/save functionality with change tracking
+      </tasks>
+    </step>
+    <step number="4">
+      <title>Video Editing Features</title>
+      <tasks>
+        - Build Analytics tab with 4 sub-tabs (Overview, Reach, Engagement, Audience)
+        - Implement chart components using Recharts/Chart.js
+        - Create Comments tab with moderation tools
+        - Add inline reply functionality
+        - Build batch moderation with checkboxes
+        - Create Editor tab with timeline interface
+        - Implement basic editing tools (trim, blur indicators)
+        - Add Copyright tab with Content ID status display
+        - Create Clips tab functionality
+      </tasks>
+    </step>
+    <step number="5">
+      <title>Dashboard Implementation</title>
+      <tasks>
+        - Build latest video performance card with metrics
+        - Implement channel analytics card
+        - Add time period selector
+        - Create quick actions bar (Upload, Go live, Create post)
+        - Build recent comments section
+        - Add Creator Insider and What's New sections
+        - Implement real-time data updates
+        - Add empty states with CTAs
+      </tasks>
+    </step>
+    <step number="6">
+      <title>Analytics Engine</title>
+      <tasks>
+        - Build Analytics page with 4 main tabs
+        - Implement time period selector (presets + custom)
+        - Create key metric card with interactive charts
+        - Build realtime section with live updates
+        - Add Content tab with traffic sources analysis
+        - Implement Audience tab with demographics
+        - Create device types and geographies visualizations
+        - Add Trends tab with research tool
+        - Implement "Not enough data" handling
+      </tasks>
+    </step>
+    <step number="7">
+      <title>Community and Moderation</title>
+      <tasks>
+        - Build Community page with 3 tabs (Comments, Viewer posts, Mentions)
+        - Implement Published/Held comment queues
+        - Add sort and filter dropdowns
+        - Create inline reply interface
+        - Build action menu with moderation options
+        - Implement batch selection and moderation
+        - Add user management (moderators, approved users, hidden users)
+        - Create response status tracking
+      </tasks>
+    </step>
+    <step number="8">
+      <title>Settings and Configuration</title>
+      <tasks>
+        - Build Settings modal dialog with 6 main tabs
+        - Implement General tab (currency selection)
+        - Create Channel tab with Basic info and Advanced settings
+        - Add COPPA made-for-kids configuration
+        - Build Upload Defaults tab
+        - Implement Permissions tab with user roles
+        - Create Community Moderation tab with content controls
+        - Add user management interfaces
+        - Implement blocked words and link text filtering
+        - Create Agreements tab
+        - Add Save/Cancel with change tracking
+      </tasks>
+    </step>
+    <step number="9">
+      <title>Channel Customization</title>
+      <tasks>
+        - Build Profile tab with banner and profile picture upload
+        - Implement channel name and handle editing
+        - Add pronouns selection with filters
+        - Create description textarea with language support
+        - Build external links section
+        - Add contact info field
+        - Create Home tab with layout customization
+        - Implement section management (add/remove/reorder)
+        - Add preview and publish functionality
+      </tasks>
+    </step>
+    <step number="10">
+      <title>Monetization and Earn</title>
+      <tasks>
+        - Build Earn page with milestone sections
+        - Implement expandable earning method cards
+        - Add eligibility progress with visual bars
+        - Create notification system for eligibility alerts
+        - Build creator resources section
+        - Implement progress tracking for all monetization thresholds
+      </tasks>
+    </step>
+    <step number="11">
+      <title>Subtitle and Caption Management</title>
+      <tasks>
+        - Build Subtitles page with channel-level view
+        - Implement tab filtering (All, Drafts, Published)
+        - Create language dropdown with 150+ options
+        - Add video subtitle detail view
+        - Implement add/remove language functionality
+        - Add "All changes saved" toast notifications
+      </tasks>
+    </step>
+    <step number="12">
+      <title>Audio Library</title>
+      <tasks>
+        - Build Audio Library page with 3 tabs
+        - Implement search and filter functionality
+        - Create audio track listing with metadata
+        - Add play/pause preview functionality
+        - Implement star/unstar for favorites
+        - Add download functionality
+        - Create pagination controls
+      </tasks>
+    </step>
+    <step number="13">
+      <title>Live Streaming</title>
+      <tasks>
+        - Build Live Streaming page with tab navigation
+        - Implement request access dialog
+        - Create Channel Level Settings dialog
+        - Add overlay configuration options
+        - Implement feedback dialog integration
+      </tasks>
+    </step>
+    <step number="14">
+      <title>Content Detection and Copyright</title>
+      <tasks>
+        - Build Copyright tab interface
+        - Implement removal request creation
+        - Add likeness detection section
+        - Create empty states with helpful messaging
+        - Implement retry mechanisms for failed sections
+      </tasks>
+    </step>
+    <step number="15">
+      <title>Backend API Development</title>
+      <tasks>
+        - Set up Express.js server with TypeScript
+        - Configure PostgreSQL and MongoDB connections
+        - Implement authentication endpoints (register, login, OAuth)
+        - Create REST API endpoints for all features
+        - Add WebSocket support for real-time features
+        - Configure file upload handling with S3 integration
+        - Set up FFmpeg for video processing
+        - Implement background job queues with Bull/Redis
+        - Add rate limiting and security middleware
+        - Create API documentation with OpenAPI/Swagger
+      </tasks>
+    </step>
+    <step number="16">
+      <title>Data Persistence and Storage</title>
+      <tasks>
+        - Design and implement database schema
+        - Create database migration scripts
+        - Set up file storage with S3 or similar
+        - Configure thumbnail generation pipeline
+        - Implement video upload and processing workflow
+        - Add data validation and sanitization
+        - Create database indexes for performance
+      </tasks>
+    </step>
+    <step number="17">
+      <title>Real-time Features</title>
+      <tasks>
+        - Implement WebSocket server for real-time updates
+        - Add live analytics updates
+        - Create live comment streaming
+        - Implement notification system
+        - Add real-time progress tracking for uploads
+      </tasks>
+    </step>
+    <step number="18">
+      <title>Testing and Quality Assurance</title>
+      <tasks>
+        - Write unit tests for all components (React Testing Library)
+        - Create integration tests for API endpoints
+        - Implement E2E tests with Playwright/Cypress
+        - Test accessibility with axe-core
+        - Perform cross-browser testing
+        - Test responsive design on all screen sizes
+        - Load testing for high-traffic scenarios
+        - Security audit for vulnerabilities
+      </tasks>
+    </step>
+    <step number="19">
+      <title>Performance Optimization</title>
+      <tasks>
+        - Implement code splitting and lazy loading
+        - Add image optimization and CDN delivery
+        - Optimize bundle size with tree shaking
+        - Implement caching strategies (Redis, CDN)
+        - Add database query optimization
+        - Create service worker for offline support
+        - Monitor and optimize Core Web Vitals
+      </tasks>
+    </step>
+    <step number="20">
+      <title>Deployment and DevOps</title>
+      <tasks>
+        - Set up CI/CD pipeline (GitHub Actions/GitLab CI)
+        - Configure production environment variables
+        - Set up monitoring and alerting (Sentry, DataDog)
+        - Implement logging infrastructure
+        - Configure backup and disaster recovery
+        - Set up staging environment
+        - Create deployment documentation
+        - Perform production deployment
+      </tasks>
+    </step>
+  </implementation_steps>
+
+  <success_criteria>
+    <functionality>
+      - All 248 test cases pass from feature_list.json
+      - Video upload, edit, and publish workflow works end-to-end
+      - Analytics data displays accurately and updates in real-time
+      - Comment moderation tools function correctly
+      - Settings save and persist across sessions
+      - Search and filter functionality works on all pages
+      - All navigation routes load correctly with proper authentication
+      - File uploads (videos, thumbnails, audio) process successfully
+      - Pagination works for large datasets
+      - Empty states display with helpful CTAs
+    </functionality>
+    <user_experience>
+      - Page load time under 2 seconds on standard connection
+      - Interactive elements respond within 100ms
+      - Smooth animations and transitions (60fps)
+      - Intuitive navigation with clear visual hierarchy
+      - Consistent design language across all pages
+      - Responsive design works on mobile (320px+), tablet, and desktop (1920px+)
+      - Keyboard navigation works for all features
+      - Empty states guide users to next actions
+      - Error messages are clear and actionable
+      - Onboarding flow for new users
+    </user_experience>
+    <technical_quality>
+      - 95%+ code coverage for critical paths
+      - Zero critical security vulnerabilities
+      - API response time under 500ms (p95)
+      - Database queries optimized with proper indexes
+      - No memory leaks in long-running processes
+      - Proper error handling and logging
+      - TypeScript strict mode with zero any types
+      - Accessibility score 90+ (Lighthouse)
+      - SEO score 90+ (Lighthouse)
+      - PWA score 80+ (Lighthouse)
+    </technical_quality>
+    <design_polish>
+      - Pixel-perfect implementation of YouTube Studio design
+      - Consistent spacing using 4px grid system
+      - Proper use of brand colors and typography
+      - Smooth hover states and transitions
+      - Loading states for all async operations
+      - Skeleton screens for content loading
+      - Proper focus indicators for keyboard navigation
+      - High contrast mode support
+      - Dark mode support (optional but recommended)
+      - Cross-browser consistency (Chrome, Firefox, Safari, Edge)
+    </design_polish>
+  </success_criteria>
+</project_specification>

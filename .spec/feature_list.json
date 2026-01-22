@@ -1,0 +1,3852 @@
+[
+  {
+    "id": 1,
+    "category": "functional",
+    "description": "Content page displays all available tabs (Videos, Shorts, Live, Posts, Playlists, Podcasts, Promotions, Collaborations)",
+    "steps": [
+      "Navigate to Content page",
+      "Verify all 8 tabs are visible in the tab list",
+      "Verify each tab is clickable and changes the active tab"
+    ],
+    "passes": true,
+    "source_page": "content",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/content"
+  },
+  {
+    "id": 2,
+    "category": "functional",
+    "description": "Videos tab displays video list with all columns (Video, Visibility, Restrictions, Date, Views, Comments, Likes)",
+    "steps": [
+      "Navigate to Content page and click Videos tab",
+      "Verify table is displayed with correct column headers",
+      "Verify video thumbnails, titles, and metadata are visible",
+      "Verify each video row has edit link"
+    ],
+    "passes": true,
+    "source_page": "content",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/content"
+  },
+  {
+    "id": 3,
+    "category": "functional",
+    "description": "Clicking video thumbnail or title navigates to video edit page",
+    "steps": [
+      "Navigate to Content page Videos tab",
+      "Click on video thumbnail or title link",
+      "Verify navigation to video details page",
+      "Verify video details page loads with Details tab active"
+    ],
+    "passes": true,
+    "source_page": "content",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/content"
+  },
+  {
+    "id": 4,
+    "category": "functional",
+    "description": "Video edit page has all tabs: Details, Analytics, Editor, Comments, Copyright, Clips",
+    "steps": [
+      "Navigate to video edit page",
+      "Verify all 6 tabs are visible in left sidebar",
+      "Click each tab and verify navigation to correct page",
+      "Verify active tab is highlighted"
+    ],
+    "passes": true,
+    "source_page": "video-edit",
+    "source_url": "https://studio.youtube.com/video/kziDjgXLyN0/edit"
+  },
+  {
+    "id": 5,
+    "category": "functional",
+    "description": "Video Details tab allows editing title, description, thumbnail, playlists, and audience settings",
+    "steps": [
+      "Navigate to video Details tab",
+      "Verify Title input field is present and editable",
+      "Verify Description textarea is present and editable",
+      "Verify Thumbnail options (Upload file, Auto-generated, Test & compare) are visible",
+      "Verify Playlist selector is present",
+      "Verify Audience settings (Made for kids radio buttons) are visible"
+    ],
+    "passes": true,
+    "source_page": "video-edit",
+    "source_url": "https://studio.youtube.com/video/kziDjgXLyN0/edit"
+  },
+  {
+    "id": 6,
+    "category": "functional",
+    "description": "Video Analytics tab displays Overview, Reach, Engagement, and Audience sub-tabs",
+    "steps": [
+      "Navigate to video Analytics tab",
+      "Verify Overview, Reach, Engagement, Audience tabs are visible",
+      "Verify views metric is displayed",
+      "Verify watch time metric is displayed",
+      "Verify audience retention chart is present"
+    ],
+    "passes": true,
+    "source_page": "video-edit",
+    "source_url": "https://studio.youtube.com/video/kziDjgXLyN0/analytics/tab-overview/period-default"
+  },
+  {
+    "id": 7,
+    "category": "functional",
+    "description": "Video Comments tab displays comment list with moderation options",
+    "steps": [
+      "Navigate to video Comments tab",
+      "Verify comments are displayed with author info",
+      "Verify each comment has Reply, Like, Dislike, Heart buttons",
+      "Verify Published filter dropdown is present",
+      "Verify Sort by dropdown is present",
+      "Verify Response status filter is present"
+    ],
+    "passes": true,
+    "source_page": "video-edit",
+    "source_url": "https://studio.youtube.com/video/kziDjgXLyN0/comments/inbox"
+  },
+  {
+    "id": 8,
+    "category": "functional",
+    "description": "Video Editor tab provides timeline-based editing with Trim & cut, Blur, Audio, End screen, Info cards options",
+    "steps": [
+      "Navigate to video Editor tab",
+      "Verify video player with timeline is displayed",
+      "Verify Edit section with Trim & cut option",
+      "Verify Edit section with Blur option",
+      "Verify Edit section with Audio option",
+      "Verify Edit section with End screen option",
+      "Verify Edit section with Info cards option"
+    ],
+    "passes": true,
+    "source_page": "video-edit",
+    "source_url": "https://studio.youtube.com/video/kziDjgXLyN0/editor"
+  },
+  {
+    "id": 9,
+    "category": "functional",
+    "description": "Video Copyright tab displays copyright status and content used information",
+    "steps": [
+      "Navigate to video Copyright tab",
+      "Verify copyright status message is displayed",
+      "Verify Channel impact section is visible",
+      "Verify Visibility restrictions section is visible",
+      "Verify Content used section is displayed"
+    ],
+    "passes": true,
+    "source_page": "video-edit",
+    "source_url": "https://studio.youtube.com/video/kziDjgXLyN0/copyright"
+  },
+  {
+    "id": 10,
+    "category": "functional",
+    "description": "Shorts tab displays short-form video content",
+    "steps": [
+      "Navigate to Content page and click Shorts tab",
+      "Verify Short-specific columns are displayed (Short, Visibility, Restrictions, Date, Views, Comments, Likes)",
+      "Verify empty state message when no shorts exist",
+      "Verify Upload videos button is present"
+    ],
+    "passes": true,
+    "source_page": "content",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/videos/short"
+  },
+  {
+    "id": 11,
+    "category": "functional",
+    "description": "Live tab displays live streams with Get started option",
+    "steps": [
+      "Navigate to Content page and click Live tab",
+      "Verify Live stream-specific columns (Type, Live viewers)",
+      "Verify empty state message when no live streams exist",
+      "Verify Get started button navigates to livestreaming page"
+    ],
+    "passes": true,
+    "source_page": "content",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/videos/live"
+  },
+  {
+    "id": 12,
+    "category": "functional",
+    "description": "Posts tab displays community posts with Create a post option",
+    "steps": [
+      "Navigate to Content page and click Posts tab",
+      "Verify Post-specific columns (Type, Responses)",
+      "Verify empty state message when no posts exist",
+      "Verify Create a post button is present"
+    ],
+    "passes": true,
+    "source_page": "content",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/content/posts"
+  },
+  {
+    "id": 13,
+    "category": "functional",
+    "description": "Playlists tab displays playlists with New playlist option",
+    "steps": [
+      "Navigate to Content page and click Playlists tab",
+      "Verify Playlist-specific columns (Type, Last updated, Video count)",
+      "Verify empty state message when no playlists exist",
+      "Verify New playlist button is present"
+    ],
+    "passes": true,
+    "source_page": "content",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/content/playlists"
+  },
+  {
+    "id": 14,
+    "category": "functional",
+    "description": "Podcasts tab displays podcasts with New podcast option",
+    "steps": [
+      "Navigate to Content page and click Podcasts tab",
+      "Verify Podcast-specific columns (Visibility, Last updated, Video count)",
+      "Verify empty state message when no podcasts exist",
+      "Verify New podcast button is present",
+      "Verify Learn more link is present"
+    ],
+    "passes": true,
+    "source_page": "content",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/content/podcasts"
+  },
+  {
+    "id": 15,
+    "category": "functional",
+    "description": "Promotions tab displays promotion options and Get started button",
+    "steps": [
+      "Navigate to Content page and click Promotions tab",
+      "Verify promotional content is displayed",
+      "Verify Get started button is present",
+      "Verify Learn more about promotions link is present"
+    ],
+    "passes": true,
+    "source_page": "content",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/content/promotions"
+  },
+  {
+    "id": 16,
+    "category": "functional",
+    "description": "Collaborations tab displays collaborative videos",
+    "steps": [
+      "Navigate to Content page and click Collaborations tab",
+      "Verify Collaboration-specific columns (Content type)",
+      "Verify empty state message when no collaborations exist"
+    ],
+    "passes": true,
+    "source_page": "content",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/videos/collaboration"
+  },
+  {
+    "id": 17,
+    "category": "functional",
+    "description": "Filter textbox allows filtering content in each tab",
+    "steps": [
+      "Navigate to any Content tab",
+      "Locate Filter textbox in table header",
+      "Enter text to filter content",
+      "Verify table updates to show filtered results"
+    ],
+    "passes": true,
+    "source_page": "content",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/content"
+  },
+  {
+    "id": 18,
+    "category": "functional",
+    "description": "Sort by column allows sorting content by Date, Views, Comments, Likes",
+    "steps": [
+      "Navigate to Videos tab",
+      "Click on Date column header",
+      "Verify sorting toggle between ascending/descending",
+      "Click on Views column header",
+      "Verify content is sorted by views"
+    ],
+    "passes": true,
+    "source_page": "content",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/content"
+  },
+  {
+    "id": 19,
+    "category": "functional",
+    "description": "Comments link in video table navigates to video comments page",
+    "steps": [
+      "Navigate to Videos tab",
+      "Click on comments count link for a video",
+      "Verify navigation to video comments page",
+      "Verify comments are displayed for that specific video"
+    ],
+    "passes": true,
+    "source_page": "content",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/content"
+  },
+  {
+    "id": 20,
+    "category": "style",
+    "description": "Content page has proper layout with sidebar navigation and main content area",
+    "steps": [
+      "Navigate to Content page",
+      "Verify left sidebar navigation is visible",
+      "Verify main content area displays table",
+      "Verify responsive layout adapts to screen size",
+      "Verify proper spacing and alignment"
+    ],
+    "passes": true,
+    "source_page": "content",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/content"
+  },
+  {
+    "id": 21,
+    "category": "style",
+    "description": "Video thumbnails are displayed with correct aspect ratio and quality",
+    "steps": [
+      "Navigate to Videos tab",
+      "Verify video thumbnails are visible",
+      "Verify thumbnails have correct 16:9 aspect ratio",
+      "Verify thumbnail images load properly",
+      "Verify duration badge is overlaid on thumbnail"
+    ],
+    "passes": true,
+    "source_page": "content",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/content"
+  },
+  {
+    "id": 22,
+    "category": "style",
+    "description": "Video player in Details tab has proper controls and preview",
+    "steps": [
+      "Navigate to video Details tab",
+      "Verify video player is displayed",
+      "Verify play/pause button is present",
+      "Verify volume control is present",
+      "Verify fullscreen button is present",
+      "Verify video preview is visible"
+    ],
+    "passes": true,
+    "source_page": "video-edit",
+    "source_url": "https://studio.youtube.com/video/kziDjgXLyN0/edit"
+  },
+  {
+    "id": 23,
+    "category": "functional",
+    "description": "Channel content breadcrumb allows navigation back to content list",
+    "steps": [
+      "Navigate to video edit page",
+      "Locate Channel content breadcrumb/button",
+      "Click Channel content button",
+      "Verify navigation back to Videos tab"
+    ],
+    "passes": true,
+    "source_page": "video-edit",
+    "source_url": "https://studio.youtube.com/video/kziDjgXLyN0/edit"
+  },
+  {
+    "id": 24,
+    "category": "functional",
+    "description": "Save and Undo changes buttons in Details tab",
+    "steps": [
+      "Navigate to video Details tab",
+      "Verify Save button is present (initially disabled)",
+      "Verify Undo changes button is present (initially disabled)",
+      "Make a change to title field",
+      "Verify Save button becomes enabled"
+    ],
+    "passes": true,
+    "source_page": "video-edit",
+    "source_url": "https://studio.youtube.com/video/kziDjgXLyN0/edit"
+  },
+  {
+    "id": 25,
+    "category": "functional",
+    "description": "Video visibility can be changed from Details page",
+    "steps": [
+      "Navigate to video Details tab",
+      "Locate Visibility section",
+      "Click Edit video visibility status button",
+      "Verify visibility options are displayed (Public, Private, Unlisted, Scheduled)"
+    ],
+    "passes": true,
+    "source_page": "video-edit",
+    "source_url": "https://studio.youtube.com/video/kziDjgXLyN0/edit"
+  },
+  {
+    "id": 26,
+    "category": "functional",
+    "description": "Subtitles button allows managing video subtitles",
+    "steps": [
+      "Navigate to video Details tab",
+      "Locate Subtitles button",
+      "Click Subtitles button",
+      "Verify subtitles management interface is displayed"
+    ],
+    "passes": true,
+    "source_page": "video-edit",
+    "source_url": "https://studio.youtube.com/video/kziDjgXLyN0/edit"
+  },
+  {
+    "id": 27,
+    "category": "functional",
+    "description": "End screen button allows managing video end screens",
+    "steps": [
+      "Navigate to video Details tab",
+      "Locate End screen button",
+      "Click End screen button",
+      "Verify end screen management interface is displayed"
+    ],
+    "passes": true,
+    "source_page": "video-edit",
+    "source_url": "https://studio.youtube.com/video/kziDjgXLyN0/edit"
+  },
+  {
+    "id": 28,
+    "category": "functional",
+    "description": "Cards button allows managing video info cards",
+    "steps": [
+      "Navigate to video Details tab",
+      "Locate Cards button",
+      "Click Cards button",
+      "Verify cards management interface is displayed"
+    ],
+    "passes": true,
+    "source_page": "video-edit",
+    "source_url": "https://studio.youtube.com/video/kziDjgXLyN0/edit"
+  },
+  {
+    "id": 29,
+    "category": "functional",
+    "description": "Video link can be copied from Details page",
+    "steps": [
+      "Navigate to video Details tab",
+      "Locate Video link section",
+      "Click Copy video link button",
+      "Verify link is copied to clipboard"
+    ],
+    "passes": true,
+    "source_page": "video-edit",
+    "source_url": "https://studio.youtube.com/video/kziDjgXLyN0/edit"
+  },
+  {
+    "id": 30,
+    "category": "functional",
+    "description": "Clips tab allows creating video clips from existing content",
+    "steps": [
+      "Navigate to video Clips tab",
+      "Verify empty state message is displayed",
+      "Verify Create video clip button is present",
+      "Verify Learn more link is present"
+    ],
+    "passes": true,
+    "source_page": "video-edit",
+    "source_url": "https://studio.youtube.com/video/kziDjgXLyN0/clips"
+  },
+  {
+    "id": 31,
+    "category": "functional",
+    "description": "Live streaming page displays request access dialog when streaming not enabled",
+    "steps": [
+      "Navigate to livestreaming page",
+      "Verify request access dialog is displayed",
+      "Verify heading 'Request access to streaming' is visible",
+      "Verify informational text about 24-hour wait period is displayed",
+      "Verify Request button is present and clickable"
+    ],
+    "passes": true,
+    "source_page": "livestreaming",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/livestreaming"
+  },
+  {
+    "id": 32,
+    "category": "functional",
+    "description": "Live streaming navigation tabs are disabled when access not granted",
+    "steps": [
+      "Navigate to livestreaming page",
+      "Verify Stream tab button is visible but disabled",
+      "Verify Webcam tab button is visible but disabled",
+      "Verify Manage tab button is visible but disabled",
+      "Hover over each disabled tab and verify tooltip appears: 'You don't have access to this feature'"
+    ],
+    "passes": true,
+    "source_page": "livestreaming",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/livestreaming"
+  },
+  {
+    "id": 33,
+    "category": "functional",
+    "description": "Channel Level Settings button opens overlay configuration dialog",
+    "steps": [
+      "Navigate to livestreaming page",
+      "Click Channel Level Settings button",
+      "Verify Settings dialog opens with heading 'Settings'",
+      "Verify 'Overlay for breaks' section is visible",
+      "Verify 'Use default overlay' button is present",
+      "Verify 'Choose from your videos' button is present",
+      "Verify 'Learn more' link is present",
+      "Verify Save button is present (initially disabled)",
+      "Verify Close/Cancel button is present"
+    ],
+    "passes": true,
+    "source_page": "livestreaming",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/livestreaming"
+  },
+  {
+    "id": 34,
+    "category": "functional",
+    "description": "Selecting overlay option enables Save button in settings dialog",
+    "steps": [
+      "Navigate to livestreaming page",
+      "Open Channel Level Settings dialog",
+      "Verify Save button is disabled initially",
+      "Click 'Use default overlay' button",
+      "Verify Save button becomes enabled",
+      "Verify Cancel button changes to 'Cancel' (from 'Close')"
+    ],
+    "passes": true,
+    "source_page": "livestreaming",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/livestreaming"
+  },
+  {
+    "id": 35,
+    "category": "functional",
+    "description": "Settings dialog shows discard changes confirmation when closing with unsaved changes",
+    "steps": [
+      "Navigate to livestreaming page",
+      "Open Channel Level Settings dialog",
+      "Click 'Use default overlay' button to make changes",
+      "Click Cancel/Close button",
+      "Verify confirmation dialog appears: 'Discard changes?'",
+      "Verify dialog can be accepted or cancelled"
+    ],
+    "passes": true,
+    "source_page": "livestreaming",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/livestreaming"
+  },
+  {
+    "id": 36,
+    "category": "functional",
+    "description": "Send feedback button opens feedback form in iframe",
+    "steps": [
+      "Navigate to livestreaming page",
+      "Click Send feedback button",
+      "Verify feedback dialog opens in iframe",
+      "Verify Send feedback button becomes active state",
+      "Press Escape key to close dialog",
+      "Verify dialog closes and returns to main page"
+    ],
+    "passes": true,
+    "source_page": "livestreaming",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/livestreaming"
+  },
+  {
+    "id": 37,
+    "category": "functional",
+    "description": "YouTube Studio dashboard link navigates back to main dashboard",
+    "steps": [
+      "Navigate to livestreaming page",
+      "Locate YouTube Studio dashboard link in top banner",
+      "Click the dashboard link",
+      "Verify navigation to main Studio dashboard",
+      "Verify URL changes to /channel/[CHANNEL_ID]"
+    ],
+    "passes": true,
+    "source_page": "livestreaming",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/livestreaming"
+  },
+  {
+    "id": 38,
+    "category": "style",
+    "description": "Live streaming page has proper layout with navigation and content area",
+    "steps": [
+      "Navigate to livestreaming page",
+      "Verify top navigation bar with Stream, Webcam, Manage tabs is visible",
+      "Verify right-side action buttons (Channel Level Settings, Send feedback) are visible",
+      "Verify main content area displays request access dialog",
+      "Verify proper spacing and alignment of all elements",
+      "Verify responsive layout adapts to screen size"
+    ],
+    "passes": true,
+    "source_page": "livestreaming",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/livestreaming"
+  },
+  {
+    "id": 39,
+    "category": "style",
+    "description": "Disabled tabs show visual indicators and informative tooltips",
+    "steps": [
+      "Navigate to livestreaming page",
+      "Verify Stream, Webcam, Manage tabs appear disabled (grayed out)",
+      "Hover over each disabled tab",
+      "Verify tooltip appears with message 'You don't have access to this feature'",
+      "Verify tooltip has proper styling and positioning"
+    ],
+    "passes": true,
+    "source_page": "livestreaming",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/livestreaming"
+  },
+  {
+    "id": 40,
+    "category": "style",
+    "description": "Request access dialog has clear visual hierarchy",
+    "steps": [
+      "Navigate to livestreaming page",
+      "Verify request access dialog is centered in main content area",
+      "Verify icon is displayed above heading",
+      "Verify heading 'Request access to streaming' is prominent",
+      "Verify descriptive text is readable and informative",
+      "Verify Request button is prominent and easily clickable"
+    ],
+    "passes": true,
+    "source_page": "livestreaming",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/livestreaming"
+  },
+  {
+    "id": 41,
+    "category": "functional",
+    "description": "Dashboard displays latest video performance card with thumbnail, title, and metrics",
+    "steps": [
+      "Navigate to Channel Dashboard",
+      "Verify 'Latest video performance' heading is visible",
+      "Verify video thumbnail is displayed",
+      "Verify video title is shown",
+      "Verify Views metric is displayed (e.g., '41')",
+      "Verify Comments metric is displayed (e.g., '4')",
+      "Verify Likes metric is displayed (e.g., '2')"
+    ],
+    "passes": true,
+    "source_page": "dashboard",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA"
+  },
+  {
+    "id": 42,
+    "category": "functional",
+    "description": "Dashboard metric buttons allow selection and display of detailed metrics",
+    "steps": [
+      "Navigate to Channel Dashboard",
+      "Locate metric buttons in Latest video performance card",
+      "Click 'Views 41' button",
+      "Verify button becomes active/selected state",
+      "Click 'Impressions click-through rate' button",
+      "Verify button becomes active/selected state",
+      "Click 'Average view duration' button",
+      "Verify button becomes active/selected state"
+    ],
+    "passes": true,
+    "source_page": "dashboard",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA"
+  },
+  {
+    "id": 43,
+    "category": "functional",
+    "description": "Dashboard provides quick action buttons: Upload videos, Go live, Create post",
+    "steps": [
+      "Navigate to Channel Dashboard",
+      "Verify 'Upload videos' button is visible and clickable",
+      "Verify 'Go live' button is visible and clickable",
+      "Verify 'Create post' button is visible and clickable",
+      "Click 'Upload videos' and verify upload dialog/interface appears",
+      "Navigate back to dashboard",
+      "Click 'Go live' and verify navigation to livestreaming page"
+    ],
+    "passes": true,
+    "source_page": "dashboard",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA"
+  },
+  {
+    "id": 44,
+    "category": "functional",
+    "description": "Create button in top bar opens dropdown menu with creation options",
+    "steps": [
+      "Navigate to Channel Dashboard",
+      "Locate 'Create' button in top navigation bar",
+      "Click 'Create' button",
+      "Verify dropdown menu appears",
+      "Verify 'Upload videos' option is visible",
+      "Verify 'Go live' option is visible",
+      "Verify 'Create post' option is visible",
+      "Verify 'New playlist' option is visible",
+      "Verify 'New podcast' option is visible"
+    ],
+    "passes": true,
+    "source_page": "dashboard",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA"
+  },
+  {
+    "id": 45,
+    "category": "functional",
+    "description": "Dashboard Channel Analytics card displays subscriber count and performance metrics",
+    "steps": [
+      "Navigate to Channel Dashboard",
+      "Locate 'Channel analytics' card",
+      "Verify 'Current subscribers' label is displayed",
+      "Verify subscriber count is shown (e.g., '0')",
+      "Verify 'Summary' section displays 'Last 28 days'",
+      "Verify 'Views' metric is displayed",
+      "Verify 'Watch time (hours)' metric is displayed",
+      "Verify comparison indicators (—) are shown"
+    ],
+    "passes": true,
+    "source_page": "dashboard",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA"
+  },
+  {
+    "id": 46,
+    "category": "functional",
+    "description": "Dashboard displays Top videos table with links to video analytics",
+    "steps": [
+      "Navigate to Channel Dashboard",
+      "Locate 'Top videos' section in Channel Analytics card",
+      "Verify table heading shows 'Last 48 hours · Views'",
+      "Verify video title is displayed as a link",
+      "Verify view count is displayed",
+      "Click on video title link",
+      "Verify navigation to video analytics page",
+      "Navigate back to dashboard"
+    ],
+    "passes": true,
+    "source_page": "dashboard",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA"
+  },
+  {
+    "id": 47,
+    "category": "functional",
+    "description": "Dashboard displays recent comments with View more link",
+    "steps": [
+      "Navigate to Channel Dashboard",
+      "Locate 'Comments' section",
+      "Verify latest comment is displayed with author name",
+      "Verify comment timestamp is shown (e.g., '2 hours ago')",
+      "Verify comment text is visible",
+      "Verify 'View more' button/link is present",
+      "Click 'View more' and verify navigation to comments inbox"
+    ],
+    "passes": true,
+    "source_page": "dashboard",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA"
+  },
+  {
+    "id": 48,
+    "category": "functional",
+    "description": "Dashboard provides navigation to video analytics and comments from latest video card",
+    "steps": [
+      "Navigate to Channel Dashboard",
+      "Locate 'Latest video performance' card",
+      "Verify 'Go to video analytics' button/link is present",
+      "Verify 'See comments (4)' button/link is present",
+      "Click 'Go to video analytics'",
+      "Verify navigation to video analytics page",
+      "Navigate back to dashboard",
+      "Click 'See comments'",
+      "Verify navigation to video comments page"
+    ],
+    "passes": true,
+    "source_page": "dashboard",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA"
+  },
+  {
+    "id": 49,
+    "category": "functional",
+    "description": "Dashboard displays Creator Insider news section with video link",
+    "steps": [
+      "Navigate to Channel Dashboard",
+      "Locate 'Creator Insider' section",
+      "Verify 'This Week at YouTube' heading is displayed",
+      "Verify news description text is visible",
+      "Verify 'Watch on YouTube' button is present",
+      "Click 'Watch on YouTube' button",
+      "Verify navigation to YouTube video (external link)"
+    ],
+    "passes": true,
+    "source_page": "dashboard",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA"
+  },
+  {
+    "id": 50,
+    "category": "functional",
+    "description": "Dashboard displays What's new in Studio section with feature announcements",
+    "steps": [
+      "Navigate to Channel Dashboard",
+      "Locate 'What's new in Studio' section",
+      "Verify 'Increasing Shorts length' announcement is displayed",
+      "Verify 'Expansion of channel permissions' announcement is displayed",
+      "Verify 'Upcoming changes to Community Guidelines warnings' announcement is displayed",
+      "Click on announcement link",
+      "Verify navigation to support documentation"
+    ],
+    "passes": true,
+    "source_page": "dashboard",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA"
+  },
+  {
+    "id": 51,
+    "category": "functional",
+    "description": "Dashboard sidebar navigation provides access to all Studio sections",
+    "steps": [
+      "Navigate to Channel Dashboard",
+      "Verify sidebar displays channel name and profile picture",
+      "Verify 'Dashboard' menu item is highlighted as active",
+      "Verify 'Content' menu item is visible",
+      "Verify 'Analytics' menu item is visible",
+      "Verify 'Community' menu item is visible",
+      "Verify 'Subtitles' menu item is visible",
+      "Verify 'Content detection' menu item is visible",
+      "Verify 'Earn' menu item is visible",
+      "Verify 'Customization' menu item is visible",
+      "Verify 'Audio library' menu item is visible",
+      "Verify 'Settings' button is visible",
+      "Verify 'Send feedback' button is visible"
+    ],
+    "passes": true,
+    "source_page": "dashboard",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA"
+  },
+  {
+    "id": 52,
+    "category": "functional",
+    "description": "Dashboard search functionality allows searching across channel",
+    "steps": [
+      "Navigate to Channel Dashboard",
+      "Locate search textbox with placeholder 'Search across your channel'",
+      "Click in search textbox",
+      "Enter search query",
+      "Verify search results or suggestions appear"
+    ],
+    "passes": true,
+    "source_page": "dashboard",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA"
+  },
+  {
+    "id": 53,
+    "category": "functional",
+    "description": "Dashboard displays time-based indicator for latest video performance",
+    "steps": [
+      "Navigate to Channel Dashboard",
+      "Locate 'Latest video performance' card",
+      "Verify time indicator is displayed (e.g., 'First 2 hours 31 minutes')",
+      "Wait for time indicator to update",
+      "Verify time indicator reflects elapsed time"
+    ],
+    "passes": true,
+    "source_page": "dashboard",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA"
+  },
+  {
+    "id": 54,
+    "category": "functional",
+    "description": "Dashboard Community Posts section encourages post creation with CTA",
+    "steps": [
+      "Navigate to Channel Dashboard",
+      "Locate Community Posts section",
+      "Verify message 'Create your first post to start a conversation and get feedback from your community' is displayed",
+      "Verify 'Create post' button is present",
+      "Click 'Create post' button",
+      "Verify post creation interface is accessible"
+    ],
+    "passes": true,
+    "source_page": "dashboard",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA"
+  },
+  {
+    "id": 55,
+    "category": "functional",
+    "description": "Dashboard footer provides policy and safety links",
+    "steps": [
+      "Navigate to Channel Dashboard",
+      "Scroll to bottom of page",
+      "Verify 'Terms of use' link is present",
+      "Verify 'Privacy policy' link is present",
+      "Verify 'Policies & Safety' link is present",
+      "Click on footer link and verify navigation to policy pages"
+    ],
+    "passes": true,
+    "source_page": "dashboard",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA"
+  },
+  {
+    "id": 56,
+    "category": "style",
+    "description": "Dashboard has proper card-based layout with clear visual hierarchy",
+    "steps": [
+      "Navigate to Channel Dashboard",
+      "Verify page heading 'Channel dashboard' is prominently displayed",
+      "Verify quick action buttons are positioned at top below heading",
+      "Verify Latest video performance card is first in main content",
+      "Verify Channel Analytics card is displayed",
+      "Verify Comments section is displayed",
+      "Verify Creator Insider section is displayed",
+      "Verify What's new in Studio section is displayed",
+      "Verify cards have proper spacing and separation"
+    ],
+    "passes": true,
+    "source_page": "dashboard",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA"
+  },
+  {
+    "id": 57,
+    "category": "style",
+    "description": "Dashboard sidebar navigation has proper active state indication",
+    "steps": [
+      "Navigate to Channel Dashboard",
+      "Verify 'Dashboard' menu item is visually distinguished (active state)",
+      "Verify other menu items are in normal state",
+      "Hover over other menu items",
+      "Verify hover effects are visible",
+      "Verify proper spacing between menu items"
+    ],
+    "passes": true,
+    "source_page": "dashboard",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA"
+  },
+  {
+    "id": 58,
+    "category": "style",
+    "description": "Dashboard top navigation bar has all controls properly positioned",
+    "steps": [
+      "Navigate to Channel Dashboard",
+      "Verify Collapse menu button is at left of top bar",
+      "Verify YouTube Studio logo/link is present",
+      "Verify search box is centered in top bar",
+      "Verify Help and Notifications buttons are on right side",
+      "Verify Create button is positioned before Account profile",
+      "Verify Account profile button is at far right",
+      "Verify proper spacing between all elements"
+    ],
+    "passes": true,
+    "source_page": "dashboard",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA"
+  },
+  {
+    "id": 59,
+    "category": "style",
+    "description": "Dashboard metric displays use proper formatting and visual indicators",
+    "steps": [
+      "Navigate to Channel Dashboard",
+      "Verify metric values are displayed prominently (e.g., '41', '4', '2')",
+      "Verify metric icons are visible next to values",
+      "Verify comparison indicators (—) are properly aligned",
+      "Verify metric labels (Views, CTR, Avg view duration) are clear",
+      "Verify proper spacing between metric buttons"
+    ],
+    "passes": true,
+    "source_page": "dashboard",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA"
+  },
+  {
+    "id": 60,
+    "category": "style",
+    "description": "Dashboard is responsive and adapts to different screen sizes",
+    "steps": [
+      "Navigate to Channel Dashboard",
+      "Verify layout is properly displayed at 1600x900 viewport",
+      "Verify sidebar can be collapsed using Collapse menu button",
+      "Verify cards maintain readability when sidebar is collapsed",
+      "Verify content remains accessible and properly aligned"
+    ],
+    "passes": true,
+    "source_page": "dashboard",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA"
+  },
+  {
+    "id": 61,
+    "category": "functional",
+    "description": "Analytics page displays Overview, Content, Audience, and Trends tabs",
+    "steps": [
+      "Navigate to Channel Analytics page",
+      "Verify Overview tab is visible and selected by default",
+      "Verify Content tab is visible and clickable",
+      "Verify Audience tab is visible and clickable",
+      "Verify Trends tab is visible and clickable",
+      "Click each tab and verify content changes appropriately"
+    ],
+    "passes": true,
+    "source_page": "analytics",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/analytics/tab-overview/period-default"
+  },
+  {
+    "id": 62,
+    "category": "functional",
+    "description": "Analytics Overview tab displays key performance metrics with chart",
+    "steps": [
+      "Navigate to Analytics Overview tab",
+      "Verify main metric card is displayed with chart",
+      "Verify Views metric is selected by default",
+      "Verify chart shows data for selected time period",
+      "Verify date range is displayed on chart x-axis"
+    ],
+    "passes": true,
+    "source_page": "analytics",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/analytics/tab-overview/period-default"
+  },
+  {
+    "id": 63,
+    "category": "functional",
+    "description": "Analytics metric selector allows switching between Views, Watch time, and Subscribers",
+    "steps": [
+      "Navigate to Analytics Overview tab",
+      "Locate metric dropdown selector",
+      "Click metric dropdown",
+      "Verify 'Views' option is available",
+      "Verify 'Watch time (hours)' option is available",
+      "Verify 'Subscribers' option is available",
+      "Select 'Watch time (hours)'",
+      "Verify main chart updates to show watch time data",
+      "Verify metric label changes to 'Watch time (hours)'"
+    ],
+    "passes": true,
+    "source_page": "analytics",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/analytics/tab-overview/period-default"
+  },
+  {
+    "id": 64,
+    "category": "functional",
+    "description": "Analytics time period selector provides multiple preset options",
+    "steps": [
+      "Navigate to Analytics Overview tab",
+      "Click time period dropdown button (e.g., 'Dec 2 - 29, 2025 Last 28 days')",
+      "Verify 'Last 7 days' option is available",
+      "Verify 'Last 28 days' option is available and selected",
+      "Verify 'Last 90 days' option is available",
+      "Verify 'Last 365 days' option is available",
+      "Verify 'Lifetime' option is available",
+      "Verify yearly options (2025, 2024, etc.) are available",
+      "Verify monthly options (December, November, etc.) are available",
+      "Verify 'Custom' option is available"
+    ],
+    "passes": true,
+    "source_page": "analytics",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/analytics/tab-overview/period-default"
+  },
+  {
+    "id": 65,
+    "category": "functional",
+    "description": "Analytics time period selection updates chart data and URL",
+    "steps": [
+      "Navigate to Analytics Overview tab",
+      "Click time period dropdown",
+      "Select 'Last 90 days'",
+      "Verify button text changes to 'Oct 1 - Dec 29, 2025 Last 90 days'",
+      "Verify URL changes to 'period-quarter'",
+      "Verify chart data updates to show 90-day range",
+      "Verify all metric cards update with new time period data"
+    ],
+    "passes": true,
+    "source_page": "analytics",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/analytics/tab-overview/period-default"
+  },
+  {
+    "id": 66,
+    "category": "functional",
+    "description": "Analytics Overview tab displays Realtime section with live subscriber count",
+    "steps": [
+      "Navigate to Analytics Overview tab",
+      "Locate 'Realtime' section",
+      "Verify 'Updating live' indicator is displayed",
+      "Verify subscriber count is shown (or dash if no data)",
+      "Verify 'Views - Last 48 hours' metric is displayed",
+      "Verify realtime activity chart is visible",
+      "Verify 'See live count' link is present"
+    ],
+    "passes": true,
+    "source_page": "analytics",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/analytics/tab-overview/period-default"
+  },
+  {
+    "id": 67,
+    "category": "functional",
+    "description": "Analytics Overview tab displays Top Content section",
+    "steps": [
+      "Navigate to Analytics Overview tab",
+      "Locate 'Top content' section in realtime card",
+      "Verify 'Top content' heading is displayed",
+      "Verify 'Views' label is shown",
+      "Verify video thumbnail is displayed",
+      "Verify video title is shown as link",
+      "Verify view count is displayed",
+      "Click on video title",
+      "Verify navigation to video analytics page"
+    ],
+    "passes": true,
+    "source_page": "analytics",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/analytics/tab-overview/period-default"
+  },
+  {
+    "id": 68,
+    "category": "functional",
+    "description": "Analytics Overview tab displays Latest Content section with key metrics",
+    "steps": [
+      "Navigate to Analytics Overview tab",
+      "Locate 'Latest content' section",
+      "Verify video thumbnail is displayed",
+      "Verify video title is shown",
+      "Verify time indicator is displayed (e.g., 'First 2 hours 47 minutes')",
+      "Verify 'Views' metric button is displayed",
+      "Verify 'Impressions click-through rate' metric button is displayed",
+      "Verify 'Average view duration' metric button is displayed",
+      "Verify 'See video analytics' link is present"
+    ],
+    "passes": true,
+    "source_page": "analytics",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/analytics/tab-overview/period-default"
+  },
+  {
+    "id": 69,
+    "category": "functional",
+    "description": "Analytics Content tab displays traffic source breakdown",
+    "steps": [
+      "Navigate to Analytics page",
+      "Click Content tab",
+      "Locate 'How viewers find your videos' section",
+      "Verify 'Views - Last 28 days' label is displayed",
+      "Verify 'Overall' radio button is available",
+      "Verify 'External' radio button is available",
+      "Verify 'YouTube search' radio button is available",
+      "Verify 'Suggested videos' radio button is available",
+      "Verify 'Playlists' radio button is available",
+      "Verify 'See more' link is present"
+    ],
+    "passes": true,
+    "source_page": "analytics",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/analytics/tab-content/period-default"
+  },
+  {
+    "id": 70,
+    "category": "functional",
+    "description": "Analytics Content tab displays Impressions and Top Videos sections",
+    "steps": [
+      "Navigate to Analytics Content tab",
+      "Locate 'Impressions and how they led to watch time' section",
+      "Verify data range indicator is displayed",
+      "Verify section shows data or appropriate empty state message",
+      "Locate 'Top videos' section",
+      "Verify 'Views - Last 28 days' label is displayed",
+      "Verify 'See more' link is present",
+      "Locate 'Top Remixed' section",
+      "Verify 'Your content used to create Shorts - Last 28 days' label is displayed"
+    ],
+    "passes": true,
+    "source_page": "analytics",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/analytics/tab-content/period-default"
+  },
+  {
+    "id": 71,
+    "category": "functional",
+    "description": "Analytics Audience tab displays audience demographics and behavior",
+    "steps": [
+      "Navigate to Analytics page",
+      "Click Audience tab",
+      "Locate 'Audience by watch behavior' section",
+      "Verify 'Monthly audience - Dec 29, 2025' label is displayed",
+      "Verify section shows data or appropriate empty state message",
+      "Locate 'When your viewers are on YouTube' section",
+      "Verify time zone indicator is displayed",
+      "Locate 'Age and gender' section",
+      "Verify 'Views - Last 28 days' label is displayed"
+    ],
+    "passes": true,
+    "source_page": "analytics",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/analytics/tab-build_audience/period-default"
+  },
+  {
+    "id": 72,
+    "category": "functional",
+    "description": "Analytics Audience tab displays device types and geography data",
+    "steps": [
+      "Navigate to Analytics Audience tab",
+      "Locate 'Device type' section",
+      "Verify 'Watch time (hours) - Last 28 days' label is displayed",
+      "Verify device breakdown is shown (Desktop, Mobile, Tablet, TV, Other)",
+      "Locate 'Top geographies' section",
+      "Verify 'Views - Last 28 days' label is displayed",
+      "Locate 'Top subtitle/CC languages' section",
+      "Verify 'Views - Last 28 days' label is displayed"
+    ],
+    "passes": true,
+    "source_page": "analytics",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/analytics/tab-build_audience/period-default"
+  },
+  {
+    "id": 73,
+    "category": "functional",
+    "description": "Analytics Trends tab provides video topic research and suggestions",
+    "steps": [
+      "Navigate to Analytics page",
+      "Click Trends tab",
+      "Verify 'Get ideas for your next video' heading is displayed",
+      "Verify 'Saved (0)' button is present",
+      "Verify search box is present",
+      "Verify 'Ideas to get started' section is displayed",
+      "Verify topic suggestions are shown with thumbnails",
+      "Click on a topic suggestion",
+      "Verify navigation to topic detail page"
+    ],
+    "passes": true,
+    "source_page": "analytics",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/analytics/tab-research/period-default"
+  },
+  {
+    "id": 74,
+    "category": "functional",
+    "description": "Analytics Advanced Mode link navigates to comprehensive analytics explorer",
+    "steps": [
+      "Navigate to Analytics page (any tab)",
+      "Locate 'Advanced mode' link near page heading",
+      "Click 'Advanced mode' link",
+      "Verify navigation to advanced analytics page",
+      "Verify URL contains 'explore' with query parameters",
+      "Verify advanced analytics interface is displayed with table and chart views"
+    ],
+    "passes": true,
+    "source_page": "analytics",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/analytics/tab-overview/period-default"
+  },
+  {
+    "id": 75,
+    "category": "functional",
+    "description": "Analytics 'See more' links navigate to detailed analytics for each section",
+    "steps": [
+      "Navigate to Analytics Overview tab",
+      "Locate 'See more' link in main metric card",
+      "Click 'See more' link",
+      "Verify navigation to advanced analytics with relevant metric",
+      "Navigate back to Overview tab",
+      "Locate 'See more' link in Realtime section",
+      "Click 'See more' link",
+      "Verify navigation to latest activity analytics"
+    ],
+    "passes": true,
+    "source_page": "analytics",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/analytics/tab-overview/period-default"
+  },
+  {
+    "id": 76,
+    "category": "style",
+    "description": "Analytics page has consistent layout and visual design across tabs",
+    "steps": [
+      "Navigate to Analytics Overview tab",
+      "Verify page heading 'Channel analytics' is prominently displayed",
+      "Verify tab navigation is visible and properly aligned",
+      "Verify time period selector is positioned near tabs",
+      "Verify Advanced mode link is visible",
+      "Switch to Content tab",
+      "Verify layout maintains consistency",
+      "Switch to Audience tab",
+      "Verify layout maintains consistency",
+      "Switch to Trends tab",
+      "Verify layout maintains consistency"
+    ],
+    "passes": true,
+    "source_page": "analytics",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/analytics/tab-overview/period-default"
+  },
+  {
+    "id": 77,
+    "category": "style",
+    "description": "Analytics charts and data visualizations are properly formatted",
+    "steps": [
+      "Navigate to Analytics Overview tab",
+      "Verify main performance chart is displayed with proper axes",
+      "Verify data points are visible on chart",
+      "Verify chart legend or labels are clear",
+      "Verify empty state messages are displayed when no data is available",
+      "Verify metric values are properly formatted (commas, decimals)",
+      "Verify date labels on chart x-axis are readable"
+    ],
+    "passes": true,
+    "source_page": "analytics",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/analytics/tab-overview/period-default"
+  },
+  {
+    "id": 78,
+    "category": "style",
+    "description": "Analytics metric buttons and dropdowns have proper hover and active states",
+    "steps": [
+      "Navigate to Analytics Overview tab",
+      "Hover over metric selector dropdown",
+      "Verify hover effect is visible",
+      "Click metric dropdown",
+      "Verify dropdown menu is properly styled",
+      "Select a different metric",
+      "Verify active/selected state is visually indicated",
+      "Hover over 'See more' links",
+      "Verify links have appropriate hover effects"
+    ],
+    "passes": true,
+    "source_page": "analytics",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/analytics/tab-overview/period-default"
+  },
+  {
+    "id": 79,
+    "category": "style",
+    "description": "Analytics tabs have proper active and inactive states",
+    "steps": [
+      "Navigate to Analytics page",
+      "Verify Overview tab is visually distinguished as active",
+      "Verify Content, Audience, Trends tabs are in inactive state",
+      "Click Content tab",
+      "Verify Content tab becomes active state",
+      "Verify Overview tab changes to inactive state",
+      "Verify active tab has clear visual indicator (underline, background color, etc.)"
+    ],
+    "passes": true,
+    "source_page": "analytics",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/analytics/tab-overview/period-default"
+  },
+  {
+    "id": 80,
+    "category": "style",
+    "description": "Analytics page handles empty states with appropriate messaging",
+    "steps": [
+      "Navigate to Analytics Overview tab",
+      "Verify empty state message is shown when channel has no views",
+      "Verify empty state message is clear and informative",
+      "Navigate to Content tab",
+      "Verify 'Not enough traffic data' messages are shown where appropriate",
+      "Navigate to Audience tab",
+      "Verify 'Not enough viewer data' messages are shown where appropriate",
+      "Verify all empty state messages have consistent styling"
+    ],
+    "passes": true,
+    "source_page": "analytics",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/analytics/tab-overview/period-default"
+  },
+  {
+    "id": 81,
+    "category": "functional",
+    "description": "Community page displays Comments, Viewer posts, and Mentions tabs",
+    "steps": [
+      "Navigate to Community page",
+      "Verify Comments tab is visible and selected by default",
+      "Verify Viewer posts tab is visible and clickable",
+      "Verify Mentions tab is visible and clickable",
+      "Click Viewer posts tab and verify content changes",
+      "Click Mentions tab and verify content changes"
+    ],
+    "passes": true,
+    "source_page": "community",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/comments/inbox"
+  },
+  {
+    "id": 82,
+    "category": "functional",
+    "description": "Comments tab displays all moderation and filtering controls",
+    "steps": [
+      "Navigate to Community Comments tab",
+      "Verify Moderation status dropdown is visible (Published/Held)",
+      "Verify Sort by dropdown is visible",
+      "Verify Response status filter button is visible",
+      "Verify Filter textbox is present",
+      "Verify Select all checkbox is visible"
+    ],
+    "passes": true,
+    "source_page": "community",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/comments/inbox"
+  },
+  {
+    "id": 83,
+    "category": "functional",
+    "description": "Moderation status dropdown allows switching between Published and Held comments",
+    "steps": [
+      "Navigate to Community Comments tab",
+      "Click Moderation status dropdown",
+      "Verify 'Published' and 'Held' options are displayed",
+      "Select 'Held' option",
+      "Verify Apply button is present",
+      "Click Apply button",
+      "Verify URL changes to /comments/moderate",
+      "Verify page displays held comments or empty state"
+    ],
+    "passes": true,
+    "source_page": "community",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/comments/inbox"
+  },
+  {
+    "id": 84,
+    "category": "functional",
+    "description": "Sort by dropdown provides Most relevant and Newest options",
+    "steps": [
+      "Navigate to Community Comments tab (Held queue)",
+      "Click Sort by dropdown",
+      "Verify 'Most relevant (default)' option is available",
+      "Verify 'Newest' option is available",
+      "Verify currently selected option is checked",
+      "Select 'Most relevant (default)'",
+      "Click Apply button",
+      "Verify sort order is applied"
+    ],
+    "passes": true,
+    "source_page": "community",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/comments/inbox"
+  },
+  {
+    "id": 85,
+    "category": "functional",
+    "description": "Response status filter provides Unresponded, Responded, and New replies options",
+    "steps": [
+      "Navigate to Community Comments tab",
+      "Click Response status filter button",
+      "Verify 'Unresponded' checkbox is displayed and checked by default",
+      "Verify 'Responded' checkbox is displayed",
+      "Verify 'New replies to your response' checkbox is displayed",
+      "Verify Apply button is present",
+      "Click Close button",
+      "Verify filter is dismissed"
+    ],
+    "passes": true,
+    "source_page": "community",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/comments/inbox"
+  },
+  {
+    "id": 86,
+    "category": "functional",
+    "description": "Filter textbox allows text-based filtering of comments",
+    "steps": [
+      "Navigate to Community Comments tab",
+      "Locate Filter textbox",
+      "Enter text to filter comments",
+      "Verify comments list updates based on filter",
+      "Clear filter textbox",
+      "Verify all comments are displayed again"
+    ],
+    "passes": true,
+    "source_page": "community",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/comments/inbox"
+  },
+  {
+    "id": 87,
+    "category": "functional",
+    "description": "Individual comments display all required elements and actions",
+    "steps": [
+      "Navigate to Community Comments tab",
+      "Verify comment author avatar is displayed",
+      "Verify author display name is shown as link",
+      "Verify comment timestamp is displayed",
+      "Verify comment text is visible",
+      "Verify video thumbnail and title reference are shown",
+      "Verify Reply button is present",
+      "Verify View replies button (if replies exist) is present",
+      "Verify Like, Dislike, Heart buttons are present",
+      "Verify Action menu button (three dots) is present"
+    ],
+    "passes": true,
+    "source_page": "community",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/comments/inbox"
+  },
+  {
+    "id": 88,
+    "category": "functional",
+    "description": "Reply button opens inline reply editor",
+    "steps": [
+      "Navigate to Community Comments tab",
+      "Click Reply button on a comment",
+      "Verify inline reply editor appears",
+      "Verify 'Add a reply...' textbox is displayed",
+      "Verify Cancel button is present",
+      "Verify Reply button is present",
+      "Click Cancel button",
+      "Verify reply editor is closed"
+    ],
+    "passes": true,
+    "source_page": "community",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/comments/inbox"
+  },
+  {
+    "id": 89,
+    "category": "functional",
+    "description": "View replies button expands reply thread",
+    "steps": [
+      "Navigate to Community Comments tab",
+      "Locate a comment with replies (indicated by 'X replies' button)",
+      "Click 'X replies' button",
+      "Verify reply thread expands to show replies",
+      "Verify individual replies are displayed with author info",
+      "Verify reply text is visible",
+      "Click button again to collapse replies",
+      "Verify reply thread collapses"
+    ],
+    "passes": true,
+    "source_page": "community",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/comments/inbox"
+  },
+  {
+    "id": 90,
+    "category": "functional",
+    "description": "Action menu provides moderation options for comments",
+    "steps": [
+      "Navigate to Community Comments tab",
+      "Click Action menu button (three dots) on a comment",
+      "Verify 'Remove' option is displayed",
+      "Verify 'Report' option is displayed",
+      "Verify 'Hide user from channel' option is displayed",
+      "Verify 'Always approve comments from this user' option is displayed",
+      "Verify 'Add user as managing moderator' option is displayed",
+      "Verify 'Add user as standard moderator' option is displayed",
+      "Click outside menu to close"
+    ],
+    "passes": true,
+    "source_page": "community",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/comments/inbox"
+  },
+  {
+    "id": 91,
+    "category": "functional",
+    "description": "Viewer posts tab displays community posts management interface",
+    "steps": [
+      "Navigate to Community page",
+      "Click Viewer posts tab",
+      "Verify Published filter dropdown is visible",
+      "Verify Sort by dropdown is visible",
+      "Verify Filter textbox is present",
+      "Verify table view is displayed",
+      "Verify 'Turn on my Community' button is shown if Community not enabled",
+      "Verify 'No comments found' message if no posts exist"
+    ],
+    "passes": true,
+    "source_page": "community",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/activity/viewer-posts"
+  },
+  {
+    "id": 92,
+    "category": "functional",
+    "description": "Mentions tab displays channel mentions",
+    "steps": [
+      "Navigate to Community page",
+      "Click Mentions tab",
+      "Verify 'No mentions found' message is displayed when no mentions exist",
+      "Verify tab content area is properly styled"
+    ],
+    "passes": true,
+    "source_page": "community",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/activity/mentions"
+  },
+  {
+    "id": 93,
+    "category": "functional",
+    "description": "Select all checkbox allows batch selection of comments",
+    "steps": [
+      "Navigate to Community Comments tab",
+      "Locate Select all checkbox in header",
+      "Click Select all checkbox",
+      "Verify all individual comment checkboxes become checked",
+      "Click Select all checkbox again to deselect",
+      "Verify all individual comment checkboxes become unchecked"
+    ],
+    "passes": true,
+    "source_page": "community",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/comments/inbox"
+  },
+  {
+    "id": 94,
+    "category": "functional",
+    "description": "View comment on YouTube link navigates to YouTube comment page",
+    "steps": [
+      "Navigate to Community Comments tab",
+      "Locate 'View comment on YouTube' button/link on a comment",
+      "Click the button/link",
+      "Verify navigation to YouTube (external site)",
+      "Verify comment is displayed on YouTube video page"
+    ],
+    "passes": true,
+    "source_page": "community",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/comments/inbox"
+  },
+  {
+    "id": 95,
+    "category": "style",
+    "description": "Community page has proper layout with tab navigation and filter controls",
+    "steps": [
+      "Navigate to Community page",
+      "Verify page heading 'Community' is prominently displayed",
+      "Verify tab navigation (Comments, Viewer posts, Mentions) is visible",
+      "Verify filter controls are properly aligned in header",
+      "Verify comments list is displayed below filters",
+      "Verify proper spacing between elements",
+      "Verify layout is responsive and adapts to screen size"
+    ],
+    "passes": true,
+    "source_page": "community",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/comments/inbox"
+  },
+  {
+    "id": 96,
+    "category": "style",
+    "description": "Comment cards have consistent styling and layout",
+    "steps": [
+      "Navigate to Community Comments tab",
+      "Verify each comment is displayed in a card-like container",
+      "Verify comment cards have consistent spacing",
+      "Verify author info is aligned left",
+      "Verify action buttons (Reply, Like, etc.) are aligned",
+      "Verify video thumbnail has proper aspect ratio",
+      "Verify comment text is readable and properly formatted",
+      "Verify timestamps have consistent formatting"
+    ],
+    "passes": true,
+    "source_page": "community",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/comments/inbox"
+  },
+  {
+    "id": 97,
+    "category": "style",
+    "description": "Community page dropdowns and menus have proper styling",
+    "steps": [
+      "Navigate to Community Comments tab",
+      "Click Moderation status dropdown",
+      "Verify dropdown menu is properly styled with clear borders",
+      "Verify options have proper padding and spacing",
+      "Verify close button is visible and properly positioned",
+      "Click Action menu on a comment",
+      "Verify action menu has proper z-index (appears above other content)",
+      "Verify menu items have proper hover effects",
+      "Verify icons are aligned with text in menu items"
+    ],
+    "passes": true,
+    "source_page": "community",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/comments/inbox"
+  },
+  {
+    "id": 98,
+    "category": "style",
+    "description": "Empty states in Community tabs have clear messaging",
+    "steps": [
+      "Navigate to Community page",
+      "Switch to Held comments (if empty)",
+      "Verify 'No comments found' message is displayed",
+      "Verify message suggests 'Try searching for something else or removing filters'",
+      "Switch to Mentions tab",
+      "Verify 'No mentions found' message is displayed",
+      "Verify all empty state messages have consistent styling"
+    ],
+    "passes": true,
+    "source_page": "community",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/comments/inbox"
+  },
+  {
+    "id": 99,
+    "category": "style",
+    "description": "Community tabs have proper active and inactive states",
+    "steps": [
+      "Navigate to Community page",
+      "Verify Comments tab is visually distinguished as active",
+      "Verify Viewer posts and Mentions tabs are in inactive state",
+      "Click Viewer posts tab",
+      "Verify Viewer posts tab becomes active state",
+      "Verify Comments tab changes to inactive state",
+      "Verify active tab has clear visual indicator"
+    ],
+    "passes": true,
+    "source_page": "community",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/comments/inbox"
+  },
+  {
+    "id": 100,
+    "category": "style",
+    "description": "Reaction buttons (Like, Dislike, Heart) have proper visual feedback",
+    "steps": [
+      "Navigate to Community Comments tab",
+      "Locate Like, Dislike, Heart buttons on a comment",
+      "Hover over each button",
+      "Verify hover effects are visible",
+      "Verify buttons are properly aligned and spaced",
+      "Verify icons are clear and recognizable",
+      "Verify buttons have appropriate click targets"
+    ],
+    "passes": true,
+    "source_page": "community",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/comments/inbox"
+  },
+  {
+    "id": 101,
+    "category": "functional",
+    "description": "Subtitles page displays channel-level view of all videos with subtitle status",
+    "steps": [
+      "Navigate to Subtitles page",
+      "Verify page heading 'Channel subtitles' is displayed",
+      "Verify tab navigation (All, Drafts, Published) is visible",
+      "Verify videos table is displayed with columns: Video, Languages, Modified on",
+      "Verify video thumbnails and titles are shown",
+      "Verify language count is displayed for each video",
+      "Verify modification dates are shown"
+    ],
+    "passes": true,
+    "source_page": "subtitles",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/subtitles"
+  },
+  {
+    "id": 102,
+    "category": "functional",
+    "description": "Subtitles page tabs allow filtering by subtitle status",
+    "steps": [
+      "Navigate to Subtitles page",
+      "Verify 'All' tab is selected by default",
+      "Click 'Drafts' tab",
+      "Verify tab becomes active and content filters to show draft subtitles",
+      "Click 'Published' tab",
+      "Verify tab becomes active and content filters to show published subtitles",
+      "Click 'All' tab to return to default view"
+    ],
+    "passes": true,
+    "source_page": "subtitles",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/subtitles"
+  },
+  {
+    "id": 103,
+    "category": "functional",
+    "description": "Clicking video thumbnail or title navigates to video subtitle management",
+    "steps": [
+      "Navigate to Subtitles page",
+      "Click on video thumbnail or title link",
+      "Verify navigation to video subtitles page",
+      "Verify URL changes to /video/{id}/translations",
+      "Verify video subtitle management interface is displayed"
+    ],
+    "passes": true,
+    "source_page": "subtitles",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/subtitles"
+  },
+  {
+    "id": 104,
+    "category": "functional",
+    "description": "Video subtitles page allows setting video language",
+    "steps": [
+      "Navigate to video subtitles page",
+      "Verify 'Set language' button is displayed",
+      "Click 'Set language' button",
+      "Verify language dropdown opens with 150+ language options",
+      "Verify languages are listed alphabetically",
+      "Select a language (e.g., English)",
+      "Verify Confirm button becomes enabled",
+      "Click Confirm button",
+      "Verify 'All changes saved' message is displayed"
+    ],
+    "passes": true,
+    "source_page": "subtitles",
+    "source_url": "https://studio.youtube.com/video/kziDjgXLyN0/translations"
+  },
+  {
+    "id": 105,
+    "category": "functional",
+    "description": "Language dropdown includes regional variants and specialized languages",
+    "steps": [
+      "Navigate to video subtitles page",
+      "Click 'Set language' button",
+      "Scroll through language dropdown",
+      "Verify regional variants are present (e.g., English (US), English (UK), Portuguese (Brazil))",
+      "Verify specialized languages are present (e.g., American Sign Language, Klingon)",
+      "Verify languages are organized alphabetically",
+      "Press Escape to close dropdown"
+    ],
+    "passes": true,
+    "source_page": "subtitles",
+    "source_url": "https://studio.youtube.com/video/kziDjgXLyN0/translations"
+  },
+  {
+    "id": 106,
+    "category": "functional",
+    "description": "'Make this the default for my channel' checkbox sets default language",
+    "steps": [
+      "Navigate to video subtitles page",
+      "Verify 'Make this the default for my channel' checkbox is visible",
+      "Verify checkbox is checked by default",
+      "Uncheck the checkbox",
+      "Select a language and click Confirm",
+      "Verify language is set without making it channel default"
+    ],
+    "passes": true,
+    "source_page": "subtitles",
+    "source_url": "https://studio.youtube.com/video/kziDjgXLyN0/translations"
+  },
+  {
+    "id": 107,
+    "category": "functional",
+    "description": "Video subtitles page displays translations table with language, subtitle, and metadata columns",
+    "steps": [
+      "Navigate to video subtitles page after setting video language",
+      "Verify translations table is displayed",
+      "Verify 'Language' column shows video language with '(video language)' marker",
+      "Verify 'Subtitles' column shows subtitle track status (or '–' if none)",
+      "Verify 'Title & description' column shows translation status",
+      "Verify 'Published' status and modification date are displayed"
+    ],
+    "passes": true,
+    "source_page": "subtitles",
+    "source_url": "https://studio.youtube.com/video/kziDjgXLyN0/translations"
+  },
+  {
+    "id": 108,
+    "category": "functional",
+    "description": "Add language button opens dropdown to add new subtitle languages",
+    "steps": [
+      "Navigate to video subtitles page",
+      "Verify 'Add language' button is displayed",
+      "Click 'Add language' button",
+      "Verify language dropdown opens",
+      "Verify currently selected language is disabled in dropdown",
+      "Verify other languages are available for selection",
+      "Press Escape to close dropdown"
+    ],
+    "passes": true,
+    "source_page": "subtitles",
+    "source_url": "https://studio.youtube.com/video/kziDjgXLyN0/translations"
+  },
+  {
+    "id": 109,
+    "category": "functional",
+    "description": "Channel subtitles breadcrumb navigates back to channel view",
+    "steps": [
+      "Navigate to video subtitles page",
+      "Locate 'Channel subtitles' breadcrumb/button in top left",
+      "Click 'Channel subtitles' button",
+      "Verify navigation back to channel subtitles page",
+      "Verify URL changes to /channel/{id}/translations"
+    ],
+    "passes": true,
+    "source_page": "subtitles",
+    "source_url": "https://studio.youtube.com/video/kziDjgXLyN0/translations"
+  },
+  {
+    "id": 110,
+    "category": "functional",
+    "description": "Videos table shows accurate subtitle counts after language is set",
+    "steps": [
+      "Set video language for a video",
+      "Navigate back to channel subtitles page",
+      "Verify language count is updated (e.g., from '0' to '1')",
+      "Verify modification date reflects recent change",
+      "Click on video to verify language is set correctly"
+    ],
+    "passes": true,
+    "source_page": "subtitles",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/subtitles"
+  },
+  {
+    "id": 111,
+    "category": "style",
+    "description": "Subtitles page has proper table layout with aligned columns",
+    "steps": [
+      "Navigate to Subtitles page",
+      "Verify table header row is displayed with proper styling",
+      "Verify column headers (Video, Languages, Modified on) are aligned",
+      "Verify video thumbnails are properly sized and aligned",
+      "Verify video titles are aligned with thumbnails",
+      "Verify language counts are centered in their column",
+      "Verify dates are properly formatted and aligned"
+    ],
+    "passes": true,
+    "source_page": "subtitles",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/subtitles"
+  },
+  {
+    "id": 112,
+    "category": "style",
+    "description": "Language dropdown has proper styling and scrollable list",
+    "steps": [
+      "Navigate to video subtitles page",
+      "Click 'Set language' button",
+      "Verify dropdown menu has proper borders and shadow",
+      "Verify dropdown appears below the button",
+      "Verify language list is scrollable",
+      "Verify scroll behavior is smooth",
+      "Verify hover effects on language options are visible",
+      "Verify selected language has clear visual indicator"
+    ],
+    "passes": true,
+    "source_page": "subtitles",
+    "source_url": "https://studio.youtube.com/video/kziDjgXLyN0/translations"
+  },
+  {
+    "id": 113,
+    "category": "style",
+    "description": "Subtitles tabs have proper active and inactive states",
+    "steps": [
+      "Navigate to Subtitles page",
+      "Verify 'All' tab is visually distinguished as active",
+      "Verify 'Drafts' and 'Published' tabs are in inactive state",
+      "Click 'Drafts' tab",
+      "Verify 'Drafts' tab becomes active state",
+      "Verify 'All' tab changes to inactive state",
+      "Verify active tab has clear visual indicator (underline, background color)"
+    ],
+    "passes": true,
+    "source_page": "subtitles",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/subtitles"
+  },
+  {
+    "id": 114,
+    "category": "style",
+    "description": "Video subtitle management page has clear visual hierarchy",
+    "steps": [
+      "Navigate to video subtitles page",
+      "Verify page heading 'Video subtitles' is prominently displayed",
+      "Verify breadcrumb navigation is visible at top",
+      "Verify language settings section is clearly defined",
+      "Verify translations table is displayed below settings",
+      "Verify 'Add language' button is prominent and accessible",
+      "Verify proper spacing between all sections"
+    ],
+    "passes": true,
+    "source_page": "subtitles",
+    "source_url": "https://studio.youtube.com/video/kziDjgXLyN0/translations"
+  },
+  {
+    "id": 115,
+    "category": "functional",
+    "description": "Content Detection page displays Copyright tab and navigation elements",
+    "steps": [
+      "Navigate to Content Detection page (/content-detection)",
+      "Verify page redirects to /copyright",
+      "Verify page title is 'Content detection - YouTube Studio'",
+      "Verify Copyright tab is visible and selected",
+      "Verify sidebar navigation is displayed with all menu items",
+      "Verify Content detection menu item is highlighted as active"
+    ],
+    "passes": true,
+    "source_page": "content-detection",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/content-detection"
+  },
+  {
+    "id": 116,
+    "category": "functional",
+    "description": "Content Detection page displays Removal Requests section",
+    "steps": [
+      "Navigate to Content Detection page",
+      "Verify 'Removal requests' section heading is displayed",
+      "Verify 'New removal request' button is present",
+      "Verify empty state message is shown: 'Nothing to see yet - You haven't submitted any copyright takedown requests'",
+      "Verify help text is displayed: 'Looking for a copyright claim somebody made on your video? Check the video list'",
+      "Verify 'copyright takedown requests' link is present",
+      "Verify 'video list' link is present"
+    ],
+    "passes": true,
+    "source_page": "content-detection",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/content-detection"
+  },
+  {
+    "id": 117,
+    "category": "functional",
+    "description": "Content Detection page displays Likeness Detection section",
+    "steps": [
+      "Navigate to Content Detection page",
+      "Verify Likeness Detection section is displayed",
+      "Verify description text is shown: 'Review content where your likeness may be altered or made with AI'",
+      "Verify note is displayed: 'Likeness detection accuracy is constantly improving'",
+      "Verify section has appropriate layout and styling"
+    ],
+    "passes": true,
+    "source_page": "content-detection",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/content-detection"
+  },
+  {
+    "id": 118,
+    "category": "functional",
+    "description": "Retry buttons are displayed for failed content sections",
+    "steps": [
+      "Navigate to Content Detection page",
+      "Locate sections showing 'Oops, something went wrong' error message",
+      "Verify 'Retry' button is present for each error section",
+      "Verify error message is displayed: 'Oops, something went wrong'",
+      "Note: Some sections may fail to load due to API issues"
+    ],
+    "passes": true,
+    "source_page": "content-detection",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/content-detection"
+  },
+  {
+    "id": 119,
+    "category": "functional",
+    "description": "Content Detection page uses custom web components",
+    "steps": [
+      "Navigate to Content Detection page",
+      "Verify ytcr-management-page custom element is present",
+      "Verify tp-yt-paper-tabs element is present for tab navigation",
+      "Verify tp-yt-paper-tab elements are present for individual tabs",
+      "Verify ytcp-primary-action-bar element is present",
+      "Verify page uses shadow DOM for content rendering"
+    ],
+    "passes": true,
+    "source_page": "content-detection",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/content-detection"
+  },
+  {
+    "id": 120,
+    "category": "functional",
+    "description": "Copyright tab is displayed as selected in tab navigation",
+    "steps": [
+      "Navigate to Content Detection page",
+      "Locate Copyright tab in tab navigation",
+      "Verify tab has 'iron-selected' class",
+      "Verify tab aria-selected attribute is 'true'",
+      "Verify tab text displays 'Copyright'",
+      "Verify tab is visually distinguished as active"
+    ],
+    "passes": true,
+    "source_page": "content-detection",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/content-detection"
+  },
+  {
+    "id": 121,
+    "category": "style",
+    "description": "Content Detection page has proper layout with sidebar and main content",
+    "steps": [
+      "Navigate to Content Detection page",
+      "Verify left sidebar navigation is visible and properly positioned",
+      "Verify top navigation bar is displayed with all controls",
+      "Verify main content area is displayed to the right of sidebar",
+      "Verify tab navigation is visible in main content area",
+      "Verify proper spacing between all sections",
+      "Verify layout is responsive and adapts to screen size"
+    ],
+    "passes": true,
+    "source_page": "content-detection",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/content-detection"
+  },
+  {
+    "id": 122,
+    "category": "style",
+    "description": "Content Detection page tab navigation has proper styling",
+    "steps": [
+      "Navigate to Content Detection page",
+      "Verify tab navigation bar is displayed",
+      "Verify Copyright tab is visually distinguished as active",
+      "Verify tab text is readable and properly aligned",
+      "Verify tab has proper padding and spacing",
+      "Verify active tab indicator is visible (underline or background)"
+    ],
+    "passes": true,
+    "source_page": "content-detection",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/content-detection"
+  },
+  {
+    "id": 123,
+    "category": "style",
+    "description": "Content Detection page sections have consistent styling",
+    "steps": [
+      "Navigate to Content Detection page",
+      "Verify Removal requests section has proper heading and spacing",
+      "Verify Likeness Detection section has proper heading and spacing",
+      "Verify error sections are displayed with consistent styling",
+      "Verify all sections have proper margins and padding",
+      "Verify typography is consistent across sections",
+      "Verify buttons and links have consistent styling"
+    ],
+    "passes": true,
+    "source_page": "content-detection",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/content-detection"
+  },
+  {
+    "id": 124,
+    "category": "style",
+    "description": "Content Detection empty states have clear messaging",
+    "steps": [
+      "Navigate to Content Detection page",
+      "Verify Removal requests empty state message is clear: 'Nothing to see yet'",
+      "Verify empty state provides helpful context: 'You haven't submitted any copyright takedown requests'",
+      "Verify empty state provides guidance: 'Looking for a copyright claim somebody made on your video? Check the video list'",
+      "Verify empty state has proper styling and spacing",
+      "Verify links in empty state are visually distinct"
+    ],
+    "passes": true,
+    "source_page": "content-detection",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/content-detection"
+  },
+  {
+    "id": 125,
+    "category": "functional",
+    "description": "Earn page displays Next Milestone and Future Milestone sections with earning methods",
+    "steps": [
+      "Navigate to Earn page",
+      "Verify page heading 'Earn on YouTube' is displayed",
+      "Verify 'Next milestone' section is displayed with 'Start your earning journey' heading",
+      "Verify 'Future milestone' section is displayed with 'Continue to grow' heading",
+      "Verify Memberships, Supers, and Shopping options are shown in Next Milestone",
+      "Verify Watch Page Ads and Shorts Feed Ads options are shown in Future Milestone"
+    ],
+    "passes": true,
+    "source_page": "earn",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/monetization"
+  },
+  {
+    "id": 126,
+    "category": "functional",
+    "description": "Earning method cards are expandable and collapsible",
+    "steps": [
+      "Navigate to Earn page",
+      "Verify Memberships card is expanded by default in Next Milestone section",
+      "Click on Supers card header",
+      "Verify Supers card expands and Memberships card collapses",
+      "Click on Shopping card header",
+      "Verify Shopping card expands and Supers card collapses",
+      "Click on Watch Page Ads card header in Future Milestone section",
+      "Verify Watch Page Ads card expands",
+      "Click on Shorts Feed Ads card header",
+      "Verify Shorts Feed Ads card expands and Watch Page Ads collapses"
+    ],
+    "passes": true,
+    "source_page": "earn",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/monetization"
+  },
+  {
+    "id": 127,
+    "category": "functional",
+    "description": "Each earning method card displays title, tagline, and description",
+    "steps": [
+      "Navigate to Earn page",
+      "Expand Memberships card",
+      "Verify title 'Memberships' is displayed",
+      "Verify tagline 'Grow your community and earn monthly' is shown",
+      "Verify description mentions 70% net revenue share",
+      "Expand Supers card",
+      "Verify title 'Supers' is displayed",
+      "Verify tagline 'Strengthen connections with your fans' is shown",
+      "Verify description mentions Super Chat, Super Stickers, and Super Thanks",
+      "Expand Shopping card",
+      "Verify title 'Shopping' is displayed",
+      "Verify tagline 'Connect your online store to YouTube' is shown"
+    ],
+    "passes": true,
+    "source_page": "earn",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/monetization"
+  },
+  {
+    "id": 128,
+    "category": "functional",
+    "description": "Eligibility section displays current channel metrics against requirements",
+    "steps": [
+      "Navigate to Earn page",
+      "Locate Eligibility section under Next Milestone",
+      "Verify subscriber count is displayed with progress bar (e.g., '0 subscribers' out of 500)",
+      "Verify video uploads metric is shown (e.g., '1 video upload' out of 3 in last 90 days)",
+      "Verify watch hours metric is shown with progress bar (e.g., '0 valid public watch hours' out of 3,000)",
+      "Verify Shorts views metric is shown with progress bar (e.g., '0 valid public Shorts views' out of 3M)",
+      "Verify data freshness note is displayed: 'Showing data as of: [date]'"
+    ],
+    "passes": true,
+    "source_page": "earn",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/monetization"
+  },
+  {
+    "id": 129,
+    "category": "functional",
+    "description": "Future Milestone eligibility section shows higher thresholds",
+    "steps": [
+      "Navigate to Earn page",
+      "Locate Eligibility section under Future Milestone",
+      "Verify subscriber requirement is 1,000 (vs 500 for Next Milestone)",
+      "Verify watch hours requirement is 4,000 (vs 3,000 for Next Milestone)",
+      "Verify Shorts views requirement is 10M (vs 3M for Next Milestone)",
+      "Verify current metrics are displayed with progress bars",
+      "Verify progress bars accurately reflect current channel status"
+    ],
+    "passes": true,
+    "source_page": "earn",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/monetization"
+  },
+  {
+    "id": 130,
+    "category": "functional",
+    "description": "Get notified button enables eligibility notifications",
+    "steps": [
+      "Navigate to Earn page",
+      "Locate 'Get notified' button in Next Milestone section",
+      "Verify button text is 'Get notified'",
+      "Click 'Get notified' button",
+      "Verify button text changes to 'We'll let you know when you're eligible'",
+      "Verify 'Apply now' button becomes disabled",
+      "Verify 'All changes saved' message appears briefly",
+      "Verify notification preference is saved"
+    ],
+    "passes": true,
+    "source_page": "earn",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/monetization"
+  },
+  {
+    "id": 131,
+    "category": "functional",
+    "description": "Creator resources section provides links to support tools",
+    "steps": [
+      "Navigate to Earn page",
+      "Locate 'Creator resources & tools' section",
+      "Verify 'YouTube Creator Support' link is present",
+      "Verify 'Copyright Match Tool' link is present",
+      "Verify 'Video end screens' link is present",
+      "Click 'YouTube Creator Support' link",
+      "Verify link opens in new tab",
+      "Close new tab and return to Earn page",
+      "Verify all resource links are accessible"
+    ],
+    "passes": true,
+    "source_page": "earn",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/monetization"
+  },
+  {
+    "id": 132,
+    "category": "functional",
+    "description": "Resources section provides categorized support and learning links",
+    "steps": [
+      "Navigate to Earn page",
+      "Locate 'Resources' section",
+      "Verify 'Support' subsection with 'Help Center' and 'Community forums' links",
+      "Verify 'Learn' subsection with 'YouTube Creators Channel' link",
+      "Verify 'Things to know' subsection with policy links",
+      "Verify 'Channel monetization policies' link is present",
+      "Verify 'Advertiser-friendly guidelines' link is present",
+      "Verify 'Other ways to earn' link is present",
+      "Click on a resource link and verify it opens in new tab"
+    ],
+    "passes": true,
+    "source_page": "earn",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/monetization"
+  },
+  {
+    "id": 133,
+    "category": "functional",
+    "description": "After you apply section explains monetization review process",
+    "steps": [
+      "Navigate to Earn page",
+      "Locate 'After you apply' section at bottom of page",
+      "Verify explanatory text is displayed about policy review",
+      "Verify 'monetization policies' link is present in text",
+      "Verify 'Learn more' button/link is present",
+      "Click 'Learn more' button",
+      "Verify link opens in new tab with detailed information about application process"
+    ],
+    "passes": true,
+    "source_page": "earn",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/monetization"
+  },
+  {
+    "id": 134,
+    "category": "functional",
+    "description": "Data freshness tooltip explains validation delay",
+    "steps": [
+      "Navigate to Earn page",
+      "Locate 'Showing data as of: [date]' text in Eligibility section",
+      "Verify info icon is displayed next to date",
+      "Hover over or click the info icon",
+      "Verify tooltip appears with explanation: 'Why could this take a week to update?'",
+      "Verify tooltip explains metrics validation process",
+      "Verify tooltip mentions data may vary from YouTube Analytics"
+    ],
+    "passes": true,
+    "source_page": "earn",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/monetization"
+  },
+  {
+    "id": 135,
+    "category": "style",
+    "description": "Earn page has proper visual hierarchy with milestone badges",
+    "steps": [
+      "Navigate to Earn page",
+      "Verify 'Next milestone' badge is visually prominent",
+      "Verify 'Future milestone' badge is visually distinct from Next Milestone",
+      "Verify milestone sections have clear separation",
+      "Verify progress bars have proper color coding",
+      "Verify expandable cards have consistent styling",
+      "Verify proper spacing between all sections"
+    ],
+    "passes": true,
+    "source_page": "earn",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/monetization"
+  },
+  {
+    "id": 136,
+    "category": "style",
+    "description": "Progress bars accurately display channel metrics against thresholds",
+    "steps": [
+      "Navigate to Earn page",
+      "Locate subscriber progress bar in Next Milestone Eligibility section",
+      "Verify progress bar visual fill matches current metric (e.g., 0/500)",
+      "Verify threshold value (500) is displayed at end of bar",
+      "Verify current value (0) is displayed before the bar",
+      "Verify progress bar styling is consistent across all metrics",
+      "Verify progress bars for watch hours and Shorts views follow same pattern"
+    ],
+    "passes": true,
+    "source_page": "earn",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/monetization"
+  },
+  {
+    "id": 137,
+    "category": "style",
+    "description": "Expandable cards have proper visual states",
+    "steps": [
+      "Navigate to Earn page",
+      "Verify expanded card shows full content with description",
+      "Verify collapsed card shows only title and tagline",
+      "Verify expand/collapse arrow icons indicate current state",
+      "Verify hover effects on card headers encourage interaction",
+      "Verify smooth transitions when expanding/collapsing cards",
+      "Verify only one card per section can be expanded at a time"
+    ],
+    "passes": true,
+    "source_page": "earn",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/monetization"
+  },
+  {
+    "id": 138,
+    "category": "style",
+    "description": "Earn page buttons have proper styling and states",
+    "steps": [
+      "Navigate to Earn page",
+      "Verify 'Get notified' button is prominent and easily clickable",
+      "Verify button has proper hover effect",
+      "Verify disabled 'Apply now' button has appropriate styling",
+      "Verify 'Learn more' button is styled as secondary action",
+      "Verify all buttons have proper padding and spacing",
+      "Verify button text is readable and properly aligned"
+    ],
+    "passes": true,
+    "source_page": "earn",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/monetization"
+  },
+  {
+    "id": 139,
+    "category": "style",
+    "description": "Earn page is responsive and handles different screen sizes",
+    "steps": [
+      "Navigate to Earn page",
+      "Verify layout is properly displayed at 1600x900 viewport",
+      "Verify milestone sections stack properly on smaller screens",
+      "Verify progress bars remain readable at different sizes",
+      "Verify expandable cards maintain accessibility on mobile",
+      "Verify resource links remain accessible and properly spaced",
+      "Verify proper spacing between all elements"
+    ],
+    "passes": true,
+    "source_page": "earn",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/monetization"
+  },
+  {
+    "id": 140,
+    "category": "functional",
+    "description": "Customization page displays Profile and Home tab tabs",
+    "steps": [
+      "Navigate to Customization page",
+      "Verify page redirects to /editing/profile",
+      "Verify Profile tab is visible and selected by default",
+      "Verify Home tab tab is visible and clickable",
+      "Click Home tab tab",
+      "Verify tab becomes active and URL changes to /editing/hometab"
+    ],
+    "passes": true,
+    "source_page": "customization",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/customization"
+  },
+  {
+    "id": 141,
+    "category": "functional",
+    "description": "Profile tab displays all channel branding sections",
+    "steps": [
+      "Navigate to Customization page Profile tab",
+      "Verify Banner image section is displayed with Upload button",
+      "Verify Picture section is displayed with Upload button",
+      "Verify Name section is displayed with editable textbox",
+      "Verify Handle section is displayed with editable textbox and URL preview",
+      "Verify Pronouns section is displayed with 'Add pronoun' button",
+      "Verify Description section is displayed with textarea and 'Add language' button",
+      "Verify Channel URL section is displayed with Copy button",
+      "Verify Links section is displayed with 'Add link' button",
+      "Verify Contact info section is displayed with email field",
+      "Verify Video watermark section is displayed with Upload button"
+    ],
+    "passes": true,
+    "source_page": "customization",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/editing/profile"
+  },
+  {
+    "id": 142,
+    "category": "functional",
+    "description": "Banner image section displays upload instructions and recommendations",
+    "steps": [
+      "Navigate to Customization page Profile tab",
+      "Locate Banner image section",
+      "Verify current banner image is displayed (or placeholder if none)",
+      "Verify descriptive text is present: 'This image will appear across the top of your channel'",
+      "Verify size recommendation is shown: 'at least 2048 x 1152 pixels and 6MB or less'",
+      "Verify Upload button is present and clickable"
+    ],
+    "passes": true,
+    "source_page": "customization",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/editing/profile"
+  },
+  {
+    "id": 143,
+    "category": "functional",
+    "description": "Profile picture section displays upload instructions and recommendations",
+    "steps": [
+      "Navigate to Customization page Profile tab",
+      "Locate Picture section",
+      "Verify current profile picture is displayed",
+      "Verify descriptive text is present: 'Your profile picture will appear where your channel is presented on YouTube'",
+      "Verify size recommendation is shown: 'at least 98 x 98 pixels and 4MB or less'",
+      "Verify format recommendation is shown: 'Use a PNG or GIF (no animations) file'",
+      "Verify Upload button is present and clickable"
+    ],
+    "passes": true,
+    "source_page": "customization",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/editing/profile"
+  },
+  {
+    "id": 144,
+    "category": "functional",
+    "description": "Name and Handle sections are editable with proper constraints",
+    "steps": [
+      "Navigate to Customization page Profile tab",
+      "Locate Name section",
+      "Verify explanatory text mentions change frequency: 'You can change your name twice in 14 days'",
+      "Verify channel name textbox is displayed and editable",
+      "Locate Handle section",
+      "Verify @ prefix is displayed before handle textbox",
+      "Verify handle textbox is displayed and editable",
+      "Verify handle URL preview is shown (e.g., 'https://www.youtube.com/@tonyzhou3956')",
+      "Verify explanatory text mentions handle constraints"
+    ],
+    "passes": true,
+    "source_page": "customization",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/editing/profile"
+  },
+  {
+    "id": 145,
+    "category": "functional",
+    "description": "Pronouns section allows adding and managing pronouns",
+    "steps": [
+      "Navigate to Customization page Profile tab",
+      "Locate Pronouns section",
+      "Verify 'Add pronoun' button is present",
+      "Click 'Add pronoun' button",
+      "Verify pronoun search textbox appears",
+      "Verify 'Filter by language' dropdown is present",
+      "Verify visibility dropdown is present (e.g., 'Visible to only my subscribers')",
+      "Press Escape to close pronoun interface"
+    ],
+    "passes": true,
+    "source_page": "customization",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/editing/profile"
+  },
+  {
+    "id": 146,
+    "category": "functional",
+    "description": "Description section allows adding channel description with translations",
+    "steps": [
+      "Navigate to Customization page Profile tab",
+      "Locate Description section",
+      "Verify heading 'Description' is displayed",
+      "Verify descriptive text explains where description appears",
+      "Verify description textarea is present and editable",
+      "Verify 'Add language' button is present",
+      "Click 'Add language' button",
+      "Verify language selection interface appears",
+      "Press Escape to close interface"
+    ],
+    "passes": true,
+    "source_page": "customization",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/editing/profile"
+  },
+  {
+    "id": 147,
+    "category": "functional",
+    "description": "Channel URL section displays and allows copying channel URL",
+    "steps": [
+      "Navigate to Customization page Profile tab",
+      "Locate Channel URL section",
+      "Verify heading 'Channel URL' is displayed",
+      "Verify explanatory text about channel URL is present",
+      "Verify channel URL is displayed in read-only textbox",
+      "Verify Copy button is present",
+      "Click Copy button",
+      "Verify channel URL is copied to clipboard"
+    ],
+    "passes": true,
+    "source_page": "customization",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/editing/profile"
+  },
+  {
+    "id": 148,
+    "category": "functional",
+    "description": "Links section allows adding external links to channel",
+    "steps": [
+      "Navigate to Customization page Profile tab",
+      "Locate Links section",
+      "Verify heading 'Links' is displayed",
+      "Verify descriptive text explains link visibility",
+      "Verify 'Add link' button is present",
+      "Click 'Add link' button",
+      "Verify 'Link title (required)' textbox appears",
+      "Verify 'URL (required)' textbox appears",
+      "Verify 'Remove' button is present for new link",
+      "Verify 'Add link' button becomes disabled after clicking"
+    ],
+    "passes": true,
+    "source_page": "customization",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/editing/profile"
+  },
+  {
+    "id": 149,
+    "category": "functional",
+    "description": "Contact info section allows setting business email",
+    "steps": [
+      "Navigate to Customization page Profile tab",
+      "Locate Contact info section",
+      "Verify heading 'Contact info' is displayed",
+      "Verify descriptive text explains email visibility",
+      "Verify 'Email' label is displayed",
+      "Verify email address textbox is present and editable"
+    ],
+    "passes": true,
+    "source_page": "customization",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/editing/profile"
+  },
+  {
+    "id": 150,
+    "category": "functional",
+    "description": "Video watermark section allows uploading watermark for videos",
+    "steps": [
+      "Navigate to Customization page Profile tab",
+      "Locate Video watermark section",
+      "Verify heading 'Video watermark' is displayed",
+      "Verify descriptive text explains watermark placement: 'will appear on your videos in the right-hand corner'",
+      "Verify watermark placeholder or current watermark is displayed",
+      "Verify size recommendation is shown: '150 x 150 pixels is recommended'",
+      "Verify size limit is shown: '1MB or less'",
+      "Verify supported formats are listed: 'PNG, GIF (no animations), BMP, or JPEG'",
+      "Verify Upload button is present and clickable"
+    ],
+    "passes": true,
+    "source_page": "customization",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/editing/profile"
+  },
+  {
+    "id": 151,
+    "category": "functional",
+    "description": "Home tab tab allows enabling/disabling and customizing channel homepage layout",
+    "steps": [
+      "Navigate to Customization page",
+      "Click Home tab tab",
+      "Verify URL changes to /editing/hometab",
+      "Verify 'Home tab' heading and description are displayed",
+      "Verify 'Show Home Tab' switch is present",
+      "Verify switch is in unchecked/off state by default",
+      "Verify 'Add section' button is disabled when home tab is disabled",
+      "Verify section cards (For You, Videos, etc.) are visible but options are disabled"
+    ],
+    "passes": true,
+    "source_page": "customization",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/editing/hometab"
+  },
+  {
+    "id": 152,
+    "category": "functional",
+    "description": "Enabling Home Tab activates layout customization options",
+    "steps": [
+      "Navigate to Customization Home tab tab",
+      "Verify 'Show Home Tab' switch is unchecked",
+      "Click 'Show Home Tab' switch to enable it",
+      "Verify switch state changes to checked/active",
+      "Verify switch text changes to 'Hide Home Tab'",
+      "Verify 'Add section' button becomes enabled",
+      "Verify section options buttons (three dots) become enabled",
+      "Verify 'Publish' button becomes enabled",
+      "Verify 'Cancel' button becomes enabled"
+    ],
+    "passes": true,
+    "source_page": "customization",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/editing/hometab"
+  },
+  {
+    "id": 153,
+    "category": "functional",
+    "description": "Add section menu displays all available section types",
+    "steps": [
+      "Navigate to Customization Home tab tab",
+      "Enable Home Tab if not already enabled",
+      "Verify 'Add section' button is enabled",
+      "Click 'Add section' button",
+      "Verify add section menu opens with 16 section types",
+      "Verify 'Channel trailer' option is available",
+      "Verify 'Spotlight (for returning subscribers)' option is available",
+      "Verify 'Popular videos' option is available",
+      "Verify 'Live now' option is available",
+      "Verify 'Upcoming live streams' option is available",
+      "Verify 'Single playlist' option is available",
+      "Verify 'Multiple playlists' option is available",
+      "Verify 'Subscriptions' option is available",
+      "Verify 'Featured channels' option is available",
+      "Verify 'Top community clips' option is available",
+      "Verify already added sections (For You, Videos, Short videos, etc.) are disabled",
+      "Press Escape to close menu"
+    ],
+    "passes": true,
+    "source_page": "customization",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/editing/hometab"
+  },
+  {
+    "id": 154,
+    "category": "functional",
+    "description": "Section options menu allows removing sections",
+    "steps": [
+      "Navigate to Customization Home tab tab",
+      "Enable Home Tab if not already enabled",
+      "Locate 'For You' section card",
+      "Click section options button (three dots) on 'For You' section",
+      "Verify options menu opens",
+      "Verify 'Remove section' option is displayed",
+      "Click outside menu to close",
+      "Click section options button on 'Videos' section",
+      "Verify 'Remove section' option is displayed"
+    ],
+    "passes": true,
+    "source_page": "customization",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/editing/hometab"
+  },
+  {
+    "id": 155,
+    "category": "functional",
+    "description": "Section cards display content counts and status",
+    "steps": [
+      "Navigate to Customization Home tab tab",
+      "Enable Home Tab if not already enabled",
+      "Verify 'For You' section is displayed with description",
+      "Verify 'Videos (1)' section displays video count",
+      "Verify 'Short videos (0)' section displays zero count",
+      "Verify 'Past live streams (0)' section displays zero count",
+      "Verify 'Created playlists (1)' section displays playlist count with thumbnail",
+      "Verify 'Posts (0)' section displays zero count",
+      "Verify 'Collaborations (0)' section displays zero count",
+      "Verify empty sections show descriptive placeholder text (e.g., 'This section will appear after a short video has been uploaded')"
+    ],
+    "passes": true,
+    "source_page": "customization",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/editing/hometab"
+  },
+  {
+    "id": 156,
+    "category": "functional",
+    "description": "View channel button opens channel page in new tab",
+    "steps": [
+      "Navigate to Customization page (Profile or Home tab tab)",
+      "Locate 'View channel' button in top right",
+      "Verify 'View channel' button is present and clickable",
+      "Click 'View channel' button",
+      "Verify channel page opens in new tab",
+      "Close new tab and verify Customization page remains open"
+    ],
+    "passes": true,
+    "source_page": "customization",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/editing/profile"
+  },
+  {
+    "id": 157,
+    "category": "functional",
+    "description": "Cancel and Publish buttons manage unsaved changes",
+    "steps": [
+      "Navigate to Customization page Profile tab",
+      "Verify 'Cancel' button is present but disabled (no unsaved changes)",
+      "Verify 'Publish' button is present but disabled (no unsaved changes)",
+      "Make a change to channel name textbox",
+      "Verify 'Publish' button becomes enabled",
+      "Verify 'Cancel' button becomes enabled",
+      "Click 'Cancel' button",
+      "Verify changes are discarded and textbox reverts to original value"
+    ],
+    "passes": true,
+    "source_page": "customization",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/editing/profile"
+  },
+  {
+    "id": 158,
+    "category": "style",
+    "description": "Customization page has proper layout with tabs and action buttons",
+    "steps": [
+      "Navigate to Customization page",
+      "Verify page heading 'Channel customization' is prominently displayed",
+      "Verify tab navigation (Profile, Home tab) is visible and properly aligned",
+      "Verify 'View channel' button is positioned in top right",
+      "Verify 'Cancel' and 'Publish' buttons are positioned in top right",
+      "Verify main content area displays profile or home tab sections",
+      "Verify proper spacing between all elements"
+    ],
+    "passes": true,
+    "source_page": "customization",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/editing/profile"
+  },
+  {
+    "id": 159,
+    "category": "style",
+    "description": "Profile tab sections have consistent styling and layout",
+    "steps": [
+      "Navigate to Customization page Profile tab",
+      "Verify each section has clear heading",
+      "Verify sections have consistent spacing and padding",
+      "Verify descriptive text under headings is readable",
+      "Verify input fields and textboxes are properly aligned",
+      "Verify buttons have consistent styling",
+      "Verify images (banner, profile picture, watermark) are properly sized"
+    ],
+    "passes": true,
+    "source_page": "customization",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/editing/profile"
+  },
+  {
+    "id": 160,
+    "category": "style",
+    "description": "Home tab layout has visual consistency with section cards",
+    "steps": [
+      "Navigate to Customization Home tab tab",
+      "Enable Home Tab",
+      "Verify 'Layout' heading is displayed",
+      "Verify section cards have consistent styling",
+      "Verify each section card has heading with count (e.g., 'Videos (1)')",
+      "Verify section options button is positioned consistently",
+      "Verify section thumbnails are properly aligned",
+      "Verify empty state messages have consistent styling"
+    ],
+    "passes": true,
+    "source_page": "customization",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/editing/hometab"
+  },
+  {
+    "id": 161,
+    "category": "style",
+    "description": "Customization tabs have proper active and inactive states",
+    "steps": [
+      "Navigate to Customization page",
+      "Verify Profile tab is visually distinguished as active",
+      "Verify Home tab tab is in inactive state",
+      "Click Home tab tab",
+      "Verify Home tab tab becomes active state",
+      "Verify Profile tab changes to inactive state",
+      "Verify active tab has clear visual indicator (underline, background color)"
+    ],
+    "passes": true,
+    "source_page": "customization",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/editing/profile"
+  },
+  {
+    "id": 162,
+    "category": "style",
+    "description": "Modals and menus have proper styling and z-index",
+    "steps": [
+      "Navigate to Customization page Profile tab",
+      "Click 'Add pronoun' button",
+      "Verify pronoun selection interface appears above other content",
+      "Verify interface has proper borders and shadow",
+      "Press Escape to close",
+      "Click 'Add link' button",
+      "Verify link form appears with proper styling",
+      "Press Escape to close",
+      "Navigate to Home tab tab and enable it",
+      "Click 'Add section' button",
+      "Verify section menu has proper z-index and styling",
+      "Click section options button",
+      "Verify options menu has proper z-index and styling"
+    ],
+    "passes": true,
+    "source_page": "customization",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/editing/profile"
+  },
+  {
+    "id": 163,
+    "category": "style",
+    "description": "Customization page is responsive and adapts to screen size",
+    "steps": [
+      "Navigate to Customization page",
+      "Verify layout is properly displayed at 1600x900 viewport",
+      "Verify tab navigation remains accessible",
+      "Verify sections maintain readability when resized",
+      "Verify input fields and buttons remain accessible",
+      "Verify images scale appropriately",
+      "Verify proper spacing is maintained throughout"
+    ],
+    "passes": true,
+    "source_page": "customization",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/editing/profile"
+  },
+  {
+    "id": 164,
+    "category": "functional",
+    "description": "User can browse Music tab in Audio Library",
+    "steps": [
+      "Navigate to Audio Library page",
+      "Verify Music tab is selected by default",
+      "Verify list of music tracks is displayed",
+      "Verify each track shows title, genre, mood, artist, duration, license type, and added date",
+      "Verify play button is displayed for each track",
+      "Verify star button is displayed for each track"
+    ],
+    "passes": true,
+    "source_page": "audio-library",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/audiolibrary"
+  },
+  {
+    "id": 165,
+    "category": "functional",
+    "description": "User can switch between Music, Sound effects, and Starred tabs",
+    "steps": [
+      "Navigate to Audio Library page",
+      "Click on Sound effects tab",
+      "Verify sound effects list is displayed with categories",
+      "Click on Starred tab",
+      "Verify starred tracks list is displayed",
+      "Click on Music tab",
+      "Verify music tracks list is displayed"
+    ],
+    "passes": true,
+    "source_page": "audio-library",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/audiolibrary"
+  },
+  {
+    "id": 166,
+    "category": "functional",
+    "description": "User can filter audio tracks by genre",
+    "steps": [
+      "Navigate to Audio Library Music tab",
+      "Click on genre filter button (e.g., Hip-Hop & Rap)",
+      "Verify genre filter is applied",
+      "Verify results show only tracks from selected genre",
+      "Verify 'Genre: [genre]' filter chip is displayed",
+      "Click remove button on filter chip",
+      "Verify filter is removed and all tracks are shown"
+    ],
+    "passes": true,
+    "source_page": "audio-library",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/audiolibrary"
+  },
+  {
+    "id": 167,
+    "category": "functional",
+    "description": "User can filter audio tracks by mood using filter dialog",
+    "steps": [
+      "Navigate to Audio Library Music tab",
+      "Click in search box",
+      "Select 'Mood' from filter options",
+      "Verify mood filter dialog opens with mood options",
+      "Select 'Happy' mood checkbox",
+      "Click Apply button",
+      "Verify mood filter is applied",
+      "Verify results show only tracks with Happy mood"
+    ],
+    "passes": true,
+    "source_page": "audio-library",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/audiolibrary"
+  },
+  {
+    "id": 168,
+    "category": "functional",
+    "description": "User can star and unstar audio tracks",
+    "steps": [
+      "Navigate to Audio Library Music tab",
+      "Click star button on a track",
+      "Verify star button changes to 'Remove star'",
+      "Verify 'All changes saved' message appears",
+      "Navigate to Starred tab",
+      "Verify starred track appears in list",
+      "Return to Music tab",
+      "Click 'Remove star' button",
+      "Verify star button changes back to 'Add star'"
+    ],
+    "passes": true,
+    "source_page": "audio-library",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/audiolibrary"
+  },
+  {
+    "id": 169,
+    "category": "functional",
+    "description": "Starred tab shows empty state when no tracks are starred",
+    "steps": [
+      "Navigate to Audio Library page",
+      "Ensure no tracks are starred",
+      "Click on Starred tab",
+      "Verify empty state message is displayed",
+      "Verify message reads 'When you star audio tracks they'll appear here for you to find them easily.'"
+    ],
+    "passes": true,
+    "source_page": "audio-library",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/audiolibrary"
+  },
+  {
+    "id": 170,
+    "category": "functional",
+    "description": "User can preview audio tracks using play button",
+    "steps": [
+      "Navigate to Audio Library Music tab",
+      "Click play button on a track",
+      "Verify audio starts playing",
+      "Verify play button changes state",
+      "Click play button again to pause",
+      "Verify audio stops playing"
+    ],
+    "passes": true,
+    "source_page": "audio-library",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/audiolibrary"
+  },
+  {
+    "id": 171,
+    "category": "functional",
+    "description": "Sound effects tab displays sound effects by category",
+    "steps": [
+      "Navigate to Audio Library page",
+      "Click on Sound effects tab",
+      "Verify sound effects list is displayed",
+      "Verify categories include Ambiences, Transportation, Cartoon, Animals, Horror, Tools",
+      "Verify each effect shows name, duration, category, and added date",
+      "Verify play and download buttons are available"
+    ],
+    "passes": true,
+    "source_page": "audio-library",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/audiolibrary"
+  },
+  {
+    "id": 172,
+    "category": "functional",
+    "description": "User can filter sound effects by category",
+    "steps": [
+      "Navigate to Audio Library Sound effects tab",
+      "Click on category filter button (e.g., Ambiences)",
+      "Verify category filter is applied",
+      "Verify results show only sound effects from selected category",
+      "Verify category filter chip is displayed"
+    ],
+    "passes": true,
+    "source_page": "audio-library",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/audiolibrary"
+  },
+  {
+    "id": 173,
+    "category": "functional",
+    "description": "Pagination controls allow navigation through audio library",
+    "steps": [
+      "Navigate to Audio Library Music tab",
+      "Verify pagination controls are displayed at bottom",
+      "Verify current page and total results are shown",
+      "Click 'Next page' button",
+      "Verify next page of tracks is loaded",
+      "Click 'Previous page' button",
+      "Verify previous page is loaded"
+    ],
+    "passes": true,
+    "source_page": "audio-library",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/audiolibrary"
+  },
+  {
+    "id": 174,
+    "category": "style",
+    "description": "Audio Library page has proper layout and visual hierarchy",
+    "steps": [
+      "Navigate to Audio Library page",
+      "Verify page title 'Audio library' is displayed",
+      "Verify tab navigation is clearly visible",
+      "Verify search/filter bar is prominently placed",
+      "Verify table columns are properly aligned with headers",
+      "Verify track listings have consistent spacing",
+      "Verify pagination controls are positioned at bottom"
+    ],
+    "passes": true,
+    "source_page": "audio-library",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/audiolibrary"
+  },
+  {
+    "id": 175,
+    "category": "style",
+    "description": "Audio Library is responsive and adapts to screen size",
+    "steps": [
+      "Navigate to Audio Library page",
+      "Verify layout is properly displayed at 1600x900 viewport",
+      "Verify tab navigation remains accessible",
+      "Verify search/filter bar remains functional",
+      "Verify track list maintains readability",
+      "Verify buttons and links remain clickable"
+    ],
+    "passes": true,
+    "source_page": "audio-library",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/audiolibrary"
+  },
+  {
+    "id": 176,
+    "category": "functional",
+    "description": "Settings dialog opens when Settings button is clicked in sidebar",
+    "steps": [
+      "Navigate to YouTube Studio dashboard",
+      "Click Settings button in sidebar",
+      "Verify Settings dialog opens with proper heading",
+      "Verify all main tabs are visible: General, Channel, Upload defaults, Permissions, Community moderation, Agreements"
+    ],
+    "passes": true,
+    "source_page": "settings",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/settings"
+  },
+  {
+    "id": 177,
+    "category": "functional",
+    "description": "General settings tab displays currency selection option",
+    "steps": [
+      "Open Settings dialog",
+      "Click General tab",
+      "Verify Currency dropdown is displayed",
+      "Click Currency dropdown",
+      "Verify list of currency options is shown",
+      "Verify USD is selected by default"
+    ],
+    "passes": true,
+    "source_page": "settings",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/settings"
+  },
+  {
+    "id": 178,
+    "category": "functional",
+    "description": "Channel Basic Info tab allows setting country of residence",
+    "steps": [
+      "Open Settings dialog",
+      "Click Channel tab",
+      "Verify Basic Info sub-tab is selected by default",
+      "Verify Country of residence dropdown is displayed",
+      "Click Country dropdown",
+      "Verify list of countries is shown",
+      "Verify United States is selected"
+    ],
+    "passes": true,
+    "source_page": "settings",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/settings"
+  },
+  {
+    "id": 179,
+    "category": "functional",
+    "description": "Channel Basic Info tab allows adding keywords",
+    "steps": [
+      "Open Settings dialog and navigate to Channel > Basic Info",
+      "Locate Keywords text input field",
+      "Verify placeholder text 'Add keywords' is displayed",
+      "Verify help text 'Enter comma-separated values' is shown"
+    ],
+    "passes": true,
+    "source_page": "settings",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/settings"
+  },
+  {
+    "id": 180,
+    "category": "functional",
+    "description": "Channel Advanced Settings tab displays audience and content options",
+    "steps": [
+      "Open Settings dialog and navigate to Channel tab",
+      "Click Advanced Settings sub-tab",
+      "Verify 'Audience' section with made-for-kids options is displayed",
+      "Verify three radio buttons: Yes, No, Review per video",
+      "Verify 'I want to review this setting for every video' is selected by default"
+    ],
+    "passes": true,
+    "source_page": "settings",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/settings"
+  },
+  {
+    "id": 181,
+    "category": "functional",
+    "description": "Channel Advanced Settings displays Google Ads account linking option",
+    "steps": [
+      "Open Settings dialog and navigate to Channel > Advanced Settings",
+      "Locate Google Ads account linking section",
+      "Verify 'Link account' button is displayed",
+      "Verify explanatory text about Google Ads linking is shown"
+    ],
+    "passes": true,
+    "source_page": "settings",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/settings"
+  },
+  {
+    "id": 182,
+    "category": "functional",
+    "description": "Channel Advanced Settings provides automatic captions option",
+    "steps": [
+      "Open Settings dialog and navigate to Channel > Advanced Settings",
+      "Locate Automatic captions section",
+      "Verify checkbox for 'Don't show potentially inappropriate words' is displayed",
+      "Verify help text explaining auto-captioning mistakes is shown"
+    ],
+    "passes": true,
+    "source_page": "settings",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/settings"
+  },
+  {
+    "id": 183,
+    "category": "functional",
+    "description": "Channel Advanced Settings includes automatic dubbing option",
+    "steps": [
+      "Open Settings dialog and navigate to Channel > Advanced Settings",
+      "Locate Automatic dubbing section",
+      "Verify heading 'Automatic dubbing' is displayed",
+      "Verify explanatory text about early access is shown",
+      "Verify 'Enable' button is displayed"
+    ],
+    "passes": true,
+    "source_page": "settings",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/settings"
+  },
+  {
+    "id": 184,
+    "category": "functional",
+    "description": "Channel Advanced Settings provides advertisement options",
+    "steps": [
+      "Open Settings dialog and navigate to Channel > Advanced Settings",
+      "Locate Advertisements section",
+      "Verify checkbox for 'Disable interest-based ads' is displayed",
+      "Verify warning text about potential revenue reduction is shown"
+    ],
+    "passes": true,
+    "source_page": "settings",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/settings"
+  },
+  {
+    "id": 185,
+    "category": "functional",
+    "description": "Channel Advanced Settings provides clips option",
+    "steps": [
+      "Open Settings dialog and navigate to Channel > Advanced Settings",
+      "Locate Clips section",
+      "Verify checkbox for 'Allow viewers to clip my content' is displayed",
+      "Verify checkbox is checked by default",
+      "Verify explanatory text about clips is shown"
+    ],
+    "passes": true,
+    "source_page": "settings",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/settings"
+  },
+  {
+    "id": 186,
+    "category": "functional",
+    "description": "Channel Advanced Settings includes video quality enhancements",
+    "steps": [
+      "Open Settings dialog and navigate to Channel > Advanced Settings",
+      "Locate Video quality enhancements section",
+      "Verify checkbox for 'Let YouTube enhance visual quality' is displayed and checked",
+      "Verify checkbox for 'Let YouTube enhance audio quality' is displayed and checked",
+      "Verify Learn more link is provided"
+    ],
+    "passes": true,
+    "source_page": "settings",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/settings"
+  },
+  {
+    "id": 187,
+    "category": "functional",
+    "description": "Channel Advanced Settings includes third-party AI training option",
+    "steps": [
+      "Open Settings dialog and navigate to Channel > Advanced Settings",
+      "Locate Third-party training section",
+      "Verify checkbox for 'Allow third-party companies to train AI models using my channel content' is displayed",
+      "Verify checkbox is unchecked by default",
+      "Verify explanatory text about AI training is shown"
+    ],
+    "passes": true,
+    "source_page": "settings",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/settings"
+  },
+  {
+    "id": 188,
+    "category": "functional",
+    "description": "Channel Feature Eligibility tab displays feature tiers",
+    "steps": [
+      "Open Settings dialog and navigate to Channel tab",
+      "Click Feature Eligibility sub-tab",
+      "Verify three feature tiers are displayed: Standard features, Intermediate features, Advanced features",
+      "Verify Standard features shows 'Enabled' status",
+      "Verify Intermediate features shows 'Eligible' status",
+      "Verify Advanced features shows 'Eligible' status"
+    ],
+    "passes": true,
+    "source_page": "settings",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/settings"
+  },
+  {
+    "id": 189,
+    "category": "functional",
+    "description": "Upload Defaults Basic Info tab provides title and description fields",
+    "steps": [
+      "Open Settings dialog and navigate to Upload defaults tab",
+      "Verify Basic Info sub-tab is selected by default",
+      "Verify Title text input field is displayed with placeholder",
+      "Verify Description text input field is displayed with placeholder",
+      "Verify Visibility dropdown is displayed",
+      "Verify Tags input field is displayed"
+    ],
+    "passes": true,
+    "source_page": "settings",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/settings"
+  },
+  {
+    "id": 190,
+    "category": "functional",
+    "description": "Upload Defaults Advanced Settings provides video metadata options",
+    "steps": [
+      "Open Settings dialog and navigate to Upload defaults tab",
+      "Click Advanced Settings sub-tab",
+      "Verify Automatic chapters checkbox is displayed and checked",
+      "Verify License dropdown is displayed",
+      "Verify Category dropdown is displayed",
+      "Verify Video language dropdown is displayed",
+      "Verify Caption certification dropdown is displayed"
+    ],
+    "passes": true,
+    "source_page": "settings",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/settings"
+  },
+  {
+    "id": 191,
+    "category": "functional",
+    "description": "Upload Defaults Advanced Settings includes comments options",
+    "steps": [
+      "Open Settings dialog and navigate to Upload defaults > Advanced Settings",
+      "Locate Comments section",
+      "Verify Comments dropdown is displayed with 'On' selected",
+      "Verify Moderation dropdown is displayed with 'Basic' selected",
+      "Verify 'Show how many viewers like this video' checkbox is displayed and checked"
+    ],
+    "passes": true,
+    "source_page": "settings",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/settings"
+  },
+  {
+    "id": 192,
+    "category": "functional",
+    "description": "Permissions tab displays channel owner information",
+    "steps": [
+      "Open Settings dialog and navigate to Permissions tab",
+      "Verify 'Permissions for Tony zhou' heading is displayed",
+      "Verify Invite button is displayed",
+      "Verify explanatory text about permissions is shown",
+      "Verify table with Name and Role columns is displayed",
+      "Verify channel owner is listed with 'Owner' role"
+    ],
+    "passes": true,
+    "source_page": "settings",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/settings"
+  },
+  {
+    "id": 193,
+    "category": "functional",
+    "description": "Community Moderation Content Controls provides moderation settings",
+    "steps": [
+      "Open Settings dialog and navigate to Community moderation tab",
+      "Verify Content Controls sub-tab is selected by default",
+      "Verify 'Comments on new videos and posts' section is displayed",
+      "Verify Comments dropdown with 'On' is displayed",
+      "Verify Moderation dropdown with 'Basic' is displayed",
+      "Verify 'Messages in your live chat' section with Moderation dropdown is displayed"
+    ],
+    "passes": true,
+    "source_page": "settings",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/settings"
+  },
+  {
+    "id": 194,
+    "category": "functional",
+    "description": "Community Moderation Content Controls includes posts and blocked words settings",
+    "steps": [
+      "Open Settings dialog and navigate to Community moderation > Content Controls",
+      "Locate 'Posts in your Community' section",
+      "Verify Viewer posts dropdown with 'Off' is displayed",
+      "Verify Moderation dropdown with 'Basic' is displayed",
+      "Verify Who can post dropdown with 'Subscribers' is displayed",
+      "Verify Minimum subscription time dropdown is displayed",
+      "Verify Blocked words text input is displayed",
+      "Verify 'Hold comments with hashtags and URLs' checkbox is displayed"
+    ],
+    "passes": true,
+    "source_page": "settings",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/settings"
+  },
+  {
+    "id": 195,
+    "category": "functional",
+    "description": "Community Moderation User Management provides moderator management",
+    "steps": [
+      "Open Settings dialog and navigate to Community moderation tab",
+      "Click User Management sub-tab",
+      "Verify 'Managing moderators' section with Add managing moderator input is displayed",
+      "Verify 'Standard moderators' section with Add standard moderator input is displayed",
+      "Verify 'Approved users' section with Add approved user input is displayed",
+      "Verify 'Hidden users' section with Add hidden user input is displayed"
+    ],
+    "passes": true,
+    "source_page": "settings",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/settings"
+  },
+  {
+    "id": 196,
+    "category": "functional",
+    "description": "Community Moderation User Management includes live redirect settings",
+    "steps": [
+      "Open Settings dialog and navigate to Community moderation > User Management",
+      "Locate 'Live Redirect users' section",
+      "Verify 'All channels can redirect to my content' checkbox is displayed",
+      "Verify 'Channels I subscribe to can redirect to my content' checkbox is displayed and checked",
+      "Verify explanatory text about private subscriptions is shown",
+      "Verify 'Add a user for live redirect' text input is displayed"
+    ],
+    "passes": true,
+    "source_page": "settings",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/settings"
+  },
+  {
+    "id": 197,
+    "category": "functional",
+    "description": "Community Moderation Channel Guidelines provides verification option",
+    "steps": [
+      "Open Settings dialog and navigate to Community moderation tab",
+      "Click Channel Guidelines sub-tab",
+      "Verify heading 'Set guidelines for your channel' is displayed",
+      "Verify explanatory text about channel guidelines is shown",
+      "Verify Verify button is displayed",
+      "Verify Learn more link is provided"
+    ],
+    "passes": true,
+    "source_page": "settings",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/settings"
+  },
+  {
+    "id": 198,
+    "category": "functional",
+    "description": "Agreements tab displays terms of service information",
+    "steps": [
+      "Open Settings dialog and navigate to Agreements tab",
+      "Verify text about YouTube Terms of Service is displayed",
+      "Verify Learn more link to terms documentation is provided"
+    ],
+    "passes": true,
+    "source_page": "settings",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/settings"
+  },
+  {
+    "id": 199,
+    "category": "style",
+    "description": "Settings dialog has proper modal layout and styling",
+    "steps": [
+      "Open Settings dialog",
+      "Verify dialog is centered on screen with proper z-index",
+      "Verify heading 'Settings' is displayed at top",
+      "Verify left sidebar with main tabs is visible",
+      "Verify main content area displays selected tab content",
+      "Verify Cancel and Save buttons are at bottom right",
+      "Verify all sections have consistent spacing and alignment"
+    ],
+    "passes": true,
+    "source_page": "settings",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/settings"
+  },
+  {
+    "id": 200,
+    "category": "style",
+    "description": "Settings dropdown menus have consistent styling and behavior",
+    "steps": [
+      "Open Settings dialog and navigate to Channel > Basic Info",
+      "Click Country of residence dropdown",
+      "Verify dropdown list appears below trigger",
+      "Verify list items have proper hover states",
+      "Verify selected item is highlighted",
+      "Verify dropdown closes when clicking outside or pressing Escape"
+    ],
+    "passes": true,
+    "source_page": "settings",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/settings"
+  },
+  {
+    "id": 201,
+    "category": "functional",
+    "description": "Settings Save button is disabled until changes are made",
+    "steps": [
+      "Open Settings dialog",
+      "Navigate to any settings tab",
+      "Verify Save button is disabled initially",
+      "Make a change to any setting",
+      "Verify Save button becomes enabled",
+      "Verify Cancel button remains enabled throughout"
+    ],
+    "passes": true,
+    "source_page": "settings",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/settings"
+  },
+  {
+    "id": 202,
+    "category": "functional",
+    "description": "Settings Cancel button shows discard changes confirmation",
+    "steps": [
+      "Open Settings dialog",
+      "Make a change to any setting",
+      "Click Cancel button",
+      "Verify confirmation dialog 'Discard changes?' is displayed",
+      "Verify dialog has option to confirm or cancel"
+    ],
+    "passes": true,
+    "source_page": "settings",
+    "source_url": "https://studio.youtube.com/channel/UCtxQrYzeMBCKMAofCgcY5dA/settings"
+  },
+  {
+    "id": 203,
+    "category": "functional",
+    "description": "Voice search should work instead of showing placeholder",
+    "steps": [
+      "Navigate to any page with Voice search button",
+      "Click the 'Voice search' button",
+      "Verify it performs expected action: Open voice search interface",
+      "Verify no placeholder message is shown"
+    ],
+    "passes": true,
+    "source": "audit",
+    "audit_issue": "placeholder",
+    "element": "Voice search"
+  },
+  {
+    "id": 204,
+    "category": "functional",
+    "description": "Shorts navigation link should work",
+    "steps": [
+      "Navigate to home page",
+      "Locate 'Shorts' in sidebar",
+      "Click on Shorts",
+      "Verify navigation occurs to Shorts page"
+    ],
+    "passes": true,
+    "source": "audit",
+    "audit_issue": "no_response",
+    "element": "Shorts"
+  },
+  {
+    "id": 205,
+    "category": "functional",
+    "description": "Music navigation link should work",
+    "steps": [
+      "Navigate to home page",
+      "Locate 'Music' in sidebar",
+      "Click on Music",
+      "Verify navigation occurs to Music page"
+    ],
+    "passes": true,
+    "source": "audit",
+    "audit_issue": "no_response",
+    "element": "Music"
+  },
+  {
+    "id": 206,
+    "category": "functional",
+    "description": "Gaming navigation link should work",
+    "steps": [
+      "Navigate to home page",
+      "Locate 'Gaming' in sidebar",
+      "Click on Gaming",
+      "Verify navigation occurs to Gaming page"
+    ],
+    "passes": true,
+    "source": "audit",
+    "audit_issue": "no_response",
+    "element": "Gaming"
+  },
+  {
+    "id": 207,
+    "category": "functional",
+    "description": "News navigation link should work",
+    "steps": [
+      "Navigate to home page",
+      "Locate 'News' in sidebar",
+      "Click on News",
+      "Verify navigation occurs to News page"
+    ],
+    "passes": true,
+    "source": "audit",
+    "audit_issue": "no_response",
+    "element": "News"
+  },
+  {
+    "id": 208,
+    "category": "functional",
+    "description": "Sports navigation link should work",
+    "steps": [
+      "Navigate to home page",
+      "Locate 'Sports' in sidebar",
+      "Click on Sports",
+      "Verify navigation occurs to Sports page"
+    ],
+    "passes": true,
+    "source": "audit",
+    "audit_issue": "no_response",
+    "element": "Sports"
+  },
+  {
+    "id": 209,
+    "category": "functional",
+    "description": "Learning navigation link should work",
+    "steps": [
+      "Navigate to home page",
+      "Locate 'Learning' in sidebar",
+      "Click on Learning",
+      "Verify navigation occurs to Learning page"
+    ],
+    "passes": true,
+    "source": "audit",
+    "audit_issue": "no_response",
+    "element": "Learning"
+  },
+  {
+    "id": 210,
+    "category": "functional",
+    "description": "Show 5 more should work instead of showing placeholder",
+    "steps": [
+      "Navigate to any page with Show 5 more button",
+      "Click the 'Show 5 more' button",
+      "Verify it performs expected action: Expand subscription list to show 5 more channels",
+      "Verify no placeholder message is shown"
+    ],
+    "passes": true,
+    "source": "audit",
+    "audit_issue": "placeholder",
+    "element": "Show 5 more"
+  },
+  {
+    "id": 211,
+    "category": "functional",
+    "description": "Sign out should work instead of showing placeholder",
+    "steps": [
+      "Navigate to any page with Sign out button",
+      "Click the 'Sign out' button",
+      "Verify it performs expected action: Sign out user and redirect to login",
+      "Verify no placeholder message is shown"
+    ],
+    "passes": true,
+    "source": "audit",
+    "audit_issue": "placeholder",
+    "element": "Sign out"
+  },
+  {
+    "id": 212,
+    "category": "visual",
+    "description": "Show 5 more button should be visible and clickable",
+    "steps": [
+      "Navigate to page with 'Show 5 more' button",
+      "Verify button is within viewport",
+      "Verify button is clickable",
+      "Verify button responds to clicks"
+    ],
+    "passes": true,
+    "source": "audit",
+    "audit_issue": "visual_bug",
+    "element": "Show 5 more"
+  },
+  {
+    "id": 213,
+    "category": "functional",
+    "description": "Favorite Tech Videos navigation link should work",
+    "steps": [
+      "Navigate to home page",
+      "Locate 'Favorite Tech Videos' in sidebar",
+      "Click on Favorite Tech Videos",
+      "Verify navigation occurs to Favorite Tech Videos page"
+    ],
+    "passes": true,
+    "source": "audit",
+    "audit_issue": "no_response",
+    "element": "Favorite Tech Videos"
+  },
+  {
+    "id": 214,
+    "category": "visual",
+    "description": "Show 4 more button should be visible and clickable",
+    "steps": [
+      "Navigate to page with 'Show 4 more' button",
+      "Verify button is within viewport",
+      "Verify button is clickable",
+      "Verify button responds to clicks"
+    ],
+    "passes": true,
+    "source": "audit",
+    "audit_issue": "visual_bug",
+    "element": "Show 4 more"
+  },
+  {
+    "id": 215,
+    "category": "functional",
+    "description": "Help should work instead of showing placeholder",
+    "steps": [
+      "Navigate to any page with Help button",
+      "Click the 'Help' button",
+      "Verify it performs expected action: Open help menu or documentation",
+      "Verify no placeholder message is shown"
+    ],
+    "passes": true,
+    "source": "audit",
+    "audit_issue": "placeholder",
+    "element": "Help"
+  },
+  {
+    "id": 216,
+    "category": "functional",
+    "description": "Notifications should work instead of showing placeholder",
+    "steps": [
+      "Navigate to any page with Notifications button",
+      "Click the 'Notifications' button",
+      "Verify it performs expected action: Open notifications panel",
+      "Verify no placeholder message is shown"
+    ],
+    "passes": true,
+    "source": "audit",
+    "audit_issue": "placeholder",
+    "element": "Notifications"
+  },
+  {
+    "id": 217,
+    "category": "functional",
+    "description": "Go live should work instead of showing placeholder",
+    "steps": [
+      "Navigate to any page with Go live button",
+      "Click the 'Go live' button",
+      "Verify it performs expected action: Open live streaming setup",
+      "Verify no placeholder message is shown"
+    ],
+    "passes": true,
+    "source": "audit",
+    "audit_issue": "placeholder",
+    "element": "Go live"
+  },
+  {
+    "id": 218,
+    "category": "functional",
+    "description": "Create post should work instead of showing placeholder",
+    "steps": [
+      "Navigate to any page with Create post button",
+      "Click the 'Create post' button",
+      "Verify it performs expected action: Open community post creation interface",
+      "Verify no placeholder message is shown"
+    ],
+    "passes": true,
+    "source": "audit",
+    "audit_issue": "placeholder",
+    "element": "Create post"
+  },
+  {
+    "id": 219,
+    "category": "functional",
+    "description": "Watch on YouTube should work instead of showing placeholder",
+    "steps": [
+      "Navigate to any page with Watch on YouTube button",
+      "Click the 'Watch on YouTube' button",
+      "Verify it performs expected action: Navigate to Creator Insider video",
+      "Verify no placeholder message is shown"
+    ],
+    "passes": true,
+    "source": "audit",
+    "audit_issue": "placeholder",
+    "element": "Watch on YouTube"
+  },
+  {
+    "id": 220,
+    "category": "functional",
+    "description": "A (Profile button) should work instead of showing placeholder",
+    "steps": [
+      "Navigate to any page with A (Profile button) button",
+      "Click the 'A (Profile button)' button",
+      "Verify it performs expected action: Open account/profile menu",
+      "Verify no placeholder message is shown"
+    ],
+    "passes": true,
+    "source": "audit",
+    "audit_issue": "placeholder",
+    "element": "A (Profile button)"
+  },
+  {
+    "id": 221,
+    "category": "functional",
+    "description": "New playlist should work instead of showing placeholder",
+    "steps": [
+      "Navigate to any page with New playlist button",
+      "Click the 'New playlist' button",
+      "Verify it performs expected action: Open playlist creation dialog",
+      "Verify no placeholder message is shown"
+    ],
+    "passes": true,
+    "source": "audit",
+    "audit_issue": "placeholder",
+    "element": "New playlist"
+  },
+  {
+    "id": 222,
+    "category": "functional",
+    "description": "New podcast should work instead of showing placeholder",
+    "steps": [
+      "Navigate to any page with New podcast button",
+      "Click the 'New podcast' button",
+      "Verify it performs expected action: Open podcast creation dialog",
+      "Verify no placeholder message is shown"
+    ],
+    "passes": true,
+    "source": "audit",
+    "audit_issue": "placeholder",
+    "element": "New podcast"
+  },
+  {
+    "id": 223,
+    "category": "functional",
+    "description": "Profile button should work instead of showing placeholder",
+    "steps": [
+      "Navigate to any page with Profile button button",
+      "Click the 'Profile button' button",
+      "Verify it performs expected action: Open account/profile menu",
+      "Verify no placeholder message is shown"
+    ],
+    "passes": true,
+    "source": "audit",
+    "audit_issue": "placeholder",
+    "element": "Profile button"
+  },
+  {
+    "id": 224,
+    "category": "functional",
+    "description": "Request (access to streaming) should work instead of showing placeholder",
+    "steps": [
+      "Navigate to any page with Request (access to streaming) button",
+      "Click the 'Request (access to streaming)' button",
+      "Verify it performs expected action: Submit request for live streaming access",
+      "Verify no placeholder message is shown"
+    ],
+    "passes": true,
+    "source": "audit",
+    "audit_issue": "placeholder",
+    "element": "Request (access to streaming)"
+  },
+  {
+    "id": 225,
+    "category": "functional",
+    "description": "Create a post should work instead of showing placeholder",
+    "steps": [
+      "Navigate to any page with Create a post button",
+      "Click the 'Create a post' button",
+      "Verify it performs expected action: Open community post creation dialog",
+      "Verify no placeholder message is shown"
+    ],
+    "passes": true,
+    "source": "audit",
+    "audit_issue": "placeholder",
+    "element": "Create a post"
+  },
+  {
+    "id": 226,
+    "category": "functional",
+    "description": "Get started should work instead of showing placeholder",
+    "steps": [
+      "Navigate to any page with Get started button",
+      "Click the 'Get started' button",
+      "Verify it performs expected action: Open promotions setup",
+      "Verify no placeholder message is shown"
+    ],
+    "passes": true,
+    "source": "audit",
+    "audit_issue": "placeholder",
+    "element": "Get started"
+  },
+  {
+    "id": 227,
+    "category": "functional",
+    "description": "Upload file (thumbnail) should work instead of showing placeholder",
+    "steps": [
+      "Navigate to any page with Upload file (thumbnail) button",
+      "Click the 'Upload file (thumbnail)' button",
+      "Verify it performs expected action: Open file picker for thumbnail upload",
+      "Verify no placeholder message is shown"
+    ],
+    "passes": true,
+    "source": "audit",
+    "audit_issue": "placeholder",
+    "element": "Upload file (thumbnail)"
+  },
+  {
+    "id": 228,
+    "category": "functional",
+    "description": "Subtitles should work instead of showing placeholder",
+    "steps": [
+      "Navigate to any page with Subtitles button",
+      "Click the 'Subtitles' button",
+      "Verify it performs expected action: Open subtitles editor",
+      "Verify no placeholder message is shown"
+    ],
+    "passes": true,
+    "source": "audit",
+    "audit_issue": "placeholder",
+    "element": "Subtitles"
+  },
+  {
+    "id": 229,
+    "category": "functional",
+    "description": "Trim & cut should work instead of showing placeholder",
+    "steps": [
+      "Navigate to any page with Trim & cut button",
+      "Click the 'Trim & cut' button",
+      "Verify it performs expected action: Open video trimming tool",
+      "Verify no placeholder message is shown"
+    ],
+    "passes": true,
+    "source": "audit",
+    "audit_issue": "placeholder",
+    "element": "Trim & cut"
+  },
+  {
+    "id": 230,
+    "category": "functional",
+    "description": "Options should work instead of showing placeholder",
+    "steps": [
+      "Navigate to any page with Options button",
+      "Click the 'Options' button",
+      "Verify it performs expected action: Open video options menu",
+      "Verify no placeholder message is shown"
+    ],
+    "passes": true,
+    "source": "audit",
+    "audit_issue": "placeholder",
+    "element": "Options"
+  },
+  {
+    "id": 231,
+    "category": "functional",
+    "description": "Send feedback should perform correct action",
+    "steps": [
+      "Navigate to page with 'Send feedback'",
+      "Click 'Send feedback'",
+      "Verify expected behavior: Open feedback form or modal",
+      "Verify correct page/modal is shown"
+    ],
+    "passes": true,
+    "source": "audit",
+    "audit_issue": "incomplete",
+    "element": "Send feedback"
+  },
+  {
+    "id": 232,
+    "category": "technical",
+    "description": "Console error in studio_content should be fixed",
+    "steps": [
+      "Navigate to http://localhost:5173/studio/content",
+      "Open browser console",
+      "Verify no errors are present",
+      "Interact with page elements",
+      "Verify no errors occur during interaction"
+    ],
+    "passes": true,
+    "source": "audit",
+    "audit_issue": "console_error",
+    "page": "studio_content"
+  },
+  {
+    "id": 233,
+    "category": "functional",
+    "description": "More options should work instead of showing placeholder",
+    "steps": [
+      "Navigate to any page with More options button",
+      "Click the 'More options' button",
+      "Verify it performs expected action: Open video options menu",
+      "Verify no placeholder message is shown"
+    ],
+    "passes": true,
+    "source": "audit",
+    "audit_issue": "placeholder",
+    "element": "More options"
+  },
+  {
+    "id": 234,
+    "category": "visual",
+    "description": "Show 6 more button should be visible and clickable",
+    "steps": [
+      "Navigate to page with 'Show 6 more' button",
+      "Verify button is within viewport",
+      "Verify button is clickable",
+      "Verify button responds to clicks"
+    ],
+    "passes": true,
+    "source": "audit",
+    "audit_issue": "visual_bug",
+    "element": "Show 6 more"
+  }
+]
