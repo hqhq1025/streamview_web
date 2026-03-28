@@ -1065,58 +1065,51 @@ export default function VideoEdit({ video, onBack, initialTab = 'details', onNot
           {activeTab === 'details' && (
             <div className="space-y-6">
               <div className="bg-white border border-[#e5e5e5] rounded-md overflow-hidden">
-                <div className="relative bg-black aspect-video">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center">
-                      <svg viewBox="0 0 24 24" className="w-16 h-16 mx-auto mb-2 fill-white/70">
-                        <path d="M10 16.5l6-4.5-6-4.5v9zM5 20h14a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1zM5 5h14v14H5V5z"></path>
-                      </svg>
-                      <p className="text-white/70 text-sm">Video preview</p>
-                    </div>
-                  </div>
-
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                    <div className="flex items-center gap-4">
-                      <button
-                        className="w-10 h-10 flex items-center justify-center rounded-full bg-white/90 hover:bg-white text-black transition-colors"
-                        title="Play"
-                        onClick={() => onNotImplemented?.('Video preview')}
-                      >
-                        <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current">
-                          <path d="M8 5v14l11-7z"></path>
-                        </svg>
-                      </button>
-
-                      <div className="flex-1 flex items-center gap-3">
-                        <span className="text-white text-xs font-medium">0:00</span>
-                        <div className="flex-1 h-1 bg-white/30 rounded-full overflow-hidden">
-                          <div className="h-full w-0 bg-red-600 rounded-full"></div>
+                {(() => {
+                  const playerSource = video?.videoUrl || video?.asset?.url || video?.watchUrl;
+                  const isFileVideo = (source) => {
+                    if (!source) return false;
+                    if (video?.origin === 'studio') return true;
+                    const lower = source.toLowerCase();
+                    if (lower.includes('youtube.com/embed/') || lower.includes('youtube-nocookie.com/embed/')) {
+                      return false;
+                    }
+                    if (lower.includes('/api/files/') || lower.startsWith('blob:') || lower.startsWith('data:')) {
+                      return true;
+                    }
+                    return /\.(mp4|webm|ogg)(\?|$)/.test(lower);
+                  };
+                  return (
+                    <div className="relative bg-black aspect-video">
+                      {playerSource && isFileVideo(playerSource) ? (
+                        <video
+                          className="w-full h-full"
+                          src={playerSource}
+                          controls
+                          playsInline
+                        />
+                      ) : playerSource ? (
+                        <iframe
+                          className="w-full h-full"
+                          src={playerSource}
+                          title={video?.title || 'Video preview'}
+                          loading="lazy"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        />
+                      ) : (
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="text-center">
+                            <svg viewBox="0 0 24 24" className="w-16 h-16 mx-auto mb-2 fill-white/70">
+                              <path d="M10 16.5l6-4.5-6-4.5v9zM5 20h14a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1zM5 5h14v14H5V5z"></path>
+                            </svg>
+                            <p className="text-white/70 text-sm">No video source available</p>
+                          </div>
                         </div>
-                        <span className="text-white text-xs font-medium">0:00</span>
-                      </div>
-
-                      <button
-                        className="text-white hover:text-white/80 transition-colors"
-                        title="Volume"
-                        onClick={() => onNotImplemented?.('Volume control')}
-                      >
-                        <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current">
-                          <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"></path>
-                        </svg>
-                      </button>
-
-                      <button
-                        className="text-white hover:text-white/80 transition-colors"
-                        title="Fullscreen"
-                        onClick={() => onNotImplemented?.('Fullscreen')}
-                      >
-                        <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current">
-                          <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"></path>
-                        </svg>
-                      </button>
+                      )}
                     </div>
-                  </div>
-                </div>
+                  );
+                })()}
               </div>
 
               <div className="bg-white border border-[#e5e5e5] rounded-md p-6 space-y-6">
