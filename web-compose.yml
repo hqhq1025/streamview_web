@@ -20,7 +20,7 @@ services:
     networks:
       - web
     labels:
-      caddy: "streamview.${HOST_SUFFIX:-localhost}, studio.streamview.${HOST_SUFFIX:-localhost}"
+      caddy: "${CADDY_SCHEME-http://}streamview.${HOST_SUFFIX:-localhost}, ${CADDY_SCHEME-http://}studio.streamview.${HOST_SUFFIX:-localhost}"
       caddy.0_reverse_proxy: "/api* streamview_web_backend:8000"
       caddy.1_reverse_proxy: "/mcp* streamview_web_backend:8000"
       caddy.2_reverse_proxy: "streamview_web_frontend:80"
