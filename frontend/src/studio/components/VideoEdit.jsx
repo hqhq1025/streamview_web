@@ -8,6 +8,20 @@ import {
   parseDurationToSeconds,
 } from '../utils/metrics';
 
+const VISIBILITY_LABELS = {
+  public: 'Public',
+  unlisted: 'Unlisted',
+  private: 'Private',
+  scheduled: 'Scheduled',
+};
+
+const VISIBILITY_DESCRIPTIONS = {
+  public: 'Everyone can watch your video',
+  unlisted: 'Anyone with the video link can watch your video',
+  private: 'Only you and people you choose can watch your video',
+  scheduled: 'Your video will go public at a scheduled time',
+};
+
 function ClipsTab({ onNotImplemented }) {
   return (
     <div>
@@ -930,7 +944,7 @@ export default function VideoEdit({ video, onBack, initialTab = 'details', onNot
   const [formData, setFormData] = useState({
     title: video?.title || 'Untitled Video',
     description: video?.description || '',
-    visibility: video?.visibility || 'Public'
+    visibility: String(video?.visibility || 'public').toLowerCase()
   });
 
   // Handler for uploading thumbnail
@@ -961,7 +975,7 @@ export default function VideoEdit({ video, onBack, initialTab = 'details', onNot
     setFormData({
       title: video?.title || 'Untitled Video',
       description: video?.description || '',
-      visibility: video?.visibility || 'Public',
+      visibility: String(video?.visibility || 'public').toLowerCase(),
     });
     setHasChanges(false);
   }, [video]);
@@ -1002,7 +1016,7 @@ export default function VideoEdit({ video, onBack, initialTab = 'details', onNot
     setFormData({
       title: video?.title || 'Untitled Video',
       description: video?.description || '',
-      visibility: video?.visibility || 'Public',
+      visibility: String(video?.visibility || 'public').toLowerCase(),
     });
     setHasChanges(false);
   };
@@ -1202,13 +1216,10 @@ export default function VideoEdit({ video, onBack, initialTab = 'details', onNot
                 <div className="flex items-center justify-between p-4 border border-[#e5e5e5] rounded hover:bg-[#f9f9f9]">
                   <div>
                     <div className="text-sm font-medium text-[#0d0d0d] mb-1">
-                      {formData.visibility}
+                      {VISIBILITY_LABELS[formData.visibility] || 'Public'}
                     </div>
                     <div className="text-xs text-[#606060]">
-                      {formData.visibility === 'Public' && 'Everyone can watch your video'}
-                      {formData.visibility === 'Private' && 'Only you and people you choose can watch your video'}
-                      {formData.visibility === 'Unlisted' && 'Anyone with the video link can watch your video'}
-                      {formData.visibility === 'Scheduled' && 'Your video will go public at a scheduled time'}
+                      {VISIBILITY_DESCRIPTIONS[formData.visibility] || VISIBILITY_DESCRIPTIONS.public}
                     </div>
                   </div>
                   <button
@@ -1347,7 +1358,7 @@ export default function VideoEdit({ video, onBack, initialTab = 'details', onNot
               </div>
             </div>
             <div className="p-6 space-y-4">
-              {['Public', 'Private', 'Unlisted', 'Scheduled'].map((visibility) => (
+              {['public', 'private', 'unlisted', 'scheduled'].map((visibility) => (
                 <label key={visibility} className="flex items-start gap-4 p-4 border border-[#e5e5e5] rounded hover:bg-[#f9f9f9] cursor-pointer">
                   <input
                     type="radio"
@@ -1358,13 +1369,8 @@ export default function VideoEdit({ video, onBack, initialTab = 'details', onNot
                     className="mt-1 w-4 h-4"
                   />
                   <div className="flex-1">
-                    <div className="text-sm font-medium text-[#0d0d0d] mb-1">{visibility}</div>
-                    <div className="text-xs text-[#606060]">
-                      {visibility === 'Public' && 'Everyone can watch your video'}
-                      {visibility === 'Private' && 'Only you and people you choose can watch your video'}
-                      {visibility === 'Unlisted' && 'Anyone with the video link can watch your video'}
-                      {visibility === 'Scheduled' && 'Your video will go public at a scheduled time'}
-                    </div>
+                    <div className="text-sm font-medium text-[#0d0d0d] mb-1">{VISIBILITY_LABELS[visibility]}</div>
+                    <div className="text-xs text-[#606060]">{VISIBILITY_DESCRIPTIONS[visibility]}</div>
                   </div>
                 </label>
               ))}

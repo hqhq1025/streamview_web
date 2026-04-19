@@ -2,7 +2,6 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { api } from "../apiClient";
 import { DataProvider, useData } from "../context/DataContext";
-import { md5FromArrayBuffer } from "./utils/md5";
 import { getVideoId } from "./utils/metrics";
 import TopBar from "./components/TopBar";
 import Sidebar from "./components/Sidebar";
@@ -64,7 +63,7 @@ const buildSlug = (value) =>
     .replace(/\s+/g, "-");
 
 function StudioShell() {
-  const { state, data, loading, refreshState, showToast } = useData();
+  const { state, data, loading, refreshState, showToast, uploadVideo } = useData();
   const location = useLocation();
   const navigate = useNavigate();
   const [isBusy, setIsBusy] = useState(false);
@@ -149,81 +148,61 @@ function StudioShell() {
     });
   }, [data, creatorChannelId]);
 
-  const handleUpload = async ({ file, visibility, title, description, onProgress } = {}) => {
+  const handleUpload = async ({ file, visibility, title, description, tags, onProgress } = {}) => {
     if (!file) return;
     try {
       setIsBusy(true);
       if (typeof onProgress === "function") {
         onProgress(null);
       }
-      const arrayBuffer = file.arrayBuffer
-        ? await file.arrayBuffer()
-        : await new Promise((resolve, reject) => {
-            const reader = new FileReader();
-            reader.onload = () => resolve(reader.result);
-            reader.onerror = () => reject(new Error("Failed to read file."));
-            reader.readAsArrayBuffer(file);
-          });
-      if (!(arrayBuffer instanceof ArrayBuffer)) {
-        throw new Error("Failed to read file data.");
-      }
-      const contentMd5 = md5FromArrayBuffer(arrayBuffer);
 
-      const uploadResponse = await api.uploadFiles([file], { onProgress });
-      const uploaded = uploadResponse?.files?.[0];
-      if (!uploaded) {
-        throw new Error("Upload failed.");
-      }
-
-      const nextVisibility = visibility || "Public";
-      const nextTitle = (title || file.name || "Untitled").trim();
+      const nextTitle = (title || file.name || "Untitled").trim() || "Untitled upload";
       const nextDescription = (description || "").trim();
+      const tagString = Array.isArray(tags) ? tags.join(",") : (tags || "");
+
+      const nextVisibility = String(visibility || "public").toLowerCase();
+      const uploadResponse = await uploadVideo(
+        { file, title: nextTitle, description: nextDescription, tags: tagString, visibility: nextVisibility },
+        { onProgress },
+      );
+      const uploadedVideos = uploadResponse?.state?.data?.videos || [];
+      const newVideo = [...uploadedVideos].reverse().find((v) => v?.title === nextTitle);
+      if (!newVideo) {
+        throw new Error("Upload succeeded but video record not found.");
+      }
+
       const now = new Date().toISOString();
-      const videoSeed = uploaded.id || `${Date.now()}`;
-      const safeTitle = nextTitle || "Untitled upload";
-      const thumbnailSeed = encodeURIComponent(videoSeed);
-      const currentVideos = data?.videos || [];
+      const assetUrl = newVideo.asset?.url || "";
+      const thumbnailSeed = encodeURIComponent(newVideo.id);
+
+      const enrichedVideos = uploadedVideos.map((video) =>
+        video?.id === newVideo.id
+          ? {
+              ...video,
+              videoId: `upload-${video.id}`,
+              visibility: nextVisibility,
+              uploadDate: now,
+              channelId: creatorChannelId,
+              channelName: creatorName || "Your Channel",
+              channelAvatar: creatorAvatar,
+              thumbnail: `https://picsum.photos/seed/${thumbnailSeed}/640/360`,
+              duration: "0:00",
+              viewCount: 0,
+              likeCount: 0,
+              dislikeCount: 0,
+              commentCount: 0,
+              category: "Uploads",
+              youtubeId: video.id.replace(/^vid_/, "").slice(0, 11),
+              videoUrl: assetUrl,
+              watchUrl: assetUrl,
+              origin: "studio",
+              title_slug: buildSlug(nextTitle),
+            }
+          : video
+      );
+
       const currentChannels = data?.channels || [];
-      const nextVideoId = `upload-${videoSeed}`;
-      const nextVideos = [
-        ...currentVideos,
-        {
-          id: uploaded.id,
-          videoId: nextVideoId,
-          title: nextTitle,
-          description: nextDescription,
-          visibility: nextVisibility,
-          status: "draft",
-          uploaded_at: now,
-          uploadDate: now,
-          channelId: creatorChannelId,
-          channelName: creatorName || "Your Channel",
-          channelAvatar: creatorAvatar,
-          thumbnail: `https://picsum.photos/seed/${thumbnailSeed}/640/360`,
-          duration: "0:00",
-          viewCount: 0,
-          likeCount: 0,
-          dislikeCount: 0,
-          commentCount: 0,
-          category: "Uploads",
-          tags: ["studio", "upload"],
-          youtubeId: videoSeed.slice(0, 11),
-          videoUrl: uploaded.url,
-          watchUrl: uploaded.url,
-          origin: "studio",
-          asset: {
-            id: uploaded.id,
-            original_filename: uploaded.name || file.name,
-            stored_filename: uploaded.filename,
-            content_type: uploaded.type || file.type || "application/octet-stream",
-            size_bytes: file.size,
-            url: uploaded.url,
-            content_md5: contentMd5,
-          },
-          title_slug: buildSlug(safeTitle),
-        },
-      ];
-      const creatorVideoCount = nextVideos.filter((video) => {
+      const creatorVideoCount = enrichedVideos.filter((video) => {
         if (!video) return false;
         if (video.origin === "studio") return true;
         if (!video.channelId) return true;
@@ -254,12 +233,8 @@ function StudioShell() {
               videos: [],
             },
           ];
-      const nextComments = {
-        ...(data?.comments || {}),
-        [nextVideoId]: data?.comments?.[nextVideoId] || [],
-      };
 
-      await api.patchState({ videos: nextVideos, channels: nextChannels, comments: nextComments });
+      await api.patchState({ videos: enrichedVideos, channels: nextChannels });
       await refreshState();
       navigate("/studio/content");
       showToast("Video uploaded");

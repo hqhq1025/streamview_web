@@ -3,9 +3,10 @@ import React, { useState } from 'react';
 export default function UploadModal({ onClose, onUpload, onNotImplemented }) {
   const [step, setStep] = useState(0); // 0: Select, 1: Details, 2: Elements, 3: Checks, 4: Visibility
   const [file, setFile] = useState(null);
-  const [visibility, setVisibility] = useState("Public");
+  const [visibility, setVisibility] = useState("public");
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+  const [tags, setTags] = useState("");
   const [isUploading, setIsUploading] = useState(false);
   const [uploadProgress, setUploadProgress] = useState(null);
   const [uploadError, setUploadError] = useState("");
@@ -16,7 +17,8 @@ export default function UploadModal({ onClose, onUpload, onNotImplemented }) {
       setFile(nextFile);
       setTitle(nextFile.name);
       setDescription("");
-      setVisibility("Public");
+      setTags("");
+      setVisibility("public");
       setUploadProgress(null);
       setUploadError("");
       setIsUploading(false);
@@ -33,9 +35,10 @@ export default function UploadModal({ onClose, onUpload, onNotImplemented }) {
       if (onUpload) {
         await onUpload({
           file,
-          visibility,
+          visibility: String(visibility || "public").toLowerCase(),
           title,
           description,
+          tags,
           onProgress: (progress) => {
             if (typeof progress === "number" && Number.isFinite(progress)) {
               setUploadProgress(Math.min(100, Math.max(0, progress)));
@@ -174,6 +177,20 @@ export default function UploadModal({ onClose, onUpload, onNotImplemented }) {
                 </div>
                 
                 <div className="space-y-2">
+                  <label className="text-sm text-[#606060]">Tags</label>
+                  <p className="text-xs text-[#606060] mb-2">Separate tags with commas (e.g. pudding, cream_soup, egypt).</p>
+                  <div className="border border-[#cccccc] rounded p-2 focus-within:border-[#065fd4]">
+                    <input
+                      type="text"
+                      className="w-full bg-transparent text-[#0d0d0d] outline-none"
+                      placeholder="tag1, tag2, tag3"
+                      value={tags}
+                      onChange={(event) => setTags(event.target.value)}
+                    />
+                  </div>
+                </div>
+
+                <div className="space-y-2">
                   <label className="text-sm text-[#606060]">Thumbnail</label>
                   <p className="text-xs text-[#606060] mb-2">Select or upload a picture that shows what's in your video.</p>
                   <div className="flex gap-4">
@@ -281,8 +298,8 @@ export default function UploadModal({ onClose, onUpload, onNotImplemented }) {
                       type="radio"
                       name="visibility"
                       className="mt-1"
-                      checked={visibility === "Private"}
-                      onChange={() => setVisibility("Private")}
+                      checked={visibility === "private"}
+                      onChange={() => setVisibility("private")}
                     />
                     <div>
                       <h4 className="text-[#0d0d0d] font-medium">Private</h4>
@@ -294,8 +311,8 @@ export default function UploadModal({ onClose, onUpload, onNotImplemented }) {
                       type="radio"
                       name="visibility"
                       className="mt-1"
-                      checked={visibility === "Unlisted"}
-                      onChange={() => setVisibility("Unlisted")}
+                      checked={visibility === "unlisted"}
+                      onChange={() => setVisibility("unlisted")}
                     />
                     <div>
                       <h4 className="text-[#0d0d0d] font-medium">Unlisted</h4>
@@ -307,8 +324,8 @@ export default function UploadModal({ onClose, onUpload, onNotImplemented }) {
                       type="radio"
                       name="visibility"
                       className="mt-1"
-                      checked={visibility === "Public"}
-                      onChange={() => setVisibility("Public")}
+                      checked={visibility === "public"}
+                      onChange={() => setVisibility("public")}
                     />
                     <div>
                       <h4 className="text-[#0d0d0d] font-medium">Public</h4>

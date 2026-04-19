@@ -259,6 +259,17 @@ export const DataProvider = ({ children }) => {
     [applyAction]
   );
 
+  const publishVideo = useCallback(
+    async (videoId) => applyAction(() => api.publishVideo(videoId), 'Failed to publish video'),
+    [applyAction]
+  );
+
+  const uploadVideo = useCallback(
+    async (payload, options) =>
+      applyAction(() => api.uploadVideo(payload, options), 'Failed to upload video'),
+    [applyAction]
+  );
+
   const showToast = useCallback((message) => {
     const toast = document.createElement('div');
     toast.className = 'toast';
@@ -298,6 +309,8 @@ export const DataProvider = ({ children }) => {
       addModerator,
       removeModerator,
       reportComment,
+      publishVideo,
+      uploadVideo,
       showToast,
       miniPlayer,
       setMiniPlayer,
@@ -330,6 +343,8 @@ export const DataProvider = ({ children }) => {
       addModerator,
       removeModerator,
       reportComment,
+      publishVideo,
+      uploadVideo,
       showToast,
       miniPlayer,
     ]

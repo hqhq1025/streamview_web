@@ -4,6 +4,8 @@ from typing import Any, Callable, Dict, Optional
 
 from .models import UserState
 
+VALID_VISIBILITIES = ("public", "unlisted", "private")
+
 
 def _deep_merge(dest: Dict[str, Any], src: Dict[str, Any]) -> Dict[str, Any]:
     for key, value in src.items():
@@ -16,6 +18,29 @@ def _deep_merge(dest: Dict[str, Any], src: Dict[str, Any]) -> Dict[str, Any]:
         else:
             dest[key] = copy.deepcopy(value)
     return dest
+
+
+def _normalize_videos(data: Dict[str, Any]) -> None:
+    """Ensure every video carries the fields required by the v2 evaluator contract.
+
+    Runs on state read/write boundaries so seed data and newly inserted records
+    both surface identical shapes, without forcing every writer to set defaults.
+    """
+    videos = data.get("videos")
+    if not isinstance(videos, list):
+        return
+    for video in videos:
+        if not isinstance(video, dict):
+            continue
+        video.setdefault("description", "")
+        video.setdefault("tags", [])
+        video.setdefault("status", "draft")
+        raw_visibility = video.get("visibility")
+        if isinstance(raw_visibility, str):
+            lowered = raw_visibility.strip().lower()
+            video["visibility"] = lowered if lowered in VALID_VISIBILITIES else "public"
+        else:
+            video["visibility"] = "public"
 
 
 class StateStore:
@@ -31,11 +56,13 @@ class StateStore:
             if state is None:
                 state = UserState()
                 self._states[user_id] = state
+            _normalize_videos(state.data)
             return state
 
     async def replace_state(self, user_id: str, new_state: Dict[str, Any]) -> UserState:
         async with self._lock:
             state = UserState(**new_state)
+            _normalize_videos(state.data)
             self._states[user_id] = state
             return state
 
@@ -43,6 +70,7 @@ class StateStore:
         async with self._lock:
             state = self._states.get(user_id, UserState())
             updated_data = _deep_merge(copy.deepcopy(state.data), patch)
+            _normalize_videos(updated_data)
             state.data = updated_data
             if note is not None:
                 state.note = note
@@ -60,6 +88,7 @@ class StateStore:
             state = self._states.get(user_id, UserState())
             data_copy = copy.deepcopy(state.data)
             updated_data = mutator(data_copy) or data_copy
+            _normalize_videos(updated_data)
             state.data = updated_data
             if note is not None:
                 state.note = note
@@ -70,6 +99,7 @@ class StateStore:
     async def reset_state(self, user_id: str) -> UserState:
         async with self._lock:
             state = UserState()
+            _normalize_videos(state.data)
             self._states[user_id] = state
             return state
 

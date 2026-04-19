@@ -11,6 +11,7 @@ class StateMeta(BaseModel):
     updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
     version: int = 1
     type: str = "unrestricted"
+    task_mode: Optional[str] = None
 
 
 HUGGINGFACE_INIT_FILE_URL = (

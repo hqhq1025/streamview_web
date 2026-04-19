@@ -4,7 +4,7 @@ import uuid
 from contextlib import asynccontextmanager
 from typing import Any, Dict, Optional
 
-from fastapi import Depends, FastAPI, File, HTTPException, Request, Response, UploadFile
+from fastapi import Depends, FastAPI, File, Form, HTTPException, Request, Response, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, JSONResponse
 from mcp.server.fastmcp import FastMCP
@@ -34,6 +34,13 @@ from .schemas import (
     VideoActionRequest,
 )
 from .state_store import StateStore
+from .videos_service import (
+    InvalidVisibilityError,
+    VideoNotFoundError,
+    create_video,
+    normalize_visibility,
+    publish_video,
+)
 from .youtube_service import (
     add_comment,
     add_moderator,
@@ -293,6 +300,75 @@ async def get_file(filename: str, user_id: str = Depends(get_user_id)) -> FileRe
         filename=split_stored_name(filename),
         content_disposition_type="inline",
     )
+
+
+@app.post(
+    f"{settings.api_prefix}/streamview/videos",
+    response_model=StateResponse,
+    tags=["streamview"],
+    summary="Upload a video with title/description/tags",
+)
+async def youtube_upload_video(
+    file: UploadFile = File(...),
+    title: str = Form(...),
+    description: str = Form(""),
+    tags: str = Form(""),
+    visibility: str = Form("public"),
+    user_id: str = Depends(get_user_id),
+) -> StateResponse:
+    try:
+        visibility_normalized = normalize_visibility(visibility)
+    except InvalidVisibilityError as exc:
+        raise HTTPException(
+            status_code=400,
+            detail={
+                "error": "invalid_visibility",
+                "message": "visibility must be one of: public, unlisted, private.",
+            },
+        ) from exc
+
+    saved = save_upload(user_id, file)
+    await file.close()
+
+    tag_list = [t.strip() for t in tags.split(",") if t.strip()]
+    current = await store.get_state(user_id)
+    meta = current.meta
+
+    state = await store.mutate_data(
+        user_id,
+        lambda data: create_video(
+            data,
+            file_meta=saved,
+            title=title,
+            description=description,
+            tags=tag_list,
+            user_id=user_id,
+            meta=meta,
+            visibility=visibility_normalized,
+        ),
+    )
+    return StateResponse(user_id=user_id, state=state)
+
+
+@app.post(
+    f"{settings.api_prefix}/streamview/videos/{{video_id}}/publish",
+    response_model=StateResponse,
+    tags=["streamview"],
+    summary="Publish a video by flipping its status to public",
+)
+async def youtube_publish_video(
+    video_id: str, user_id: str = Depends(get_user_id)
+) -> StateResponse:
+    current = await store.get_state(user_id)
+    meta = current.meta
+    try:
+        state = await store.mutate_data(
+            user_id,
+            lambda data: publish_video(data, video_id, meta=meta),
+        )
+    except VideoNotFoundError as exc:
+        raise HTTPException(status_code=404, detail="Video not found") from exc
+    return StateResponse(user_id=user_id, state=state)
 
 
 @app.post(

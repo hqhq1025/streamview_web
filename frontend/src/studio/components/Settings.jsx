@@ -21,7 +21,7 @@ function Settings({ isOpen, onClose, onNotImplemented }) {
   // Upload defaults state
   const [defaultTitle, setDefaultTitle] = useState('');
   const [defaultDescription, setDefaultDescription] = useState('');
-  const [defaultVisibility, setDefaultVisibility] = useState('Public');
+  const [defaultVisibility, setDefaultVisibility] = useState('public');
   const [defaultTags, setDefaultTags] = useState('');
   const [automaticChapters, setAutomaticChapters] = useState(true);
   const [license, setLicense] = useState('Standard StreamView License');
@@ -486,9 +486,9 @@ function Settings({ isOpen, onClose, onNotImplemented }) {
           onChange={(e) => setDefaultVisibility(e.target.value)}
           className="w-full px-3 py-2 border border-[#ccc] rounded bg-white text-sm"
         >
-          <option value="Public">Public</option>
-          <option value="Unlisted">Unlisted</option>
-          <option value="Private">Private</option>
+          <option value="public">Public</option>
+          <option value="unlisted">Unlisted</option>
+          <option value="private">Private</option>
         </select>
       </div>
 

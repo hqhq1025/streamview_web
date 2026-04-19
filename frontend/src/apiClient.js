@@ -18,7 +18,12 @@ async function request(path, options = {}) {
 
   if (!response.ok) {
     const errorBody = await response.json().catch(() => ({}));
-    const message = errorBody.detail || response.statusText || 'Request failed';
+    const detail = errorBody.detail;
+    const message =
+      (detail && typeof detail === 'object' && detail.message) ||
+      (typeof detail === 'string' ? detail : null) ||
+      response.statusText ||
+      'Request failed';
     throw new Error(message);
   }
 
@@ -92,6 +97,68 @@ export const api = {
       method: 'POST',
       body: JSON.stringify({ reason, details }),
     }),
+  uploadVideo: ({ file, title, description = '', tags = '', visibility = 'public' }, { onProgress } = {}) => {
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append('title', title);
+    formData.append('description', description);
+    formData.append('tags', Array.isArray(tags) ? tags.join(',') : tags);
+    formData.append('visibility', String(visibility || 'public').toLowerCase());
+
+    if (typeof onProgress !== 'function') {
+      return request('/streamview/videos', { method: 'POST', body: formData });
+    }
+
+    return new Promise((resolve, reject) => {
+      const xhr = new XMLHttpRequest();
+      xhr.open('POST', `${API_BASE}/streamview/videos`, true);
+      xhr.withCredentials = true;
+      xhr.responseType = 'json';
+
+      onProgress(null);
+
+      xhr.upload.onprogress = (event) => {
+        if (event.lengthComputable) {
+          const percent = Math.round((event.loaded / event.total) * 100);
+          onProgress(percent);
+        } else {
+          onProgress(null);
+        }
+      };
+
+      xhr.onload = () => {
+        const responseBody =
+          xhr.response ||
+          (() => {
+            try {
+              return JSON.parse(xhr.responseText || '{}');
+            } catch (err) {
+              return {};
+            }
+          })();
+        if (xhr.status >= 200 && xhr.status < 300) {
+          onProgress(100);
+          resolve(responseBody);
+        } else {
+          const detail = responseBody.detail;
+          const message =
+            (detail && typeof detail === 'object' && detail.message) ||
+            detail ||
+            xhr.statusText ||
+            'Upload failed';
+          reject(new Error(message));
+        }
+      };
+
+      xhr.onerror = () => {
+        reject(new Error('Network error'));
+      };
+
+      xhr.send(formData);
+    });
+  },
+  publishVideo: (videoId) =>
+    request(`/streamview/videos/${videoId}/publish`, { method: 'POST' }),
   uploadFiles: (files, { onProgress } = {}) => {
     const formData = new FormData();
     files.forEach((file) => formData.append('files', file));
