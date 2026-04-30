@@ -1,12 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import {
-  Bell,
   ChevronDown,
   Download,
   ListPlus,
   Minimize2,
-  MoreHorizontal,
   Share2,
   ThumbsDown,
   ThumbsUp,
@@ -288,12 +286,6 @@ const VideoPlayerPage = () => {
                 <Minimize2 size={20} />
                 <span>Miniplayer</span>
               </button>
-              <button
-                className="action-button"
-                onClick={() => showToast('More actions are not implemented yet.')}
-              >
-                <MoreHorizontal size={20} />
-              </button>
             </div>
           </div>
         </div>
@@ -320,15 +312,6 @@ const VideoPlayerPage = () => {
             >
               {isSubscribed ? 'Subscribed' : 'Subscribe'}
             </button>
-            {isSubscribed && (
-              <button
-                className="notification-bell-button"
-                aria-label="Notifications"
-                onClick={() => showToast('Notification settings are not implemented yet.')}
-              >
-                <Bell size={20} />
-              </button>
-            )}
           </div>
         </div>
 
@@ -480,12 +463,6 @@ const VideoPlayerPage = () => {
                                   onClick={() => handleCommentReaction(reply.commentId, 'dislike')}
                                 >
                                   <ThumbsDown size={16} />
-                                </button>
-                                <button
-                                  className="comment-action"
-                                  onClick={() => showToast('Replying to replies is not implemented yet.')}
-                                >
-                                  <span>Reply</span>
                                 </button>
                               </div>
                             </div>
