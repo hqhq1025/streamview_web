@@ -1,6 +1,6 @@
 from typing import Any, Dict, Optional
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 
 from .models import StateMeta, UserState
 
@@ -28,35 +28,45 @@ class InfoResponse(BaseModel):
     request: Dict[str, Any]
 
 
-class VideoActionRequest(BaseModel):
+class StrictProductRequest(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+
+class VideoActionRequest(StrictProductRequest):
     video_id: str
 
 
-class CommentRequest(BaseModel):
+class CommentRequest(StrictProductRequest):
     video_id: str
     text: str
     parent_comment_id: Optional[str] = None
 
 
-class PlaylistCreateRequest(BaseModel):
+class PlaylistCreateRequest(StrictProductRequest):
     name: str
     description: Optional[str] = ""
     privacy: str = "Public"
 
 
-class UserManagementRequest(BaseModel):
+class UserManagementRequest(StrictProductRequest):
     user_id: str
     user_name: str
     user_avatar: Optional[str] = ""
 
 
-class ModeratorRequest(BaseModel):
+class ModeratorRequest(StrictProductRequest):
     user_id: str
     user_name: str
     user_avatar: Optional[str] = ""
     moderator_type: str = "standard"  # "managing" or "standard"
 
 
-class ReportCommentRequest(BaseModel):
+class ReportCommentRequest(StrictProductRequest):
     reason: str
     details: Optional[str] = ""
+
+
+class VideoUpdateRequest(StrictProductRequest):
+    title: Optional[str] = None
+    description: Optional[str] = None
+    visibility: Optional[str] = None

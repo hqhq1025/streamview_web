@@ -83,7 +83,7 @@ export const DataProvider = ({ children }) => {
   const hydrate = useCallback(async () => {
     setLoading(true);
     try {
-      const next = await api.getState();
+      const next = await api.getBootstrap();
       setState(next.state);
       setData(normalizeData(next.state?.data));
       setError('');
@@ -204,30 +204,9 @@ export const DataProvider = ({ children }) => {
 
   const updateVideoDetails = useCallback(
     async (videoId, updates) => {
-      const nextVideos = data.videos.map((video) => {
-        const matches =
-          video?.videoId === videoId ||
-          video?.id === videoId ||
-          video?.youtubeId === videoId;
-        if (!matches) return video;
-        const nextTitle = updates?.title ?? video.title;
-        const nextSlug =
-          typeof nextTitle === 'string' && nextTitle.trim()
-            ? nextTitle
-                .trim()
-                .toLowerCase()
-                .replace(/[^a-z0-9\s-]/g, '')
-                .replace(/\s+/g, '-')
-            : video.title_slug;
-        return {
-          ...video,
-          ...updates,
-          ...(nextSlug ? { title_slug: nextSlug } : {}),
-        };
-      });
-      return applyAction(() => api.patchState({ videos: nextVideos }), 'Failed to update video');
+      return applyAction(() => api.updateVideo(videoId, updates), 'Failed to update video');
     },
-    [applyAction, data.videos]
+    [applyAction]
   );
 
   const hideUser = useCallback(

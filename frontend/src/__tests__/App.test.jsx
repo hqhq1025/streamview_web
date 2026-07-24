@@ -10,9 +10,7 @@ const buildResponse = (data, status = 200) =>
 describe('App', () => {
   const statePayload = {
     user_id: 'test-user',
-    state: {
-      meta: { created_at: '2024-01-01T00:00:00Z', updated_at: '2024-01-01T00:00:00Z', version: 1 },
-      data: {
+    data: {
         user: {
           userId: 'user-1',
           displayName: 'Test User',
@@ -62,8 +60,6 @@ describe('App', () => {
         playlists: [],
         notifications: [],
         categories: ['All', 'Tech'],
-      },
-      note: null,
     },
   };
 

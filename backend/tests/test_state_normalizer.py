@@ -12,6 +12,13 @@ import pytest
 
 
 @pytest.mark.asyncio
+async def test_control_plane_is_hidden_from_public_openapi(async_client):
+    schema = (await async_client.get("/api/openapi.json")).json()
+    assert "/api/state" not in schema["paths"]
+    assert all(tag.get("name") != "state" for tag in schema.get("tags", []))
+
+
+@pytest.mark.asyncio
 async def test_seeded_videos_have_default_fields(async_client):
     resp = await async_client.get("/api/state", params={"cookie": "normalizer-seed"})
     assert resp.status_code == 200
@@ -103,7 +110,7 @@ async def test_upload_endpoint_defaults_visibility_to_public(async_client):
         data={"title": "Default visibility clip", "description": "", "tags": ""},
     )
     assert resp.status_code == 200
-    videos = resp.json()["state"]["data"]["videos"]
+    videos = resp.json()["data"]["videos"]
     uploaded = next(v for v in videos if v["title"] == "Default visibility clip")
     assert uploaded["visibility"] == "public"
     assert uploaded["status"] == "draft"
@@ -124,7 +131,7 @@ async def test_upload_endpoint_persists_private_visibility(async_client):
         },
     )
     assert resp.status_code == 200
-    videos = resp.json()["state"]["data"]["videos"]
+    videos = resp.json()["data"]["videos"]
     uploaded = next(v for v in videos if v["title"] == "Draft clip")
     assert uploaded["visibility"] == "private"
 

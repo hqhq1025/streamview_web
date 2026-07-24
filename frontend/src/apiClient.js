@@ -30,56 +30,66 @@ async function request(path, options = {}) {
   return response.json();
 }
 
+const asProductState = (payload) => ({
+  user_id: payload.user_id,
+  state: { data: payload.data },
+});
+
+const productRequest = (path, options) => request(path, options).then(asProductState);
+
 export const api = {
   baseUrl: API_BASE,
-  getState: () => request('/state'),
-  replaceState: (data, note, meta) =>
-    request('/state', { method: 'PUT', body: JSON.stringify({ data, note, meta }) }),
-  patchState: (data, note) =>
-    request('/state', { method: 'PATCH', body: JSON.stringify({ data, note }) }),
-  resetState: () => request('/state', { method: 'DELETE' }),
+  getBootstrap: () =>
+    productRequest('/streamview/bootstrap'),
+  updateVideo: (videoId, updates) =>
+    request(`/streamview/videos/${videoId}`, {
+      method: 'PATCH',
+      body: JSON.stringify(updates),
+    }).then(() => api.getBootstrap()),
+  finalizeVideo: (videoId) =>
+    request(`/streamview/videos/${videoId}/finalize`, { method: 'POST' }),
   getInfo: () => request('/info'),
   addToHistory: (videoId) =>
-    request('/streamview/history', {
+    productRequest('/streamview/history', {
       method: 'POST',
       body: JSON.stringify({ video_id: videoId }),
     }),
   removeFromHistory: (videoId) =>
-    request(`/streamview/history/${videoId}`, { method: 'DELETE' }),
-  clearHistory: () => request('/streamview/history', { method: 'DELETE' }),
-  toggleLike: (videoId) => request(`/streamview/videos/${videoId}/like`, { method: 'POST' }),
-  toggleDislike: (videoId) => request(`/streamview/videos/${videoId}/dislike`, { method: 'POST' }),
+    productRequest(`/streamview/history/${videoId}`, { method: 'DELETE' }),
+  clearHistory: () => productRequest('/streamview/history', { method: 'DELETE' }),
+  toggleLike: (videoId) => productRequest(`/streamview/videos/${videoId}/like`, { method: 'POST' }),
+  toggleDislike: (videoId) => productRequest(`/streamview/videos/${videoId}/dislike`, { method: 'POST' }),
   toggleWatchLater: (videoId) =>
-    request(`/streamview/videos/${videoId}/watch-later`, { method: 'POST' }),
+    productRequest(`/streamview/videos/${videoId}/watch-later`, { method: 'POST' }),
   toggleSubscription: (channelId) =>
-    request(`/streamview/channels/${channelId}/subscribe`, { method: 'POST' }),
+    productRequest(`/streamview/channels/${channelId}/subscribe`, { method: 'POST' }),
   addComment: (payload) =>
-    request('/streamview/comments', { method: 'POST', body: JSON.stringify(payload) }),
+    productRequest('/streamview/comments', { method: 'POST', body: JSON.stringify(payload) }),
   toggleCommentLike: (commentId) =>
-    request(`/streamview/comments/${commentId}/like`, { method: 'POST' }),
+    productRequest(`/streamview/comments/${commentId}/like`, { method: 'POST' }),
   toggleCommentDislike: (commentId) =>
-    request(`/streamview/comments/${commentId}/dislike`, { method: 'POST' }),
+    productRequest(`/streamview/comments/${commentId}/dislike`, { method: 'POST' }),
   toggleCommentHeart: (commentId) =>
-    request(`/streamview/comments/${commentId}/heart`, { method: 'POST' }),
+    productRequest(`/streamview/comments/${commentId}/heart`, { method: 'POST' }),
   removeComment: (commentId) =>
-    request(`/streamview/comments/${commentId}`, { method: 'DELETE' }),
+    productRequest(`/streamview/comments/${commentId}`, { method: 'DELETE' }),
   createPlaylist: (payload) =>
-    request('/streamview/playlists', { method: 'POST', body: JSON.stringify(payload) }),
+    productRequest('/streamview/playlists', { method: 'POST', body: JSON.stringify(payload) }),
   togglePlaylistVideo: (playlistId, videoId) =>
-    request(`/streamview/playlists/${playlistId}/videos/${videoId}`, { method: 'POST' }),
+    productRequest(`/streamview/playlists/${playlistId}/videos/${videoId}`, { method: 'POST' }),
   markNotificationRead: (notificationId) =>
-    request(`/streamview/notifications/${notificationId}/read`, { method: 'POST' }),
+    productRequest(`/streamview/notifications/${notificationId}/read`, { method: 'POST' }),
   markAllNotificationsRead: () =>
-    request('/streamview/notifications/read-all', { method: 'POST' }),
+    productRequest('/streamview/notifications/read-all', { method: 'POST' }),
   hideUser: (userId, userName, userAvatar = '') =>
-    request('/streamview/users/hide', {
+    productRequest('/streamview/users/hide', {
       method: 'POST',
       body: JSON.stringify({ user_id: userId, user_name: userName, user_avatar: userAvatar }),
     }),
   unhideUser: (userId) =>
-    request(`/streamview/users/${userId}/hide`, { method: 'DELETE' }),
+    productRequest(`/streamview/users/${userId}/hide`, { method: 'DELETE' }),
   addModerator: (userId, userName, userAvatar = '', moderatorType = 'standard') =>
-    request('/streamview/users/moderator', {
+    productRequest('/streamview/users/moderator', {
       method: 'POST',
       body: JSON.stringify({
         user_id: userId,
@@ -89,11 +99,11 @@ export const api = {
       }),
     }),
   removeModerator: (userId, moderatorType = 'standard') =>
-    request(`/streamview/users/${userId}/moderator?moderator_type=${moderatorType}`, {
+    productRequest(`/streamview/users/${userId}/moderator?moderator_type=${moderatorType}`, {
       method: 'DELETE',
     }),
   reportComment: (commentId, reason, details = '') =>
-    request(`/streamview/comments/${commentId}/report`, {
+    productRequest(`/streamview/comments/${commentId}/report`, {
       method: 'POST',
       body: JSON.stringify({ reason, details }),
     }),
@@ -106,7 +116,7 @@ export const api = {
     formData.append('visibility', String(visibility || 'public').toLowerCase());
 
     if (typeof onProgress !== 'function') {
-      return request('/streamview/videos', { method: 'POST', body: formData });
+      return productRequest('/streamview/videos', { method: 'POST', body: formData });
     }
 
     return new Promise((resolve, reject) => {
@@ -138,7 +148,7 @@ export const api = {
           })();
         if (xhr.status >= 200 && xhr.status < 300) {
           onProgress(100);
-          resolve(responseBody);
+          resolve(asProductState(responseBody));
         } else {
           const detail = responseBody.detail;
           const message =
@@ -158,7 +168,7 @@ export const api = {
     });
   },
   publishVideo: (videoId) =>
-    request(`/streamview/videos/${videoId}/publish`, { method: 'POST' }),
+    productRequest(`/streamview/videos/${videoId}/publish`, { method: 'POST' }),
   uploadFiles: (files, { onProgress } = {}) => {
     const formData = new FormData();
     files.forEach((file) => formData.append('files', file));

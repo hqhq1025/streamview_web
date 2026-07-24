@@ -55,13 +55,6 @@ const consumeUploadIntent = () => {
   return true;
 };
 
-const buildSlug = (value) =>
-  value
-    .trim()
-    .toLowerCase()
-    .replace(/[^a-z0-9\s-]/g, "")
-    .replace(/\s+/g, "-");
-
 function StudioShell() {
   const { state, data, loading, refreshState, showToast, uploadVideo } = useData();
   const location = useLocation();
@@ -171,70 +164,7 @@ function StudioShell() {
         throw new Error("Upload succeeded but video record not found.");
       }
 
-      const now = new Date().toISOString();
-      const assetUrl = newVideo.asset?.url || "";
-      const thumbnailSeed = encodeURIComponent(newVideo.id);
-
-      const enrichedVideos = uploadedVideos.map((video) =>
-        video?.id === newVideo.id
-          ? {
-              ...video,
-              videoId: `upload-${video.id}`,
-              visibility: nextVisibility,
-              uploadDate: now,
-              channelId: creatorChannelId,
-              channelName: creatorName || "Your Channel",
-              channelAvatar: creatorAvatar,
-              thumbnail: `https://picsum.photos/seed/${thumbnailSeed}/640/360`,
-              duration: "0:00",
-              viewCount: 0,
-              likeCount: 0,
-              dislikeCount: 0,
-              commentCount: 0,
-              category: "Uploads",
-              youtubeId: video.id.replace(/^vid_/, "").slice(0, 11),
-              videoUrl: assetUrl,
-              watchUrl: assetUrl,
-              origin: "studio",
-              title_slug: buildSlug(nextTitle),
-            }
-          : video
-      );
-
-      const currentChannels = data?.channels || [];
-      const creatorVideoCount = enrichedVideos.filter((video) => {
-        if (!video) return false;
-        if (video.origin === "studio") return true;
-        if (!video.channelId) return true;
-        return video.channelId === creatorChannelId;
-      }).length;
-      const hasCreatorChannel = currentChannels.some(
-        (channel) => channel.channelId === creatorChannelId
-      );
-      const nextChannels = hasCreatorChannel
-        ? currentChannels.map((channel) =>
-            channel.channelId === creatorChannelId
-              ? { ...channel, videoCount: creatorVideoCount }
-              : channel
-          )
-        : [
-            ...currentChannels,
-            {
-              channelId: creatorChannelId,
-              name: creatorName,
-              handle: creatorHandle,
-              avatar: creatorAvatar,
-              banner: "https://picsum.photos/1600/400?random=creator",
-              description: "Welcome to your official channel.",
-              subscriberCount: 0,
-              videoCount: creatorVideoCount,
-              joinedDate: new Date().toISOString().slice(0, 10),
-              links: [],
-              videos: [],
-            },
-          ];
-
-      await api.patchState({ videos: enrichedVideos, channels: nextChannels });
+      await api.finalizeVideo(newVideo.id);
       await refreshState();
       navigate("/studio/content");
       showToast("Video uploaded");

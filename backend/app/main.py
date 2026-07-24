@@ -32,6 +32,7 @@ from .schemas import (
     StateResponse,
     UserManagementRequest,
     VideoActionRequest,
+    VideoUpdateRequest,
 )
 from .state_store import StateStore
 from .videos_service import (
@@ -68,7 +69,6 @@ settings = get_settings()
 store = StateStore()
 
 tags_metadata = [
-    {"name": "state", "description": "Manage per-user experiment state"},
     {"name": "system", "description": "Environment and health information"},
     {"name": "files", "description": "User-scoped file uploads"},
     {"name": "streamview", "description": "StreamView mock actions for per-user state"},
@@ -178,15 +178,13 @@ async def health() -> Dict[str, str]:
     return {"status": "ok"}
 
 
-@app.get("/state-doc", tags=["system"])
-async def state_doc():
-    from pathlib import Path
-    content = Path("/app/STATE.md").read_text(encoding="utf-8")
-    return Response(content=content, media_type="text/plain; charset=utf-8")
-
-
 # when build on the basesite, the below endpoints about state management should remain unchanged
-@app.get(f"{settings.api_prefix}/state", response_model=StateResponse, tags=["state"])
+@app.get(
+    f"{settings.api_prefix}/state",
+    response_model=StateResponse,
+    tags=["state"],
+    include_in_schema=False,
+)
 async def get_state(user_id: str = Depends(get_user_id)) -> StateResponse:
     state = await store.get_state(user_id)
     return StateResponse(user_id=user_id, state=state)
@@ -197,6 +195,7 @@ async def get_state(user_id: str = Depends(get_user_id)) -> StateResponse:
     response_model=StateResponse,
     tags=["state"],
     summary="Replace state",
+    include_in_schema=False,
 )
 async def put_state(payload: StateRequest, user_id: str = Depends(get_user_id)) -> StateResponse:
     next_state = {"data": payload.data, "note": payload.note}
@@ -211,6 +210,7 @@ async def put_state(payload: StateRequest, user_id: str = Depends(get_user_id)) 
     response_model=StateResponse,
     tags=["state"],
     summary="Merge into existing state",
+    include_in_schema=False,
 )
 async def patch_state(
     payload: StatePatchRequest, user_id: str = Depends(get_user_id)
@@ -224,11 +224,32 @@ async def patch_state(
     response_model=StateResponse,
     tags=["state"],
     summary="Reset and clear state",
+    include_in_schema=False,
 )
 async def delete_state(user_id: str = Depends(get_user_id)) -> StateResponse:
     delete_user_files(user_id)
     state = await store.reset_state(user_id)
     return StateResponse(user_id=user_id, state=state)
+
+
+@app.get(f"{settings.api_prefix}/streamview/bootstrap", tags=["streamview"])
+async def streamview_bootstrap(user_id: str = Depends(get_user_id)) -> Dict[str, Any]:
+    state = await store.get_state(user_id)
+    return _streamview_projection(user_id, state.data)
+
+
+def _streamview_projection(user_id: str, data: Dict[str, Any]) -> Dict[str, Any]:
+    product_keys = (
+        "user",
+        "videos",
+        "channels",
+        "comments",
+        "playlists",
+        "notifications",
+        "categories",
+        "userManagement",
+    )
+    return {"user_id": user_id, "data": {key: data.get(key) for key in product_keys}}
 
 
 @app.post(
@@ -304,7 +325,6 @@ async def get_file(filename: str, user_id: str = Depends(get_user_id)) -> FileRe
 
 @app.post(
     f"{settings.api_prefix}/streamview/videos",
-    response_model=StateResponse,
     tags=["streamview"],
     summary="Upload a video with title/description/tags",
 )
@@ -315,7 +335,7 @@ async def youtube_upload_video(
     tags: str = Form(""),
     visibility: str = Form("public"),
     user_id: str = Depends(get_user_id),
-) -> StateResponse:
+) -> Dict[str, Any]:
     try:
         visibility_normalized = normalize_visibility(visibility)
     except InvalidVisibilityError as exc:
@@ -347,18 +367,17 @@ async def youtube_upload_video(
             visibility=visibility_normalized,
         ),
     )
-    return StateResponse(user_id=user_id, state=state)
+    return _streamview_projection(user_id, state.data)
 
 
 @app.post(
     f"{settings.api_prefix}/streamview/videos/{{video_id}}/publish",
-    response_model=StateResponse,
     tags=["streamview"],
     summary="Publish a video by flipping its status to public",
 )
 async def youtube_publish_video(
     video_id: str, user_id: str = Depends(get_user_id)
-) -> StateResponse:
+) -> Dict[str, Any]:
     current = await store.get_state(user_id)
     meta = current.meta
     try:
@@ -368,128 +387,221 @@ async def youtube_publish_video(
         )
     except VideoNotFoundError as exc:
         raise HTTPException(status_code=404, detail="Video not found") from exc
-    return StateResponse(user_id=user_id, state=state)
+    return _streamview_projection(user_id, state.data)
+
+
+@app.patch(
+    f"{settings.api_prefix}/streamview/videos/{{video_id}}",
+    tags=["streamview"],
+)
+async def youtube_update_video(
+    video_id: str,
+    payload: VideoUpdateRequest,
+    user_id: str = Depends(get_user_id),
+) -> Dict[str, Any]:
+    updates = payload.model_dump(exclude_none=True)
+    if "visibility" in updates:
+        try:
+            updates["visibility"] = normalize_visibility(updates["visibility"])
+        except InvalidVisibilityError as exc:
+            raise HTTPException(status_code=422, detail="Invalid visibility") from exc
+
+    def mutate(data: Dict[str, Any]) -> Dict[str, Any]:
+        for video in data.get("videos", []):
+            identifiers = {video.get("id"), video.get("videoId"), video.get("youtubeId")}
+            if video_id in identifiers:
+                video.update(updates)
+                if "title" in updates and updates["title"]:
+                    video["title_slug"] = updates["title"].strip().lower().replace(" ", "-")
+                return data
+        raise VideoNotFoundError(video_id)
+
+    try:
+        state = await store.mutate_data(user_id, mutate)
+    except VideoNotFoundError as exc:
+        raise HTTPException(status_code=404, detail="Video not found") from exc
+    video = next(
+        item for item in state.data.get("videos", [])
+        if video_id in {item.get("id"), item.get("videoId"), item.get("youtubeId")}
+    )
+    return {"user_id": user_id, "video": video}
+
+
+@app.post(f"{settings.api_prefix}/streamview/videos/{{video_id}}/finalize", tags=["streamview"])
+async def youtube_finalize_upload(
+    video_id: str, user_id: str = Depends(get_user_id)
+) -> Dict[str, Any]:
+    def mutate(data: Dict[str, Any]) -> Dict[str, Any]:
+        video = next((item for item in data.get("videos", []) if item.get("id") == video_id), None)
+        if video is None:
+            raise VideoNotFoundError(video_id)
+        user = data.get("user", {})
+        channel_id = user.get("channelId") or user.get("userId") or "creator-channel"
+        channel_name = (user.get("displayName") or user.get("name") or "Your Channel").strip()
+        now = video.get("uploaded_at")
+        asset_url = video.get("asset", {}).get("url", "")
+        video.update({
+            "videoId": f"upload-{video_id}",
+            "uploadDate": now,
+            "channelId": channel_id,
+            "channelName": channel_name,
+            "channelAvatar": user.get("avatar", ""),
+            "thumbnail": f"https://picsum.photos/seed/{video_id}/640/360",
+            "duration": "0:00",
+            "viewCount": 0,
+            "likeCount": 0,
+            "dislikeCount": 0,
+            "commentCount": 0,
+            "category": "Uploads",
+            "youtubeId": video_id.removeprefix("vid_")[:11],
+            "videoUrl": asset_url,
+            "watchUrl": asset_url,
+            "origin": "studio",
+            "title_slug": video.get("title", "").strip().lower().replace(" ", "-"),
+        })
+        channels = data.setdefault("channels", [])
+        creator_count = sum(
+            1 for item in data.get("videos", [])
+            if item.get("origin") == "studio" or item.get("channelId") in {None, channel_id}
+        )
+        channel = next((item for item in channels if item.get("channelId") == channel_id), None)
+        if channel is None:
+            channel = {
+                "channelId": channel_id,
+                "name": channel_name,
+                "handle": user.get("handle", "@creator"),
+                "avatar": user.get("avatar", ""),
+                "banner": "https://picsum.photos/1600/400?random=creator",
+                "description": "Welcome to your official channel.",
+                "subscriberCount": 0,
+                "joinedDate": now[:10] if now else "",
+                "links": [],
+                "videos": [],
+            }
+            channels.append(channel)
+        channel["videoCount"] = creator_count
+        return data
+
+    try:
+        state = await store.mutate_data(user_id, mutate)
+    except VideoNotFoundError as exc:
+        raise HTTPException(status_code=404, detail="Video not found") from exc
+    video = next(item for item in state.data["videos"] if item.get("id") == video_id)
+    channel = next(item for item in state.data["channels"] if item.get("channelId") == video["channelId"])
+    return {"user_id": user_id, "video": video, "channel": channel}
 
 
 @app.post(
     f"{settings.api_prefix}/streamview/videos/{{video_id}}/like",
-    response_model=StateResponse,
     tags=["streamview"],
     summary="Toggle like on a video",
 )
-async def youtube_toggle_like(video_id: str, user_id: str = Depends(get_user_id)) -> StateResponse:
+async def youtube_toggle_like(video_id: str, user_id: str = Depends(get_user_id)) -> Dict[str, Any]:
     try:
         state = await store.mutate_data(user_id, lambda data: toggle_like(data, video_id))
     except ValueError as exc:
         raise HTTPException(status_code=404, detail=str(exc)) from exc
-    return StateResponse(user_id=user_id, state=state)
+    return _streamview_projection(user_id, state.data)
 
 
 @app.post(
     f"{settings.api_prefix}/streamview/videos/{{video_id}}/dislike",
-    response_model=StateResponse,
     tags=["streamview"],
     summary="Toggle dislike on a video",
 )
 async def youtube_toggle_dislike(
     video_id: str, user_id: str = Depends(get_user_id)
-) -> StateResponse:
+) -> Dict[str, Any]:
     try:
         state = await store.mutate_data(user_id, lambda data: toggle_dislike(data, video_id))
     except ValueError as exc:
         raise HTTPException(status_code=404, detail=str(exc)) from exc
-    return StateResponse(user_id=user_id, state=state)
+    return _streamview_projection(user_id, state.data)
 
 
 @app.post(
     f"{settings.api_prefix}/streamview/videos/{{video_id}}/watch-later",
-    response_model=StateResponse,
     tags=["streamview"],
     summary="Toggle watch-later for a video",
 )
 async def youtube_toggle_watch_later(
     video_id: str, user_id: str = Depends(get_user_id)
-) -> StateResponse:
+) -> Dict[str, Any]:
     try:
         state = await store.mutate_data(
             user_id, lambda data: toggle_watch_later(data, video_id)
         )
     except ValueError as exc:
         raise HTTPException(status_code=404, detail=str(exc)) from exc
-    return StateResponse(user_id=user_id, state=state)
+    return _streamview_projection(user_id, state.data)
 
 
 @app.post(
     f"{settings.api_prefix}/streamview/channels/{{channel_id}}/subscribe",
-    response_model=StateResponse,
     tags=["streamview"],
     summary="Toggle subscription for a channel",
 )
 async def youtube_toggle_subscription(
     channel_id: str, user_id: str = Depends(get_user_id)
-) -> StateResponse:
+) -> Dict[str, Any]:
     try:
         state = await store.mutate_data(
             user_id, lambda data: toggle_subscription(data, channel_id)
         )
     except ValueError as exc:
         raise HTTPException(status_code=404, detail=str(exc)) from exc
-    return StateResponse(user_id=user_id, state=state)
+    return _streamview_projection(user_id, state.data)
 
 
 @app.post(
     f"{settings.api_prefix}/streamview/history",
-    response_model=StateResponse,
     tags=["streamview"],
     summary="Add a video to watch history",
 )
 async def youtube_add_history(
     payload: VideoActionRequest, user_id: str = Depends(get_user_id)
-) -> StateResponse:
+) -> Dict[str, Any]:
     try:
         state = await store.mutate_data(
             user_id, lambda data: add_watch_history(data, payload.video_id)
         )
     except ValueError as exc:
         raise HTTPException(status_code=404, detail=str(exc)) from exc
-    return StateResponse(user_id=user_id, state=state)
+    return _streamview_projection(user_id, state.data)
 
 
 @app.delete(
     f"{settings.api_prefix}/streamview/history/{{video_id}}",
-    response_model=StateResponse,
     tags=["streamview"],
     summary="Remove a video from watch history",
 )
 async def youtube_remove_history(
     video_id: str, user_id: str = Depends(get_user_id)
-) -> StateResponse:
+) -> Dict[str, Any]:
     state = await store.mutate_data(
         user_id, lambda data: remove_from_history(data, video_id)
     )
-    return StateResponse(user_id=user_id, state=state)
+    return _streamview_projection(user_id, state.data)
 
 
 @app.delete(
     f"{settings.api_prefix}/streamview/history",
-    response_model=StateResponse,
     tags=["streamview"],
     summary="Clear watch history",
 )
-async def youtube_clear_history(user_id: str = Depends(get_user_id)) -> StateResponse:
+async def youtube_clear_history(user_id: str = Depends(get_user_id)) -> Dict[str, Any]:
     state = await store.mutate_data(user_id, lambda data: clear_history(data))
-    return StateResponse(user_id=user_id, state=state)
+    return _streamview_projection(user_id, state.data)
 
 
 @app.post(
     f"{settings.api_prefix}/streamview/comments",
-    response_model=StateResponse,
     tags=["streamview"],
     summary="Add a comment or reply",
 )
 async def youtube_add_comment(
     payload: CommentRequest, user_id: str = Depends(get_user_id)
-) -> StateResponse:
+) -> Dict[str, Any]:
     try:
         state = await store.mutate_data(
             user_id,
@@ -499,226 +611,213 @@ async def youtube_add_comment(
         )
     except ValueError as exc:
         raise HTTPException(status_code=404, detail=str(exc)) from exc
-    return StateResponse(user_id=user_id, state=state)
+    return _streamview_projection(user_id, state.data)
 
 
 @app.post(
     f"{settings.api_prefix}/streamview/comments/{{comment_id}}/like",
-    response_model=StateResponse,
     tags=["streamview"],
     summary="Toggle like on a comment",
 )
 async def youtube_toggle_comment_like(
     comment_id: str, user_id: str = Depends(get_user_id)
-) -> StateResponse:
+) -> Dict[str, Any]:
     try:
         state = await store.mutate_data(
             user_id, lambda data: toggle_comment_reaction(data, comment_id, "like")
         )
     except ValueError as exc:
         raise HTTPException(status_code=404, detail=str(exc)) from exc
-    return StateResponse(user_id=user_id, state=state)
+    return _streamview_projection(user_id, state.data)
 
 
 @app.post(
     f"{settings.api_prefix}/streamview/comments/{{comment_id}}/dislike",
-    response_model=StateResponse,
     tags=["streamview"],
     summary="Toggle dislike on a comment",
 )
 async def youtube_toggle_comment_dislike(
     comment_id: str, user_id: str = Depends(get_user_id)
-) -> StateResponse:
+) -> Dict[str, Any]:
     try:
         state = await store.mutate_data(
             user_id, lambda data: toggle_comment_reaction(data, comment_id, "dislike")
         )
     except ValueError as exc:
         raise HTTPException(status_code=404, detail=str(exc)) from exc
-    return StateResponse(user_id=user_id, state=state)
+    return _streamview_projection(user_id, state.data)
 
 
 @app.post(
     f"{settings.api_prefix}/streamview/comments/{{comment_id}}/heart",
-    response_model=StateResponse,
     tags=["streamview"],
     summary="Toggle heart on a comment",
 )
 async def youtube_toggle_comment_heart(
     comment_id: str, user_id: str = Depends(get_user_id)
-) -> StateResponse:
+) -> Dict[str, Any]:
     try:
         state = await store.mutate_data(
             user_id, lambda data: toggle_comment_heart(data, comment_id)
         )
     except ValueError as exc:
         raise HTTPException(status_code=404, detail=str(exc)) from exc
-    return StateResponse(user_id=user_id, state=state)
+    return _streamview_projection(user_id, state.data)
 
 
 @app.delete(
     f"{settings.api_prefix}/streamview/comments/{{comment_id}}",
-    response_model=StateResponse,
     tags=["streamview"],
     summary="Remove a comment or reply",
 )
 async def youtube_remove_comment(
     comment_id: str, user_id: str = Depends(get_user_id)
-) -> StateResponse:
+) -> Dict[str, Any]:
     try:
         state = await store.mutate_data(
             user_id, lambda data: remove_comment(data, comment_id)
         )
     except ValueError as exc:
         raise HTTPException(status_code=404, detail=str(exc)) from exc
-    return StateResponse(user_id=user_id, state=state)
+    return _streamview_projection(user_id, state.data)
 
 
 @app.post(
     f"{settings.api_prefix}/streamview/playlists",
-    response_model=StateResponse,
     tags=["streamview"],
     summary="Create a playlist",
 )
 async def youtube_create_playlist(
     payload: PlaylistCreateRequest, user_id: str = Depends(get_user_id)
-) -> StateResponse:
+) -> Dict[str, Any]:
     state = await store.mutate_data(
         user_id,
         lambda data: create_playlist(data, payload.name, payload.description, payload.privacy),
     )
-    return StateResponse(user_id=user_id, state=state)
+    return _streamview_projection(user_id, state.data)
 
 
 @app.post(
     f"{settings.api_prefix}/streamview/playlists/{{playlist_id}}/videos/{{video_id}}",
-    response_model=StateResponse,
     tags=["streamview"],
     summary="Toggle a video inside a playlist",
 )
 async def youtube_toggle_playlist_video(
     playlist_id: str, video_id: str, user_id: str = Depends(get_user_id)
-) -> StateResponse:
+) -> Dict[str, Any]:
     try:
         state = await store.mutate_data(
             user_id, lambda data: toggle_playlist_video(data, playlist_id, video_id)
         )
     except ValueError as exc:
         raise HTTPException(status_code=404, detail=str(exc)) from exc
-    return StateResponse(user_id=user_id, state=state)
+    return _streamview_projection(user_id, state.data)
 
 
 @app.post(
     f"{settings.api_prefix}/streamview/notifications/{{notification_id}}/read",
-    response_model=StateResponse,
     tags=["streamview"],
     summary="Mark a notification as read",
 )
 async def youtube_mark_notification_read(
     notification_id: str, user_id: str = Depends(get_user_id)
-) -> StateResponse:
+) -> Dict[str, Any]:
     try:
         state = await store.mutate_data(
             user_id, lambda data: mark_notification_read(data, notification_id)
         )
     except ValueError as exc:
         raise HTTPException(status_code=404, detail=str(exc)) from exc
-    return StateResponse(user_id=user_id, state=state)
+    return _streamview_projection(user_id, state.data)
 
 
 @app.post(
     f"{settings.api_prefix}/streamview/notifications/read-all",
-    response_model=StateResponse,
     tags=["streamview"],
     summary="Mark all notifications as read",
 )
 async def youtube_mark_all_notifications_read(
     user_id: str = Depends(get_user_id),
-) -> StateResponse:
+) -> Dict[str, Any]:
     state = await store.mutate_data(
         user_id, lambda data: mark_all_notifications_read(data)
     )
-    return StateResponse(user_id=user_id, state=state)
+    return _streamview_projection(user_id, state.data)
 
 
 @app.post(
     f"{settings.api_prefix}/streamview/users/hide",
-    response_model=StateResponse,
     tags=["streamview"],
     summary="Hide a user and remove all their comments",
 )
 async def youtube_hide_user(
     payload: UserManagementRequest, user_id: str = Depends(get_user_id)
-) -> StateResponse:
+) -> Dict[str, Any]:
     state = await store.mutate_data(
         user_id,
         lambda data: hide_user(data, payload.user_id, payload.user_name, payload.user_avatar),
     )
-    return StateResponse(user_id=user_id, state=state)
+    return _streamview_projection(user_id, state.data)
 
 
 @app.delete(
     f"{settings.api_prefix}/streamview/users/{{target_user_id}}/hide",
-    response_model=StateResponse,
     tags=["streamview"],
     summary="Unhide a user",
 )
 async def youtube_unhide_user(
     target_user_id: str, user_id: str = Depends(get_user_id)
-) -> StateResponse:
+) -> Dict[str, Any]:
     state = await store.mutate_data(
         user_id, lambda data: unhide_user(data, target_user_id)
     )
-    return StateResponse(user_id=user_id, state=state)
+    return _streamview_projection(user_id, state.data)
 
 
 @app.post(
     f"{settings.api_prefix}/streamview/users/moderator",
-    response_model=StateResponse,
     tags=["streamview"],
     summary="Add a user as a moderator",
 )
 async def youtube_add_moderator(
     payload: ModeratorRequest, user_id: str = Depends(get_user_id)
-) -> StateResponse:
+) -> Dict[str, Any]:
     state = await store.mutate_data(
         user_id,
         lambda data: add_moderator(
             data, payload.user_id, payload.user_name, payload.user_avatar, payload.moderator_type
         ),
     )
-    return StateResponse(user_id=user_id, state=state)
+    return _streamview_projection(user_id, state.data)
 
 
 @app.delete(
     f"{settings.api_prefix}/streamview/users/{{target_user_id}}/moderator",
-    response_model=StateResponse,
     tags=["streamview"],
     summary="Remove a user from moderators",
 )
 async def youtube_remove_moderator(
     target_user_id: str, moderator_type: str = "standard", user_id: str = Depends(get_user_id)
-) -> StateResponse:
+) -> Dict[str, Any]:
     state = await store.mutate_data(
         user_id, lambda data: remove_moderator(data, target_user_id, moderator_type)
     )
-    return StateResponse(user_id=user_id, state=state)
+    return _streamview_projection(user_id, state.data)
 
 
 @app.post(
     f"{settings.api_prefix}/streamview/comments/{{comment_id}}/report",
-    response_model=StateResponse,
     tags=["streamview"],
     summary="Report a comment",
 )
 async def youtube_report_comment(
     comment_id: str, payload: ReportCommentRequest, user_id: str = Depends(get_user_id)
-) -> StateResponse:
+) -> Dict[str, Any]:
     state = await store.mutate_data(
         user_id,
         lambda data: report_comment(data, comment_id, payload.reason, payload.details),
     )
-    return StateResponse(user_id=user_id, state=state)
+    return _streamview_projection(user_id, state.data)
 
 
 @app.get(

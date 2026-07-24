@@ -15,7 +15,6 @@ import LikedVideosPage from './pages/LikedVideosPage';
 import LibraryPage from './pages/LibraryPage';
 import TrendingPage from './pages/TrendingPage';
 import SettingsPage from './pages/SettingsPage';
-import StateInspector from './pages/StateInspector';
 import PlaylistPage from './pages/PlaylistPage';
 import MiniPlayer from './components/MiniPlayer';
 import './App.css';
@@ -76,7 +75,6 @@ function App() {
                 <Route path="/playlist/:playlistId" element={<PlaylistPage />} />
                 <Route path="/trending" element={<TrendingPage />} />
                 <Route path="/settings" element={<SettingsPage />} />
-                <Route path="/go" element={<StateInspector />} />
               </Routes>
             </main>
           </div>
@@ -88,4 +86,3 @@ function App() {
 }
 
 export default App;
-  
