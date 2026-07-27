@@ -19,6 +19,70 @@ async def test_control_plane_is_hidden_from_public_openapi(async_client):
 
 
 @pytest.mark.asyncio
+async def test_bootstrap_projection_and_video_update_preserve_control_state(async_client):
+    cookie = "streamview-product-contract"
+    await async_client.patch(
+        "/api/state",
+        params={"cookie": cookie},
+        json={
+            "data": {
+                "evaluator_marker": {"keep": True},
+                "unrelated_top_level": {"hidden": True},
+                "developer_tools_open": False,
+            }
+        },
+    )
+
+    bootstrap = await async_client.get(
+        "/api/streamview/bootstrap", params={"cookie": cookie}
+    )
+    assert bootstrap.status_code == 200
+    assert set(bootstrap.json()) == {"user_id", "data"}
+    assert set(bootstrap.json()["data"]) == {
+        "user",
+        "videos",
+        "channels",
+        "comments",
+        "playlists",
+        "notifications",
+        "categories",
+        "userManagement",
+    }
+    assert "evaluator_marker" not in bootstrap.json()["data"]
+    assert "unrelated_top_level" not in bootstrap.json()["data"]
+    video = bootstrap.json()["data"]["videos"][0]
+    video_id = video.get("id") or video.get("videoId") or video.get("youtubeId")
+    assert video_id
+
+    for field in (
+        "arbitrary_state",
+        "developer_tools_open",
+        "evaluator_marker",
+        "data",
+        "state",
+    ):
+        rejected = await async_client.patch(
+            f"/api/streamview/videos/{video_id}",
+            params={"cookie": cookie},
+            json={"title": "Rejected", field: True},
+        )
+        assert rejected.status_code == 422
+
+    updated = await async_client.patch(
+        f"/api/streamview/videos/{video_id}",
+        params={"cookie": cookie},
+        json={"title": "Product-scoped update"},
+    )
+    assert updated.status_code == 200
+    assert set(updated.json()) == {"user_id", "video"}
+    final = await async_client.get("/api/state", params={"cookie": cookie})
+    data = final.json()["state"]["data"]
+    assert data["evaluator_marker"] == {"keep": True}
+    assert data["unrelated_top_level"] == {"hidden": True}
+    assert data["developer_tools_open"] is False
+
+
+@pytest.mark.asyncio
 async def test_seeded_videos_have_default_fields(async_client):
     resp = await async_client.get("/api/state", params={"cookie": "normalizer-seed"})
     assert resp.status_code == 200
