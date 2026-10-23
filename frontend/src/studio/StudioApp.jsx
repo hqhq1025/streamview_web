@@ -20,30 +20,6 @@ import PlaylistModal from "../components/PlaylistModal";
 import PodcastModal from "../components/PodcastModal";
 import LiveStreaming from "./components/LiveStreaming";
 
-const COOKIE_NAME = import.meta.env.VITE_COOKIE_NAME || "user_id";
-const COOKIE_MAX_AGE = Number(import.meta.env.VITE_COOKIE_MAX_AGE || 60 * 60 * 24 * 30);
-
-// this function checks the URL for a "cookie" query parameter,
-// sets the cookie accordingly, and reloads the page without the query parameter
-// when build on the basesite, the below function should remain unchanged
-const applyCookieFromQuery = () => {
-  if (typeof window === "undefined") return;
-  const url = new URL(window.location.href);
-  const override = url.searchParams.get("cookie");
-  if (!override) return false;
-  let cookie = `${COOKIE_NAME}=${encodeURIComponent(override)}; Path=/; SameSite=Lax`;
-  if (Number.isFinite(COOKIE_MAX_AGE) && COOKIE_MAX_AGE > 0) {
-    cookie += `; Max-Age=${Math.floor(COOKIE_MAX_AGE)}`;
-  }
-  document.cookie = cookie;
-  const redirectUrl = url.origin;
-  if (window.location.href !== redirectUrl) {
-    window.location.replace(redirectUrl);
-    return true;
-  }
-  return false;
-};
-
 const consumeUploadIntent = () => {
   if (typeof window === "undefined") return false;
   const url = new URL(window.location.href);
