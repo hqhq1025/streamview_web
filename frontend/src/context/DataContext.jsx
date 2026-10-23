@@ -5,7 +5,7 @@ import { applyCookieFromQuery } from '../cookieSession';
 const emptyData = {
   user: {
     userId: '',
-    displayName: 'Loading...',
+    displayName: 'Profile not set',
     email: '',
     handle: '',
     avatar: 'https://picsum.photos/100/100?random=placeholder',
@@ -311,6 +311,10 @@ export const DataProvider = ({ children }) => {
 
   if (loading && !state) {
     return <div className="app-loading">Loading your feed...</div>;
+  }
+
+  if (error && !state) {
+    return <div role="alert">Unable to load your feed: {error}</div>;
   }
 
   return <DataContext.Provider value={value}>{children}</DataContext.Provider>;
